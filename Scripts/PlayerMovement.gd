@@ -8,6 +8,8 @@ extends CharacterBody2D
 @export var tex_right: Texture2D
 
 @onready var sprite: Sprite2D = $Sprite2D
+@onready var health_bar: ProgressBar = $HealthBar
+
 
 func _ready() -> void:
 	if tex_down:

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c82tfgqnagjv4"
-path="res://.godot/imported/SpriteBack.png-a40f4c136eee27cf0292676c9c452484.ctex"
+uid="uid://ia6ndm6t21wn"
+path="res://.godot/imported/key_32x32_24f.png-2b5478ef6498119cfbd0a95294cbd9ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PlayerModels/SpriteBack.png"
-dest_files=["res://.godot/imported/SpriteBack.png-a40f4c136eee27cf0292676c9c452484.ctex"]
+source_file="res://assets/sprites/key_32x32_24f.png"
+dest_files=["res://.godot/imported/key_32x32_24f.png-2b5478ef6498119cfbd0a95294cbd9ed.ctex"]
 
 [params]
 
