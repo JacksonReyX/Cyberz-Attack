@@ -12,5 +12,4 @@ position = Vector2(0, -1)
 texture = ExtResource("1_d3jon")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 5)
 shape = SubResource("CircleShape2D_32kkf")
