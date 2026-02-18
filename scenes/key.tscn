@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://wh66v8lxv0la"]
+[gd_scene load_steps=29 format=3 uid="uid://wh66v8lxv0la"]
 
-[ext_resource type="Script" uid="uid://bglcoqi6paqeg" path="res://scripts/key.gd" id="1_fttkb"]
-[ext_resource type="Texture2D" uid="uid://ia6ndm6t21wn" path="res://assets/sprites/key_32x32_24f.png" id="1_yk2u2"]
+[ext_resource type="Script" path="res://scripts/key.gd" id="1_fttkb"]
+[ext_resource type="Texture2D" uid="uid://ia6ndm6t21wn" path="res://Assets/sprites/key_32x32_24f.png" id="1_yk2u2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fttkb"]
 atlas = ExtResource("1_yk2u2")
@@ -182,21 +182,20 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_c562q"]
 radius = 7.0
 
-[node name="key" type="Area2D" unique_id=95518628]
+[node name="key" type="Area2D"]
 script = ExtResource("1_fttkb")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2038335102]
-position = Vector2(-10.5, 11)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-9.53674e-07, 9.53674e-07)
 scale = Vector2(0.34375, 0.3125)
 sprite_frames = SubResource("SpriteFrames_tbsev")
 animation = &"new_animation"
 autoplay = "new_animation"
-frame_progress = 0.20661506
+frame_progress = 0.206615
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1275981911]
-position = Vector2(-11, 11)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_c562q")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1597732006]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
