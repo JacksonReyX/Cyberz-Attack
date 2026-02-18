@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d047538vnageu"]
+
+[ext_resource type="Texture2D" uid="uid://csu8c16602oj7" path="res://Assets/PlayerModels/Fisherman_Sprite-1.png" id="1_t4krk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8l1k"]
+size = Vector2(7.5, 28)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_t4krk")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-10, 1)
+shape = SubResource("RectangleShape2D_h8l1k")
