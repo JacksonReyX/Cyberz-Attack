@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://daq0urbutxndc"]
+
+[ext_resource type="Texture2D" uid="uid://csu8c16602oj7" path="res://Assets/PlayerModels/Fisherman_Sprite-1.png" id="1_d3jon"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_32kkf"]
+
+[node name="Enemies" type="CharacterBody2D"]
+position = Vector2(1890, 1290)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("1_d3jon")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 5)
+shape = SubResource("CircleShape2D_32kkf")
