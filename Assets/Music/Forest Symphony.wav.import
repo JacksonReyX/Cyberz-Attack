@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d2y33n4i34wf"
+path="res://.godot/imported/Forest Symphony.wav-1b79095d49cc65ba37aa42bd7a6ef310.sample"
+
+[deps]
+
+source_file="res://Assets/Music/Forest Symphony.wav"
+dest_files=["res://.godot/imported/Forest Symphony.wav-1b79095d49cc65ba37aa42bd7a6ef310.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

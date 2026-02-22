@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct5yvg7ckos4n"]
+
+[ext_resource type="Script" path="res://Assets/Music/music_manager.gd" id="1_yfyle"]
+[ext_resource type="AudioStream" uid="uid://c153mrlefo5uk" path="res://Assets/Music/Dungeon.wav" id="2_xun62"]
+[ext_resource type="AudioStream" uid="uid://cn6dpvmwhqphc" path="res://Assets/Music/Final wish.wav" id="3_28ekj"]
+[ext_resource type="AudioStream" uid="uid://eqy5pw8jtgpq" path="res://Assets/Music/For your life.wav" id="4_5dkhh"]
+
+[node name="MusicManager" type="Node2D"]
+script = ExtResource("1_yfyle")
+dungeon_music = ExtResource("2_xun62")
+combat_music = ExtResource("3_28ekj")
+menu_music = ExtResource("4_5dkhh")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_xun62")
+autoplay = true
+bus = &"Music"
