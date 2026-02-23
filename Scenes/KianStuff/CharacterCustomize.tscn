@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c1qwr34in1lv6"]
+[gd_scene load_steps=13 format=3 uid="uid://c1qwr34in1lv6"]
 
 [ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://Assets/Menus/Buttons/BackHover.png" id="1_d061v"]
 [ext_resource type="Script" path="res://Scripts/character_customize.gd" id="1_ogjvl"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://0atkqlxedi60" path="res://Assets/Menus/Buttons/PlayPressed.png" id="5_2y0fi"]
 [ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://Assets/Menus/Buttons/BackPressed.png" id="6_4e8e1"]
 [ext_resource type="Texture2D" uid="uid://bmai6bfhki511" path="res://Assets/Menus/Buttons/PlayHover.png" id="6_rxag3"]
+[ext_resource type="Texture2D" uid="uid://d4hg4c7peel8h" path="res://Assets/Menus/Card/PreviewFrame.png" id="9_0vabe"]
 [ext_resource type="Texture2D" uid="uid://bvo6r8uygoww2" path="res://Assets/Menus/Buttons/Previous.png" id="9_vqqy5"]
 [ext_resource type="Texture2D" uid="uid://d4hmeivjoqfo7" path="res://Assets/Menus/Buttons/Next.png" id="10_73x0q"]
 
@@ -30,7 +31,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+[node name="Background" type="PanelContainer" parent="CanvasLayer"]
 offset_right = 639.0
 offset_bottom = 360.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_35nb7")
@@ -54,38 +55,52 @@ texture_normal = ExtResource("3_4a3q7")
 texture_pressed = ExtResource("5_2y0fi")
 texture_hover = ExtResource("6_rxag3")
 
-[node name="PreviewFrame" type="PanelContainer" parent="CanvasLayer"]
-offset_left = 150.0
-offset_top = 105.0
-offset_right = 250.0
-offset_bottom = 255.0
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/PreviewFrame"]
+[node name="PreviewArea" type="PanelContainer" parent="CanvasLayer/Control"]
+offset_left = 155.0
+offset_top = 110.0
+offset_right = 245.0
+offset_bottom = 250.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control/PreviewArea"]
 layout_mode = 2
 
-[node name="Doll" type="Node2D" parent="CanvasLayer/PreviewFrame/CenterContainer"]
+[node name="Doll" type="Node2D" parent="CanvasLayer/Control/PreviewArea/CenterContainer"]
 position = Vector2(50, 75)
 scale = Vector2(5, 5)
 
-[node name="Hair" type="Sprite2D" parent="CanvasLayer/PreviewFrame/CenterContainer/Doll"]
+[node name="Hair" type="Sprite2D" parent="CanvasLayer/Control/PreviewArea/CenterContainer/Doll"]
 unique_name_in_owner = true
 z_index = 3
 
-[node name="Eyes" type="Sprite2D" parent="CanvasLayer/PreviewFrame/CenterContainer/Doll"]
+[node name="Eyes" type="Sprite2D" parent="CanvasLayer/Control/PreviewArea/CenterContainer/Doll"]
 unique_name_in_owner = true
 z_index = 1
 scale = Vector2(1, 1)
 
-[node name="Body" type="Sprite2D" parent="CanvasLayer/PreviewFrame/CenterContainer/Doll"]
+[node name="Body" type="Sprite2D" parent="CanvasLayer/Control/PreviewArea/CenterContainer/Doll"]
 unique_name_in_owner = true
 
-[node name="Outfit" type="Sprite2D" parent="CanvasLayer/PreviewFrame/CenterContainer/Doll"]
+[node name="Outfit" type="Sprite2D" parent="CanvasLayer/Control/PreviewArea/CenterContainer/Doll"]
 unique_name_in_owner = true
 z_index = 2
 
-[node name="Accessory" type="Sprite2D" parent="CanvasLayer/PreviewFrame/CenterContainer/Doll"]
+[node name="Accessory" type="Sprite2D" parent="CanvasLayer/Control/PreviewArea/CenterContainer/Doll"]
 unique_name_in_owner = true
 z_index = 4
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 105.0
+offset_right = 250.0
+offset_bottom = 255.0
+texture = ExtResource("9_0vabe")
 
 [node name="ClassLeft" type="TextureButton" parent="CanvasLayer"]
 unique_name_in_owner = true
