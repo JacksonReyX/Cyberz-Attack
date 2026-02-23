@@ -1,19 +1,27 @@
 extends CharacterBody2D
 
 @export var speed: float = 95.0
-
-@export var tex_down: Texture2D
-@export var tex_up: Texture2D
-@export var tex_left: Texture2D
-@export var tex_right: Texture2D
-
 var door_lock := false
 
-@onready var sprite: Sprite2D = $Sprite2D
+# Textures
+const KNIGHT_OUTFIT := preload("res://Assets/Characters/Knight/KnightOutfit.png")
+const KNIGHT_ACCESSORY := preload("res://Assets/Characters/Knight/KnightAccessory.png")
+
+const WIZARD_BODY := preload("res://Assets/Characters/Wizard/WizardBody.png")
+const WIZARD_OUTFIT := preload("res://Assets/Characters/Wizard/WizardOutfit.png")
+const WIZARD_EYES := preload("res://Assets/Characters/Wizard/WizardEyes.png")
+const WIZARD_ACCESSORY := preload("res://Assets/Characters/Wizard/WizardAccessory.png")
+
+# Visual layers
+@onready var visuals: Node2D = $Visuals
+@onready var body: Sprite2D = %Body
+@onready var outfit: Sprite2D = %Outfit
+@onready var eyes: Sprite2D = %Eyes
+@onready var accessory: Sprite2D = %Accessory
+@onready var hair: Sprite2D = %Hair
 
 func _ready() -> void:
-	if tex_down:
-		sprite.texture = tex_down
+	apply_customization()
 
 func _physics_process(_delta: float) -> void:
 	var input_vec := Vector2.ZERO
@@ -27,15 +35,28 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("move_up"):
 		input_vec.y -= 1
 
-	# Smooth diagonal movement
 	input_vec = input_vec.normalized()
-
 	velocity = input_vec * speed
 	move_and_slide()
 
-	# Change facing sprite based on last direction pressed
-	if input_vec != Vector2.ZERO:
-		if abs(input_vec.x) > abs(input_vec.y):
-			sprite.texture = tex_right if input_vec.x > 0 else tex_left
-		else:
-			sprite.texture = tex_down if input_vec.y > 0 else tex_up
+	# Face left/right by flipping the whole visuals
+	if input_vec.x != 0:
+		visuals.scale.x = -abs(visuals.scale.x) if input_vec.x < 0 else abs(visuals.scale.x)
+
+func apply_customization() -> void:
+	var cname: String = PlayerCustomization.selected_class
+
+	if cname == "Wizard":
+		body.texture = WIZARD_BODY
+		eyes.texture = WIZARD_EYES
+		outfit.texture = WIZARD_OUTFIT
+		accessory.texture = WIZARD_ACCESSORY
+	else:
+		# Knight: no body/eyes
+		body.texture = null
+		eyes.texture = null
+		outfit.texture = KNIGHT_OUTFIT
+		accessory.texture = KNIGHT_ACCESSORY
+
+	# Optional: hair layer not used yet
+	hair.texture = null

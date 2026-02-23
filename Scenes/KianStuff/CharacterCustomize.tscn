@@ -46,10 +46,10 @@ texture_pressed = ExtResource("6_4e8e1")
 texture_hover = ExtResource("1_d061v")
 
 [node name="PlayButton" type="TextureButton" parent="CanvasLayer"]
-offset_left = 443.0
-offset_top = 238.0
-offset_right = 505.0
-offset_bottom = 268.0
+offset_left = 288.0
+offset_top = 267.0
+offset_right = 350.0
+offset_bottom = 297.0
 texture_normal = ExtResource("3_4a3q7")
 texture_pressed = ExtResource("5_2y0fi")
 texture_hover = ExtResource("6_rxag3")
@@ -89,18 +89,20 @@ z_index = 4
 
 [node name="ClassLeft" type="TextureButton" parent="CanvasLayer"]
 unique_name_in_owner = true
-offset_left = 130.0
-offset_top = 170.0
-offset_right = 160.0
-offset_bottom = 200.0
+offset_left = 138.0
+offset_top = 172.0
+offset_right = 168.0
+offset_bottom = 202.0
+scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("9_vqqy5")
 
 [node name="ClassRight" type="TextureButton" parent="CanvasLayer"]
 unique_name_in_owner = true
 offset_left = 240.0
-offset_top = 170.0
+offset_top = 172.0
 offset_right = 270.0
-offset_bottom = 200.0
+offset_bottom = 202.0
+scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("10_73x0q")
 
 [connection signal="pressed" from="CanvasLayer/BackButton" to="." method="_on_back_button_pressed"]
