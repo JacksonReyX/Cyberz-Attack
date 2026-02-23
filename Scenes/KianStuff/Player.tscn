@@ -1,10 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://daee17hg000ae"]
+[gd_scene load_steps=4 format=3 uid="uid://daee17hg000ae"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerMovement.gd" id="1_q6k34"]
-[ext_resource type="Texture2D" uid="uid://dsdep3so6cc3b" path="res://Assets/PlayerModels/SpriteFront.png" id="2_rxk5h"]
-[ext_resource type="Texture2D" uid="uid://c82tfgqnagjv4" path="res://Assets/PlayerModels/SpriteBack.png" id="3_q2qwc"]
-[ext_resource type="Texture2D" uid="uid://doc2dgbxptt6f" path="res://Assets/PlayerModels/SpriteLeft.png" id="4_dim77"]
-[ext_resource type="Texture2D" uid="uid://djmvn4ffvxflb" path="res://Assets/PlayerModels/SpriteRight.png" id="5_o08un"]
+[ext_resource type="Texture2D" uid="uid://jf0xi1wdb3q3" path="res://Assets/PlayerModels/Knight.png" id="2_typtl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1k5aj"]
 radius = 2.0
@@ -12,13 +9,14 @@ height = 10.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_q6k34")
-tex_down = ExtResource("2_rxk5h")
-tex_up = ExtResource("3_q2qwc")
-tex_left = ExtResource("4_dim77")
-tex_right = ExtResource("5_o08un")
+tex_down = ExtResource("2_typtl")
+tex_up = ExtResource("2_typtl")
+tex_left = ExtResource("2_typtl")
+tex_right = ExtResource("2_typtl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_rxk5h")
+position = Vector2(0, -2)
+texture = ExtResource("2_typtl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 7)

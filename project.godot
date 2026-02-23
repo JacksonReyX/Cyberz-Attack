@@ -26,6 +26,7 @@ buses/default_bus_layout=""
 [autoload]
 
 MusicManager="*res://Scenes/KianStuff/MusicManager.tscn"
+PlayerCustomization="*res://Scripts/player_customization.gd"
 
 [display]
 
