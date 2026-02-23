@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cetlqot03k2sd"
-path="res://.godot/imported/Pink Buttons Text.png-4c6534daa211bb5e33451c41d98f915f.ctex"
+uid="uid://bmai6bfhki511"
+path="res://.godot/imported/PlayHover.png-833be7e68f3d62403139c87308205d85.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menus/Pink Buttons Text.png"
-dest_files=["res://.godot/imported/Pink Buttons Text.png-4c6534daa211bb5e33451c41d98f915f.ctex"]
+source_file="res://Assets/Menus/PlayHover.png"
+dest_files=["res://.godot/imported/PlayHover.png-833be7e68f3d62403139c87308205d85.ctex"]
 
 [params]
 

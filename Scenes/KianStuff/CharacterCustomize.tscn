@@ -1,3 +1,54 @@
-[gd_scene format=3 uid="uid://c1qwr34in1lv6"]
+[gd_scene load_steps=9 format=3 uid="uid://c1qwr34in1lv6"]
 
-[node name="CharacterCustomize" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://Assets/Menus/BackHover.png" id="1_d061v"]
+[ext_resource type="Script" path="res://Scripts/character_customize.gd" id="1_ogjvl"]
+[ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://Assets/Menus/Back.png" id="1_vcgky"]
+[ext_resource type="Texture2D" uid="uid://dtmo876xe2hpm" path="res://Assets/Menus/CharCustCard.png" id="1_y3noa"]
+[ext_resource type="Texture2D" uid="uid://cdwqd0gniyd38" path="res://Assets/Menus/Play.png" id="3_4a3q7"]
+[ext_resource type="Texture2D" uid="uid://0atkqlxedi60" path="res://Assets/Menus/PlayPressed.png" id="5_2y0fi"]
+[ext_resource type="Texture2D" uid="uid://bmai6bfhki511" path="res://Assets/Menus/PlayHover.png" id="6_rxag3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_35nb7"]
+texture = ExtResource("1_y3noa")
+
+[node name="CharacterCustomize" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ogjvl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(2000, 2000)
+offset_left = -500.0
+offset_top = -500.0
+offset_right = 500.0
+offset_bottom = 500.0
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+offset_right = 639.0
+offset_bottom = 360.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_35nb7")
+
+[node name="BackButton" type="TextureButton" parent="CanvasLayer"]
+custom_minimum_size = Vector2(30, 30)
+offset_left = 98.0
+offset_top = 62.0
+offset_right = 128.0
+offset_bottom = 92.0
+texture_normal = ExtResource("1_vcgky")
+texture_pressed = ExtResource("1_vcgky")
+texture_hover = ExtResource("1_d061v")
+
+[node name="PlayButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 443.0
+offset_top = 238.0
+offset_right = 505.0
+offset_bottom = 268.0
+texture_normal = ExtResource("3_4a3q7")
+texture_pressed = ExtResource("5_2y0fi")
+texture_hover = ExtResource("6_rxag3")
+
+[connection signal="pressed" from="CanvasLayer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PlayButton" to="." method="_on_play_button_pressed"]

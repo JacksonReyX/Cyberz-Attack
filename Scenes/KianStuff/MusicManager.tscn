@@ -1,17 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://ct5yvg7ckos4n"]
 
-[ext_resource type="Script" path="res://Assets/Music/music_manager.gd" id="1_yfyle"]
-[ext_resource type="AudioStream" uid="uid://c153mrlefo5uk" path="res://Assets/Music/Dungeon.wav" id="2_xun62"]
+[ext_resource type="Script" path="res://Scripts/music_manager.gd" id="1_yfyle"]
+[ext_resource type="AudioStream" uid="uid://dasafdt4xn2eb" path="res://Assets/Music/Music/Music_3.ogg" id="2_ongxc"]
 [ext_resource type="AudioStream" uid="uid://cn6dpvmwhqphc" path="res://Assets/Music/Final wish.wav" id="3_28ekj"]
-[ext_resource type="AudioStream" uid="uid://eqy5pw8jtgpq" path="res://Assets/Music/For your life.wav" id="4_5dkhh"]
+[ext_resource type="AudioStream" uid="uid://cjjhgapol6lrf" path="res://Assets/Music/Music/Music_1.ogg" id="4_gyfkr"]
 
-[node name="MusicManager" type="Node2D"]
+[node name="MusicManager" type="Node"]
 script = ExtResource("1_yfyle")
-dungeon_music = ExtResource("2_xun62")
+dungeon_music = ExtResource("2_ongxc")
 combat_music = ExtResource("3_28ekj")
-menu_music = ExtResource("4_5dkhh")
+menu_music = ExtResource("4_gyfkr")
 
-[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_xun62")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 autoplay = true
-bus = &"Music"
