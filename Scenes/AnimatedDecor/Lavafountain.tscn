@@ -51,7 +51,7 @@ fill_to = Vector2(1, 1)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_oqlff")
 autoplay = "default"
-frame_progress = 0.904346
+frame_progress = 0.627263
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)
