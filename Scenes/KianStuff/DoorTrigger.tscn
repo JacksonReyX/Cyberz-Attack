@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://de1fym16t3g5d"]
+
+[ext_resource type="Script" uid="uid://bdfak0cml68vd" path="res://Scripts/door_trigger.gd" id="1_2ub4p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2a5a"]
+
+[node name="DoorTrigger" type="Area2D" unique_id=833409580]
+script = ExtResource("1_2ub4p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1453287751]
+shape = SubResource("RectangleShape2D_a2a5a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2083364871]

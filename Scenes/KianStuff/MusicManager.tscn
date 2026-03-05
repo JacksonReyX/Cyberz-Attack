@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct5yvg7ckos4n"]
+
+[ext_resource type="Script" path="res://Scripts/music_manager.gd" id="1_yfyle"]
+[ext_resource type="AudioStream" uid="uid://dasafdt4xn2eb" path="res://Assets/Music/Music_3.ogg" id="2_ongxc"]
+[ext_resource type="AudioStream" uid="uid://dkitk7ibo43dw" path="res://Assets/Music/Music_16.ogg" id="3_wfl35"]
+[ext_resource type="AudioStream" uid="uid://cjjhgapol6lrf" path="res://Assets/Music/Music_1.ogg" id="4_gyfkr"]
+
+[node name="MusicManager" type="Node"]
+script = ExtResource("1_yfyle")
+dungeon_music = ExtResource("2_ongxc")
+combat_music = ExtResource("3_wfl35")
+menu_music = ExtResource("4_gyfkr")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
