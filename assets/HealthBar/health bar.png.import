@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c82tfgqnagjv4"
-path="res://.godot/imported/SpriteBack.png-a40f4c136eee27cf0292676c9c452484.ctex"
+uid="uid://do01ysqa25flm"
+path="res://.godot/imported/health bar.png-f4d3e931126e8d6001ac302d171cb4d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PlayerModels/SpriteBack.png"
-dest_files=["res://.godot/imported/SpriteBack.png-a40f4c136eee27cf0292676c9c452484.ctex"]
+source_file="res://assets/HealthBar/health bar.png"
+dest_files=["res://.godot/imported/health bar.png-f4d3e931126e8d6001ac302d171cb4d4.ctex"]
 
 [params]
 

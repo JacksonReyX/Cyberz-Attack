@@ -7,6 +7,15 @@ extends CharacterBody2D
 @export var tex_left: Texture2D
 @export var tex_right: Texture2D
 
+# --- HEALTH VARIABLES ---
+@export var max_health: int = 100
+var health: int = 100
+@onready var health_bar: TextureProgressBar = $"../CanvasLayer/Control/HealthBar"
+
+
+
+
+
 var door_lock := false
 
 @onready var sprite: Sprite2D = $Sprite2D
@@ -16,6 +25,7 @@ func _ready() -> void:
 		sprite.texture = tex_down
 
 func _physics_process(_delta: float) -> void:
+	
 	var input_vec := Vector2.ZERO
 
 	if Input.is_action_pressed("move_right"):
@@ -39,3 +49,20 @@ func _physics_process(_delta: float) -> void:
 			sprite.texture = tex_right if input_vec.x > 0 else tex_left
 		else:
 			sprite.texture = tex_down if input_vec.y > 0 else tex_up
+
+# --- DAMAGE FUNCTION ---
+func take_damage(amount):
+	health -= amount
+	health = clamp(health, 0, max_health)
+
+	if health_bar:
+		health_bar.value = health
+
+
+# --- HEAL FUNCTION ---
+func heal(amount):
+	health += amount
+	health = clamp(health, 0, max_health)
+
+	if health_bar:
+		health_bar.value = health

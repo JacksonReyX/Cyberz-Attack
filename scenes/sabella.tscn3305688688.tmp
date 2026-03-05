@@ -1,14 +1,26 @@
-[gd_scene format=4 uid="uid://3k6yp023jmnb"]
+[gd_scene format=4 uid="uid://6ssftv5vshry"]
 
-[ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://scenes/Player.tscn" id="1_0juc3"]
-[ext_resource type="PackedScene" uid="uid://daq0urbutxndc" path="res://scenes/Enemies.tscn" id="2_n02sa"]
-[ext_resource type="Texture2D" uid="uid://cjltkxrkoa1f1" path="res://assets/Tiles/Dungen Tiles 2.png" id="3_yh741"]
-[ext_resource type="Texture2D" uid="uid://5fxcti76ijwb" path="res://assets/Tiles/DoorRight1.png" id="4_7byhx"]
-[ext_resource type="PackedScene" uid="uid://dor0wwuw7e1pm" path="res://scenes/Waterfall.tscn" id="5_tkd3m"]
-[ext_resource type="PackedScene" uid="uid://de1fym16t3g5d" path="res://scenes/DoorTrigger.tscn" id="6_1ojw1"]
+[ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://scenes/Player.tscn" id="1_s5hn4"]
+[ext_resource type="PackedScene" uid="uid://daq0urbutxndc" path="res://scenes/Enemies.tscn" id="2_wydyh"]
+[ext_resource type="Texture2D" uid="uid://bfk0mypmc630k" path="res://assets/HealthBar/empty health bar.png" id="2_y5wjm"]
+[ext_resource type="Texture2D" uid="uid://do01ysqa25flm" path="res://assets/HealthBar/health bar.png" id="3_4urc5"]
+[ext_resource type="Texture2D" uid="uid://cjltkxrkoa1f1" path="res://assets/Tiles/Dungen Tiles 2.png" id="3_b87bh"]
+[ext_resource type="Texture2D" uid="uid://5fxcti76ijwb" path="res://assets/Tiles/DoorRight1.png" id="4_1t2w0"]
+[ext_resource type="PackedScene" uid="uid://dor0wwuw7e1pm" path="res://scenes/Waterfall.tscn" id="5_y5wjm"]
+[ext_resource type="PackedScene" uid="uid://de1fym16t3g5d" path="res://scenes/DoorTrigger.tscn" id="6_4urc5"]
+[ext_resource type="PackedScene" uid="uid://ce88u41h83qm" path="res://scenes/coin.tscn" id="7_wydyh"]
+[ext_resource type="Script" uid="uid://cdoemn3dawtbn" path="res://scripts/game_manager.gd" id="8_b87bh"]
+[ext_resource type="Script" uid="uid://chcvw6j6b0tjh" path="res://scripts/canvas_layer.gd" id="10_iilcb"]
+[ext_resource type="Texture2D" uid="uid://ba8vey2n2eae4" path="res://assets/images/coin_image.png" id="11_4urc5"]
+[ext_resource type="Texture2D" uid="uid://3sra3g4n6da6" path="res://assets/images/key_32x32_24f.png" id="13_iilcb"]
+[ext_resource type="PackedScene" uid="uid://wh66v8lxv0la" path="res://scenes/key.tscn" id="13_tabgm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wydyh"]
+radius = 9.0
+height = 20.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_11wsd"]
-texture = ExtResource("3_yh741")
+texture = ExtResource("3_b87bh")
 margins = Vector2i(1, 1)
 separation = Vector2i(1, 1)
 0:0/0 = 0
@@ -344,7 +356,7 @@ separation = Vector2i(1, 1)
 14:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k6fqm"]
-texture = ExtResource("4_7byhx")
+texture = ExtResource("4_1t2w0")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
@@ -354,7 +366,7 @@ sources/1 = SubResource("TileSetAtlasSource_11wsd")
 sources/2 = SubResource("TileSetAtlasSource_k6fqm")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1lc8q"]
-texture = ExtResource("3_yh741")
+texture = ExtResource("3_b87bh")
 margins = Vector2i(1, 1)
 separation = Vector2i(1, 1)
 0:0/0 = 0
@@ -667,7 +679,7 @@ separation = Vector2i(1, 1)
 12:18/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1h0y8"]
-texture = ExtResource("4_7byhx")
+texture = ExtResource("4_1t2w0")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_0vvnh"]
@@ -676,11 +688,11 @@ sources/0 = SubResource("TileSetAtlasSource_1lc8q")
 sources/1 = SubResource("TileSetAtlasSource_1h0y8")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hq0xp"]
-texture = ExtResource("4_7byhx")
+texture = ExtResource("4_1t2w0")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bcrrx"]
-texture = ExtResource("3_yh741")
+texture = ExtResource("3_b87bh")
 margins = Vector2i(1, 1)
 separation = Vector2i(1, 1)
 0:0/0 = 0
@@ -1025,7 +1037,7 @@ sources/1 = SubResource("TileSetAtlasSource_bcrrx")
 sources/0 = SubResource("TileSetAtlasSource_hq0xp")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_832mt"]
-texture = ExtResource("3_yh741")
+texture = ExtResource("3_b87bh")
 margins = Vector2i(1, 1)
 separation = Vector2i(1, 1)
 0:0/0 = 0
@@ -1343,15 +1355,34 @@ separation = Vector2i(1, 1)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_832mt")
 
+[sub_resource type="GDScript" id="GDScript_43lag"]
+script/source = "extends CanvasLayer
+
+@onready var texture_rect: TextureRect = $HBoxContainer2/TextureRect
+
+
+func _ready():
+	# Find the key object in the scene
+	var key_node = get_tree().get_root().find_node(\"Key\", true, false)
+	if key_node:
+		key_node.connect(\"key_collected\", Callable(self, \"_on_key_collected\"))
+
+func _on_key_collected():
+	texture_rect.visible = true  # show the key in inventory
+"
+
 [node name="Node2D" type="Node2D" unique_id=598407902]
 
-[node name="CharacterBody2D" parent="." unique_id=1070250154 groups=["player"] instance=ExtResource("1_0juc3")]
+[node name="CharacterBody2D" parent="." unique_id=1070250154 groups=["player"] instance=ExtResource("1_s5hn4")]
 z_index = 10
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1199770961]
 zoom = Vector2(2, 2)
 
-[node name="Enemies" parent="." unique_id=1392677045 instance=ExtResource("2_n02sa")]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=417337873]
+shape = SubResource("CapsuleShape2D_wydyh")
+
+[node name="Enemies" parent="." unique_id=1392677045 instance=ExtResource("2_wydyh")]
 z_index = 10
 position = Vector2(195, -534)
 scale = Vector2(-1, 1)
@@ -1369,10 +1400,10 @@ position = Vector2(0, -17)
 tile_map_data = PackedByteArray("AAAEAP7/AAAHAAwAAAD8/wIAAAAHAAwAAAD+//7/AAAHAAwAAAADAAEAAAAHAAwAAAACAP3/AAAGAAoAAAADAP3/AAAPAAsAAAD7////AAAHAAoAAAAAAAEAAAAHAAoAAAD///v/AAAUAAAAAAA=")
 tile_set = SubResource("TileSet_0vvnh")
 
-[node name="Waterfall" parent="Level1Room1" unique_id=1018634820 instance=ExtResource("5_tkd3m")]
+[node name="Waterfall" parent="Level1Room1" unique_id=1018634820 instance=ExtResource("5_y5wjm")]
 position = Vector2(0, -22)
 
-[node name="DoorTrigger_ToRoom2" parent="Level1Room1" unique_id=1507737495 instance=ExtResource("6_1ojw1")]
+[node name="DoorTrigger_ToRoom2" parent="Level1Room1" unique_id=1507737495 instance=ExtResource("6_4urc5")]
 z_index = 3
 position = Vector2(-1, -87)
 target_marker = NodePath("../Entrance_From_Level1Room1")
@@ -1393,9 +1424,77 @@ position = Vector2(0, -395)
 tile_map_data = PackedByteArray("AAAEAP7/AAAHAAwAAAD8/wIAAAAHAAwAAAADAAEAAAAHAAwAAAD7////AAAHAAoAAAAAAAEAAAAHAAoAAAABAPD/AAAPAAsAAADx//D/AAAHAAoAAAD+//H/AAAHAAoAAAD2//r/AAAHAAoAAAD+//b/AAAHAAoAAAALAPr/AAAHAAoAAAAKAPr/AAAGAAoAAADy//v/AAAGAAoAAAD3/+7/AAAGAAoAAAD0//j/AAAHAAwAAAAAAPj/AAAHAAwAAAD2//D/AAAHAAwAAAAAAPH/AAAHAAwAAAD1//b/AAAHAAwAAAD1//v/AAAHAAwAAAD8//j/AAAHAAwAAAAEAPj/AAAHAAwAAAALAPj/AAAHAAwAAADy//H/AAAHAAwAAAD6//b/AAANAAMAAAD3/+3/AAANAAMAAAD//+//AAANAAMAAAD+//T/AAANAAIAAAALAPX/AAANAAIAAADy//n/AAANAAQAAAD4//j/AAANAAQAAAAJAPj/AAANAAQAAAALAPb/AAAHAAsAAAACAPj/AAAHAAsAAADx//f/AAAHAAsAAAD4//H/AAAHAAsAAAD1//X/AAAHAAsAAAD0/+7/AAAPAAsAAAA=")
 tile_set = SubResource("TileSet_ntxnf")
 
-[node name="DoorTrigger_ToRoom1" parent="Level1Room2" unique_id=366226035 instance=ExtResource("6_1ojw1")]
+[node name="DoorTrigger_ToRoom1" parent="Level1Room2" unique_id=366226035 instance=ExtResource("6_4urc5")]
 position = Vector2(0, -349)
 target_marker = NodePath("../Entrance_From_Level1Room2")
 
 [node name="Entrance_From_Level1Room2" type="Marker2D" parent="Level1Room2" unique_id=1340943821]
 position = Vector2(0, -80)
+
+[node name="Pickups" type="Node" parent="." unique_id=315665301]
+
+[node name="Coin" parent="Pickups" unique_id=1590275974 instance=ExtResource("7_wydyh")]
+position = Vector2(-11, -48)
+
+[node name="Coin2" parent="Pickups" unique_id=151729771 instance=ExtResource("7_wydyh")]
+position = Vector2(13, -42)
+
+[node name="Key" parent="Pickups" unique_id=1250183173 instance=ExtResource("13_tabgm")]
+position = Vector2(-48, -33)
+
+[node name="GameManager" type="Node" parent="." unique_id=750784226]
+unique_name_in_owner = true
+script = ExtResource("8_b87bh")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1092082673]
+script = ExtResource("10_iilcb")
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1884929248]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HealthBar" type="TextureProgressBar" parent="CanvasLayer/Control" unique_id=236952241]
+layout_mode = 1
+offset_right = 128.0
+offset_bottom = 16.0
+scale = Vector2(1.5, 1.5)
+value = 100.0
+texture_under = ExtResource("2_y5wjm")
+texture_over = ExtResource("3_4urc5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=576288993]
+layout_mode = 1
+offset_left = 2.0
+offset_top = 23.0
+offset_right = 28.0
+offset_bottom = 39.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/HBoxContainer" unique_id=141906951]
+layout_mode = 2
+texture = ExtResource("11_4urc5")
+
+[node name="CoinLabel" type="Label" parent="CanvasLayer/Control/HBoxContainer" unique_id=1860381333]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "0"
+
+[node name="KeyControl" type="Control" parent="CanvasLayer" unique_id=1944571790]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_43lag")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/KeyControl" unique_id=400876631]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/KeyControl/HBoxContainer2" unique_id=949848479]
+layout_mode = 2
+texture = ExtResource("13_iilcb")
