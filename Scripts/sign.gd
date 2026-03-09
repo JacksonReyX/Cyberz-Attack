@@ -9,9 +9,12 @@ extends Node2D
 @onready var sign_sprite: Sprite2D = $Sprite2D
 @onready var interact_area: Area2D = $InteractArea
 
+
+
 var player_in_range := false
 var opened := false
 var opening := false
+var inArea = false
 
 func _ready() -> void:
 	prompt.visible = true
@@ -30,24 +33,29 @@ func _process(_delta: float) -> void:
 			prompt.texture = prompt_normal
 
 func _on_body_entered(body: Node) -> void:
-	if body.is_in_group("player") and not opened:
+	if body.is_in_group("player"):
 		player_in_range = true
 		prompt.visible = true
 		prompt.texture = prompt_normal
+		inArea = true
 
 func _on_body_exited(body: Node) -> void:
 	if body.is_in_group("player"):
 		player_in_range = false
 		prompt.visible = false
+		inArea = false
 
 func interact() -> void:
 	if opened or opening:
 		return
 
 	opening = true
-	prompt.visible = false
-	Sfx.sign()
-
+	#prompt.visible = false
+	#Sfx.sign()
+	
+	if inArea == true:
+		prompt.texture = prompt_pressed
+		
 	
 	GameState.coins += 20
 
