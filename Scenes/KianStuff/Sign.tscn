@@ -6,9 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://cuv2uln14uaru" path="res://Assets/Sprites/Deco/Sign.png" id="4_jywkn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p86l8"]
+size = Vector2(20, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x0fa2"]
-radius = 20.0
+radius = 17.0294
 
 [node name="Sign" type="Node2D"]
 script = ExtResource("1_jlcqo")
@@ -21,6 +22,7 @@ sign = ExtResource("4_jywkn")
 [node name="Solid" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Solid"]
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_p86l8")
 
 [node name="InteractArea" type="Area2D" parent="."]
@@ -30,3 +32,5 @@ shape = SubResource("CircleShape2D_x0fa2")
 
 [node name="Prompt" type="Sprite2D" parent="."]
 z_index = 50
+position = Vector2(0, -14)
+scale = Vector2(0.267, 0.267)
