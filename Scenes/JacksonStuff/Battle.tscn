@@ -47,3 +47,5 @@ offset_right = 92.8341
 offset_bottom = 42.1295
 scale = Vector2(0.308112, 0.47385)
 text = "Question Here"
+
+[node name="Camera2D" type="Camera2D" parent="."]

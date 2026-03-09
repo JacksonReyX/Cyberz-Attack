@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=30 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
 [ext_resource type="Texture2D" uid="uid://mk5w7v66h636" path="res://Assets/Tiles/0x72_DungeonTilesetII_v1.7.png" id="2_og63f"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b4207duut6b75" path="res://Assets/Sprites/Deco/Coin.png" id="9_sqwm2"]
 [ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="11_gyowf"]
 [ext_resource type="PackedScene" uid="uid://dh4me51kb1tpd" path="res://Scenes/KianStuff/Sign.tscn" id="12_ua63u"]
+[ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://Scenes/JacksonStuff/FisherEnemy.tscn" id="14_otloe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
 texture = ExtResource("2_og63f")
@@ -5100,3 +5101,6 @@ position = Vector2(40, -447)
 [node name="Torch9" parent="SecondRoom/Torches" instance=ExtResource("7_jncrx")]
 z_index = 4
 position = Vector2(-40, -447)
+
+[node name="FisherEnemy" parent="SecondRoom" instance=ExtResource("14_otloe")]
+position = Vector2(3, -458)
