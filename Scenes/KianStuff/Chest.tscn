@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=3 uid="uid://cg0a3i8qru1ei"]
+
+[ext_resource type="Script" path="res://Scripts/chest.gd" id="1_lygkv"]
+[ext_resource type="Texture2D" uid="uid://b2ce7lkvqlqe0" path="res://Assets/Sprites/Deco/Chest.png" id="1_q8gxq"]
+[ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://Assets/Menus/Buttons/prompt_normal.png" id="3_7qn3c"]
+[ext_resource type="Texture2D" uid="uid://ddlbatddwhos3" path="res://Assets/Menus/Buttons/prompt_pressed.png" id="3_nnj7g"]
+[ext_resource type="Texture2D" uid="uid://8hvxufkkse0i" path="res://Assets/Sprites/Deco/ChestPartOpen.png" id="5_s4rfr"]
+[ext_resource type="Texture2D" uid="uid://d4jj8m14wapkq" path="res://Assets/Sprites/Deco/ChestOpen.png" id="6_srfil"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhjfo"]
+size = Vector2(16, 14)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_54vmx"]
+radius = 14.0
+
+[node name="Chest" type="Node2D"]
+script = ExtResource("1_lygkv")
+prompt_normal = ExtResource("3_7qn3c")
+prompt_pressed = ExtResource("3_nnj7g")
+chest_closed = ExtResource("1_q8gxq")
+chest_mid = ExtResource("5_s4rfr")
+chest_open = ExtResource("6_srfil")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Solid" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Solid"]
+shape = SubResource("RectangleShape2D_dhjfo")
+
+[node name="InteractArea" type="Area2D" parent="."]
+
+[node name="DetectionRange" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource("CircleShape2D_54vmx")
+
+[node name="Prompt" type="Sprite2D" parent="."]
+z_index = 50
+position = Vector2(0, -14)
+scale = Vector2(0.266667, 0.266667)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=20 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
 [ext_resource type="Texture2D" uid="uid://mk5w7v66h636" path="res://Assets/Tiles/0x72_DungeonTilesetII_v1.7.png" id="2_og63f"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://c0eu0yoqno1qv" path="res://Assets/Tiles/dungeontiles-extended v1.1/dungeontileset-extended.png" id="4_w0n7e"]
 [ext_resource type="Texture2D" uid="uid://ks6cj2pitvpi" path="res://Assets/Tiles/stairs.png" id="5_o82nj"]
 [ext_resource type="PackedScene" uid="uid://bluviblfhyg08" path="res://Scenes/AnimatedDecor/Torch.tscn" id="7_jncrx"]
+[ext_resource type="PackedScene" uid="uid://cg0a3i8qru1ei" path="res://Scenes/KianStuff/Chest.tscn" id="8_cthv1"]
+[ext_resource type="Script" path="res://Scripts/coins_hud.gd" id="9_5yy4f"]
+[ext_resource type="Texture2D" uid="uid://b4207duut6b75" path="res://Assets/Sprites/Deco/Coin.png" id="9_sqwm2"]
+[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="11_gyowf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
 texture = ExtResource("2_og63f")
@@ -2662,7 +2666,7 @@ sources/0 = SubResource("TileSetAtlasSource_ujtme")
 
 [node name="DungeonScene" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." groups=["player"] instance=ExtResource("1_q2ont")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_q2ont")]
 z_index = 10
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
@@ -2754,3 +2758,33 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="Chest" parent="." instance=ExtResource("8_cthv1")]
+z_index = 3
+position = Vector2(40, -168)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CoinsHUD" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("9_5yy4f")
+
+[node name="CoinIcon" type="TextureRect" parent="CanvasLayer/CoinsHUD"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 35.0
+offset_bottom = 35.0
+texture = ExtResource("9_sqwm2")
+
+[node name="CoinLabel" type="Label" parent="CanvasLayer/CoinsHUD"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 15.0
+offset_right = 80.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("11_gyowf")
+text = "0"

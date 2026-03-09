@@ -8,6 +8,7 @@ extends Control
 @onready var quit_btn: TextureButton = $UILayer/Quit
 
 func _ready() -> void:
+	UISfx.wire_buttons(self)
 	MusicManager.play_menu()
 
 	start_btn.pressed.connect(_on_start_pressed)
@@ -22,3 +23,4 @@ func _on_info_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+	
