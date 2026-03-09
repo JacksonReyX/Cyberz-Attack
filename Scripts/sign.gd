@@ -24,7 +24,7 @@ func _ready() -> void:
 	interact_area.body_exited.connect(_on_body_exited)
 
 func _process(_delta: float) -> void:
-	if player_in_range and not opened and not opening:
+	if player_in_range:
 		if Input.is_action_just_pressed("interact"):
 			prompt.texture = prompt_pressed
 			interact()
@@ -46,18 +46,16 @@ func _on_body_exited(body: Node) -> void:
 		inArea = false
 
 func interact() -> void:
-	if opened or opening:
-		return
-
 	opening = true
 	#prompt.visible = false
 	#Sfx.sign()
 	
 	if inArea == true:
 		prompt.texture = prompt_pressed
-		
+	else: 
+		prompt.texture = prompt_normal
 	
-	GameState.coins += 20
+	
 
 	opening = false
 	opened = true
