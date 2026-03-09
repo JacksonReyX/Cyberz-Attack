@@ -195,6 +195,16 @@ offset_right = 494.0
 offset_bottom = 255.0
 texture = ExtResource("18_agvjx")
 
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 302.0
+offset_top = 184.0
+offset_right = 466.0
+offset_bottom = 207.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_8kkrl")
+theme_override_font_sizes/font_size = 16
+text = "In progress"
+
 [node name="Tabs" type="Node" parent="CanvasLayer"]
 
 [node name="HairTab" type="TextureButton" parent="CanvasLayer/Tabs"]

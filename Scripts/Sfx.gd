@@ -30,5 +30,5 @@ func play(stream: AudioStream) -> void:
 	p.play()
 
 func chest() -> void:
-	print("[Sfx] chest() called. chest_stream =", chest_stream)
-	play(chest_stream)
+	print("[Sfx] sign() called. sign_stream =", sign_stream)
+	play(sign_stream)

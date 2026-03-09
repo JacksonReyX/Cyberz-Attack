@@ -20,6 +20,7 @@ script = ExtResource("1_qybiu")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(2000, 2000)
+layout_mode = 0
 offset_left = -390.0
 offset_top = -485.0
 offset_right = 1610.0
