@@ -6,6 +6,13 @@ extends Node
 @export var combat_music: AudioStream
 @export var menu_music: AudioStream
 
+func _ready() -> void:
+	player.bus = "Music"
+	AudioServer.set_bus_volume_db(
+		AudioServer.get_bus_index("Music"),
+		-16
+	)
+
 func play_menu():
 	_play(menu_music)
 

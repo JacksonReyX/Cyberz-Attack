@@ -10,3 +10,4 @@ click_stream = ExtResource("2_llugx")
 hover_stream = ExtResource("3_yreu8")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"UI"

@@ -11,6 +11,8 @@ var _player: AudioStreamPlayer
 func _ready() -> void:
 	_player = AudioStreamPlayer.new()
 	add_child(_player)
+	_player.bus = "UI"
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("UI"), -4.0)
 
 	if use_sfx_bus and AudioServer.get_bus_index(sfx_bus_name) != -1:
 		_player.bus = sfx_bus_name
