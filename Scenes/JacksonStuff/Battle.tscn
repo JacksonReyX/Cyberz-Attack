@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cyahrapvjma6d"]
 
-[ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://Scenes/FisherEnemy.tscn" id="1_d7r1a"]
+[ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://Scenes/JacksonStuff/FisherEnemy.tscn" id="1_d7r1a"]
 
 [node name="Node2D" type="Node2D"]
 

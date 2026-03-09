@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=4 uid="uid://bkhgmvtd3hthp"]
 
 [ext_resource type="Texture2D" uid="uid://cjltkxrkoa1f1" path="res://Assets/Tiles/Dungen Tiles 2.png" id="1_xc65m"]
-[ext_resource type="Texture2D" uid="uid://5fxcti76ijwb" path="res://Assets/Tiles/DoorRight1.png" id="2_eb3tx"]
-[ext_resource type="PackedScene" uid="uid://dvyjtgpmifxft" path="res://Scenes/JacksonHallway.tscn" id="3_x1lq0"]
-[ext_resource type="PackedScene" uid="uid://inpbuncswkk" path="res://Scenes/Enemy_Room1_Jackson.tscn" id="4_7p1pu"]
-[ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/Player.tscn" id="5_7505e"]
+[ext_resource type="Texture2D" path="res://Assets/Tiles/DoorRight1.png" id="2_eb3tx"]
+[ext_resource type="PackedScene" uid="uid://dvyjtgpmifxft" path="res://Scenes/JacksonStuff/JacksonHallway.tscn" id="3_x1lq0"]
+[ext_resource type="PackedScene" uid="uid://inpbuncswkk" path="res://Scenes/JacksonStuff/Enemy_Room1_Jackson.tscn" id="4_7p1pu"]
+[ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="5_7505e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hgkgh"]
 texture = ExtResource("1_xc65m")
