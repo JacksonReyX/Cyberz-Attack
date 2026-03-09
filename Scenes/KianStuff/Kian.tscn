@@ -343,7 +343,6 @@ separation = Vector2i(1, 1)
 14:6/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7c3oa"]
-load_path = "res://.godot/imported/DoorRight1.png-4ba9afc2ca0ca296d9e0703fced9b5ea.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4km0h"]
 texture = SubResource("CompressedTexture2D_7c3oa")
@@ -1347,7 +1346,7 @@ sources/0 = SubResource("TileSetAtlasSource_832mt")
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." groups=["player"] instance=ExtResource("1_ok33x")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_ok33x")]
 z_index = 10
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

@@ -14,7 +14,7 @@ var opened := false
 var opening := false
 
 func _ready() -> void:
-	prompt.visible = true
+	prompt.visible = false
 	prompt.texture = prompt_normal
 
 	interact_area.body_entered.connect(_on_body_entered)

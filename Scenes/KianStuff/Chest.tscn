@@ -18,8 +18,8 @@ script = ExtResource("1_lygkv")
 prompt_normal = ExtResource("3_7qn3c")
 prompt_pressed = ExtResource("3_nnj7g")
 chest_closed = ExtResource("1_q8gxq")
-chest_mid = ExtResource("6_srfil")
-chest_open = ExtResource("5_s4rfr")
+chest_mid = ExtResource("5_s4rfr")
+chest_open = ExtResource("6_srfil")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
