@@ -1,6 +1,5 @@
 [gd_scene load_steps=14 format=3 uid="uid://42xscrpgkgsm"]
 
-[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="1_7bxcw"]
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_p454h"]
 [ext_resource type="Texture2D" uid="uid://dw05rjusxavno" path="res://Assets/Menus/Buttons/Start.png" id="3_ddd1l"]
 [ext_resource type="Texture2D" uid="uid://is52nbhq1b8f" path="res://Assets/Menus/Buttons/StartPressed.png" id="4_dovbr"]
@@ -11,7 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://bqfxbevrxla52" path="res://Assets/Menus/Buttons/Info.png" id="8_s0y0t"]
 [ext_resource type="Texture2D" uid="uid://chv501leqsjtt" path="res://Assets/Menus/Buttons/InfoPressed.png" id="9_i3ka5"]
 [ext_resource type="Texture2D" uid="uid://m0r3xwjeece2" path="res://Assets/Menus/Buttons/InfoHover.png" id="10_6pmid"]
-[ext_resource type="PackedScene" uid="uid://bcxdepmfixh78" path="res://Scenes/KianStuff/TempMenu.tscn" id="11_p64d1"]
+[ext_resource type="PackedScene" uid="uid://bcxdepmfixh78" path="res://Scenes/KianStuff/MainMenuBg.tscn" id="11_p64d1"]
+[ext_resource type="Texture2D" uid="uid://tk0ypi83ofo1" path="res://Assets/Menus/Card/Title.png" id="12_hsg7s"]
 
 [sub_resource type="Theme" id="Theme_a3gd8"]
 Button/icons/icon = null
@@ -28,20 +28,9 @@ script = ExtResource("1_p454h")
 
 [node name="MainMenuBg" parent="." instance=ExtResource("11_p64d1")]
 z_index = -1
+position = Vector2(423, 254)
 
 [node name="UILayer" type="CanvasLayer" parent="."]
-
-[node name="Title" type="Label" parent="UILayer"]
-z_index = 10
-offset_left = 124.0
-offset_top = 90.0
-offset_right = 516.0
-offset_bottom = 122.0
-theme_override_fonts/font = ExtResource("1_7bxcw")
-theme_override_font_sizes/font_size = 32
-text = "Cyberz Attack"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Start" type="TextureButton" parent="UILayer"]
 z_index = 10
@@ -96,3 +85,14 @@ grow_vertical = 2
 texture_normal = ExtResource("8_s0y0t")
 texture_pressed = ExtResource("9_i3ka5")
 texture_hover = ExtResource("10_6pmid")
+
+[node name="TextureRect" type="TextureRect" parent="UILayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -144.0
+offset_top = 5.0
+offset_right = 142.0
+offset_bottom = 148.0
+grow_horizontal = 2
+texture = ExtResource("12_hsg7s")

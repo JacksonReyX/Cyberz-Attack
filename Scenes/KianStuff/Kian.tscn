@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=4 uid="uid://3k6yp023jmnb"]
 
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_ok33x"]
-[ext_resource type="PackedScene" uid="uid://730guexmy0us" path="res://Scenes/Enemies.tscn" id="2_mil4v"]
+[ext_resource type="PackedScene" uid="uid://730guexmy0us" path="res://Scenes/JacksonStuff/Enemies.tscn" id="2_mil4v"]
 [ext_resource type="Texture2D" uid="uid://cjltkxrkoa1f1" path="res://Assets/Tiles/Dungen Tiles 2.png" id="3_xjjeu"]
 [ext_resource type="PackedScene" uid="uid://dor0wwuw7e1pm" path="res://Scenes/AnimatedDecor/Waterfall.tscn" id="5_6ca4n"]
 [ext_resource type="PackedScene" uid="uid://de1fym16t3g5d" path="res://Scenes/KianStuff/DoorTrigger.tscn" id="6_nkw0k"]
@@ -343,7 +343,6 @@ separation = Vector2i(1, 1)
 14:6/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7c3oa"]
-load_path = "res://.godot/imported/DoorRight1.png-4ba9afc2ca0ca296d9e0703fced9b5ea.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4km0h"]
 texture = SubResource("CompressedTexture2D_7c3oa")
@@ -1347,7 +1346,7 @@ sources/0 = SubResource("TileSetAtlasSource_832mt")
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." groups=["player"] instance=ExtResource("1_ok33x")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_ok33x")]
 z_index = 10
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
