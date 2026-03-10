@@ -48,9 +48,6 @@ func interact() -> void:
 	prompt.visible = false
 	Sfx.sign()
 
-	
-	GameState.coins += 20
-
 	opening = false
 	opened = true
 	print("Sign opened")
