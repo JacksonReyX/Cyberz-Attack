@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://bfk0mypmc630k" path="res://assets/HealthBar/empty health bar.png" id="13_163v5"]
 [ext_resource type="Texture2D" uid="uid://do01ysqa25flm" path="res://assets/HealthBar/health bar.png" id="14_eabik"]
 [ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://scenes/JacksonStuff/FisherEnemy.tscn" id="14_otloe"]
+[ext_resource type="Texture2D" uid="uid://rcmlqai41i6j" path="res://assets/Sprites/Deco/Golden_Key.png" id="15_iqwnn"]
 [ext_resource type="Script" uid="uid://em0yi2wsdwsw" path="res://scripts/coin_manager.gd" id="16_glcv4"]
 [ext_resource type="PackedScene" uid="uid://wh66v8lxv0la" path="res://scenes/key.tscn" id="19_eabik"]
 
@@ -5095,6 +5096,16 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="KeyIcon" type="TextureRect" parent="CanvasLayer/KeyHUD" unique_id=354779359]
+visible = false
+layout_mode = 0
+offset_left = 3.9999998
+offset_top = 48.0
+offset_right = 174.0
+offset_bottom = 218.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("15_iqwnn")
+
 [node name="Sign" parent="." unique_id=1718531630 instance=ExtResource("12_ua63u")]
 position = Vector2(56, -24)
 
@@ -5152,4 +5163,4 @@ script = ExtResource("16_glcv4")
 [node name="Keys" type="Node" parent="." unique_id=1687451706]
 
 [node name="Key" parent="Keys" unique_id=1250183173 instance=ExtResource("19_eabik")]
-position = Vector2(-102, 73)
+position = Vector2(-87, 90)

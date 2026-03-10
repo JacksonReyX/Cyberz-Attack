@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ce88u41h83qm"]
 
 [ext_resource type="Script" uid="uid://0m7wyia0t2yj" path="res://scripts/coin.gd" id="1_i64fm"]
-[ext_resource type="Texture2D" uid="uid://cyote47qp2oc7" path="res://assets/sprites/01PixelCoinGold.png" id="1_rwqht"]
+[ext_resource type="Texture2D" uid="uid://cyote47qp2oc7" path="res://assets/Sprites/Deco/01PixelCoinGold.png" id="1_rwqht"]
 [ext_resource type="AudioStream" uid="uid://c53rwkbej4glo" path="res://assets/sounds/coin.wav" id="3_11l1o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i64fm"]
@@ -172,6 +172,8 @@ shape = SubResource("CircleShape2D_rwqht")
 
 [node name="PickupSound" type="AudioStreamPlayer2D" parent="." unique_id=1929430727]
 stream = ExtResource("3_11l1o")
+volume_db = -10.292
+bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=931052215]
 libraries/ = SubResource("AnimationLibrary_wnlwo")
