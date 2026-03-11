@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=55 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://de1fym16t3g5d" path="res://Scenes/KianStuff/DoorTrigger.tscn" id="8_5730i"]
 [ext_resource type="PackedScene" uid="uid://cg0a3i8qru1ei" path="res://Scenes/KianStuff/Chest.tscn" id="8_cthv1"]
 [ext_resource type="Script" path="res://Scripts/coins_hud.gd" id="9_5yy4f"]
-[ext_resource type="Texture2D" uid="uid://b4207duut6b75" path="res://Assets/Sprites/Deco/Coin.png" id="9_sqwm2"]
 [ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="11_gyowf"]
 [ext_resource type="PackedScene" uid="uid://dh4me51kb1tpd" path="res://Scenes/KianStuff/Sign.tscn" id="12_ua63u"]
 [ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="14_rge1b"]
@@ -27,9 +26,12 @@
 [ext_resource type="Texture2D" uid="uid://csftv15b8vsmr" path="res://Assets/Menus/Buttons/MainMenuHover.png" id="20_nufx6"]
 [ext_resource type="Texture2D" uid="uid://jgn0vxfsnhfw" path="res://Assets/Menus/Buttons/Quit2.png" id="21_djoam"]
 [ext_resource type="Texture2D" uid="uid://cfr6p50fq7ow6" path="res://Assets/Menus/Buttons/QuitPressed2.png" id="22_jeq7h"]
+[ext_resource type="Texture2D" uid="uid://dy11egb5o2dw7" path="res://Assets/Menus/Buttons/VolumePressed.png" id="22_q6ajh"]
 [ext_resource type="Texture2D" uid="uid://d25343ltfnoq2" path="res://Assets/Menus/Buttons/QuitHover2.png" id="23_kvolx"]
+[ext_resource type="Texture2D" uid="uid://csdgy7l42pm6l" path="res://Assets/Menus/Buttons/VolumeHover.png" id="23_p2p71"]
 [ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://Assets/Menus/Buttons/Back.png" id="26_f4fvt"]
 [ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://Assets/Menus/Buttons/BackPressed.png" id="27_lifpq"]
+[ext_resource type="Texture2D" uid="uid://djmdl5ddm841e" path="res://Assets/Menus/Card/Volume.png" id="28_8dysy"]
 [ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://Assets/Menus/Buttons/BackHover.png" id="28_ild77"]
 [ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://Scenes/JacksonStuff/FisherEnemy.tscn" id="32_p1g1e"]
 
@@ -4950,6 +4952,42 @@ texture = ExtResource("4_w0n7e")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_vq1fq")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_whm1l"]
+atlas = ExtResource("4_w0n7e")
+region = Rect2(288, 320, 8, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aijea"]
+atlas = ExtResource("4_w0n7e")
+region = Rect2(296, 320, 8, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_us88a"]
+atlas = ExtResource("4_w0n7e")
+region = Rect2(304, 320, 8, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wagve"]
+atlas = ExtResource("4_w0n7e")
+region = Rect2(312, 320, 8, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1c8c5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whm1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aijea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_us88a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wagve")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="DungeonScene" type="Node2D"]
 script = ExtResource("1_nv8n0")
 
@@ -5124,20 +5162,19 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("9_5yy4f")
 
-[node name="CoinIcon" type="TextureRect" parent="HUDLayer/HUD/CoinsHUD"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 35.0
-offset_bottom = 35.0
-texture = ExtResource("9_sqwm2")
+[node name="CoinIcon" type="AnimatedSprite2D" parent="HUDLayer/HUD/CoinsHUD"]
+position = Vector2(22, 21.875)
+scale = Vector2(1.75, 1.75)
+sprite_frames = SubResource("SpriteFrames_1c8c5")
+autoplay = "default"
+frame_progress = 0.874954
 
 [node name="CoinLabel" type="Label" parent="HUDLayer/HUD/CoinsHUD"]
 layout_mode = 0
-offset_left = 40.0
+offset_left = 31.0
 offset_top = 15.0
-offset_right = 80.0
-offset_bottom = 38.0
+offset_right = 71.0
+offset_bottom = 31.0
 theme_override_fonts/font = ExtResource("11_gyowf")
 text = "0"
 
@@ -5145,7 +5182,6 @@ text = "0"
 
 [node name="PauseMenu" type="Control" parent="PauseLayer"]
 process_mode = 2
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -5207,6 +5243,8 @@ offset_bottom = 51.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("19_0145e")
+texture_pressed = ExtResource("22_q6ajh")
+texture_hover = ExtResource("23_p2p71")
 
 [node name="MainMenuButton" type="TextureButton" parent="PauseLayer/PauseMenu/MainButtons"]
 unique_name_in_owner = true
@@ -5246,20 +5284,42 @@ texture_hover = ExtResource("23_kvolx")
 
 [node name="VolumePanel" type="Control" parent="PauseLayer/PauseMenu"]
 unique_name_in_owner = true
-visible = false
-anchors_preset = 0
-offset_left = 294.0
-offset_top = 204.0
-offset_right = 334.0
-offset_bottom = 244.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VolumeContainer" type="TextureRect" parent="PauseLayer/PauseMenu/VolumePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 228.5
+offset_top = 80.0
+offset_right = 352.5
+offset_bottom = 224.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("28_8dysy")
 
 [node name="BackButton" type="TextureButton" parent="PauseLayer/PauseMenu/VolumePanel"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = -64.0
-offset_top = -124.0
-offset_right = -34.0
-offset_bottom = -94.0
+offset_left = 250.0
+offset_top = 123.0
+offset_right = 280.0
+offset_bottom = 153.0
+scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("26_f4fvt")
 texture_pressed = ExtResource("27_lifpq")
 texture_hover = ExtResource("28_ild77")

@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://Scripts/ui_sfx.gd" id="1_ken47"]
 [ext_resource type="AudioStream" uid="uid://ckcrubr1ksnom" path="res://Assets/Audio/UI/UIClick_BLEEOOP_Key_Chonk.ogg" id="2_llugx"]
-[ext_resource type="AudioStream" uid="uid://dpsot1y8fbixx" path="res://Assets/Audio/UI/UIClick_BLEEOOP_Rubber Duck Clicks 6.ogg" id="3_yreu8"]
+[ext_resource type="AudioStream" uid="uid://dl8ucwfha7uyh" path="res://Assets/Audio/UI/UIClick_BLEEOOP_Radio_Button.ogg" id="3_uuq3t"]
 
 [node name="UiSfx" type="Node"]
 script = ExtResource("1_ken47")
 click_stream = ExtResource("2_llugx")
-hover_stream = ExtResource("3_yreu8")
+hover_stream = ExtResource("3_uuq3t")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 bus = &"UI"

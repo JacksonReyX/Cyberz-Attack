@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3v7w4uuo5kch"]
+[gd_scene load_steps=6 format=3 uid="uid://b3v7w4uuo5kch"]
 
 [ext_resource type="Script" path="res://Scripts/options.gd" id="1_ff8yf"]
 [ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://Assets/Menus/Buttons/Back.png" id="2_l403d"]
 [ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://Assets/Menus/Buttons/BackPressed.png" id="3_n1y8j"]
 [ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://Assets/Menus/Buttons/BackHover.png" id="4_4ba1w"]
+[ext_resource type="Texture2D" uid="uid://djmdl5ddm841e" path="res://Assets/Menus/Card/Volume.png" id="5_m4k0w"]
 
 [node name="Options" type="Node2D"]
 script = ExtResource("1_ff8yf")
@@ -16,12 +17,59 @@ offset_right = 1610.0
 offset_bottom = 1515.0
 color = Color(0.0026, 0.0747933, 0.13, 1)
 
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 196.0
+offset_top = 35.0
+offset_right = 320.0
+offset_bottom = 179.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("5_m4k0w")
+
 [node name="BackButton" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(30, 30)
-offset_left = 27.0
-offset_top = 18.0
-offset_right = 57.0
-offset_bottom = 48.0
+offset_left = 197.0
+offset_top = 81.0
+offset_right = 227.0
+offset_bottom = 111.0
 texture_normal = ExtResource("2_l403d")
 texture_pressed = ExtResource("3_n1y8j")
 texture_hover = ExtResource("4_4ba1w")
+
+[node name="Master" type="HSlider" parent="."]
+offset_left = 247.0
+offset_top = 126.0
+offset_right = 347.0
+offset_bottom = 142.0
+scale = Vector2(1.5, 1.5)
+tick_count = 10
+
+[node name="Music" type="HSlider" parent="."]
+offset_left = 247.0
+offset_top = 169.0
+offset_right = 347.0
+offset_bottom = 185.0
+scale = Vector2(1.5, 1.5)
+tick_count = 10
+
+[node name="SFX" type="HSlider" parent="."]
+offset_left = 247.0
+offset_top = 213.0
+offset_right = 347.0
+offset_bottom = 229.0
+scale = Vector2(1.5, 1.5)
+tick_count = 10
+
+[node name="UISFX" type="HSlider" parent="."]
+offset_left = 247.0
+offset_top = 255.0
+offset_right = 347.0
+offset_bottom = 271.0
+scale = Vector2(1.5, 1.5)
+tick_count = 10
