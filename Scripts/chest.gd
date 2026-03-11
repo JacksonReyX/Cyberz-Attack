@@ -54,6 +54,7 @@ func interact() -> void:
 	await _open_chest_animation()
 	
 	GameState.coins += 20
+	GameState.health_potions += 1
 
 	opening = false
 	opened = true

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c2gxmtvknvo5p" path="res://scenes/AnimatedDecor/Lavafountain.tscn" id="5_mlckb"]
 [ext_resource type="PackedScene" uid="uid://d0jthabkak2ey" path="res://scenes/AnimatedDecor/Waterfountain.tscn" id="6_r11yt"]
 [ext_resource type="PackedScene" uid="uid://bluviblfhyg08" path="res://scenes/AnimatedDecor/Torch.tscn" id="7_lankr"]
-[ext_resource type="PackedScene" uid="uid://ce88u41h83qm" path="res://scenes/coin.tscn" id="8_76p51"]
+[ext_resource type="PackedScene" uid="uid://ce88u41h83qm" path="res://scenes/sabella/coin.tscn" id="8_76p51"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
 texture = ExtResource("2_evvyn")

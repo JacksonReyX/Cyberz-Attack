@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyote47qp2oc7"
-path="res://.godot/imported/01PixelCoinGold.png-21f967cfc7a0bded574aba886c1eb7f4.ctex"
+uid="uid://dwlmffvq33avb"
+path="res://.godot/imported/healthpotion.png-032b6cf68b2a1f3d4b587fea22fade93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Deco/01PixelCoinGold.png"
-dest_files=["res://.godot/imported/01PixelCoinGold.png-21f967cfc7a0bded574aba886c1eb7f4.ctex"]
+source_file="res://assets/Sprites/Deco/healthpotion.png"
+dest_files=["res://.godot/imported/healthpotion.png-032b6cf68b2a1f3d4b587fea22fade93.ctex"]
 
 [params]
 
