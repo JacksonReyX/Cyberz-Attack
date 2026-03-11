@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cg0a3i8qru1ei"]
+[gd_scene load_steps=10 format=3 uid="uid://cg0a3i8qru1ei"]
 
 [ext_resource type="Script" path="res://Scripts/chest.gd" id="1_lygkv"]
 [ext_resource type="Texture2D" uid="uid://b2ce7lkvqlqe0" path="res://Assets/Sprites/Deco/Chest.png" id="1_q8gxq"]
 [ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://Assets/Menus/Buttons/prompt_normal.png" id="3_7qn3c"]
 [ext_resource type="Texture2D" uid="uid://ddlbatddwhos3" path="res://Assets/Menus/Buttons/prompt_pressed.png" id="3_nnj7g"]
 [ext_resource type="Texture2D" uid="uid://8hvxufkkse0i" path="res://Assets/Sprites/Deco/ChestPartOpen.png" id="5_s4rfr"]
+[ext_resource type="Texture2D" uid="uid://drwsjxrc8nqv4" path="res://Assets/Sprites/Deco/ChestPrompted.png" id="5_x4r24"]
 [ext_resource type="Texture2D" uid="uid://d4jj8m14wapkq" path="res://Assets/Sprites/Deco/ChestOpen.png" id="6_srfil"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dhjfo"]
@@ -18,6 +19,7 @@ script = ExtResource("1_lygkv")
 prompt_normal = ExtResource("3_7qn3c")
 prompt_pressed = ExtResource("3_nnj7g")
 chest_closed = ExtResource("1_q8gxq")
+chest_closed_highlight = ExtResource("5_x4r24")
 chest_mid = ExtResource("5_s4rfr")
 chest_open = ExtResource("6_srfil")
 
@@ -36,4 +38,4 @@ shape = SubResource("CircleShape2D_54vmx")
 [node name="Prompt" type="Sprite2D" parent="."]
 z_index = 50
 position = Vector2(0, -14)
-scale = Vector2(0.266667, 0.266667)
+scale = Vector2(0.4, 0.4)
