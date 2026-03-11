@@ -10,7 +10,7 @@ func _ready() -> void:
 	player.bus = "Music"
 	AudioServer.set_bus_volume_db(
 		AudioServer.get_bus_index("Music"),
-		-16
+		-10
 	)
 
 func play_menu():

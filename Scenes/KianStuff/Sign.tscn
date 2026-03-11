@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dh4me51kb1tpd"]
+[gd_scene load_steps=8 format=3 uid="uid://dh4me51kb1tpd"]
 
 [ext_resource type="Script" path="res://Scripts/sign.gd" id="1_jlcqo"]
 [ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://Assets/Menus/Buttons/prompt_normal.png" id="2_dyxmn"]
 [ext_resource type="Texture2D" uid="uid://ddlbatddwhos3" path="res://Assets/Menus/Buttons/prompt_pressed.png" id="3_8nnkk"]
 [ext_resource type="Texture2D" uid="uid://cuv2uln14uaru" path="res://Assets/Sprites/Deco/Sign.png" id="4_jywkn"]
+[ext_resource type="Texture2D" uid="uid://skshqntgu7rb" path="res://Assets/Sprites/Deco/SignPrompted.png" id="5_7vtxh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p86l8"]
 size = Vector2(20, 16)
@@ -15,7 +16,8 @@ radius = 17.0294
 script = ExtResource("1_jlcqo")
 prompt_normal = ExtResource("2_dyxmn")
 prompt_pressed = ExtResource("3_8nnkk")
-sign = ExtResource("4_jywkn")
+normal_texture = ExtResource("4_jywkn")
+highlight_texture = ExtResource("5_7vtxh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
@@ -33,4 +35,4 @@ shape = SubResource("CircleShape2D_x0fa2")
 [node name="Prompt" type="Sprite2D" parent="."]
 z_index = 50
 position = Vector2(0, -14)
-scale = Vector2(0.267, 0.267)
+scale = Vector2(0.4, 0.4)
