@@ -1,5 +1,6 @@
 [gd_scene load_steps=30 format=4 uid="uid://djflweht2ar7u"]
 
+[ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
 [ext_resource type="Texture2D" uid="uid://mk5w7v66h636" path="res://Assets/Tiles/0x72_DungeonTilesetII_v1.7.png" id="2_og63f"]
 [ext_resource type="PackedScene" uid="uid://d0jthabkak2ey" path="res://Scenes/AnimatedDecor/Waterfountain.tscn" id="3_23lt6"]
@@ -4933,6 +4934,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_vq1fq")
 
 [node name="DungeonScene" type="Node2D"]
+script = ExtResource("1_nv8n0")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_q2ont")]
 z_index = 10
@@ -5021,53 +5023,6 @@ z_index = 3
 position = Vector2(0, -247)
 target_marker = NodePath("../../SecondRoom/Entrance_From_Level1Room1")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.648078, 0.648078, 0.648078, 1)
-
-[node name="ColorRect" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(100, 100)
-offset_left = -966.0
-offset_top = -1496.0
-offset_right = 1034.0
-offset_bottom = 504.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Chest" parent="." instance=ExtResource("8_cthv1")]
-z_index = 3
-position = Vector2(40, -168)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="CoinsHUD" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("9_5yy4f")
-
-[node name="CoinIcon" type="TextureRect" parent="CanvasLayer/CoinsHUD"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 35.0
-offset_bottom = 35.0
-texture = ExtResource("9_sqwm2")
-
-[node name="CoinLabel" type="Label" parent="CanvasLayer/CoinsHUD"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 15.0
-offset_right = 80.0
-offset_bottom = 38.0
-theme_override_fonts/font = ExtResource("11_gyowf")
-text = "0"
-
-[node name="Sign" parent="." instance=ExtResource("12_ua63u")]
-position = Vector2(56, -24)
-
 [node name="SecondRoom" type="Node" parent="."]
 
 [node name="Entrance_From_Level1Room1" type="Marker2D" parent="SecondRoom"]
@@ -5097,6 +5052,187 @@ tile_set = SubResource("TileSet_tpbd7")
 [node name="Torch8" parent="SecondRoom/Torches" instance=ExtResource("7_jncrx")]
 z_index = 4
 position = Vector2(40, -447)
+
+[node name="Torch9" parent="SecondRoom/Torches" instance=ExtResource("7_jncrx")]
+z_index = 4
+position = Vector2(-40, -447)
+
+[node name="Interactables" type="Node" parent="."]
+
+[node name="Chest" parent="Interactables" instance=ExtResource("8_cthv1")]
+z_index = 3
+position = Vector2(40, -168)
+
+[node name="Sign" parent="Interactables" instance=ExtResource("12_ua63u")]
+position = Vector2(56, -24)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.648078, 0.648078, 0.648078, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+offset_left = -966.0
+offset_top = -1496.0
+offset_right = 1034.0
+offset_bottom = 504.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="HUDLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="HUDLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OptionsButton" type="TextureButton" parent="HUDLayer/HUD"]
+unique_name_in_owner = true
+offset_left = 581.0
+offset_top = 310.0
+offset_right = 641.0
+offset_bottom = 370.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("15_xeimi")
+texture_pressed = ExtResource("16_v8v00")
+texture_hover = ExtResource("17_vvi5q")
+
+[node name="CoinsHUD" type="Control" parent="HUDLayer/HUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("9_5yy4f")
+
+[node name="CoinIcon" type="TextureRect" parent="HUDLayer/HUD/CoinsHUD"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 35.0
+offset_bottom = 35.0
+texture = ExtResource("9_sqwm2")
+
+[node name="CoinLabel" type="Label" parent="HUDLayer/HUD/CoinsHUD"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 15.0
+offset_right = 80.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("11_gyowf")
+text = "0"
+
+[node name="PauseLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" type="Control" parent="PauseLayer"]
+process_mode = 2
+visible = false
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -600.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("14_rge1b")
+
+[node name="DarkOverlay" type="ColorRect" parent="PauseLayer/PauseMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 16.0
+anchor_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.431373)
+
+[node name="MainButtons" type="Control" parent="PauseLayer/PauseMenu"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 292.0
+offset_top = 141.0
+offset_right = 332.0
+offset_bottom = 181.0
+
+[node name="ResumeButton" type="TextureButton" parent="PauseLayer/PauseMenu/MainButtons"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -50.0
+offset_right = 47.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("15_5cpfw")
+texture_pressed = ExtResource("16_k452r")
+texture_hover = ExtResource("17_fkcgn")
+
+[node name="VolumeButton" type="TextureButton" parent="PauseLayer/PauseMenu/MainButtons"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = 21.0
+offset_right = 47.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("19_0145e")
+
+[node name="MainMenuButton" type="TextureButton" parent="PauseLayer/PauseMenu/MainButtons"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -15.0
+offset_right = 47.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("18_ybupp")
+texture_pressed = ExtResource("19_bc4cl")
+texture_hover = ExtResource("20_nufx6")
+
+[node name="QuitButton" type="TextureButton" parent="PauseLayer/PauseMenu/MainButtons"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = 57.0
+offset_right = 46.0
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("21_djoam")
+texture_pressed = ExtResource("22_jeq7h")
+texture_hover = ExtResource("23_kvolx")
+
+[node name="VolumePanel" type="Control" parent="PauseLayer/PauseMenu"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_left = 294.0
+offset_top = 204.0
+offset_right = 334.0
+offset_bottom = 244.0
 
 [node name="Torch9" parent="SecondRoom/Torches" instance=ExtResource("7_jncrx")]
 z_index = 4

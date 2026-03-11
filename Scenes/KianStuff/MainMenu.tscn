@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://42xscrpgkgsm"]
+[gd_scene load_steps=17 format=3 uid="uid://42xscrpgkgsm"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_p454h"]
 [ext_resource type="Texture2D" uid="uid://dw05rjusxavno" path="res://Assets/Menus/Buttons/Start.png" id="3_ddd1l"]
@@ -12,6 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://m0r3xwjeece2" path="res://Assets/Menus/Buttons/InfoHover.png" id="10_6pmid"]
 [ext_resource type="PackedScene" uid="uid://bcxdepmfixh78" path="res://Scenes/KianStuff/MainMenuBg.tscn" id="11_p64d1"]
 [ext_resource type="Texture2D" uid="uid://tk0ypi83ofo1" path="res://Assets/Menus/Card/Title.png" id="12_hsg7s"]
+[ext_resource type="Texture2D" uid="uid://mstmpv6lyhg1" path="res://Assets/Menus/Buttons/Options.png" id="13_h4f6l"]
+[ext_resource type="Texture2D" uid="uid://bjxevov3ppfwb" path="res://Assets/Menus/Buttons/OptionsPressed.png" id="14_3ke8p"]
+[ext_resource type="Texture2D" uid="uid://by4q8e00gcw6e" path="res://Assets/Menus/Buttons/OptionsHover.png" id="15_hcecd"]
 
 [sub_resource type="Theme" id="Theme_a3gd8"]
 Button/icons/icon = null
@@ -96,3 +99,21 @@ offset_right = 142.0
 offset_bottom = 148.0
 grow_horizontal = 2
 texture = ExtResource("12_hsg7s")
+
+[node name="Options" type="TextureButton" parent="UILayer"]
+z_index = 10
+custom_minimum_size = Vector2(60, 60)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 252.0
+offset_top = 113.0
+offset_right = 312.0
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("13_h4f6l")
+texture_pressed = ExtResource("14_3ke8p")
+texture_hover = ExtResource("15_hcecd")

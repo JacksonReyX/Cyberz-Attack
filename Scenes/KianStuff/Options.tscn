@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3v7w4uuo5kch"]
+
+[ext_resource type="Script" path="res://Scripts/options.gd" id="1_ff8yf"]
+[ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://Assets/Menus/Buttons/Back.png" id="2_l403d"]
+[ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://Assets/Menus/Buttons/BackPressed.png" id="3_n1y8j"]
+[ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://Assets/Menus/Buttons/BackHover.png" id="4_4ba1w"]
+
+[node name="Options" type="Node2D"]
+script = ExtResource("1_ff8yf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(2000, 2000)
+offset_left = -390.0
+offset_top = -485.0
+offset_right = 1610.0
+offset_bottom = 1515.0
+color = Color(0.0026, 0.0747933, 0.13, 1)
+
+[node name="BackButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(30, 30)
+offset_left = 27.0
+offset_top = 18.0
+offset_right = 57.0
+offset_bottom = 48.0
+texture_normal = ExtResource("2_l403d")
+texture_pressed = ExtResource("3_n1y8j")
+texture_hover = ExtResource("4_4ba1w")
