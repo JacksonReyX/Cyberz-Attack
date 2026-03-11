@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=48 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://Assets/Menus/Buttons/Back.png" id="26_f4fvt"]
 [ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://Assets/Menus/Buttons/BackPressed.png" id="27_lifpq"]
 [ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://Assets/Menus/Buttons/BackHover.png" id="28_ild77"]
+[ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://Scenes/JacksonStuff/FisherEnemy.tscn" id="32_p1g1e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
 texture = ExtResource("2_og63f")
@@ -5262,3 +5263,8 @@ offset_bottom = -94.0
 texture_normal = ExtResource("26_f4fvt")
 texture_pressed = ExtResource("27_lifpq")
 texture_hover = ExtResource("28_ild77")
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="FisherEnemy" parent="Enemies" instance=ExtResource("32_p1g1e")]
+position = Vector2(-2, -458)
