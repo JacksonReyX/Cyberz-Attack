@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=30 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
@@ -14,23 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b4207duut6b75" path="res://Assets/Sprites/Deco/Coin.png" id="9_sqwm2"]
 [ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="11_gyowf"]
 [ext_resource type="PackedScene" uid="uid://dh4me51kb1tpd" path="res://Scenes/KianStuff/Sign.tscn" id="12_ua63u"]
-[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="14_rge1b"]
-[ext_resource type="Texture2D" uid="uid://c8e4bwkgo8pa3" path="res://Assets/Menus/Buttons/Continue.png" id="15_5cpfw"]
-[ext_resource type="Texture2D" uid="uid://mstmpv6lyhg1" path="res://Assets/Menus/Buttons/Options.png" id="15_xeimi"]
-[ext_resource type="Texture2D" uid="uid://dk07nioprjt4a" path="res://Assets/Menus/Buttons/ContinuePressed.png" id="16_k452r"]
-[ext_resource type="Texture2D" uid="uid://bjxevov3ppfwb" path="res://Assets/Menus/Buttons/OptionsPressed.png" id="16_v8v00"]
-[ext_resource type="Texture2D" uid="uid://brvc34deasnka" path="res://Assets/Menus/Buttons/ContinueHover.png" id="17_fkcgn"]
-[ext_resource type="Texture2D" uid="uid://by4q8e00gcw6e" path="res://Assets/Menus/Buttons/OptionsHover.png" id="17_vvi5q"]
-[ext_resource type="Texture2D" uid="uid://coidtyx1e8uxj" path="res://Assets/Menus/Buttons/MainMenu.png" id="18_ybupp"]
-[ext_resource type="Texture2D" uid="uid://bmp03hkp7jyte" path="res://Assets/Menus/Buttons/Volume.png" id="19_0145e"]
-[ext_resource type="Texture2D" uid="uid://dq44bx5eb2kee" path="res://Assets/Menus/Buttons/MainMenuPressed.png" id="19_bc4cl"]
-[ext_resource type="Texture2D" uid="uid://csftv15b8vsmr" path="res://Assets/Menus/Buttons/MainMenuHover.png" id="20_nufx6"]
-[ext_resource type="Texture2D" uid="uid://jgn0vxfsnhfw" path="res://Assets/Menus/Buttons/Quit2.png" id="21_djoam"]
-[ext_resource type="Texture2D" uid="uid://cfr6p50fq7ow6" path="res://Assets/Menus/Buttons/QuitPressed2.png" id="22_jeq7h"]
-[ext_resource type="Texture2D" uid="uid://d25343ltfnoq2" path="res://Assets/Menus/Buttons/QuitHover2.png" id="23_kvolx"]
-[ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://Assets/Menus/Buttons/Back.png" id="26_f4fvt"]
-[ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://Assets/Menus/Buttons/BackPressed.png" id="27_lifpq"]
-[ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://Assets/Menus/Buttons/BackHover.png" id="28_ild77"]
+[ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://Scenes/JacksonStuff/FisherEnemy.tscn" id="14_otloe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
 texture = ExtResource("2_og63f")
@@ -5252,13 +5236,9 @@ offset_top = 204.0
 offset_right = 334.0
 offset_bottom = 244.0
 
-[node name="BackButton" type="TextureButton" parent="PauseLayer/PauseMenu/VolumePanel"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = -64.0
-offset_top = -124.0
-offset_right = -34.0
-offset_bottom = -94.0
-texture_normal = ExtResource("26_f4fvt")
-texture_pressed = ExtResource("27_lifpq")
-texture_hover = ExtResource("28_ild77")
+[node name="Torch9" parent="SecondRoom/Torches" instance=ExtResource("7_jncrx")]
+z_index = 4
+position = Vector2(-40, -447)
+
+[node name="FisherEnemy" parent="SecondRoom" instance=ExtResource("14_otloe")]
+position = Vector2(3, -458)
