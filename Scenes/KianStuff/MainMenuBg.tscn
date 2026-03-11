@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=4 uid="uid://bcxdepmfixh78"]
+[gd_scene load_steps=16 format=4 uid="uid://bcxdepmfixh78"]
 
 [ext_resource type="Texture2D" uid="uid://mk5w7v66h636" path="res://Assets/Tiles/0x72_DungeonTilesetII_v1.7.png" id="2_qgum5"]
 [ext_resource type="Texture2D" uid="uid://ks6cj2pitvpi" path="res://Assets/Tiles/stairs.png" id="3_bnuyu"]
 [ext_resource type="Texture2D" uid="uid://c0eu0yoqno1qv" path="res://Assets/Tiles/dungeontiles-extended v1.1/dungeontileset-extended.png" id="4_2rahp"]
 [ext_resource type="PackedScene" uid="uid://c2gxmtvknvo5p" path="res://Scenes/AnimatedDecor/Lavafountain.tscn" id="5_humoe"]
 [ext_resource type="PackedScene" uid="uid://d0jthabkak2ey" path="res://Scenes/AnimatedDecor/Waterfountain.tscn" id="6_kmalo"]
+[ext_resource type="PackedScene" uid="uid://cckpbigb8883f" path="res://Scenes/KianStuff/Sfx.tscn" id="7_6exik"]
 [ext_resource type="PackedScene" uid="uid://bluviblfhyg08" path="res://Scenes/AnimatedDecor/Torch.tscn" id="7_6jc23"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
@@ -2754,3 +2755,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="Sfx" parent="." instance=ExtResource("7_6exik")]
+position = Vector2(-37, -32)
