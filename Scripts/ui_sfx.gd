@@ -2,22 +2,22 @@ extends Node
 
 @export var click_stream: AudioStream
 @export var hover_stream: AudioStream
+@export var slider_tick_stream: AudioStream
 
-@export var use_sfx_bus := true
-@export var sfx_bus_name := "SFX"
+@export var ui_bus_name := "UI"
 
 var _player: AudioStreamPlayer
 
 func _ready() -> void:
 	_player = AudioStreamPlayer.new()
 	add_child(_player)
-	_player.bus = "UI"
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("UI"), -4.0)
 
-	if use_sfx_bus and AudioServer.get_bus_index(sfx_bus_name) != -1:
-		_player.bus = sfx_bus_name
+	if AudioServer.get_bus_index(ui_bus_name) != -1:
+		_player.bus = ui_bus_name
 	else:
 		_player.bus = "Master"
+
+	SettingsState.apply_all_buses()
 
 func play_click() -> void:
 	if click_stream == null:
@@ -43,10 +43,14 @@ func wire_buttons(root: Node) -> void:
 			if not b.pressed.is_connected(play_click):
 				b.pressed.connect(play_click)
 
-			# Hover with mouse
 			if not b.mouse_entered.is_connected(play_hover):
 				b.mouse_entered.connect(play_hover)
 
-			# Optional: hover when keyboard/controller focuses the button
 			if not b.focus_entered.is_connected(play_hover):
 				b.focus_entered.connect(play_hover)
+				
+func play_slider_tick() -> void:
+	if slider_tick_stream == null:
+		return
+	_player.stream = slider_tick_stream
+	_player.play()
