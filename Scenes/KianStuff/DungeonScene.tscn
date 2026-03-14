@@ -5101,10 +5101,10 @@ offset_bottom = 40.0
 [node name="KeyIcon" type="TextureRect" parent="CanvasLayer/KeyHUD" unique_id=354779359]
 visible = false
 layout_mode = 0
-offset_left = 3.9999998
-offset_top = 48.0
-offset_right = 174.0
-offset_bottom = 218.0
+offset_left = 3.0000002
+offset_top = 46.0
+offset_right = 173.0
+offset_bottom = 216.0
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("15_iqwnn")
 
@@ -5118,18 +5118,18 @@ script = ExtResource("16_nby2y")
 [node name="GreenHealthPotion" type="TextureRect" parent="CanvasLayer/HealingItemsHUD" unique_id=2011641579]
 visible = false
 layout_mode = 0
-offset_left = 579.0
+offset_left = 587.0
 offset_top = 28.0
-offset_right = 611.0
+offset_right = 619.0
 offset_bottom = 59.0
 texture = ExtResource("16_2yqyp")
 
 [node name="GreenHealthPotionLabel" type="Label" parent="CanvasLayer/HealingItemsHUD" unique_id=697114043]
 visible = false
 layout_mode = 0
-offset_left = 610.0
+offset_left = 616.0
 offset_top = 37.0
-offset_right = 626.0
+offset_right = 632.0
 offset_bottom = 72.0
 theme_override_fonts/font = ExtResource("11_gyowf")
 text = "0
@@ -5192,4 +5192,4 @@ script = ExtResource("16_glcv4")
 [node name="Keys" type="Node" parent="." unique_id=1687451706]
 
 [node name="Key" parent="Keys" unique_id=1250183173 instance=ExtResource("19_eabik")]
-position = Vector2(-87, 90)
+position = Vector2(-263, -148)

@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://s0o5ne8dhlm7"]
+
+[ext_resource type="Texture2D" uid="uid://dtmo876xe2hpm" path="res://assets/Menus/Card/CharCustCard.png" id="1_b0wkj"]
+[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_grguu"]
+[ext_resource type="Texture2D" uid="uid://b4207duut6b75" path="res://assets/Sprites/Deco/Coin.png" id="3_w4588"]
+[ext_resource type="Texture2D" uid="uid://cw0jy87nbqj14" path="res://assets/PlayerModels/Wizard.png" id="4_lo1pv"]
+[ext_resource type="Texture2D" uid="uid://c7uhksxdlo5f0" path="res://assets/PlayerModels/Knight2.png" id="5_yrxvl"]
+[ext_resource type="Texture2D" uid="uid://b6tko3r8q07m4" path="res://assets/PlayerModels/Witch.png" id="6_0ncwt"]
+
+[node name="ItemShop" type="Node2D" unique_id=1736807062]
+position = Vector2(1, -1)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2061967681]
+position = Vector2(319.99997, 172)
+scale = Vector2(0.56241864, 0.4784546)
+texture = ExtResource("1_b0wkj")
+
+[node name="ShopTitle" type="Label" parent="." unique_id=377341774]
+offset_left = 226.0
+offset_top = 57.0
+offset_right = 408.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_fonts/font = ExtResource("2_grguu")
+theme_override_font_sizes/font_size = 22
+text = "Item Shop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SkinSectionTitle" type="Label" parent="." unique_id=1756148497]
+visible = false
+offset_left = 210.0
+offset_top = 112.0
+offset_right = 426.0
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_fonts/font = ExtResource("2_grguu")
+theme_override_font_sizes/font_size = 16
+text = "Available Skins
+"
+
+[node name="SkinContainer" type="GridContainer" parent="." unique_id=934777683]
+offset_left = 102.0
+offset_top = 134.0
+offset_right = 541.0
+offset_bottom = 240.0
+columns = 3
+
+[node name="Skin1" type="Node" parent="SkinContainer" unique_id=714933304]
+
+[node name="ColorRect" type="ColorRect" parent="SkinContainer/Skin1" unique_id=1950920947]
+offset_left = 122.0
+offset_top = 132.0
+offset_right = 217.0
+offset_bottom = 238.0
+color = Color(0.50980395, 0.4509804, 0.40392157, 1)
+
+[node name="Button" type="Button" parent="SkinContainer/Skin1" unique_id=2123091017]
+offset_left = 291.0
+offset_top = 243.0
+offset_right = 357.0
+offset_bottom = 274.0
+theme_override_fonts/font = ExtResource("2_grguu")
+text = "200
+"
+icon = ExtResource("3_w4588")
+
+[node name="WizardSkin" type="Sprite2D" parent="SkinContainer/Skin1" unique_id=925979819]
+position = Vector2(172, 165.00002)
+scale = Vector2(5.1250005, 5.083334)
+texture = ExtResource("4_lo1pv")
+
+[node name="Label" type="Label" parent="SkinContainer/Skin1" unique_id=600918283]
+offset_left = 132.0
+offset_top = 116.0
+offset_right = 208.0
+offset_bottom = 132.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_fonts/font = ExtResource("2_grguu")
+theme_override_font_sizes/font_size = 13
+text = "Wizard"
+
+[node name="Skin2" type="Node" parent="SkinContainer" unique_id=302315620]
+
+[node name="ColorRect" type="ColorRect" parent="SkinContainer/Skin2" unique_id=699914410]
+offset_left = 280.0
+offset_top = 133.0
+offset_right = 372.0
+offset_bottom = 238.0
+color = Color(0.50980395, 0.4509804, 0.40392157, 1)
+
+[node name="Button" type="Button" parent="SkinContainer/Skin2" unique_id=1657820282]
+anchors_preset = -1
+anchor_left = 0.066
+anchor_top = 0.20500001
+anchor_right = 0.066
+anchor_bottom = 0.20500001
+offset_left = 399.76
+offset_top = 169.2
+offset_right = 465.76
+offset_bottom = 200.2
+theme_override_fonts/font = ExtResource("2_grguu")
+text = "200
+"
+icon = ExtResource("3_w4588")
+
+[node name="KnightSkin" type="Sprite2D" parent="SkinContainer/Skin2" unique_id=1342640461]
+position = Vector2(331.00003, 167.00002)
+scale = Vector2(4.968752, 4.9583335)
+texture = ExtResource("5_yrxvl")
+
+[node name="Label" type="Label" parent="SkinContainer/Skin2" unique_id=292730846]
+offset_left = 289.0
+offset_top = 116.0
+offset_right = 362.0
+offset_bottom = 132.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_fonts/font = ExtResource("2_grguu")
+theme_override_font_sizes/font_size = 13
+text = "Knight"
+
+[node name="Skin3" type="Node" parent="SkinContainer" unique_id=1532972746]
+
+[node name="ColorRect" type="ColorRect" parent="SkinContainer/Skin3" unique_id=394977591]
+offset_left = 429.0
+offset_top = 134.0
+offset_right = 520.0
+offset_bottom = 237.0
+color = Color(0.50980395, 0.4509804, 0.40392157, 1)
+
+[node name="Button" type="Button" parent="SkinContainer/Skin3" unique_id=1458830324]
+anchors_preset = -1
+anchor_right = 0.012
+anchor_bottom = 0.035
+offset_left = 137.0
+offset_top = 243.0
+offset_right = 195.32
+offset_bottom = 261.4
+theme_override_fonts/font = ExtResource("2_grguu")
+text = "200"
+icon = ExtResource("3_w4588")
+
+[node name="WitchSkin" type="Sprite2D" parent="SkinContainer/Skin3" unique_id=1561666409]
+position = Vector2(480, 184)
+scale = Vector2(4.656249, 3.5390635)
+texture = ExtResource("6_0ncwt")
+
+[node name="Label" type="Label" parent="SkinContainer/Skin3" unique_id=1084802137]
+offset_left = 445.0
+offset_top = 118.0
+offset_right = 507.0
+offset_bottom = 141.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_fonts/font = ExtResource("2_grguu")
+theme_override_font_sizes/font_size = 13
+text = "Witch"
