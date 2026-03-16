@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bnxkvrcvpturl"]
 
-[ext_resource type="Script" uid="uid://18vem5i1brvi" path="res://scripts/sign.gd" id="1_bwx44"]
+[ext_resource type="Script" uid="uid://18vem5i1brvi" path="res://Scripts/sign.gd" id="1_bwx44"]
 [ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://assets/Menus/Buttons/prompt_normal.png" id="2_t85ks"]
 [ext_resource type="Texture2D" uid="uid://bsx5j4pw0cdup" path="res://assets/Sprites/Deco/LockedDoorSign (2).png" id="3_pmyta"]
 [ext_resource type="Texture2D" uid="uid://cuv2uln14uaru" path="res://assets/Sprites/Deco/Sign.png" id="4_ixedx"]

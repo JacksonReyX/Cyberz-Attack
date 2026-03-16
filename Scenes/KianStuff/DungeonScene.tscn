@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bluviblfhyg08" path="res://scenes/AnimatedDecor/Torch.tscn" id="7_jncrx"]
 [ext_resource type="PackedScene" uid="uid://de1fym16t3g5d" path="res://scenes/KianStuff/DoorTrigger.tscn" id="8_5730i"]
 [ext_resource type="PackedScene" uid="uid://cg0a3i8qru1ei" path="res://scenes/KianStuff/Chest.tscn" id="8_cthv1"]
-[ext_resource type="Script" uid="uid://dcgljbfxyjnl8" path="res://scripts/coins_hud.gd" id="9_5yy4f"]
+[ext_resource type="Script" uid="uid://dcgljbfxyjnl8" path="res://Scripts/coins_hud.gd" id="9_5yy4f"]
 [ext_resource type="Texture2D" uid="uid://b4207duut6b75" path="res://assets/Sprites/Deco/Coin.png" id="9_sqwm2"]
 [ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="11_gyowf"]
 [ext_resource type="PackedScene" uid="uid://dh4me51kb1tpd" path="res://scenes/KianStuff/Sign.tscn" id="12_ua63u"]
@@ -17,10 +17,11 @@
 [ext_resource type="Texture2D" uid="uid://bfk0mypmc630k" path="res://assets/HealthBar/empty health bar.png" id="13_163v5"]
 [ext_resource type="Texture2D" uid="uid://do01ysqa25flm" path="res://assets/HealthBar/health bar.png" id="14_eabik"]
 [ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://scenes/JacksonStuff/FisherEnemy.tscn" id="14_otloe"]
+[ext_resource type="Script" uid="uid://cayu88gtve3d7" path="res://scripts/key_hud.gd" id="15_e3jcb"]
 [ext_resource type="Texture2D" uid="uid://rcmlqai41i6j" path="res://assets/Sprites/Deco/Golden_Key.png" id="15_iqwnn"]
 [ext_resource type="Texture2D" uid="uid://dwlmffvq33avb" path="res://assets/Sprites/Deco/healthpotion.png" id="16_2yqyp"]
-[ext_resource type="Script" uid="uid://em0yi2wsdwsw" path="res://scripts/coin_manager.gd" id="16_glcv4"]
-[ext_resource type="Script" uid="uid://qenpxbuiywxf" path="res://scripts/healing_items_hud.gd" id="16_nby2y"]
+[ext_resource type="Script" uid="uid://em0yi2wsdwsw" path="res://Scripts/coin_manager.gd" id="16_glcv4"]
+[ext_resource type="Script" uid="uid://qenpxbuiywxf" path="res://Scripts/healing_items_hud.gd" id="16_nby2y"]
 [ext_resource type="PackedScene" uid="uid://wh66v8lxv0la" path="res://scenes/sabella/key.tscn" id="19_eabik"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
@@ -5097,6 +5098,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("15_e3jcb")
 
 [node name="KeyIcon" type="TextureRect" parent="CanvasLayer/KeyHUD" unique_id=354779359]
 visible = false
@@ -5107,6 +5109,17 @@ offset_right = 173.0
 offset_bottom = 216.0
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("15_iqwnn")
+
+[node name="FindLockDoorLabel" type="Label" parent="CanvasLayer/KeyHUD" unique_id=224084354]
+visible = false
+layout_mode = 0
+offset_left = 211.0
+offset_top = 46.0
+offset_right = 433.0
+offset_bottom = 69.0
+theme_override_fonts/font = ExtResource("11_gyowf")
+theme_override_font_sizes/font_size = 7
+text = "Find the locked door to use the key!"
 
 [node name="HealingItemsHUD" type="Control" parent="CanvasLayer" unique_id=378066025]
 layout_mode = 3

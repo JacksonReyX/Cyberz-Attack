@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://of2x4eype5rj"]
 
 [ext_resource type="Texture2D" uid="uid://dlmk0crquvh0k" path="res://assets/Sprites/Deco/door.png" id="1_1idtp"]
-[ext_resource type="Script" uid="uid://bslpm4nc3idba" path="res://scripts/locked_door.gd" id="1_fcbhr"]
+[ext_resource type="Script" uid="uid://bslpm4nc3idba" path="res://Scripts/locked_door.gd" id="1_fcbhr"]
 [ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://assets/Menus/Buttons/prompt_normal.png" id="3_3wi8c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fcbhr"]

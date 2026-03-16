@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://wh66v8lxv0la"]
 
-[ext_resource type="Script" uid="uid://bglcoqi6paqeg" path="res://scripts/key.gd" id="1_fttkb"]
+[ext_resource type="Script" uid="uid://bglcoqi6paqeg" path="res://Scripts/key.gd" id="1_fttkb"]
 [ext_resource type="Texture2D" uid="uid://ia6ndm6t21wn" path="res://assets/Sprites/Deco/key_32x32_24f.png" id="1_yk2u2"]
 [ext_resource type="AudioStream" uid="uid://d0nb8v2ip7t6h" path="res://assets/sounds/Key.wav" id="3_wy8tx"]
 

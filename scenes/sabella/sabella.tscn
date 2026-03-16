@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://de1fym16t3g5d" path="res://scenes/KianStuff/DoorTrigger.tscn" id="4_y8jtg"]
 [ext_resource type="PackedScene" uid="uid://ce88u41h83qm" path="res://scenes/sabella/coin.tscn" id="5_aixyj"]
 [ext_resource type="PackedScene" uid="uid://wh66v8lxv0la" path="res://scenes/sabella/key.tscn" id="6_wwoe0"]
-[ext_resource type="Script" uid="uid://cdoemn3dawtbn" path="res://scripts/game_manager.gd" id="7_4opun"]
+[ext_resource type="Script" uid="uid://cdoemn3dawtbn" path="res://Scripts/game_manager.gd" id="7_4opun"]
 [ext_resource type="Texture2D" uid="uid://bfk0mypmc630k" path="res://assets/HealthBar/empty health bar.png" id="8_03fhp"]
 [ext_resource type="Texture2D" uid="uid://do01ysqa25flm" path="res://assets/HealthBar/health bar.png" id="9_eoh70"]
 [ext_resource type="Texture2D" uid="uid://ba8vey2n2eae4" path="res://assets/images/coin_image.png" id="10_3acdp"]
