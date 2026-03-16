@@ -8,7 +8,7 @@ extends Node
 @export var sfx_bus_name := "SFX"
 
 func _ready() -> void:
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), -2.0)
+	SettingsState.apply_all_buses()
 
 func play(stream: AudioStream) -> void:
 	if stream == null:

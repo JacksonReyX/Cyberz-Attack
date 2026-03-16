@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdk31xwyh8ht8"]
+[gd_scene load_steps=5 format=3 uid="uid://cdk31xwyh8ht8"]
 
 [ext_resource type="Script" path="res://Scripts/ui_sfx.gd" id="1_ken47"]
 [ext_resource type="AudioStream" uid="uid://ckcrubr1ksnom" path="res://Assets/Audio/UI/UIClick_BLEEOOP_Key_Chonk.ogg" id="2_llugx"]
-[ext_resource type="AudioStream" uid="uid://dpsot1y8fbixx" path="res://Assets/Audio/UI/UIClick_BLEEOOP_Rubber Duck Clicks 6.ogg" id="3_yreu8"]
+[ext_resource type="AudioStream" uid="uid://dl8ucwfha7uyh" path="res://Assets/Audio/UI/UIClick_BLEEOOP_Radio_Button.ogg" id="3_uuq3t"]
+[ext_resource type="AudioStream" uid="uid://d3na8jl7t85fu" path="res://Assets/Audio/UI/UIClick_BLEEOOP_Keypad_Click.ogg" id="4_0eh06"]
 
 [node name="UiSfx" type="Node"]
 script = ExtResource("1_ken47")
 click_stream = ExtResource("2_llugx")
-hover_stream = ExtResource("3_yreu8")
+hover_stream = ExtResource("3_uuq3t")
+slider_tick_stream = ExtResource("4_0eh06")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 bus = &"UI"

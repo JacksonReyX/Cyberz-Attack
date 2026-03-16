@@ -30,6 +30,7 @@ PlayerCustomization="*res://Scripts/player_customization.gd"
 UISfx="*res://Scenes/KianStuff/UISfx.tscn"
 Sfx="*res://Scenes/KianStuff/Sfx.tscn"
 GameState="*res://Scripts/game_state.gd"
+SettingsState="*res://Scenes/KianStuff/SettingsState.tscn"
 
 [display]
 
