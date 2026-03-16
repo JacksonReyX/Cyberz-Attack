@@ -1,8 +1,10 @@
 extends Area2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var key_icon: TextureRect = $"../../CanvasLayer/KeyHUD/KeyIcon"
-@onready var key_hud: Control = $"../../CanvasLayer/KeyHUD"
+
+@onready var key_hud: Control = %KeyHUD
+@onready var key_icon: TextureRect = %KeyIcon
+
 
 func _on_body_entered(body: Node2D) -> void:
 	print("key found")

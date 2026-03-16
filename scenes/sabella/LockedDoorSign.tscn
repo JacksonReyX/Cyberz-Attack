@@ -1,9 +1,8 @@
-[gd_scene format=3 uid="uid://bnxkvrcvpturl"]
+[gd_scene load_steps=6 format=3 uid="uid://bnxkvrcvpturl"]
 
-[ext_resource type="Script" uid="uid://18vem5i1brvi" path="res://scripts/sign.gd" id="1_bwx44"]
-[ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://assets/Menus/Buttons/prompt_normal.png" id="2_t85ks"]
-[ext_resource type="Texture2D" uid="uid://bsx5j4pw0cdup" path="res://assets/Sprites/Deco/LockedDoorSign (2).png" id="3_pmyta"]
-[ext_resource type="Texture2D" uid="uid://cuv2uln14uaru" path="res://assets/Sprites/Deco/Sign.png" id="4_ixedx"]
+[ext_resource type="Script" path="res://scripts/sign.gd" id="1_bwx44"]
+[ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://Assets/Menus/Buttons/prompt_normal.png" id="2_t85ks"]
+[ext_resource type="Texture2D" uid="uid://bsx5j4pw0cdup" path="res://Assets/Sprites/Deco/LockedDoorSign (2).png" id="3_pmyta"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p86l8"]
 size = Vector2(20, 16)
@@ -11,26 +10,25 @@ size = Vector2(20, 16)
 [sub_resource type="CircleShape2D" id="CircleShape2D_x0fa2"]
 radius = 17.0
 
-[node name="Sign" type="Node2D" unique_id=2028015416]
+[node name="Sign" type="Node2D"]
 script = ExtResource("1_bwx44")
 prompt_normal = ExtResource("2_t85ks")
 prompt_pressed = ExtResource("3_pmyta")
-sign = ExtResource("4_ixedx")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=93184925]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 
-[node name="Solid" type="StaticBody2D" parent="." unique_id=1736271031]
+[node name="Solid" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Solid" unique_id=1652453153]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Solid"]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_p86l8")
 
-[node name="InteractArea" type="Area2D" parent="." unique_id=1043273734]
+[node name="InteractArea" type="Area2D" parent="."]
 
-[node name="DetectionRange" type="CollisionShape2D" parent="InteractArea" unique_id=2000029963]
+[node name="DetectionRange" type="CollisionShape2D" parent="InteractArea"]
 shape = SubResource("CircleShape2D_x0fa2")
 
-[node name="Prompt" type="Sprite2D" parent="." unique_id=1593317183]
+[node name="Prompt" type="Sprite2D" parent="."]
 z_index = 50
 position = Vector2(0, -11)
 scale = Vector2(0.267, 0.267)

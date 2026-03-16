@@ -3,23 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7uhksxdlo5f0"
-path="res://.godot/imported/Knight2.png-d69f947f16f4df184940d9729a21dc8b.ctex"
+path="res://.godot/imported/Knight2.png-ab5ba2653c424c2de25aba56dd163c70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PlayerModels/Knight2.png"
-dest_files=["res://.godot/imported/Knight2.png-d69f947f16f4df184940d9729a21dc8b.ctex"]
+source_file="res://Assets/PlayerModels/Knight2.png"
+dest_files=["res://.godot/imported/Knight2.png-ab5ba2653c424c2de25aba56dd163c70.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
-compress/uastc_level=0
-compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -27,10 +25,6 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/channel_remap/red=0
-process/channel_remap/green=1
-process/channel_remap/blue=2
-process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
