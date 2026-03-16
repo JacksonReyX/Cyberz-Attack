@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://s0o5ne8dhlm7"]
 
 [ext_resource type="Texture2D" uid="uid://dtmo876xe2hpm" path="res://assets/Menus/Card/CharCustCard.png" id="1_b0wkj"]
+[ext_resource type="Script" uid="uid://bun20w5hd0ew" path="res://scripts/item_shop.gd" id="1_yrxvl"]
 [ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_grguu"]
 [ext_resource type="Texture2D" uid="uid://b4207duut6b75" path="res://assets/Sprites/Deco/Coin.png" id="3_w4588"]
 [ext_resource type="Texture2D" uid="uid://cw0jy87nbqj14" path="res://assets/PlayerModels/Wizard.png" id="4_lo1pv"]
@@ -9,6 +10,7 @@
 
 [node name="ItemShop" type="Node2D" unique_id=1736807062]
 position = Vector2(1, -1)
+script = ExtResource("1_yrxvl")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=2061967681]
 position = Vector2(319.99997, 172)

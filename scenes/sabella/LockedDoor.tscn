@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://of2x4eype5rj"]
+
+[ext_resource type="Texture2D" uid="uid://dlmk0crquvh0k" path="res://assets/Sprites/Deco/door.png" id="1_1idtp"]
+[ext_resource type="Script" uid="uid://bslpm4nc3idba" path="res://scripts/locked_door.gd" id="1_fcbhr"]
+[ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://assets/Menus/Buttons/prompt_normal.png" id="3_3wi8c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcbhr"]
+atlas = ExtResource("1_1idtp")
+region = Rect2(0, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wi8c"]
+atlas = ExtResource("1_1idtp")
+region = Rect2(0, 32, 24, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cnro8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcbhr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wi8c")
+}],
+"loop": false,
+"name": &"open",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c24nt"]
+size = Vector2(16, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wi8c"]
+size = Vector2(13, 7)
+
+[node name="LockedDoor" type="Area2D" unique_id=2042160781]
+script = ExtResource("1_fcbhr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2078801968]
+position = Vector2(20, 10)
+scale = Vector2(0.75000006, 0.56249994)
+sprite_frames = SubResource("SpriteFrames_cnro8")
+animation = &"open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1477458360]
+position = Vector2(20, 10)
+shape = SubResource("RectangleShape2D_c24nt")
+
+[node name="buttonPrompt" type="Sprite2D" parent="." unique_id=1206219750]
+visible = false
+position = Vector2(20, -3)
+scale = Vector2(0.24583334, 0.2416667)
+texture = ExtResource("3_3wi8c")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1803997662]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=186596438]
+position = Vector2(20.5, 13.5)
+shape = SubResource("RectangleShape2D_3wi8c")
