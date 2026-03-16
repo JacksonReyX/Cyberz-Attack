@@ -4,7 +4,6 @@ extends Node2D
 @export var prompt_pressed: Texture2D
 
 @export var chest_closed: Texture2D
-@export var chest_closed_highlight: Texture2D
 @export var chest_mid: Texture2D
 @export var chest_open: Texture2D
 
@@ -37,13 +36,12 @@ func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("player") and not opened:
 		player_in_range = true
 		prompt.visible = true
-		chest_sprite.texture = chest_closed_highlight
+		prompt.texture = prompt_normal
 
 func _on_body_exited(body: Node) -> void:
-	if body.is_in_group("player") and not opened:
+	if body.is_in_group("player"):
 		player_in_range = false
 		prompt.visible = false
-		chest_sprite.texture = chest_closed
 
 func interact() -> void:
 	if opened or opening:
@@ -54,7 +52,9 @@ func interact() -> void:
 	Sfx.chest()
 
 	await _open_chest_animation()
-	GameState.add_coins(20)
+	
+	GameState.coins += 20
+	GameState.health_potions += 1
 
 	opening = false
 	opened = true

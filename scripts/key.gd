@@ -1,7 +1,13 @@
 extends Area2D
 
-@onready var key_manager: Node = %KeyManager
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var key_icon: TextureRect = $"../../CanvasLayer/KeyHUD/KeyIcon"
+@onready var key_hud: Control = $"../../CanvasLayer/KeyHUD"
 
 func _on_body_entered(body: Node2D) -> void:
-	key_manager.key_found()
-	queue_free()
+	print("key found")
+	GameState.keys += 1
+	animation_player.play("pickup")
+	key_icon.visible = true
+	
+	key_hud.show_key_message()

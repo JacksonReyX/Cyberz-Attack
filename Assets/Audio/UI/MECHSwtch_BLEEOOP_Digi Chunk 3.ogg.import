@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://7uljg3s6bsi1"
-path="res://.godot/imported/MECHSwtch_BLEEOOP_Digi Chunk 3.ogg-e79dbc4ced772294052e4225941c4160.oggvorbisstr"
+path="res://.godot/imported/MECHSwtch_BLEEOOP_Digi Chunk 3.ogg-36d2fead24c049dc73f38a082aa16d60.oggvorbisstr"
 
 [deps]
 
-source_file="res://Assets/Audio/UI/MECHSwtch_BLEEOOP_Digi Chunk 3.ogg"
-dest_files=["res://.godot/imported/MECHSwtch_BLEEOOP_Digi Chunk 3.ogg-e79dbc4ced772294052e4225941c4160.oggvorbisstr"]
+source_file="res://assets/Audio/UI/MECHSwtch_BLEEOOP_Digi Chunk 3.ogg"
+dest_files=["res://.godot/imported/MECHSwtch_BLEEOOP_Digi Chunk 3.ogg-36d2fead24c049dc73f38a082aa16d60.oggvorbisstr"]
 
 [params]
 

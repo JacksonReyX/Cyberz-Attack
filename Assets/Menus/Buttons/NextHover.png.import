@@ -3,21 +3,23 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dt5gjr2fpi3mf"
-path="res://.godot/imported/NextHover.png-9e32458c83e6d8522129a13ba413aa02.ctex"
+path="res://.godot/imported/NextHover.png-2c257343934412c35171ced1a6111cdb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menus/Buttons/NextHover.png"
-dest_files=["res://.godot/imported/NextHover.png-9e32458c83e6d8522129a13ba413aa02.ctex"]
+source_file="res://assets/Menus/Buttons/NextHover.png"
+dest_files=["res://.godot/imported/NextHover.png-2c257343934412c35171ced1a6111cdb.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
