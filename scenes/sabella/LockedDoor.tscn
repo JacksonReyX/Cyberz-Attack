@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dlmk0crquvh0k" path="res://assets/Sprites/Deco/door.png" id="1_1idtp"]
 [ext_resource type="Script" uid="uid://bslpm4nc3idba" path="res://Scripts/locked_door.gd" id="1_fcbhr"]
 [ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://assets/Menus/Buttons/prompt_normal.png" id="3_3wi8c"]
+[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_cnro8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fcbhr"]
 atlas = ExtResource("1_1idtp")
@@ -46,7 +47,6 @@ position = Vector2(20, 10)
 shape = SubResource("RectangleShape2D_c24nt")
 
 [node name="buttonPrompt" type="Sprite2D" parent="." unique_id=1206219750]
-visible = false
 position = Vector2(20, -3)
 scale = Vector2(0.24583334, 0.2416667)
 texture = ExtResource("3_3wi8c")
@@ -56,3 +56,12 @@ texture = ExtResource("3_3wi8c")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=186596438]
 position = Vector2(20.5, 13.5)
 shape = SubResource("RectangleShape2D_3wi8c")
+
+[node name="LockedLabel" type="Label" parent="." unique_id=1572550657]
+offset_left = 11.0
+offset_top = 27.0
+offset_right = 29.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("4_cnro8")
+theme_override_font_sizes/font_size = 3
+text = "Locked"
