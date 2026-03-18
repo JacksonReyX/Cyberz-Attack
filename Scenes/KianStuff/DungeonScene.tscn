@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=63 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
@@ -14,6 +14,7 @@
 [ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="11_gyowf"]
 [ext_resource type="PackedScene" uid="uid://dh4me51kb1tpd" path="res://Scenes/KianStuff/Sign.tscn" id="12_ua63u"]
 [ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="14_rge1b"]
+[ext_resource type="Texture2D" uid="uid://bfjwhqbr84ye2" path="res://Assets/Menus/Card/UserHUD.png" id="15_0jfpw"]
 [ext_resource type="Texture2D" uid="uid://c8e4bwkgo8pa3" path="res://Assets/Menus/Buttons/Continue.png" id="15_5cpfw"]
 [ext_resource type="Texture2D" uid="uid://mstmpv6lyhg1" path="res://Assets/Menus/Buttons/Options.png" id="15_xeimi"]
 [ext_resource type="Texture2D" uid="uid://dk07nioprjt4a" path="res://Assets/Menus/Buttons/ContinuePressed.png" id="16_k452r"]
@@ -32,9 +33,9 @@
 [ext_resource type="Texture2D" uid="uid://csdgy7l42pm6l" path="res://Assets/Menus/Buttons/VolumeHover.png" id="23_p2p71"]
 [ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://Assets/Menus/Buttons/Back.png" id="26_f4fvt"]
 [ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://Assets/Menus/Buttons/BackPressed.png" id="27_lifpq"]
-[ext_resource type="Texture2D" uid="uid://djmdl5ddm841e" path="res://Assets/Menus/Card/Volume.png" id="28_8dysy"]
 [ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://Assets/Menus/Buttons/BackHover.png" id="28_ild77"]
 [ext_resource type="Texture2D" uid="uid://di31e1fe563qd" path="res://Assets/Menus/Buttons/VolumeSliderBar.png" id="31_agevm"]
+[ext_resource type="Texture2D" uid="uid://badehacwr6sl3" path="res://Assets/Menus/Card/VolumeContainer.png" id="31_b5wfc"]
 [ext_resource type="Texture2D" uid="uid://es30jjr2ubix" path="res://Assets/Menus/Buttons/VolumeSlider.png" id="32_27j3r"]
 [ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://Scenes/JacksonStuff/FisherEnemy.tscn" id="32_p1g1e"]
 [ext_resource type="Texture2D" uid="uid://bd8b40ennr78r" path="res://Assets/Menus/Card/VolumeSliderFocused.png" id="33_d3nvm"]
@@ -5175,16 +5176,18 @@ texture_hover = ExtResource("17_vvi5q")
 
 [node name="TopLeftPanel" type="TextureRect" parent="HUDLayer/HUDRoot"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 103.0
+offset_bottom = 50.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("15_0jfpw")
 
 [node name="CoinSection" type="Control" parent="HUDLayer/HUDRoot/TopLeftPanel"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -9.0
-offset_top = 11.0
-offset_right = 31.0
-offset_bottom = 51.0
+offset_top = 17.0
+offset_right = 40.0
+offset_bottom = 57.0
+scale = Vector2(0.75, 0.75)
 script = ExtResource("9_5yy4f")
 
 [node name="CoinIcon" type="AnimatedSprite2D" parent="HUDLayer/HUDRoot/TopLeftPanel/CoinSection"]
@@ -5205,10 +5208,10 @@ text = "0"
 
 [node name="HealthHud" parent="HUDLayer/HUDRoot/TopLeftPanel" instance=ExtResource("17_10vpj")]
 layout_mode = 1
-offset_left = 7.0
-offset_top = 7.0
-offset_right = 7.0
-offset_bottom = 7.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 6.0
+offset_bottom = 6.0
 
 [node name="InventorySection" type="Control" parent="HUDLayer/HUDRoot/TopLeftPanel"]
 anchors_preset = 0
@@ -5226,7 +5229,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="PauseLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="PauseMenu" type="Control" parent="PauseLayer"]
 process_mode = 2
@@ -5352,7 +5354,7 @@ offset_top = 40.0
 offset_right = 320.0
 offset_bottom = 184.0
 scale = Vector2(2, 2)
-texture = ExtResource("28_8dysy")
+texture = ExtResource("31_b5wfc")
 
 [node name="MasterRow" type="Control" parent="PauseLayer/PauseMenu/VolumePanel"]
 layout_mode = 3
