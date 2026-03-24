@@ -1,0 +1,12 @@
+[
+	{
+		"question": "Which Email Address Looks Safe?",
+		"options": ["ibfwufbw@yahoo.com", "admin@g00gle.com", "bryanGarris24@gmail.com", "hacker@hackyou.com"],
+		"correctIndex": 2
+	}, 
+	{
+		"question": "You've recieved an email from an unknown sender with a link\n what should you not do?",
+		"options": ["Ignore the message", "Open the link", "Report Sender", "Delete The message"],
+		"correctIndex": 1
+	}
+]
