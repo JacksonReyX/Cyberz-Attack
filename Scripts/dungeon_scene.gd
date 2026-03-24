@@ -2,11 +2,11 @@ extends Node2D
 
 @onready var pause_menu: Control = $PauseLayer/PauseMenu
 
-@onready var options_button: TextureButton = $HUDLayer/HUD/OptionsButton
+@onready var options_button: TextureButton = $HUDLayer/HUDRoot/OptionsButton
 
 func _ready() -> void:
 	pause_menu.visible = false
-	UISfx.wire_buttons($HUDLayer/HUD)
+	UISfx.wire_buttons($HUDLayer/HUDRoot)
 	options_button.pressed.connect(_on_options_button_pressed)
 
 func _unhandled_input(event: InputEvent) -> void:
