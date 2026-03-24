@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cyahrapvjma6d"]
 
 [ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://Scenes/JacksonStuff/FisherEnemy.tscn" id="1_d7r1a"]
-[ext_resource type="Script" path="res://Scenes/JacksonStuff/control.gd" id="1_pbrhe"]
+[ext_resource type="Script" path="res://Scripts/fisherQuestions.gd" id="1_pbrhe"]
 [ext_resource type="Texture2D" uid="uid://mk5w7v66h636" path="res://Assets/Tiles/0x72_DungeonTilesetII_v1.7.png" id="3_sic85"]
 
 [sub_resource type="Theme" id="Theme_8aioo"]
@@ -699,10 +699,10 @@ anchor_left = 1.0
 anchor_top = 4.312
 anchor_right = 1.0
 anchor_bottom = 4.312
-offset_left = -99.0
-offset_top = -15.48
-offset_right = 15.0
-offset_bottom = 25.52
+offset_left = -98.0
+offset_top = -6.48
+offset_right = 16.0
+offset_bottom = 34.52
 text = "Submit"
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -758,5 +758,22 @@ offset_bottom = -67.0
 theme_override_font_sizes/font_size = 11
 text = "EVIL FISHERMAN"
 
+[node name="health" type="Label" parent="."]
+offset_left = 251.0
+offset_top = 183.0
+offset_right = 291.0
+offset_bottom = 206.0
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 138.0
+offset_top = 182.0
+offset_right = 292.0
+offset_bottom = 205.0
+text = "Player Health: "
+
+[node name="deathTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="item_selected" from="Control/ItemList" to="Control" method="_on_item_list_item_selected"]
 [connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]
+[connection signal="timeout" from="deathTimer" to="Control" method="_on_death_timer_timeout"]
