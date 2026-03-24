@@ -2678,7 +2678,7 @@ texture = ExtResource("4_w0n7e")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ujtme")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mmbsn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y07io"]
 texture = ExtResource("2_og63f")
 4:0/0 = 0
 5:0/0 = 0
@@ -3316,7 +3316,7 @@ texture = ExtResource("2_og63f")
 16:28/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_k08ox"]
-sources/0 = SubResource("TileSetAtlasSource_mmbsn")
+sources/0 = SubResource("TileSetAtlasSource_y07io")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jxtxc"]
 texture = ExtResource("2_og63f")
