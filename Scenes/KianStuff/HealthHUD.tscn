@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bh6af5v8500yi"]
+[gd_scene load_steps=8 format=3 uid="uid://bh6af5v8500yi"]
 
 [ext_resource type="Script" path="res://Scripts/health_hud.gd" id="1_onhfo"]
 [ext_resource type="Texture2D" uid="uid://bn445kvwq1wge" path="res://Assets/Menus/Health/HealthBar.png" id="1_srh08"]
 [ext_resource type="PackedScene" uid="uid://dru0dndidb6p4" path="res://Scenes/KianStuff/HealthSegment.tscn" id="2_ba0co"]
 [ext_resource type="Texture2D" uid="uid://cltdcurvhc5l" path="res://Assets/Menus/Health/HeartOverlay.png" id="3_5m3ug"]
-[ext_resource type="Texture2D" uid="uid://cpajv2su6dijw" path="res://Assets/Menus/Health/HealthOverlayEmpty.png" id="3_o3xs2"]
+[ext_resource type="Texture2D" uid="uid://dovs12h7fmh3s" path="res://Assets/Menus/Health/HeartOverlayEmpty.png" id="3_ab28s"]
+[ext_resource type="Texture2D" uid="uid://ca01v106ym427" path="res://Assets/Menus/Health/HealthBarEmpty.png" id="3_fvj6q"]
+[ext_resource type="Texture2D" uid="uid://c2buyurbuyts3" path="res://Assets/Menus/Card/TopLeftPanel.png" id="6_g7yiq"]
 
 [node name="HealthHud" type="Control"]
 layout_mode = 3
@@ -14,67 +16,65 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_onhfo")
-full_heart_texture = ExtResource("3_5m3ug")
-empty_heart_texture = ExtResource("3_o3xs2")
+health_full_texture = ExtResource("1_srh08")
+health_empty_texture = ExtResource("3_fvj6q")
+heart_full_texture = ExtResource("3_5m3ug")
+heart_empty_texture = ExtResource("3_ab28s")
 
-[node name="BaseBar" type="TextureRect" parent="."]
-layout_mode = 1
-offset_right = 96.0
-offset_bottom = 18.0
-texture = ExtResource("1_srh08")
+[node name="HealthBarBackground" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(44, 13.5)
+texture = ExtResource("6_g7yiq")
 
 [node name="Segment1" parent="." instance=ExtResource("2_ba0co")]
 unique_name_in_owner = true
-position = Vector2(18, 9)
+position = Vector2(16, 9)
 
 [node name="Segment2" parent="." instance=ExtResource("2_ba0co")]
 unique_name_in_owner = true
-position = Vector2(24, 9)
+position = Vector2(22, 9)
 
 [node name="Segment3" parent="." instance=ExtResource("2_ba0co")]
 unique_name_in_owner = true
-position = Vector2(30, 9)
+position = Vector2(28, 9)
 
 [node name="Segment4" parent="." instance=ExtResource("2_ba0co")]
 unique_name_in_owner = true
-position = Vector2(36, 9)
+position = Vector2(34, 9)
 
 [node name="Segment5" parent="." instance=ExtResource("2_ba0co")]
 unique_name_in_owner = true
-position = Vector2(42, 9)
+position = Vector2(40, 9)
 
 [node name="Segment6" parent="." instance=ExtResource("2_ba0co")]
 unique_name_in_owner = true
-position = Vector2(48, 9)
+position = Vector2(46, 9)
 
 [node name="Segment7" parent="." instance=ExtResource("2_ba0co")]
 unique_name_in_owner = true
-position = Vector2(54, 9)
+position = Vector2(52, 9)
 
 [node name="Segment8" parent="." instance=ExtResource("2_ba0co")]
 unique_name_in_owner = true
-position = Vector2(60, 9)
+position = Vector2(58, 9)
 
 [node name="Segment9" parent="." instance=ExtResource("2_ba0co")]
 unique_name_in_owner = true
-position = Vector2(66, 9)
+position = Vector2(64, 9)
 
 [node name="Segment10" parent="." instance=ExtResource("2_ba0co")]
 unique_name_in_owner = true
-position = Vector2(72, 9)
+position = Vector2(70, 9)
 
 [node name="Segment11" parent="." instance=ExtResource("2_ba0co")]
 unique_name_in_owner = true
-position = Vector2(78, 9)
+position = Vector2(76, 9)
 
 [node name="Segment12" parent="." instance=ExtResource("2_ba0co")]
 unique_name_in_owner = true
-position = Vector2(84, 9)
+position = Vector2(82, 9)
 
-[node name="HeartOverlay" type="TextureRect" parent="."]
+[node name="HeartOverlay" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-layout_mode = 0
-offset_right = 21.0
-offset_bottom = 18.0
+position = Vector2(10.5, 9)
 texture = ExtResource("3_5m3ug")
-stretch_mode = 2

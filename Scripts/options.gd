@@ -11,7 +11,7 @@ extends Control
 @onready var master_value_label: Label = %MasterValueLabel
 @onready var music_value_label: Label = %MusicValueLabel
 @onready var sfx_value_label: Label = %SFXValueLabel
-@onready var ui_value_label: Label = %UIValueLabel
+@onready var ui_value_label: Label = %UISFXValueLabel
 
 func _ready() -> void:
 	UISfx.wire_buttons(self)

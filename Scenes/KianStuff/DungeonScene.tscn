@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=68 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
@@ -14,17 +14,22 @@
 [ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="11_gyowf"]
 [ext_resource type="PackedScene" uid="uid://dh4me51kb1tpd" path="res://Scenes/KianStuff/Sign.tscn" id="12_ua63u"]
 [ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="14_rge1b"]
-[ext_resource type="Texture2D" uid="uid://bfjwhqbr84ye2" path="res://Assets/Menus/Card/UserHUD.png" id="15_0jfpw"]
 [ext_resource type="Texture2D" uid="uid://c8e4bwkgo8pa3" path="res://Assets/Menus/Buttons/Continue.png" id="15_5cpfw"]
 [ext_resource type="Texture2D" uid="uid://mstmpv6lyhg1" path="res://Assets/Menus/Buttons/Options.png" id="15_xeimi"]
 [ext_resource type="Texture2D" uid="uid://dk07nioprjt4a" path="res://Assets/Menus/Buttons/ContinuePressed.png" id="16_k452r"]
 [ext_resource type="Texture2D" uid="uid://bjxevov3ppfwb" path="res://Assets/Menus/Buttons/OptionsPressed.png" id="16_v8v00"]
+[ext_resource type="Texture2D" uid="uid://c2buyurbuyts3" path="res://Assets/Menus/Card/TopLeftPanel.png" id="16_ylyeg"]
 [ext_resource type="PackedScene" uid="uid://bh6af5v8500yi" path="res://Scenes/KianStuff/HealthHUD.tscn" id="17_10vpj"]
 [ext_resource type="Texture2D" uid="uid://brvc34deasnka" path="res://Assets/Menus/Buttons/ContinueHover.png" id="17_fkcgn"]
 [ext_resource type="Texture2D" uid="uid://by4q8e00gcw6e" path="res://Assets/Menus/Buttons/OptionsHover.png" id="17_vvi5q"]
+[ext_resource type="Texture2D" uid="uid://4nua0xi1ceu4" path="res://Assets/Menus/Health/TopLeftPanelEmpty.png" id="17_x4mv7"]
+[ext_resource type="Texture2D" uid="uid://b2qa7npsxsbfc" path="res://Assets/Menus/Card/InventorySlots.png" id="18_f4i3l"]
+[ext_resource type="Texture2D" uid="uid://bd2mtv2q3jp6j" path="res://Assets/Menus/Card/InventorySlot1.png" id="18_n7mdd"]
 [ext_resource type="Texture2D" uid="uid://coidtyx1e8uxj" path="res://Assets/Menus/Buttons/MainMenu.png" id="18_ybupp"]
+[ext_resource type="Texture2D" uid="uid://3ywyt4eq75mk" path="res://Assets/Menus/Card/InventorySlot2.png" id="19_67bnq"]
 [ext_resource type="Texture2D" uid="uid://bmp03hkp7jyte" path="res://Assets/Menus/Buttons/Volume.png" id="19_0145e"]
 [ext_resource type="Texture2D" uid="uid://dq44bx5eb2kee" path="res://Assets/Menus/Buttons/MainMenuPressed.png" id="19_bc4cl"]
+[ext_resource type="Texture2D" uid="uid://4o66f3i520wc" path="res://Assets/Menus/Card/InventorySlot3.png" id="20_jlb7i"]
 [ext_resource type="Texture2D" uid="uid://csftv15b8vsmr" path="res://Assets/Menus/Buttons/MainMenuHover.png" id="20_nufx6"]
 [ext_resource type="Texture2D" uid="uid://jgn0vxfsnhfw" path="res://Assets/Menus/Buttons/Quit2.png" id="21_djoam"]
 [ext_resource type="Texture2D" uid="uid://cfr6p50fq7ow6" path="res://Assets/Menus/Buttons/QuitPressed2.png" id="22_jeq7h"]
@@ -4994,9 +4999,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tmf6r"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b7187"]
 
-[sub_resource type="Theme" id="Theme_vecpx"]
+[sub_resource type="Theme" id="Theme_qa666"]
 HSlider/constants/center_grabber = 0
 HSlider/constants/grabber_offset = 0
 HSlider/icons/grabber = null
@@ -5005,7 +5010,7 @@ HSlider/icons/grabber_highlight = null
 HSlider/icons/tick = null
 HSlider/styles/grabber_area = null
 HSlider/styles/grabber_area_highlight = null
-HSlider/styles/slider = SubResource("StyleBoxEmpty_tmf6r")
+HSlider/styles/slider = SubResource("StyleBoxEmpty_b7187")
 
 [node name="DungeonScene" type="Node2D"]
 script = ExtResource("1_nv8n0")
@@ -5179,32 +5184,6 @@ layout_mode = 0
 offset_right = 103.0
 offset_bottom = 50.0
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("15_0jfpw")
-
-[node name="CoinSection" type="Control" parent="HUDLayer/HUDRoot/TopLeftPanel"]
-layout_mode = 3
-anchors_preset = 0
-offset_top = 17.0
-offset_right = 40.0
-offset_bottom = 57.0
-scale = Vector2(0.75, 0.75)
-script = ExtResource("9_5yy4f")
-
-[node name="CoinIcon" type="AnimatedSprite2D" parent="HUDLayer/HUDRoot/TopLeftPanel/CoinSection"]
-position = Vector2(22, 21.875)
-scale = Vector2(1.75, 1.75)
-sprite_frames = SubResource("SpriteFrames_1c8c5")
-autoplay = "default"
-frame_progress = 0.874954
-
-[node name="CoinLabel" type="Label" parent="HUDLayer/HUDRoot/TopLeftPanel/CoinSection"]
-layout_mode = 0
-offset_left = 31.0
-offset_top = 15.0
-offset_right = 71.0
-offset_bottom = 31.0
-theme_override_fonts/font = ExtResource("11_gyowf")
-text = "0"
 
 [node name="HealthHud" parent="HUDLayer/HUDRoot/TopLeftPanel" instance=ExtResource("17_10vpj")]
 layout_mode = 1
@@ -5212,21 +5191,88 @@ offset_left = 6.0
 offset_top = 6.0
 offset_right = 6.0
 offset_bottom = 6.0
+health_full_texture = ExtResource("16_ylyeg")
+health_empty_texture = ExtResource("17_x4mv7")
 
-[node name="InventorySection" type="Control" parent="HUDLayer/HUDRoot/TopLeftPanel"]
+[node name="InventorySection" type="Control" parent="HUDLayer/HUDRoot"]
 anchors_preset = 0
-offset_right = 40.0
+offset_left = 5.0
+offset_right = 45.0
 offset_bottom = 40.0
 
-[node name="Slot1" type="TextureRect" parent="HUDLayer/HUDRoot/TopLeftPanel/InventorySection"]
+[node name="Slot1" type="TextureRect" parent="HUDLayer/HUDRoot/InventorySection"]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 320.0
+offset_right = 294.0
+offset_bottom = 360.0
+texture = ExtResource("18_n7mdd")
+
+[node name="ItemIcon" type="TextureRect" parent="HUDLayer/HUDRoot/InventorySection/Slot1"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ItemIcon" type="TextureRect" parent="HUDLayer/HUDRoot/TopLeftPanel/InventorySection/Slot1"]
+[node name="Slot2" type="TextureRect" parent="HUDLayer/HUDRoot/InventorySection"]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 320.0
+offset_right = 336.0
+offset_bottom = 360.0
+texture = ExtResource("19_67bnq")
+
+[node name="ItemIcon" type="TextureRect" parent="HUDLayer/HUDRoot/InventorySection/Slot2"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Slot3" type="TextureRect" parent="HUDLayer/HUDRoot/InventorySection"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 320.0
+offset_right = 378.0
+offset_bottom = 360.0
+texture = ExtResource("20_jlb7i")
+
+[node name="ItemIcon" type="TextureRect" parent="HUDLayer/HUDRoot/InventorySection/Slot3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Inventory Holder" type="TextureRect" parent="HUDLayer/HUDRoot/InventorySection"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 312.0
+offset_right = 320.0
+offset_bottom = 336.0
+scale = Vector2(2, 2)
+texture = ExtResource("18_f4i3l")
+
+[node name="CoinSection" type="Control" parent="HUDLayer/HUDRoot"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 26.0
+offset_top = 24.0
+offset_right = 66.0
+offset_bottom = 64.0
+scale = Vector2(0.75, 0.75)
+script = ExtResource("9_5yy4f")
+
+[node name="CoinIcon" type="AnimatedSprite2D" parent="HUDLayer/HUDRoot/CoinSection"]
+position = Vector2(22, 21.875)
+scale = Vector2(1.75, 1.75)
+sprite_frames = SubResource("SpriteFrames_1c8c5")
+autoplay = "default"
+frame_progress = 0.874954
+
+[node name="CoinLabel" type="Label" parent="HUDLayer/HUDRoot/CoinSection"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 15.0
+offset_right = 71.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("11_gyowf")
+text = "0"
 
 [node name="PauseLayer" type="CanvasLayer" parent="."]
 
@@ -5356,12 +5402,23 @@ offset_bottom = 184.0
 scale = Vector2(2, 2)
 texture = ExtResource("31_b5wfc")
 
+[node name="BackButton" type="TextureButton" parent="PauseLayer/PauseMenu/VolumePanel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 198.0
+offset_top = 86.0
+offset_right = 228.0
+offset_bottom = 116.0
+texture_normal = ExtResource("26_f4fvt")
+texture_pressed = ExtResource("27_lifpq")
+texture_hover = ExtResource("28_ild77")
+
 [node name="MasterRow" type="Control" parent="PauseLayer/PauseMenu/VolumePanel"]
 layout_mode = 3
 anchors_preset = 0
-offset_top = 7.0
+offset_top = 8.0
 offset_right = 40.0
-offset_bottom = 47.0
+offset_bottom = 48.0
 
 [node name="BarArt" type="TextureRect" parent="PauseLayer/PauseMenu/VolumePanel/MasterRow"]
 layout_mode = 0
@@ -5379,7 +5436,7 @@ offset_top = 129.0
 offset_right = 347.0
 offset_bottom = 141.0
 scale = Vector2(1.5, 1.5)
-theme = SubResource("Theme_vecpx")
+theme = SubResource("Theme_qa666")
 theme_override_icons/grabber = ExtResource("32_27j3r")
 theme_override_icons/grabber_highlight = ExtResource("33_d3nvm")
 theme_override_icons/tick = ExtResource("33_vvkc4")
@@ -5394,16 +5451,28 @@ offset_left = 310.0
 offset_top = 118.0
 offset_right = 340.0
 offset_bottom = 126.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_gyowf")
 theme_override_font_sizes/font_size = 8
 text = "50%"
 
+[node name="MasterLabel" type="Label" parent="PauseLayer/PauseMenu/VolumePanel/MasterRow"]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 118.0
+offset_right = 295.0
+offset_bottom = 126.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_gyowf")
+theme_override_font_sizes/font_size = 8
+text = "Master"
+
 [node name="MusicRow" type="Control" parent="PauseLayer/PauseMenu/VolumePanel"]
 layout_mode = 3
 anchors_preset = 0
-offset_top = 7.0
+offset_top = 8.0
 offset_right = 40.0
-offset_bottom = 47.0
+offset_bottom = 48.0
 
 [node name="BarArt" type="TextureRect" parent="PauseLayer/PauseMenu/VolumePanel/MusicRow"]
 layout_mode = 0
@@ -5421,7 +5490,7 @@ offset_top = 172.0
 offset_right = 347.0
 offset_bottom = 184.0
 scale = Vector2(1.5, 1.5)
-theme = SubResource("Theme_vecpx")
+theme = SubResource("Theme_qa666")
 theme_override_icons/grabber = ExtResource("32_27j3r")
 theme_override_icons/grabber_highlight = ExtResource("33_d3nvm")
 theme_override_icons/tick = ExtResource("33_vvkc4")
@@ -5436,16 +5505,28 @@ offset_left = 310.0
 offset_top = 160.0
 offset_right = 340.0
 offset_bottom = 168.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_gyowf")
 theme_override_font_sizes/font_size = 8
 text = "50%"
 
+[node name="MusicLabel" type="Label" parent="PauseLayer/PauseMenu/VolumePanel/MusicRow"]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 160.0
+offset_right = 295.0
+offset_bottom = 168.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_gyowf")
+theme_override_font_sizes/font_size = 8
+text = "Music"
+
 [node name="SFXRow" type="Control" parent="PauseLayer/PauseMenu/VolumePanel"]
 layout_mode = 3
 anchors_preset = 0
-offset_top = 7.0
+offset_top = 8.0
 offset_right = 40.0
-offset_bottom = 47.0
+offset_bottom = 48.0
 
 [node name="BarArt" type="TextureRect" parent="PauseLayer/PauseMenu/VolumePanel/SFXRow"]
 layout_mode = 0
@@ -5463,7 +5544,7 @@ offset_top = 216.0
 offset_right = 347.0
 offset_bottom = 228.0
 scale = Vector2(1.5, 1.5)
-theme = SubResource("Theme_vecpx")
+theme = SubResource("Theme_qa666")
 theme_override_icons/grabber = ExtResource("32_27j3r")
 theme_override_icons/grabber_highlight = ExtResource("33_d3nvm")
 theme_override_icons/tick = ExtResource("33_vvkc4")
@@ -5478,18 +5559,30 @@ offset_left = 310.0
 offset_top = 203.0
 offset_right = 340.0
 offset_bottom = 211.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_gyowf")
 theme_override_font_sizes/font_size = 8
 text = "50%"
 
-[node name="UIRow" type="Control" parent="PauseLayer/PauseMenu/VolumePanel"]
+[node name="SFXLabel" type="Label" parent="PauseLayer/PauseMenu/VolumePanel/SFXRow"]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 203.0
+offset_right = 295.0
+offset_bottom = 211.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_gyowf")
+theme_override_font_sizes/font_size = 8
+text = "SFX"
+
+[node name="UISFXRow" type="Control" parent="PauseLayer/PauseMenu/VolumePanel"]
 layout_mode = 3
 anchors_preset = 0
-offset_top = 7.0
+offset_top = 8.0
 offset_right = 40.0
-offset_bottom = 47.0
+offset_bottom = 48.0
 
-[node name="BarArt" type="TextureRect" parent="PauseLayer/PauseMenu/VolumePanel/UIRow"]
+[node name="BarArt" type="TextureRect" parent="PauseLayer/PauseMenu/VolumePanel/UISFXRow"]
 layout_mode = 0
 offset_left = 247.0
 offset_top = 259.0
@@ -5497,7 +5590,7 @@ offset_right = 397.0
 offset_bottom = 275.0
 texture = ExtResource("31_agevm")
 
-[node name="UISFXSlider" type="HSlider" parent="PauseLayer/PauseMenu/VolumePanel/UIRow"]
+[node name="UISFXSlider" type="HSlider" parent="PauseLayer/PauseMenu/VolumePanel/UISFXRow"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 247.0
@@ -5505,7 +5598,7 @@ offset_top = 258.0
 offset_right = 347.0
 offset_bottom = 270.0
 scale = Vector2(1.5, 1.5)
-theme = SubResource("Theme_vecpx")
+theme = SubResource("Theme_qa666")
 theme_override_icons/grabber = ExtResource("32_27j3r")
 theme_override_icons/grabber_highlight = ExtResource("33_d3nvm")
 theme_override_icons/tick = ExtResource("33_vvkc4")
@@ -5513,27 +5606,28 @@ step = 5.0
 tick_count = 5
 ticks_on_borders = true
 
-[node name="UISFXValueLabel" type="Label" parent="PauseLayer/PauseMenu/VolumePanel/UIRow"]
+[node name="UISFXValueLabel" type="Label" parent="PauseLayer/PauseMenu/VolumePanel/UISFXRow"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 310.0
 offset_top = 246.0
 offset_right = 340.0
 offset_bottom = 254.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_gyowf")
 theme_override_font_sizes/font_size = 8
 text = "50%"
 
-[node name="BackButton" type="TextureButton" parent="PauseLayer/PauseMenu/VolumePanel"]
-unique_name_in_owner = true
+[node name="UISFXLabel" type="Label" parent="PauseLayer/PauseMenu/VolumePanel/UISFXRow"]
 layout_mode = 0
-offset_left = 198.0
-offset_top = 86.0
-offset_right = 228.0
-offset_bottom = 116.0
-texture_normal = ExtResource("26_f4fvt")
-texture_pressed = ExtResource("27_lifpq")
-texture_hover = ExtResource("28_ild77")
+offset_left = 247.0
+offset_top = 246.0
+offset_right = 295.0
+offset_bottom = 254.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_gyowf")
+theme_override_font_sizes/font_size = 8
+text = "UI SFX"
 
 [node name="Enemies" type="Node" parent="."]
 
