@@ -1,0 +1,199 @@
+[gd_scene load_steps=8 format=3 uid="uid://s0o5ne8dhlm7"]
+
+[ext_resource type="Texture2D" uid="uid://dtmo876xe2hpm" path="res://assets/Menus/Card/CharCustCard.png" id="1_b0wkj"]
+[ext_resource type="Script" path="res://Scripts/item_shop.gd" id="1_yrxvl"]
+[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_grguu"]
+[ext_resource type="Texture2D" uid="uid://b4207duut6b75" path="res://assets/Sprites/Deco/Coin.png" id="3_w4588"]
+[ext_resource type="Texture2D" uid="uid://cw0jy87nbqj14" path="res://assets/PlayerModels/Wizard.png" id="4_lo1pv"]
+[ext_resource type="Texture2D" uid="uid://c7uhksxdlo5f0" path="res://assets/PlayerModels/Knight2.png" id="5_yrxvl"]
+[ext_resource type="Texture2D" uid="uid://b6tko3r8q07m4" path="res://assets/PlayerModels/Witch.png" id="6_0ncwt"]
+
+[node name="ItemShop" type="Node2D"]
+position = Vector2(1, -1)
+script = ExtResource("1_yrxvl")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(325, 181)
+scale = Vector2(0.562419, 0.478455)
+texture = ExtResource("1_b0wkj")
+
+[node name="ShopTitle" type="Label" parent="."]
+offset_left = 226.0
+offset_top = 57.0
+offset_right = 408.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(0.0126172, 0.0126172, 0.0126172, 1)
+theme_override_fonts/font = ExtResource("2_grguu")
+theme_override_font_sizes/font_size = 22
+text = "Item Shop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SkinSectionTitle" type="Label" parent="."]
+visible = false
+offset_left = 210.0
+offset_top = 112.0
+offset_right = 426.0
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(0.0126172, 0.0126172, 0.0126172, 1)
+theme_override_fonts/font = ExtResource("2_grguu")
+theme_override_font_sizes/font_size = 16
+text = "Available Skins
+"
+
+[node name="CoinIcon2" type="TextureRect" parent="."]
+z_index = 1
+offset_left = 137.0
+offset_top = 251.0
+offset_right = 157.0
+offset_bottom = 269.0
+mouse_filter = 2
+texture = ExtResource("3_w4588")
+
+[node name="CoinIcon3" type="TextureRect" parent="."]
+z_index = 1
+offset_left = 290.0
+offset_top = 251.0
+offset_right = 310.0
+offset_bottom = 269.0
+mouse_filter = 2
+texture = ExtResource("3_w4588")
+
+[node name="CoinIcon4" type="TextureRect" parent="."]
+z_index = 1
+offset_left = 437.0
+offset_top = 250.0
+offset_right = 457.0
+offset_bottom = 268.0
+mouse_filter = 2
+texture = ExtResource("3_w4588")
+
+[node name="SkinContainer" type="GridContainer" parent="."]
+offset_left = 102.0
+offset_top = 134.0
+offset_right = 541.0
+offset_bottom = 240.0
+columns = 3
+
+[node name="Skin1" type="Node" parent="SkinContainer"]
+
+[node name="ColorRect" type="ColorRect" parent="SkinContainer/Skin1"]
+offset_left = 122.0
+offset_top = 132.0
+offset_right = 217.0
+offset_bottom = 238.0
+color = Color(0.509804, 0.45098, 0.403922, 1)
+
+[node name="Button" type="Button" parent="SkinContainer/Skin1"]
+offset_left = 125.0
+offset_top = 244.0
+offset_right = 213.0
+offset_bottom = 275.0
+theme_override_fonts/font = ExtResource("2_grguu")
+text = "    100
+"
+
+[node name="WizardSkin" type="Sprite2D" parent="SkinContainer/Skin1"]
+position = Vector2(172, 165)
+scale = Vector2(5.125, 5.08333)
+texture = ExtResource("4_lo1pv")
+
+[node name="Label" type="Label" parent="SkinContainer/Skin1"]
+offset_left = 132.0
+offset_top = 116.0
+offset_right = 208.0
+offset_bottom = 132.0
+theme_override_colors/font_color = Color(0.0126172, 0.0126172, 0.0126172, 1)
+theme_override_fonts/font = ExtResource("2_grguu")
+theme_override_font_sizes/font_size = 13
+text = "Wizard"
+
+[node name="Skin2" type="Node" parent="SkinContainer"]
+
+[node name="ColorRect" type="ColorRect" parent="SkinContainer/Skin2"]
+offset_left = 280.0
+offset_top = 133.0
+offset_right = 372.0
+offset_bottom = 238.0
+color = Color(0.509804, 0.45098, 0.403922, 1)
+
+[node name="Button" type="Button" parent="SkinContainer/Skin2"]
+anchors_preset = -1
+anchor_left = 0.066
+anchor_top = 0.205
+anchor_right = 0.066
+anchor_bottom = 0.205
+offset_left = 240.76
+offset_top = 171.2
+offset_right = 327.76
+offset_bottom = 202.2
+theme_override_fonts/font = ExtResource("2_grguu")
+text = "  100
+"
+
+[node name="KnightSkin" type="Sprite2D" parent="SkinContainer/Skin2"]
+position = Vector2(331, 167)
+scale = Vector2(4.96875, 4.95833)
+texture = ExtResource("5_yrxvl")
+
+[node name="Label" type="Label" parent="SkinContainer/Skin2"]
+offset_left = 289.0
+offset_top = 116.0
+offset_right = 362.0
+offset_bottom = 132.0
+theme_override_colors/font_color = Color(0.0126172, 0.0126172, 0.0126172, 1)
+theme_override_fonts/font = ExtResource("2_grguu")
+theme_override_font_sizes/font_size = 13
+text = "Knight"
+
+[node name="Skin3" type="Node" parent="SkinContainer"]
+
+[node name="ColorRect" type="ColorRect" parent="SkinContainer/Skin3"]
+offset_left = 429.0
+offset_top = 134.0
+offset_right = 520.0
+offset_bottom = 237.0
+color = Color(0.509804, 0.45098, 0.403922, 1)
+
+[node name="Button" type="Button" parent="SkinContainer/Skin3"]
+anchors_preset = -1
+anchor_right = 0.012
+anchor_bottom = 0.035
+offset_left = 431.0
+offset_top = 244.0
+offset_right = 511.32
+offset_bottom = 262.4
+theme_override_fonts/font = ExtResource("2_grguu")
+text = "  100"
+
+[node name="WitchSkin" type="Sprite2D" parent="SkinContainer/Skin3"]
+position = Vector2(480, 184)
+scale = Vector2(4.65625, 3.53906)
+texture = ExtResource("6_0ncwt")
+
+[node name="Label" type="Label" parent="SkinContainer/Skin3"]
+offset_left = 445.0
+offset_top = 118.0
+offset_right = 507.0
+offset_bottom = 141.0
+theme_override_colors/font_color = Color(0.0126172, 0.0126172, 0.0126172, 1)
+theme_override_fonts/font = ExtResource("2_grguu")
+theme_override_font_sizes/font_size = 13
+text = "Witch"
+
+[node name="PlayerCoinCountLabel" type="Label" parent="."]
+offset_left = 525.0
+offset_top = 65.0
+offset_right = 565.0
+offset_bottom = 84.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_grguu")
+theme_override_font_sizes/font_size = 13
+text = "0"
+
+[node name="CoinCountIcon" type="TextureRect" parent="."]
+offset_left = 499.0
+offset_top = 62.0
+offset_right = 523.0
+offset_bottom = 82.0
+texture = ExtResource("3_w4588")

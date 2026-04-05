@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://clxuhdcmkedco"
-path="res://.godot/imported/MECHSwtch_BLEEOOP_Big_Toggle.ogg-e127bda8fe7600c603ee5f96982b40b5.oggvorbisstr"
+path="res://.godot/imported/MECHSwtch_BLEEOOP_Big_Toggle.ogg-7927a7c2076905415b2bb7c0bac4e4ce.oggvorbisstr"
 
 [deps]
 
-source_file="res://Assets/Audio/UI/MECHSwtch_BLEEOOP_Big_Toggle.ogg"
-dest_files=["res://.godot/imported/MECHSwtch_BLEEOOP_Big_Toggle.ogg-e127bda8fe7600c603ee5f96982b40b5.oggvorbisstr"]
+source_file="res://assets/Audio/UI/MECHSwtch_BLEEOOP_Big_Toggle.ogg"
+dest_files=["res://.godot/imported/MECHSwtch_BLEEOOP_Big_Toggle.ogg-7927a7c2076905415b2bb7c0bac4e4ce.oggvorbisstr"]
 
 [params]
 

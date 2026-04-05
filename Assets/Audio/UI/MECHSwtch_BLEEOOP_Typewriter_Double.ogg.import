@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dmj5gu3pa2nel"
-path="res://.godot/imported/MECHSwtch_BLEEOOP_Typewriter_Double.ogg-4a4efd98e90500292614d3ebdfea2be6.oggvorbisstr"
+path="res://.godot/imported/MECHSwtch_BLEEOOP_Typewriter_Double.ogg-a407391388f0ca93a2de1274406c0967.oggvorbisstr"
 
 [deps]
 
-source_file="res://Assets/Audio/UI/MECHSwtch_BLEEOOP_Typewriter_Double.ogg"
-dest_files=["res://.godot/imported/MECHSwtch_BLEEOOP_Typewriter_Double.ogg-4a4efd98e90500292614d3ebdfea2be6.oggvorbisstr"]
+source_file="res://assets/Audio/UI/MECHSwtch_BLEEOOP_Typewriter_Double.ogg"
+dest_files=["res://.godot/imported/MECHSwtch_BLEEOOP_Typewriter_Double.ogg-a407391388f0ca93a2de1274406c0967.oggvorbisstr"]
 
 [params]
 

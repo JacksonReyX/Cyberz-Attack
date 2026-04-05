@@ -1,7 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://wh66v8lxv0la"]
+[gd_scene load_steps=32 format=3 uid="uid://wh66v8lxv0la"]
 
 [ext_resource type="Script" path="res://Scripts/key.gd" id="1_fttkb"]
-[ext_resource type="Texture2D" uid="uid://ia6ndm6t21wn" path="res://Assets/Sprites/Deco/key_32x32_24f.png" id="1_yk2u2"]
+[ext_resource type="Texture2D" uid="uid://ia6ndm6t21wn" path="res://assets/Sprites/Deco/key_32x32_24f.png" id="1_yk2u2"]
+[ext_resource type="AudioStream" uid="uid://d0nb8v2ip7t6h" path="res://assets/sounds/Key.wav" id="3_wy8tx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fttkb"]
 atlas = ExtResource("1_yk2u2")
@@ -175,27 +176,44 @@ animations = [{
 "texture": SubResource("AtlasTexture_bmwd0")
 }],
 "loop": true,
-"name": &"new_animation",
-"speed": 8.0
+"name": &"default",
+"speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c562q"]
-radius = 7.0
+radius = 6.0
 
-[node name="key" type="Area2D"]
+[sub_resource type="Animation" id="Animation_a2rra"]
+resource_name = "pickup"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_unei4"]
+_data = {
+"pickup": SubResource("Animation_a2rra")
+}
+
+[node name="Key" type="Area2D"]
 script = ExtResource("1_fttkb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-9.53674e-07, 9.53674e-07)
-scale = Vector2(0.34375, 0.3125)
+position = Vector2(14.5, 10.5)
+scale = Vector2(0.34375, 0.28125)
 sprite_frames = SubResource("SpriteFrames_tbsev")
-animation = &"new_animation"
-autoplay = "new_animation"
-frame_progress = 0.206615
+autoplay = "default"
+frame = 12
+frame_progress = 0.546867
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15, 10)
 shape = SubResource("CircleShape2D_c562q")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_wy8tx")
+volume_db = 4.875
+bus = &"SFX"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_unei4")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
