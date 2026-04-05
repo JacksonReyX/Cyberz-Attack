@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://s0o5ne8dhlm7"]
+[gd_scene load_steps=11 format=3 uid="uid://s0o5ne8dhlm7"]
 
 [ext_resource type="Texture2D" uid="uid://dtmo876xe2hpm" path="res://assets/Menus/Card/CharCustCard.png" id="1_b0wkj"]
 [ext_resource type="Script" path="res://Scripts/item_shop.gd" id="1_yrxvl"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cw0jy87nbqj14" path="res://assets/PlayerModels/Wizard.png" id="4_lo1pv"]
 [ext_resource type="Texture2D" uid="uid://c7uhksxdlo5f0" path="res://assets/PlayerModels/Knight2.png" id="5_yrxvl"]
 [ext_resource type="Texture2D" uid="uid://b6tko3r8q07m4" path="res://assets/PlayerModels/Witch.png" id="6_0ncwt"]
+[ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://assets/Menus/Buttons/Back.png" id="7_q12tm"]
+[ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://assets/Menus/Buttons/BackPressed.png" id="8_vh0se"]
+[ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://assets/Menus/Buttons/BackHover.png" id="9_1tvsk"]
 
 [node name="ItemShop" type="Node2D"]
 position = Vector2(1, -1)
@@ -18,9 +21,9 @@ scale = Vector2(0.562419, 0.478455)
 texture = ExtResource("1_b0wkj")
 
 [node name="ShopTitle" type="Label" parent="."]
-offset_left = 226.0
+offset_left = 234.0
 offset_top = 57.0
-offset_right = 408.0
+offset_right = 416.0
 offset_bottom = 105.0
 theme_override_colors/font_color = Color(0.0126172, 0.0126172, 0.0126172, 1)
 theme_override_fonts/font = ExtResource("2_grguu")
@@ -41,32 +44,15 @@ theme_override_font_sizes/font_size = 16
 text = "Available Skins
 "
 
-[node name="CoinIcon2" type="TextureRect" parent="."]
-z_index = 1
-offset_left = 137.0
-offset_top = 251.0
-offset_right = 157.0
-offset_bottom = 269.0
-mouse_filter = 2
-texture = ExtResource("3_w4588")
-
-[node name="CoinIcon3" type="TextureRect" parent="."]
-z_index = 1
-offset_left = 290.0
-offset_top = 251.0
-offset_right = 310.0
-offset_bottom = 269.0
-mouse_filter = 2
-texture = ExtResource("3_w4588")
-
-[node name="CoinIcon4" type="TextureRect" parent="."]
-z_index = 1
-offset_left = 437.0
-offset_top = 250.0
-offset_right = 457.0
-offset_bottom = 268.0
-mouse_filter = 2
-texture = ExtResource("3_w4588")
+[node name="PlayerCoinCountLabel" type="Label" parent="."]
+offset_left = 105.0
+offset_top = 67.0
+offset_right = 152.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_grguu")
+theme_override_font_sizes/font_size = 13
+text = "0"
 
 [node name="SkinContainer" type="GridContainer" parent="."]
 offset_left = 102.0
@@ -84,13 +70,13 @@ offset_right = 217.0
 offset_bottom = 238.0
 color = Color(0.509804, 0.45098, 0.403922, 1)
 
-[node name="Button" type="Button" parent="SkinContainer/Skin1"]
-offset_left = 125.0
+[node name="Skin1Button" type="Button" parent="SkinContainer/Skin1"]
+offset_left = 128.0
 offset_top = 244.0
-offset_right = 213.0
+offset_right = 208.0
 offset_bottom = 275.0
 theme_override_fonts/font = ExtResource("2_grguu")
-text = "    100
+text = "   100
 "
 
 [node name="WizardSkin" type="Sprite2D" parent="SkinContainer/Skin1"]
@@ -117,16 +103,16 @@ offset_right = 372.0
 offset_bottom = 238.0
 color = Color(0.509804, 0.45098, 0.403922, 1)
 
-[node name="Button" type="Button" parent="SkinContainer/Skin2"]
+[node name="Skin2Button" type="Button" parent="SkinContainer/Skin2"]
 anchors_preset = -1
 anchor_left = 0.066
 anchor_top = 0.205
 anchor_right = 0.066
 anchor_bottom = 0.205
-offset_left = 240.76
-offset_top = 171.2
-offset_right = 327.76
-offset_bottom = 202.2
+offset_left = 243.76
+offset_top = 170.2
+offset_right = 323.76
+offset_bottom = 201.2
 theme_override_fonts/font = ExtResource("2_grguu")
 text = "  100
 "
@@ -155,13 +141,13 @@ offset_right = 520.0
 offset_bottom = 237.0
 color = Color(0.509804, 0.45098, 0.403922, 1)
 
-[node name="Button" type="Button" parent="SkinContainer/Skin3"]
+[node name="Skin3Button" type="Button" parent="SkinContainer/Skin3"]
 anchors_preset = -1
 anchor_right = 0.012
 anchor_bottom = 0.035
-offset_left = 431.0
+offset_left = 436.0
 offset_top = 244.0
-offset_right = 511.32
+offset_right = 506.32
 offset_bottom = 262.4
 theme_override_fonts/font = ExtResource("2_grguu")
 text = "  100"
@@ -181,19 +167,56 @@ theme_override_fonts/font = ExtResource("2_grguu")
 theme_override_font_sizes/font_size = 13
 text = "Witch"
 
-[node name="PlayerCoinCountLabel" type="Label" parent="."]
-offset_left = 525.0
-offset_top = 65.0
-offset_right = 565.0
-offset_bottom = 84.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_grguu")
-theme_override_font_sizes/font_size = 13
-text = "0"
+[node name="BackButton" type="Node" parent="."]
 
-[node name="CoinCountIcon" type="TextureRect" parent="."]
-offset_left = 499.0
-offset_top = 62.0
-offset_right = 523.0
-offset_bottom = 82.0
+[node name="BackButton" type="TextureButton" parent="BackButton"]
+custom_minimum_size = Vector2(30, 30)
+offset_left = 31.0
+offset_top = 17.0
+offset_right = 64.0
+offset_bottom = 47.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("7_q12tm")
+texture_pressed = ExtResource("8_vh0se")
+texture_hover = ExtResource("9_1tvsk")
+
+[node name="CoinIcons" type="Node" parent="."]
+
+[node name="CoinIcon3" type="TextureRect" parent="CoinIcons"]
+z_index = 1
+offset_left = 289.0
+offset_top = 249.0
+offset_right = 309.0
+offset_bottom = 267.0
+mouse_filter = 2
 texture = ExtResource("3_w4588")
+
+[node name="CoinIcon4" type="TextureRect" parent="CoinIcons"]
+z_index = 1
+offset_left = 438.0
+offset_top = 250.0
+offset_right = 458.0
+offset_bottom = 268.0
+mouse_filter = 2
+texture = ExtResource("3_w4588")
+
+[node name="CoinCountIcon" type="TextureRect" parent="CoinIcons"]
+offset_left = 79.0
+offset_top = 63.0
+offset_right = 103.0
+offset_bottom = 83.0
+texture = ExtResource("3_w4588")
+
+[node name="CoinIcon5" type="TextureRect" parent="CoinIcons"]
+z_index = 1
+offset_left = 134.0
+offset_top = 250.0
+offset_right = 154.0
+offset_bottom = 268.0
+mouse_filter = 2
+texture = ExtResource("3_w4588")
+
+[connection signal="pressed" from="SkinContainer/Skin1/Skin1Button" to="." method="_on_skin_1_button_pressed"]
+[connection signal="pressed" from="SkinContainer/Skin2/Skin2Button" to="." method="_on_skin_2_button_pressed"]
+[connection signal="pressed" from="SkinContainer/Skin3/Skin3Button" to="." method="_on_skin_3_button_pressed"]
+[connection signal="pressed" from="BackButton/BackButton" to="." method="_on_back_button_pressed"]

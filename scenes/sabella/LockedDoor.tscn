@@ -28,7 +28,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c24nt"]
-size = Vector2(16, 20)
+size = Vector2(16, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3wi8c"]
 size = Vector2(13, 7)
@@ -37,17 +37,17 @@ size = Vector2(13, 7)
 script = ExtResource("1_fcbhr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(20, 9)
-scale = Vector2(0.75, 0.625)
+position = Vector2(20, 8.5)
+scale = Vector2(0.75, 0.65625)
 sprite_frames = SubResource("SpriteFrames_cnro8")
 animation = &"open"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(20, 9)
+position = Vector2(20, 8.5)
 shape = SubResource("RectangleShape2D_c24nt")
 
 [node name="buttonPrompt" type="Sprite2D" parent="."]
-position = Vector2(20, -5)
+position = Vector2(20, -6)
 scale = Vector2(0.245833, 0.241667)
 texture = ExtResource("3_3wi8c")
 
@@ -58,12 +58,13 @@ position = Vector2(20.5, 13.5)
 shape = SubResource("RectangleShape2D_3wi8c")
 
 [node name="LockedLabel" type="Label" parent="."]
-offset_left = -15.0
-offset_top = -16.0
-offset_right = 56.0
-offset_bottom = -9.0
+visible = false
+offset_left = -3.0
+offset_top = -14.0
+offset_right = 121.0
+scale = Vector2(0.37, 0.37)
 theme_override_fonts/font = ExtResource("4_cnro8")
-theme_override_font_sizes/font_size = 4
+theme_override_font_sizes/font_size = 8
 text = "Find the key!"
 horizontal_alignment = 1
 vertical_alignment = 1
