@@ -6,9 +6,8 @@ var door_lock := false
 # Textures
 const KNIGHT_OUTFIT := preload("res://Assets/Characters/Knight/KnightOutfit.png")
 const KNIGHT_ACCESSORY := preload("res://Assets/Characters/Knight/KnightAccessory.png")
-
-const WIZARD_BODY := preload("res://Assets/Characters/Wizard/WizardBody.png")
 const WIZARD_OUTFIT := preload("res://Assets/Characters/Wizard/WizardOutfit.png")
+const WIZARD_BODY := preload("res://Assets/Characters/Wizard/WizardBody.png")
 const WIZARD_EYES := preload("res://Assets/Characters/Wizard/WizardEyes.png")
 const WIZARD_ACCESSORY := preload("res://Assets/Characters/Wizard/WizardAccessory.png")
 
@@ -25,7 +24,6 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	var input_vec := Vector2.ZERO
-
 	if Input.is_action_pressed("move_right"):
 		input_vec.x += 1
 	if Input.is_action_pressed("move_left"):
@@ -34,29 +32,31 @@ func _physics_process(_delta: float) -> void:
 		input_vec.y += 1
 	if Input.is_action_pressed("move_up"):
 		input_vec.y -= 1
-
 	input_vec = input_vec.normalized()
 	velocity = input_vec * speed
 	move_and_slide()
-
-	# Face left/right by flipping the whole visuals
 	if input_vec.x != 0:
 		visuals.scale.x = -abs(visuals.scale.x) if input_vec.x < 0 else abs(visuals.scale.x)
 
 func apply_customization() -> void:
 	var cname: String = PlayerCustomization.selected_class
-
-	if cname == "Wizard":
-		body.texture = WIZARD_BODY
-		eyes.texture = WIZARD_EYES
-		outfit.texture = WIZARD_OUTFIT
-		accessory.texture = WIZARD_ACCESSORY
-	else:
-		# Knight: no body/eyes
-		body.texture = null
-		eyes.texture = null
-		outfit.texture = KNIGHT_OUTFIT
-		accessory.texture = KNIGHT_ACCESSORY
-
-	# Optional: hair layer not used yet
+	body.texture = null
+	eyes.texture = null
 	hair.texture = null
+	accessory.texture = null
+
+	match cname:
+		"Knight":
+			outfit.texture = KNIGHT_OUTFIT
+			accessory.texture = KNIGHT_ACCESSORY
+		"Wizard":
+			outfit.texture = WIZARD_OUTFIT
+			body.texture = WIZARD_BODY
+			eyes.texture = WIZARD_EYES
+			accessory.texture = WIZARD_ACCESSORY
+		"Knight 2":
+			outfit.texture = preload("res://assets/PlayerModels/Knight2.png")
+		"Wizard 2":
+			outfit.texture = preload("res://assets/PlayerModels/Wizard.png")
+		"Witch":
+			outfit.texture = preload("res://assets/PlayerModels/Witch.png")

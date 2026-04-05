@@ -5357,10 +5357,10 @@ color = Color(0.648078, 0.648078, 0.648078, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(100, 100)
-offset_left = -1342.0
-offset_top = -1719.0
-offset_right = 658.0
-offset_bottom = 281.0
+offset_left = -1184.0
+offset_top = -1717.0
+offset_right = 816.0
+offset_bottom = 283.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0, 0, 0, 1)

@@ -67,16 +67,17 @@ columns = 3
 offset_left = 122.0
 offset_top = 132.0
 offset_right = 217.0
-offset_bottom = 238.0
+offset_bottom = 240.0
 color = Color(0.509804, 0.45098, 0.403922, 1)
 
 [node name="Skin1Button" type="Button" parent="SkinContainer/Skin1"]
-offset_left = 128.0
-offset_top = 244.0
-offset_right = 208.0
-offset_bottom = 275.0
+offset_left = 145.0
+offset_top = 245.0
+offset_right = 198.0
+offset_bottom = 266.0
 theme_override_fonts/font = ExtResource("2_grguu")
-text = "   100
+theme_override_font_sizes/font_size = 12
+text = "100
 "
 
 [node name="WizardSkin" type="Sprite2D" parent="SkinContainer/Skin1"]
@@ -99,7 +100,7 @@ text = "Wizard"
 [node name="ColorRect" type="ColorRect" parent="SkinContainer/Skin2"]
 offset_left = 280.0
 offset_top = 133.0
-offset_right = 372.0
+offset_right = 374.0
 offset_bottom = 238.0
 color = Color(0.509804, 0.45098, 0.403922, 1)
 
@@ -109,12 +110,13 @@ anchor_left = 0.066
 anchor_top = 0.205
 anchor_right = 0.066
 anchor_bottom = 0.205
-offset_left = 243.76
-offset_top = 170.2
-offset_right = 323.76
-offset_bottom = 201.2
+offset_left = 259.76
+offset_top = 169.2
+offset_right = 311.76
+offset_bottom = 190.2
 theme_override_fonts/font = ExtResource("2_grguu")
-text = "  100
+theme_override_font_sizes/font_size = 12
+text = "100
 "
 
 [node name="KnightSkin" type="Sprite2D" parent="SkinContainer/Skin2"]
@@ -137,7 +139,7 @@ text = "Knight"
 [node name="ColorRect" type="ColorRect" parent="SkinContainer/Skin3"]
 offset_left = 429.0
 offset_top = 134.0
-offset_right = 520.0
+offset_right = 523.0
 offset_bottom = 237.0
 color = Color(0.509804, 0.45098, 0.403922, 1)
 
@@ -145,12 +147,13 @@ color = Color(0.509804, 0.45098, 0.403922, 1)
 anchors_preset = -1
 anchor_right = 0.012
 anchor_bottom = 0.035
-offset_left = 436.0
-offset_top = 244.0
-offset_right = 506.32
-offset_bottom = 262.4
+offset_left = 451.0
+offset_top = 242.0
+offset_right = 495.32
+offset_bottom = 250.4
 theme_override_fonts/font = ExtResource("2_grguu")
-text = "  100"
+theme_override_font_sizes/font_size = 12
+text = "100"
 
 [node name="WitchSkin" type="Sprite2D" parent="SkinContainer/Skin3"]
 position = Vector2(480, 184)
@@ -184,19 +187,19 @@ texture_hover = ExtResource("9_1tvsk")
 
 [node name="CoinIcon3" type="TextureRect" parent="CoinIcons"]
 z_index = 1
-offset_left = 289.0
-offset_top = 249.0
-offset_right = 309.0
-offset_bottom = 267.0
+offset_left = 280.0
+offset_top = 245.0
+offset_right = 300.0
+offset_bottom = 263.0
 mouse_filter = 2
 texture = ExtResource("3_w4588")
 
 [node name="CoinIcon4" type="TextureRect" parent="CoinIcons"]
 z_index = 1
-offset_left = 438.0
-offset_top = 250.0
-offset_right = 458.0
-offset_bottom = 268.0
+offset_left = 429.0
+offset_top = 244.0
+offset_right = 449.0
+offset_bottom = 262.0
 mouse_filter = 2
 texture = ExtResource("3_w4588")
 
@@ -209,10 +212,10 @@ texture = ExtResource("3_w4588")
 
 [node name="CoinIcon5" type="TextureRect" parent="CoinIcons"]
 z_index = 1
-offset_left = 134.0
-offset_top = 250.0
-offset_right = 154.0
-offset_bottom = 268.0
+offset_left = 123.0
+offset_top = 246.0
+offset_right = 143.0
+offset_bottom = 264.0
 mouse_filter = 2
 texture = ExtResource("3_w4588")
 

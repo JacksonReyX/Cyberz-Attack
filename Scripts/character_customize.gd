@@ -40,36 +40,33 @@ const WIZARD_ACCESSORY := preload("res://Assets/Characters/Wizard/WizardAccessor
 # Tab list (for forced exclusivity)
 @onready var tabs: Array[BaseButton] = [hair_tab, body_tab, eyes_tab, outfit_tab, accessory_tab]
 
-var classes := ["Knight", "Wizard"]
+var classes := ["Knight", "Wizard", "Knight 2", "Wizard 2", "Witch"]
 var class_index := 0
 
 func _ready() -> void:
+	GameState.load_data()
 	UISfx.wire_buttons(self)
-
-	# Class change buttons
 	class_left.pressed.connect(func(): _change_class(-1))
 	class_right.pressed.connect(func(): _change_class(1))
 
-	# Force tabs to behave like a real tab bar
 	for t in tabs:
 		t.toggle_mode = true
-		# Use pressed (not toggled) so we only react when user selects a tab
 		t.pressed.connect(func(tab := t): _select_tab(tab))
 
-	# Default selected tab
 	_select_tab(hair_tab)
 
-	# Load saved class
 	class_index = classes.find(PlayerCustomization.selected_class)
 	if class_index == -1:
 		class_index = 0
+
+	if not _is_class_unlocked(classes[class_index]):
+		class_index = 0
+
 	_apply_class()
 
 func _select_tab(selected: BaseButton) -> void:
-	# Make ONLY the selected tab pressed; others unpressed (returns them to dim normal)
 	for t in tabs:
 		t.button_pressed = (t == selected)
-
 	_update_tab_panels()
 
 func _update_tab_panels() -> void:
@@ -80,26 +77,68 @@ func _update_tab_panels() -> void:
 	accessory_panel.visible = accessory_tab.button_pressed
 
 func _change_class(dir: int) -> void:
-	class_index = wrapi(class_index + dir, 0, classes.size())
+	var attempts := 0
+	var next := class_index
+	while attempts < classes.size():
+		next = wrapi(next + dir, 0, classes.size())
+		if _is_class_unlocked(classes[next]):
+			class_index = next
+			break
+		attempts += 1
 	_apply_class()
+
+func _is_class_unlocked(cname: String) -> bool:
+	match cname:
+		"Knight", "Wizard":
+			return true
+		"Knight 2":
+			return "skin2" in GameState.owned_skins
+		"Wizard 2":
+			return "skin1" in GameState.owned_skins
+		"Witch":
+			return "skin3" in GameState.owned_skins
+	return false
 
 func _apply_class() -> void:
 	var cname: String = classes[class_index]
 	PlayerCustomization.selected_class = cname
 	class_label.text = cname
 
-	if cname == "Knight":
-		body.texture = null
-		eyes.texture = null
-		hair.texture = null
-		outfit.texture = KNIGHT_OUTFIT
-		accessory.texture = KNIGHT_ACCESSORY
-	else:
-		body.texture = WIZARD_BODY
-		eyes.texture = WIZARD_EYES
-		hair.texture = null
-		outfit.texture = WIZARD_OUTFIT
-		accessory.texture = WIZARD_ACCESSORY
+	match cname:
+		"Knight":
+			body.texture = null
+			eyes.texture = null
+			hair.texture = null
+			outfit.texture = KNIGHT_OUTFIT
+			accessory.texture = KNIGHT_ACCESSORY
+		"Wizard":
+			body.texture = WIZARD_BODY
+			eyes.texture = WIZARD_EYES
+			hair.texture = null
+			outfit.texture = WIZARD_OUTFIT
+			accessory.texture = null
+		"Knight 2":
+			body.texture = null
+			eyes.texture = null
+			hair.texture = null
+			outfit.texture = preload("res://assets/PlayerModels/Knight2.png")
+			accessory.texture = null
+		"Wizard 2":
+			body.texture = null
+			eyes.texture = null
+			hair.texture = null
+			outfit.texture = preload("res://assets/PlayerModels/Wizard.png")
+			accessory.texture = null
+		"Witch":
+			body.texture = null
+			eyes.texture = null
+			hair.texture = null
+			outfit.texture = preload("res://assets/PlayerModels/Witch.png")
+			accessory.texture = null
+
+# Kept as stub so other scripts referencing it don't break
+func _apply_selected_skin() -> void:
+	pass
 
 func _on_play_button_pressed() -> void:
 	MusicManager.play_dungeon()
