@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjltkxrkoa1f1"
-path="res://.godot/imported/Dungen Tiles 2.png-8d711fdfc392365c989ca99a7595fbb5.ctex"
+path="res://.godot/imported/Dungen Tiles 2.png-4acdaee969f48bca91c8610be75db2fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/Dungen Tiles 2.png"
-dest_files=["res://.godot/imported/Dungen Tiles 2.png-8d711fdfc392365c989ca99a7595fbb5.ctex"]
+source_file="res://Assets/Tiles/Dungen Tiles 2.png"
+dest_files=["res://.godot/imported/Dungen Tiles 2.png-4acdaee969f48bca91c8610be75db2fa.ctex"]
 
 [params]
 

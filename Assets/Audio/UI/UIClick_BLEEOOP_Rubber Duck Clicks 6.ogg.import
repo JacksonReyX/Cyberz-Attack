@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dpsot1y8fbixx"
-path="res://.godot/imported/UIClick_BLEEOOP_Rubber Duck Clicks 6.ogg-43870ada2df6a6d021685f9d75b3bd3f.oggvorbisstr"
+path="res://.godot/imported/UIClick_BLEEOOP_Rubber Duck Clicks 6.ogg-f4bfa3be990f2d149180c495ac305030.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/Audio/UI/UIClick_BLEEOOP_Rubber Duck Clicks 6.ogg"
-dest_files=["res://.godot/imported/UIClick_BLEEOOP_Rubber Duck Clicks 6.ogg-43870ada2df6a6d021685f9d75b3bd3f.oggvorbisstr"]
+source_file="res://Assets/Audio/UI/UIClick_BLEEOOP_Rubber Duck Clicks 6.ogg"
+dest_files=["res://.godot/imported/UIClick_BLEEOOP_Rubber Duck Clicks 6.ogg-f4bfa3be990f2d149180c495ac305030.oggvorbisstr"]
 
 [params]
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://d047538vnageu"]
+[gd_scene load_steps=5 format=3 uid="uid://d047538vnageu"]
 
 [ext_resource type="Script" path="res://Scripts/enemy_collide.gd" id="1_e0ash"]
 [ext_resource type="Texture2D" uid="uid://celyeexjnwlpw" path="res://Assets/PlayerModels/oldfisherman.png" id="2_17hxj"]
+[ext_resource type="PackedScene" uid="uid://cty5lg0a4vev" path="res://Scenes/JacksonStuff/textboxFisher.tscn" id="3_kkw1a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h8l1k"]
-size = Vector2(26.75, 41)
+size = Vector2(26.75, 29)
 
 [node name="FisherEnemy" type="Node2D"]
 
@@ -22,4 +23,11 @@ flip_h = true
 position = Vector2(9.625, 1.5)
 shape = SubResource("RectangleShape2D_h8l1k")
 
+[node name="Textbox" parent="Area2D" instance=ExtResource("3_kkw1a")]
+
+[node name="textTimer" type="Timer" parent="."]
+wait_time = 3.0
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="visibility_changed" from="Area2D/Textbox" to="Area2D" method="_on_textbox_visibility_changed"]
+[connection signal="timeout" from="textTimer" to="Area2D" method="_on_text_timer_timeout"]
