@@ -5891,7 +5891,7 @@ text = "UI SFX"
 position = Vector2(0, -633)
 
 [node name="HackerEnemy2" parent="Enemies" instance=ExtResource("52_cc4fk")]
-position = Vector2(505, -727)
+position = Vector2(537, -563)
 
 [node name="FisherEnemy" parent="Enemies" instance=ExtResource("32_p1g1e")]
 position = Vector2(-2, -458)
