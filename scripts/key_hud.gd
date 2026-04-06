@@ -4,5 +4,5 @@ extends Control
 
 func show_key_message():
 	key_message.visible = true
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(3.5).timeout
 	key_message.visible = false
