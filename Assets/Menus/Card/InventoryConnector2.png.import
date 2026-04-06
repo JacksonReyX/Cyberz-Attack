@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpajv2su6dijw"
-path="res://.godot/imported/HealthOverlayEmpty.png-baec6249569c5e17c4f15b09f7ea7027.ctex"
+uid="uid://c2lhwmmmaudtn"
+path="res://.godot/imported/InventoryConnector2.png-89eb12c3de442be99460334a35369601.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menus/Health/HealthOverlayEmpty.png"
-dest_files=["res://.godot/imported/HealthOverlayEmpty.png-baec6249569c5e17c4f15b09f7ea7027.ctex"]
+source_file="res://assets/Menus/Card/InventoryConnector2.png"
+dest_files=["res://.godot/imported/InventoryConnector2.png-89eb12c3de442be99460334a35369601.ctex"]
 
 [params]
 

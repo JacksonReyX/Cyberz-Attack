@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://bcmpoj5umgeeu"
-path="res://.godot/imported/UIClick_BLEEOOP_Old_Tech_Click.ogg-54df114cec81b272e4acd22627152fd2.oggvorbisstr"
+path="res://.godot/imported/UIClick_BLEEOOP_Old_Tech_Click.ogg-e5b08ddc422b738ebca52bc7468dafe4.oggvorbisstr"
 
 [deps]
 
-source_file="res://Assets/Audio/UI/UIClick_BLEEOOP_Old_Tech_Click.ogg"
-dest_files=["res://.godot/imported/UIClick_BLEEOOP_Old_Tech_Click.ogg-54df114cec81b272e4acd22627152fd2.oggvorbisstr"]
+source_file="res://assets/Audio/UI/UIClick_BLEEOOP_Old_Tech_Click.ogg"
+dest_files=["res://.godot/imported/UIClick_BLEEOOP_Old_Tech_Click.ogg-e5b08ddc422b738ebca52bc7468dafe4.oggvorbisstr"]
 
 [params]
 

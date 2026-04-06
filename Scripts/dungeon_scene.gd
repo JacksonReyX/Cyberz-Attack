@@ -5,6 +5,9 @@ extends Node2D
 @onready var options_button: TextureButton = $HUDLayer/HUDRoot/OptionsButton
 
 func _ready() -> void:
+	#load data
+	GameState.load_data()
+	
 	pause_menu.visible = false
 	UISfx.wire_buttons($HUDLayer/HUDRoot)
 	options_button.pressed.connect(_on_options_button_pressed)

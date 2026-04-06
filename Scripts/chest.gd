@@ -55,6 +55,10 @@ func interact() -> void:
 
 	await _open_chest_animation()
 	GameState.add_coins(20)
+	GameState.health_potions += 1
+
+	var ui = get_tree().get_root().get_node("DungeonScene/HUDLayer/HUDRoot/InventorySection") 
+	ui.show_potion_message() #shows healing potion info
 
 	opening = false
 	opened = true

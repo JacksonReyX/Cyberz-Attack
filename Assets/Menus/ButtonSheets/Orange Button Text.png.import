@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hlrcgeyhucsj"
-path="res://.godot/imported/Orange Button Text.png-f01187aaa2682febfb98352718bce212.ctex"
+path="res://.godot/imported/Orange Button Text.png-535da060a3bf2da166726258a65bb88b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menus/ButtonSheets/Orange Button Text.png"
-dest_files=["res://.godot/imported/Orange Button Text.png-f01187aaa2682febfb98352718bce212.ctex"]
+source_file="res://assets/Menus/ButtonSheets/Orange Button Text.png"
+dest_files=["res://.godot/imported/Orange Button Text.png-535da060a3bf2da166726258a65bb88b.ctex"]
 
 [params]
 

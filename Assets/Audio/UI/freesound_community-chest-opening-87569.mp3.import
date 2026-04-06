@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://n81h30ueq0oj"
-path="res://.godot/imported/freesound_community-chest-opening-87569.mp3-22f0eef240463ba67119926db5570e99.mp3str"
+path="res://.godot/imported/freesound_community-chest-opening-87569.mp3-117152cf3eb32ffeed54e4ff216468ac.mp3str"
 
 [deps]
 
-source_file="res://Assets/Audio/UI/freesound_community-chest-opening-87569.mp3"
-dest_files=["res://.godot/imported/freesound_community-chest-opening-87569.mp3-22f0eef240463ba67119926db5570e99.mp3str"]
+source_file="res://assets/Audio/UI/freesound_community-chest-opening-87569.mp3"
+dest_files=["res://.godot/imported/freesound_community-chest-opening-87569.mp3-117152cf3eb32ffeed54e4ff216468ac.mp3str"]
 
 [params]
 
