@@ -1,8 +1,8 @@
-[gd_scene load_steps=30 format=3 uid="uid://wh66v8lxv0la"]
+[gd_scene load_steps=32 format=3 uid="uid://wh66v8lxv0la"]
 
-[ext_resource type="Script" path="res://Scripts/key.gd" id="1_j0a0q"]
-[ext_resource type="Texture2D" uid="uid://ia6ndm6t21wn" path="res://Assets/Sprites/Deco/key_32x32_24f.png" id="1_yk2u2"]
-[ext_resource type="AudioStream" uid="uid://d0nb8v2ip7t6h" path="res://Assets/sounds/Key.wav" id="3_wy8tx"]
+[ext_resource type="Script" path="res://Scripts/key.gd" id="1_fttkb"]
+[ext_resource type="Texture2D" uid="uid://ia6ndm6t21wn" path="res://assets/Sprites/Deco/key_32x32_24f.png" id="1_yk2u2"]
+[ext_resource type="AudioStream" uid="uid://d0nb8v2ip7t6h" path="res://assets/sounds/Key.wav" id="3_wy8tx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fttkb"]
 atlas = ExtResource("1_yk2u2")
@@ -183,8 +183,16 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_c562q"]
 radius = 6.0
 
+[sub_resource type="Animation" id="Animation_a2rra"]
+resource_name = "pickup"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_unei4"]
+_data = {
+"pickup": SubResource("Animation_a2rra")
+}
+
 [node name="Key" type="Area2D"]
-script = ExtResource("1_j0a0q")
+script = ExtResource("1_fttkb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(14.5, 10.5)
@@ -204,5 +212,8 @@ volume_db = 4.875
 bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_unei4")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

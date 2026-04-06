@@ -4,22 +4,40 @@ extends Control
 @onready var ListItem = $ItemList
 @onready var RestartButton = $Button
 @onready var health = $"../health"
+@onready var enemyHealthBar = $"../enemyHealth"
 @onready var deathTimer = $"../deathTimer"
+@onready var winTimer = $"../winTimer"
+@onready var buttonFX = $"../buttonFX"
+@onready var correctSFX = $"../correctSFX"
+@onready var incorrectSFX = $"../incorrectSFX"
+@onready var rightAnswer = $"../correctAnswer"
+@onready var wrongAnswer = $"../wrongAnswer"
+@onready var rightTimer = $"../rightTimer"
+@onready var wrongTimer = $"../wrongTimer"
 
-var Items : Array = read_json_file("res://Assets/Questions/questions.json")
+
+
+
+var Items : Array = read_json_file("res://Assets/Questions/fisherQuestions.json")
 var item : Dictionary
 var index_item : int = 0
 var correctCount : float  = 0
 var isCorrect : bool 
 var healthPercent : int = 100
+var enemyHealth : int = 100
+var score : int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	refresh_scene()
 
 	
 func refresh_scene():
-	if index_item >= Items.size():
-		show_results()
+	var greet
+	if enemyHealth <= 0:
+		ListItem.hide()
+		greet = "Congraduations, You Win!"
+		DisplayText.text = "{greet} ! Your Score is {score}".format({"greet": greet, "score": score})
+		winTimer.start()
 	else:
 		show_questions()
 		
@@ -34,6 +52,8 @@ func show_questions():
 	for option in options:
 		ListItem.add_item(option)
 	health.text = str(healthPercent) + "%"
+	enemyHealthBar.text = str(enemyHealth) + "%"
+
 		
 		
 func show_results():
@@ -41,8 +61,9 @@ func show_results():
 	#RestartButton.show()
 	var score = round(correctCount / item.size() * 100)
 	var greet
-	if score >= 60:
-		greet = "Congraduations"
+	if enemyHealth <= 0:
+		greet = "Congraduations, You Win!"
+		#winTimer.start()
 	else:
 		greet = "Oh no"
 	DisplayText.text = "{greet} ! Your Score is {score}".format({"greet": greet, "score": score})
@@ -62,15 +83,26 @@ func _on_item_list_item_selected(index: int) -> void:
 		isCorrect = true
 	else:
 		isCorrect = false
+	buttonFX.play()
 	
 
 
 func _on_button_pressed() -> void:
 	if isCorrect:
 		correctCount += 1
+		enemyHealth -= 60
 		index_item += 1
+		score += 10
+		correctSFX.play()
+		rightAnswer.visible = true
+		rightTimer.start()
 	else:
+		incorrectSFX.play()
 		healthPercent -= 20
+		wrongAnswer.visible = true
+		wrongTimer.start()
+		if(score > 5):
+			score -= 5
 		if(healthPercent <= 0):
 			DisplayText.text = "Game Over"
 			deathTimer.start()
@@ -79,5 +111,20 @@ func _on_button_pressed() -> void:
 
 
 func _on_death_timer_timeout() -> void:
-	#get_tree().reload_current_scene()
 	get_tree().change_scene_to_file("res://Scenes/KianStuff/DungeonScene.tscn")
+	#OS.get_executable_path()
+	#get_tree().quit()
+	
+
+
+func _on_win_timer_timeout() -> void:
+	#GameState.battleReset()
+	get_tree().change_scene_to_file("res://Scenes/KianStuff/DungeonScene.tscn")
+
+
+func _on_wrong_timer_timeout() -> void:
+	wrongAnswer.visible = false
+
+
+func _on_right_timer_timeout() -> void:
+	rightAnswer.visible = false

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpajv2su6dijw"
-path="res://.godot/imported/HealthOverlayEmpty.png-baec6249569c5e17c4f15b09f7ea7027.ctex"
+uid="uid://b2qa7npsxsbfc"
+path="res://.godot/imported/InventorySlots.png-672f5d1f2eb61c39c43be0f3a800d645.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menus/Health/HealthOverlayEmpty.png"
-dest_files=["res://.godot/imported/HealthOverlayEmpty.png-baec6249569c5e17c4f15b09f7ea7027.ctex"]
+source_file="res://Assets/Menus/Card/InventorySlots.png"
+dest_files=["res://.godot/imported/InventorySlots.png-672f5d1f2eb61c39c43be0f3a800d645.ctex"]
 
 [params]
 

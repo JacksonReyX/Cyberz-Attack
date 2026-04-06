@@ -1,8 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cyahrapvjma6d"]
+[gd_scene load_steps=11 format=3 uid="uid://dm6nxr01nmi5g"]
 
-[ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://Scenes/JacksonStuff/FisherEnemy.tscn" id="1_d7r1a"]
-[ext_resource type="Script" path="res://Scripts/fisherQuestions.gd" id="1_pbrhe"]
-[ext_resource type="Texture2D" uid="uid://mk5w7v66h636" path="res://Assets/Tiles/0x72_DungeonTilesetII_v1.7.png" id="3_sic85"]
+[ext_resource type="Script" path="res://Scripts/hackerQuestions.gd" id="1_l7fk6"]
+[ext_resource type="Texture2D" uid="uid://mk5w7v66h636" path="res://Assets/Tiles/0x72_DungeonTilesetII_v1.7.png" id="3_4fphf"]
+[ext_resource type="PackedScene" uid="uid://bdk7s55tilwt0" path="res://Scenes/JacksonStuff/hacker_enemy.tscn" id="3_nak4o"]
+[ext_resource type="AudioStream" uid="uid://c82uhm3lnuvgq" path="res://Assets/Music/Music_52.ogg" id="4_66ycu"]
+[ext_resource type="AudioStream" uid="uid://b6bqjv5iy1frf" path="res://Assets/sounds/buttonSFX.mp3" id="5_8cthf"]
+[ext_resource type="AudioStream" uid="uid://l32hgtwy420v" path="res://Assets/sounds/yesFX.mp3" id="6_c2f47"]
+[ext_resource type="AudioStream" uid="uid://diee13h4bqtgo" path="res://Assets/sounds/incorrectSFX.mp3" id="7_85efc"]
 
 [sub_resource type="Theme" id="Theme_8aioo"]
 ItemList/colors/font_color = Color(0.999808, 0.984876, 0.983107, 1)
@@ -11,7 +15,7 @@ ItemList/colors/guide_color = Color(0.898589, 0.52493, 1, 0.25)
 ItemList/font_sizes/font_size = 11
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1p8wd"]
-texture = ExtResource("3_sic85")
+texture = ExtResource("3_4fphf")
 4:0/0 = 0
 5:0/0 = 0
 6:0/0 = 0
@@ -664,15 +668,15 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_pbrhe")
+script = ExtResource("1_l7fk6")
 
 [node name="DisplayText" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = -168.0
-offset_top = 27.0
-offset_right = -56.0
-offset_bottom = 50.0
-scale = Vector2(0.788112, 1.31385)
+offset_left = -169.0
+offset_top = 34.0
+offset_right = -57.0
+offset_bottom = 57.0
+scale = Vector2(0.388914, 0.747241)
 text = "Question Here"
 
 [node name="ItemList" type="ItemList" parent="Control"]
@@ -707,10 +711,6 @@ text = "Submit"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 66.91)
-
-[node name="FisherEnemy" parent="." instance=ExtResource("1_d7r1a")]
-position = Vector2(0, -18)
-scale = Vector2(2, 2)
 
 [node name="Floor" type="TileMapLayer" parent="."]
 visible = false
@@ -755,14 +755,41 @@ offset_left = -49.0
 offset_top = -90.0
 offset_right = 79.0
 offset_bottom = -67.0
+scale = Vector2(0.9982, 1)
 theme_override_font_sizes/font_size = 11
-text = "EVIL FISHERMAN"
+text = "A Hacker Aproaches"
+
+[node name="correctAnswer" type="Label" parent="."]
+visible = false
+offset_left = -305.0
+offset_top = 176.0
+offset_right = -177.0
+offset_bottom = 199.0
+scale = Vector2(0.9982, 1)
+theme_override_font_sizes/font_size = 11
+text = "Correct! Security is key"
+
+[node name="wrongAnswer" type="Label" parent="."]
+visible = false
+offset_left = -306.0
+offset_top = 205.0
+offset_right = -178.0
+offset_bottom = 228.0
+scale = Vector2(0.9982, 1)
+theme_override_font_sizes/font_size = 11
+text = "Wrong! Does this answer keep your data safe?"
 
 [node name="health" type="Label" parent="."]
 offset_left = 251.0
 offset_top = 183.0
 offset_right = 291.0
 offset_bottom = 206.0
+
+[node name="enemyHealth" type="Label" parent="."]
+offset_left = 60.0
+offset_top = -58.0
+offset_right = 100.0
+offset_bottom = -35.0
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 138.0
@@ -772,8 +799,43 @@ offset_bottom = 205.0
 text = "Player Health: "
 
 [node name="deathTimer" type="Timer" parent="."]
+wait_time = 3.0
 one_shot = true
+
+[node name="winTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="HackerEnemy" parent="." instance=ExtResource("3_nak4o")]
+position = Vector2(3, -39)
+scale = Vector2(2.84685, 2.49892)
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_66ycu")
+volume_db = -6.559
+autoplay = true
+
+[node name="buttonFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_8cthf")
+volume_db = 24.0
+
+[node name="correctSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_c2f47")
+volume_db = 8.432
+
+[node name="incorrectSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_85efc")
+volume_db = 8.432
+
+[node name="rightTimer" type="Timer" parent="."]
+wait_time = 1.965
+
+[node name="wrongTimer" type="Timer" parent="."]
+wait_time = 1.965
 
 [connection signal="item_selected" from="Control/ItemList" to="Control" method="_on_item_list_item_selected"]
 [connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]
 [connection signal="timeout" from="deathTimer" to="Control" method="_on_death_timer_timeout"]
+[connection signal="timeout" from="winTimer" to="Control" method="_on_win_timer_timeout"]
+[connection signal="timeout" from="rightTimer" to="Control" method="_on_right_timer_timeout"]
+[connection signal="timeout" from="wrongTimer" to="Control" method="_on_wrong_timer_timeout"]
