@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://ccbb48uv6qfbb"
-path="res://.godot/imported/UIClick_BLEEOOP_Button_Solid.ogg-c1d4feb56e132a7bca23dfd37e4c1ac4.oggvorbisstr"
+path="res://.godot/imported/UIClick_BLEEOOP_Button_Solid.ogg-c7d3674b6e0b3bd7e0c40c1ca373ba3c.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/Audio/UI/UIClick_BLEEOOP_Button_Solid.ogg"
-dest_files=["res://.godot/imported/UIClick_BLEEOOP_Button_Solid.ogg-c1d4feb56e132a7bca23dfd37e4c1ac4.oggvorbisstr"]
+source_file="res://Assets/Audio/UI/UIClick_BLEEOOP_Button_Solid.ogg"
+dest_files=["res://.godot/imported/UIClick_BLEEOOP_Button_Solid.ogg-c7d3674b6e0b3bd7e0c40c1ca373ba3c.oggvorbisstr"]
 
 [params]
 

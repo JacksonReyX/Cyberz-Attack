@@ -41,16 +41,7 @@ func _ready() -> void:
 		if segment:
 			segment.set_full()
 			
-	await get_tree().create_timer(1.0).timeout
-	await damage(1)
-	await get_tree().create_timer(0.5).timeout
-	await damage(2)
-	await get_tree().create_timer(0.8).timeout
-	await heal(1)
-	await get_tree().create_timer(0.8).timeout
-	await heal(2)
-	await get_tree().create_timer(0.8).timeout
-	await damage(12)
+	
 
 func set_health(new_health: int) -> void:
 	new_health = clampi(new_health, 0, max_health)

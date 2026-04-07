@@ -1,56 +1,59 @@
-[gd_scene load_steps=74 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=77 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
-[ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://scenes/KianStuff/Player.tscn" id="1_q2ont"]
-[ext_resource type="Texture2D" uid="uid://mk5w7v66h636" path="res://assets/Tiles/0x72_DungeonTilesetII_v1.7.png" id="2_og63f"]
-[ext_resource type="PackedScene" uid="uid://d0jthabkak2ey" path="res://scenes/AnimatedDecor/Waterfountain.tscn" id="3_23lt6"]
-[ext_resource type="PackedScene" uid="uid://c2gxmtvknvo5p" path="res://scenes/AnimatedDecor/Lavafountain.tscn" id="4_63kmp"]
-[ext_resource type="Texture2D" uid="uid://c0eu0yoqno1qv" path="res://assets/Tiles/dungeontiles-extended v1.1/dungeontileset-extended.png" id="4_w0n7e"]
-[ext_resource type="Texture2D" uid="uid://ks6cj2pitvpi" path="res://assets/Tiles/stairs.png" id="5_o82nj"]
-[ext_resource type="PackedScene" uid="uid://bluviblfhyg08" path="res://scenes/AnimatedDecor/Torch.tscn" id="7_jncrx"]
-[ext_resource type="PackedScene" uid="uid://de1fym16t3g5d" path="res://scenes/KianStuff/DoorTrigger.tscn" id="8_5730i"]
-[ext_resource type="PackedScene" uid="uid://cg0a3i8qru1ei" path="res://scenes/KianStuff/Chest.tscn" id="8_cthv1"]
+[ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
+[ext_resource type="Texture2D" uid="uid://mk5w7v66h636" path="res://Assets/Tiles/0x72_DungeonTilesetII_v1.7.png" id="2_og63f"]
+[ext_resource type="PackedScene" uid="uid://d0jthabkak2ey" path="res://Scenes/AnimatedDecor/Waterfountain.tscn" id="3_23lt6"]
+[ext_resource type="PackedScene" uid="uid://c2gxmtvknvo5p" path="res://Scenes/AnimatedDecor/Lavafountain.tscn" id="4_63kmp"]
+[ext_resource type="Texture2D" uid="uid://c0eu0yoqno1qv" path="res://Assets/Tiles/dungeontiles-extended v1.1/dungeontileset-extended.png" id="4_w0n7e"]
+[ext_resource type="Texture2D" uid="uid://ks6cj2pitvpi" path="res://Assets/Tiles/stairs.png" id="5_o82nj"]
+[ext_resource type="PackedScene" uid="uid://bluviblfhyg08" path="res://Scenes/AnimatedDecor/Torch.tscn" id="7_jncrx"]
+[ext_resource type="PackedScene" uid="uid://de1fym16t3g5d" path="res://Scenes/KianStuff/DoorTrigger.tscn" id="8_5730i"]
+[ext_resource type="PackedScene" uid="uid://cg0a3i8qru1ei" path="res://Scenes/KianStuff/Chest.tscn" id="8_cthv1"]
 [ext_resource type="Script" path="res://Scripts/coins_hud.gd" id="9_5yy4f"]
-[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="11_gyowf"]
-[ext_resource type="PackedScene" uid="uid://wh66v8lxv0la" path="res://scenes/sabella/key.tscn" id="12_hetau"]
-[ext_resource type="PackedScene" uid="uid://dh4me51kb1tpd" path="res://scenes/KianStuff/Sign.tscn" id="12_ua63u"]
-[ext_resource type="PackedScene" uid="uid://ce88u41h83qm" path="res://scenes/sabella/coin.tscn" id="13_q0wdd"]
-[ext_resource type="PackedScene" uid="uid://of2x4eype5rj" path="res://scenes/sabella/LockedDoor.tscn" id="14_k3ij0"]
+[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="11_gyowf"]
+[ext_resource type="PackedScene" uid="uid://wh66v8lxv0la" path="res://Scenes/sabella/key.tscn" id="12_hetau"]
+[ext_resource type="PackedScene" uid="uid://dh4me51kb1tpd" path="res://Scenes/KianStuff/Sign.tscn" id="12_ua63u"]
+[ext_resource type="PackedScene" uid="uid://ce88u41h83qm" path="res://Scenes/sabella/coin.tscn" id="13_q0wdd"]
+[ext_resource type="PackedScene" uid="uid://of2x4eype5rj" path="res://Scenes/sabella/LockedDoor.tscn" id="14_k3ij0"]
 [ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="14_rge1b"]
-[ext_resource type="Texture2D" uid="uid://c8e4bwkgo8pa3" path="res://assets/Menus/Buttons/Continue.png" id="15_5cpfw"]
-[ext_resource type="Texture2D" uid="uid://mstmpv6lyhg1" path="res://assets/Menus/Buttons/Options.png" id="15_xeimi"]
-[ext_resource type="Texture2D" uid="uid://dk07nioprjt4a" path="res://assets/Menus/Buttons/ContinuePressed.png" id="16_k452r"]
-[ext_resource type="Texture2D" uid="uid://bjxevov3ppfwb" path="res://assets/Menus/Buttons/OptionsPressed.png" id="16_v8v00"]
-[ext_resource type="Texture2D" uid="uid://c2buyurbuyts3" path="res://assets/Menus/Card/TopLeftPanel.png" id="16_ylyeg"]
-[ext_resource type="PackedScene" uid="uid://bh6af5v8500yi" path="res://scenes/KianStuff/HealthHUD.tscn" id="17_10vpj"]
-[ext_resource type="Texture2D" uid="uid://brvc34deasnka" path="res://assets/Menus/Buttons/ContinueHover.png" id="17_fkcgn"]
-[ext_resource type="Texture2D" uid="uid://by4q8e00gcw6e" path="res://assets/Menus/Buttons/OptionsHover.png" id="17_vvi5q"]
-[ext_resource type="Texture2D" uid="uid://4nua0xi1ceu4" path="res://assets/Menus/Health/TopLeftPanelEmpty.png" id="17_x4mv7"]
-[ext_resource type="Texture2D" uid="uid://b2qa7npsxsbfc" path="res://assets/Menus/Card/InventorySlots.png" id="18_f4i3l"]
-[ext_resource type="Texture2D" uid="uid://bd2mtv2q3jp6j" path="res://assets/Menus/Card/InventorySlot1.png" id="18_n7mdd"]
-[ext_resource type="Texture2D" uid="uid://coidtyx1e8uxj" path="res://assets/Menus/Buttons/MainMenu.png" id="18_ybupp"]
-[ext_resource type="Texture2D" uid="uid://3ywyt4eq75mk" path="res://assets/Menus/Card/InventorySlot2.png" id="19_67bnq"]
-[ext_resource type="Texture2D" uid="uid://bmp03hkp7jyte" path="res://assets/Menus/Buttons/Volume.png" id="19_0145e"]
-[ext_resource type="Texture2D" uid="uid://dq44bx5eb2kee" path="res://assets/Menus/Buttons/MainMenuPressed.png" id="19_bc4cl"]
+[ext_resource type="Texture2D" uid="uid://c8e4bwkgo8pa3" path="res://Assets/Menus/Buttons/Continue.png" id="15_5cpfw"]
+[ext_resource type="Texture2D" uid="uid://mstmpv6lyhg1" path="res://Assets/Menus/Buttons/Options.png" id="15_xeimi"]
+[ext_resource type="Texture2D" uid="uid://dk07nioprjt4a" path="res://Assets/Menus/Buttons/ContinuePressed.png" id="16_k452r"]
+[ext_resource type="Texture2D" uid="uid://bjxevov3ppfwb" path="res://Assets/Menus/Buttons/OptionsPressed.png" id="16_v8v00"]
+[ext_resource type="Texture2D" uid="uid://c2buyurbuyts3" path="res://Assets/Menus/Card/TopLeftPanel.png" id="16_ylyeg"]
+[ext_resource type="PackedScene" uid="uid://bh6af5v8500yi" path="res://Scenes/KianStuff/HealthHUD.tscn" id="17_10vpj"]
+[ext_resource type="Texture2D" uid="uid://brvc34deasnka" path="res://Assets/Menus/Buttons/ContinueHover.png" id="17_fkcgn"]
+[ext_resource type="Texture2D" uid="uid://by4q8e00gcw6e" path="res://Assets/Menus/Buttons/OptionsHover.png" id="17_vvi5q"]
+[ext_resource type="Texture2D" uid="uid://4nua0xi1ceu4" path="res://Assets/Menus/Health/TopLeftPanelEmpty.png" id="17_x4mv7"]
+[ext_resource type="Texture2D" uid="uid://b2qa7npsxsbfc" path="res://Assets/Menus/Card/InventorySlots.png" id="18_f4i3l"]
+[ext_resource type="Texture2D" uid="uid://bd2mtv2q3jp6j" path="res://Assets/Menus/Card/InventorySlot1.png" id="18_n7mdd"]
+[ext_resource type="Texture2D" uid="uid://coidtyx1e8uxj" path="res://Assets/Menus/Buttons/MainMenu.png" id="18_ybupp"]
+[ext_resource type="Texture2D" uid="uid://3ywyt4eq75mk" path="res://Assets/Menus/Card/InventorySlot2.png" id="19_67bnq"]
+[ext_resource type="Texture2D" uid="uid://bmp03hkp7jyte" path="res://Assets/Menus/Buttons/Volume.png" id="19_0145e"]
+[ext_resource type="Texture2D" uid="uid://dq44bx5eb2kee" path="res://Assets/Menus/Buttons/MainMenuPressed.png" id="19_bc4cl"]
 [ext_resource type="Script" path="res://Scripts/inventory_section.gd" id="20_0bvax"]
-[ext_resource type="Texture2D" uid="uid://4o66f3i520wc" path="res://assets/Menus/Card/InventorySlot3.png" id="20_jlb7i"]
-[ext_resource type="Texture2D" uid="uid://csftv15b8vsmr" path="res://assets/Menus/Buttons/MainMenuHover.png" id="20_nufx6"]
-[ext_resource type="Texture2D" uid="uid://jgn0vxfsnhfw" path="res://assets/Menus/Buttons/Quit2.png" id="21_djoam"]
-[ext_resource type="Texture2D" uid="uid://cfr6p50fq7ow6" path="res://assets/Menus/Buttons/QuitPressed2.png" id="22_jeq7h"]
-[ext_resource type="Texture2D" uid="uid://dy11egb5o2dw7" path="res://assets/Menus/Buttons/VolumePressed.png" id="22_q6ajh"]
-[ext_resource type="Texture2D" uid="uid://dwlmffvq33avb" path="res://assets/Sprites/Deco/healthpotion.png" id="22_w5x45"]
-[ext_resource type="Texture2D" uid="uid://d25343ltfnoq2" path="res://assets/Menus/Buttons/QuitHover2.png" id="23_kvolx"]
-[ext_resource type="Texture2D" uid="uid://csdgy7l42pm6l" path="res://assets/Menus/Buttons/VolumeHover.png" id="23_p2p71"]
-[ext_resource type="Texture2D" uid="uid://rcmlqai41i6j" path="res://assets/Sprites/Deco/Golden_Key.png" id="24_do3nf"]
-[ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://assets/Menus/Buttons/Back.png" id="26_f4fvt"]
-[ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://assets/Menus/Buttons/BackPressed.png" id="27_lifpq"]
-[ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://assets/Menus/Buttons/BackHover.png" id="28_ild77"]
-[ext_resource type="Texture2D" uid="uid://di31e1fe563qd" path="res://assets/Menus/Buttons/VolumeSliderBar.png" id="31_agevm"]
-[ext_resource type="Texture2D" uid="uid://badehacwr6sl3" path="res://assets/Menus/Card/VolumeContainer.png" id="31_b5wfc"]
-[ext_resource type="Texture2D" uid="uid://es30jjr2ubix" path="res://assets/Menus/Buttons/VolumeSlider.png" id="32_27j3r"]
-[ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://scenes/JacksonStuff/FisherEnemy.tscn" id="32_p1g1e"]
-[ext_resource type="Texture2D" uid="uid://bd8b40ennr78r" path="res://assets/Menus/Card/VolumeSliderFocused.png" id="33_d3nvm"]
-[ext_resource type="Texture2D" uid="uid://cx265xv42yk88" path="res://assets/Menus/Buttons/Nothing.png" id="33_vvkc4"]
+[ext_resource type="Texture2D" uid="uid://4o66f3i520wc" path="res://Assets/Menus/Card/InventorySlot3.png" id="20_jlb7i"]
+[ext_resource type="Texture2D" uid="uid://csftv15b8vsmr" path="res://Assets/Menus/Buttons/MainMenuHover.png" id="20_nufx6"]
+[ext_resource type="Texture2D" uid="uid://jgn0vxfsnhfw" path="res://Assets/Menus/Buttons/Quit2.png" id="21_djoam"]
+[ext_resource type="Texture2D" uid="uid://cfr6p50fq7ow6" path="res://Assets/Menus/Buttons/QuitPressed2.png" id="22_jeq7h"]
+[ext_resource type="Texture2D" uid="uid://dy11egb5o2dw7" path="res://Assets/Menus/Buttons/VolumePressed.png" id="22_q6ajh"]
+[ext_resource type="Texture2D" uid="uid://dwlmffvq33avb" path="res://Assets/Sprites/Deco/healthpotion.png" id="22_w5x45"]
+[ext_resource type="Texture2D" uid="uid://d25343ltfnoq2" path="res://Assets/Menus/Buttons/QuitHover2.png" id="23_kvolx"]
+[ext_resource type="Texture2D" uid="uid://csdgy7l42pm6l" path="res://Assets/Menus/Buttons/VolumeHover.png" id="23_p2p71"]
+[ext_resource type="Texture2D" uid="uid://rcmlqai41i6j" path="res://Assets/Sprites/Deco/Golden_Key.png" id="24_do3nf"]
+[ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://Assets/Menus/Buttons/Back.png" id="26_f4fvt"]
+[ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://Assets/Menus/Buttons/BackPressed.png" id="27_lifpq"]
+[ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://Assets/Menus/Buttons/BackHover.png" id="28_ild77"]
+[ext_resource type="Texture2D" uid="uid://di31e1fe563qd" path="res://Assets/Menus/Buttons/VolumeSliderBar.png" id="31_agevm"]
+[ext_resource type="Texture2D" uid="uid://badehacwr6sl3" path="res://Assets/Menus/Card/VolumeContainer.png" id="31_b5wfc"]
+[ext_resource type="Texture2D" uid="uid://es30jjr2ubix" path="res://Assets/Menus/Buttons/VolumeSlider.png" id="32_27j3r"]
+[ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://Scenes/JacksonStuff/FisherEnemy.tscn" id="32_p1g1e"]
+[ext_resource type="Texture2D" uid="uid://bd8b40ennr78r" path="res://Assets/Menus/Card/VolumeSliderFocused.png" id="33_d3nvm"]
+[ext_resource type="Texture2D" uid="uid://cx265xv42yk88" path="res://Assets/Menus/Buttons/Nothing.png" id="33_vvkc4"]
+[ext_resource type="PackedScene" uid="uid://bdk7s55tilwt0" path="res://Scenes/JacksonStuff/hacker_enemy.tscn" id="52_cc4fk"]
+[ext_resource type="Script" path="res://Scripts/preBattleState.gd" id="53_c222u"]
+[ext_resource type="PackedScene" uid="uid://s3mpivfnm1tj" path="res://Scenes/JacksonStuff/virusEnemy.tscn" id="54_oeyak"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
 texture = ExtResource("2_og63f")
@@ -2707,7 +2710,7 @@ texture = ExtResource("4_w0n7e")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ujtme")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mmbsn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y07io"]
 texture = ExtResource("2_og63f")
 4:0/0 = 0
 5:0/0 = 0
@@ -3345,7 +3348,7 @@ texture = ExtResource("2_og63f")
 16:28/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_k08ox"]
-sources/0 = SubResource("TileSetAtlasSource_mmbsn")
+sources/0 = SubResource("TileSetAtlasSource_y07io")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jxtxc"]
 texture = ExtResource("2_og63f")
@@ -5885,5 +5888,31 @@ text = "UI SFX"
 
 [node name="Enemies" type="Node" parent="."]
 
+[node name="HackerEnemy" parent="Enemies" instance=ExtResource("52_cc4fk")]
+position = Vector2(0, -633)
+
+[node name="HackerEnemy2" parent="Enemies" instance=ExtResource("52_cc4fk")]
+position = Vector2(537, -563)
+
 [node name="FisherEnemy" parent="Enemies" instance=ExtResource("32_p1g1e")]
 position = Vector2(-2, -458)
+script = ExtResource("53_c222u")
+
+[node name="id" type="Label" parent="Enemies/FisherEnemy"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "1"
+
+[node name="FisherEnemy2" parent="Enemies" instance=ExtResource("32_p1g1e")]
+position = Vector2(-200, -842)
+script = ExtResource("53_c222u")
+
+[node name="id" type="Label" parent="Enemies/FisherEnemy2"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "1"
+
+[node name="VirusEnemy" parent="Enemies" instance=ExtResource("54_oeyak")]
+position = Vector2(-9, -961)

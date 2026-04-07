@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5t235xxsvdeq"
-path="res://.godot/imported/WizardOutfit.png-f53fc0210ef1ca088dcf273652411df4.ctex"
+path="res://.godot/imported/WizardOutfit.png-c9def10d34fab8f71b2a03f5141fe95c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/Wizard/WizardOutfit.png"
-dest_files=["res://.godot/imported/WizardOutfit.png-f53fc0210ef1ca088dcf273652411df4.ctex"]
+source_file="res://Assets/Characters/Wizard/WizardOutfit.png"
+dest_files=["res://.godot/imported/WizardOutfit.png-c9def10d34fab8f71b2a03f5141fe95c.ctex"]
 
 [params]
 

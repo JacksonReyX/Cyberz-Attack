@@ -1,8 +1,12 @@
 extends Node
 
+
 var coins: int = 0
 var health_potions: int = 0
 var keys: int = 0
+var playerPosition: Vector2
+var defeatedEnemyID : String = ""
+
 
 func add_coins(amount: int) -> void:
 	coins += amount
@@ -34,6 +38,16 @@ func load_data():
 		coins = data["coins"]
 		owned_skins = data["owned_skins"]
 		selected_skin = data["selected_skin"]
+	
+func battleReset(): 
+	if GameState.playerPosition != null:
+		$CharacterBody2D.position = GameState.playerPosition
+	if GameState.defeatedEnemyID != "":
+		for enemy in get_tree().get_nodes_in_group("enemies"):
+			if enemy.defeatedEnemyID == GameState.defeatedEnemyID:
+				enemy.queue_free()
+				break
+		GameState.defeatedEnemyID = ""
 #reset data
 #func reset_data():
 	#coins = 0
