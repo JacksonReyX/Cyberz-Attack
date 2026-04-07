@@ -20,7 +20,7 @@ extends Control
 
 var Items : Array = read_json_file("res://Assets/Questions/hackerQuestions.json")
 var item : Dictionary
-var index_item : int = randi_range(1,20)
+var index_item : int = randi_range(0,20)
 var correctCount : float  = 0
 var isCorrect : bool 
 var healthPercent : int = 100
@@ -91,14 +91,14 @@ func _on_button_pressed() -> void:
 	if isCorrect:
 		correctCount += 1
 		enemyHealth -= 60
-		index_item = randi_range(1,20)
+		index_item = randi_range(0,20)
 		score += 10
 		correctSFX.play()
 		rightAnswer.visible = true
 		rightTimer.start()
 	else:
 		incorrectSFX.play()
-		index_item = randi_range(1,20)
+		index_item = randi_range(0,20)
 		healthPercent -= 20
 		wrongAnswer.visible = true
 		wrongTimer.start()

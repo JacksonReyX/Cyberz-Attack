@@ -1,0 +1,12 @@
+[
+	{
+		"question": "Your computer gets a password, it demands you pay money to get your computer back \n what do you not do?",
+		"options": ["Report to authorities", "Pay the money", "Take it to a pro to get fixed", "Research the virus"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You've recieved an email with a zip file, what do you do",
+		"options": ["Download it", "Unzip it", "Report it", "Send it to you friends"],
+		"correctIndex": 2
+	},
+]
