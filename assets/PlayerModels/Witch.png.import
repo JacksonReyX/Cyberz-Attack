@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6tko3r8q07m4"
-path="res://.godot/imported/Witch.png-8227249a23f466cda2171f2a5681c5cd.ctex"
+path="res://.godot/imported/Witch.png-2ca84f93f5da7860ce7f4a9ec74a12eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PlayerModels/Witch.png"
-dest_files=["res://.godot/imported/Witch.png-8227249a23f466cda2171f2a5681c5cd.ctex"]
+source_file="res://assets/PlayerModels/Witch.png"
+dest_files=["res://.godot/imported/Witch.png-2ca84f93f5da7860ce7f4a9ec74a12eb.ctex"]
 
 [params]
 

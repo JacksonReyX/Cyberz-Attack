@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://d2smlfuly2fk1"
-path="res://.godot/imported/MECHSwtch_BLEEOOP_HighTech.ogg-54027d8db02a6069365b230f5de0e572.oggvorbisstr"
+path="res://.godot/imported/MECHSwtch_BLEEOOP_HighTech.ogg-77bd64d79808c93f4c962d099102c108.oggvorbisstr"
 
 [deps]
 
-source_file="res://Assets/Audio/UI/MECHSwtch_BLEEOOP_HighTech.ogg"
-dest_files=["res://.godot/imported/MECHSwtch_BLEEOOP_HighTech.ogg-54027d8db02a6069365b230f5de0e572.oggvorbisstr"]
+source_file="res://assets/Audio/UI/MECHSwtch_BLEEOOP_HighTech.ogg"
+dest_files=["res://.godot/imported/MECHSwtch_BLEEOOP_HighTech.ogg-77bd64d79808c93f4c962d099102c108.oggvorbisstr"]
 
 [params]
 

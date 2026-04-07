@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://l32hgtwy420v"
-path="res://.godot/imported/yesFX.mp3-756f5881f200b080dcc7d0f84ac01721.mp3str"
+path="res://.godot/imported/yesFX.mp3-5b995819ff669adbd473b855b247841e.mp3str"
 
 [deps]
 
-source_file="res://Assets/sounds/yesFX.mp3"
-dest_files=["res://.godot/imported/yesFX.mp3-756f5881f200b080dcc7d0f84ac01721.mp3str"]
+source_file="res://assets/sounds/yesFX.mp3"
+dest_files=["res://.godot/imported/yesFX.mp3-5b995819ff669adbd473b855b247841e.mp3str"]
 
 [params]
 

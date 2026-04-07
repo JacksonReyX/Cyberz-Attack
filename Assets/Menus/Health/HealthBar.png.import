@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn445kvwq1wge"
-path="res://.godot/imported/HealthBar.png-434644cfd2d07f6f04bd958b090de7f7.ctex"
+path="res://.godot/imported/HealthBar.png-23caa644d4df5238b74fb0abff8f758e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menus/Health/HealthBar.png"
-dest_files=["res://.godot/imported/HealthBar.png-434644cfd2d07f6f04bd958b090de7f7.ctex"]
+source_file="res://assets/Menus/Health/HealthBar.png"
+dest_files=["res://.godot/imported/HealthBar.png-23caa644d4df5238b74fb0abff8f758e.ctex"]
 
 [params]
 
