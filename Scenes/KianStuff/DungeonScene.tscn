@@ -5488,6 +5488,7 @@ offset_bottom = 360.0
 texture = ExtResource("20_jlb7i")
 
 [node name="ItemIcon" type="TextureRect" parent="HUDLayer/HUDRoot/InventorySection/Slot3"]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0

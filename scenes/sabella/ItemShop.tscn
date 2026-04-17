@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://Scripts/item_shop.gd" id="1_yrxvl"]
 [ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_grguu"]
 [ext_resource type="Texture2D" uid="uid://b4207duut6b75" path="res://assets/Sprites/Deco/Coin.png" id="3_w4588"]
-[ext_resource type="Texture2D" uid="uid://cw0jy87nbqj14" path="res://assets/PlayerModels/Wizard.png" id="4_lo1pv"]
-[ext_resource type="Texture2D" uid="uid://c7uhksxdlo5f0" path="res://assets/PlayerModels/Knight2.png" id="5_yrxvl"]
+[ext_resource type="Texture2D" uid="uid://cubkxo8oar5r2" path="res://assets/PlayerModels/Wizard.png" id="4_lo1pv"]
+[ext_resource type="Texture2D" uid="uid://ddihs33po7wso" path="res://assets/PlayerModels/Knight2.png" id="5_yrxvl"]
 [ext_resource type="Texture2D" uid="uid://b6tko3r8q07m4" path="res://assets/PlayerModels/Witch.png" id="6_0ncwt"]
 [ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://assets/Menus/Buttons/Back.png" id="7_q12tm"]
 [ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://assets/Menus/Buttons/BackPressed.png" id="8_vh0se"]
@@ -81,8 +81,8 @@ text = "100
 "
 
 [node name="WizardSkin" type="Sprite2D" parent="SkinContainer/Skin1"]
-position = Vector2(172, 165)
-scale = Vector2(5.125, 5.08333)
+position = Vector2(171, 185)
+scale = Vector2(4.5625, 3.83333)
 texture = ExtResource("4_lo1pv")
 
 [node name="Label" type="Label" parent="SkinContainer/Skin1"]
@@ -120,8 +120,8 @@ text = "100
 "
 
 [node name="KnightSkin" type="Sprite2D" parent="SkinContainer/Skin2"]
-position = Vector2(331, 167)
-scale = Vector2(4.96875, 4.95833)
+position = Vector2(330, 183)
+scale = Vector2(4.96094, 4.09375)
 texture = ExtResource("5_yrxvl")
 
 [node name="Label" type="Label" parent="SkinContainer/Skin2"]
