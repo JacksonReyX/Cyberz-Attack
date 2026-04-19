@@ -216,12 +216,12 @@ scale = Vector2(9.3125, 7.375)
 texture = ExtResource("11_qntp1")
 
 [node name="Torch" parent="." instance=ExtResource("12_op46a")]
-position = Vector2(47, 160)
-scale = Vector2(3, 3)
+position = Vector2(48, 162)
+scale = Vector2(2.3, 2.3)
 
 [node name="Torch2" parent="." instance=ExtResource("12_op46a")]
-position = Vector2(606, 159)
-scale = Vector2(3, 3)
+position = Vector2(607, 161)
+scale = Vector2(2.3, 2.3)
 
 [connection signal="pressed" from="SkinContainer/Skin1/Skin1Button" to="." method="_on_skin_1_button_pressed"]
 [connection signal="pressed" from="SkinContainer/Skin2/Skin2Button" to="." method="_on_skin_2_button_pressed"]
