@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/PlayerMovement.gd" id="1_q6k34"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1k5aj"]
-radius = 7.0
+radius = 5.0
 height = 14.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
@@ -11,27 +11,31 @@ script = ExtResource("1_q6k34")
 
 [node name="Visuals" type="Node2D" parent="."]
 
-[node name="Body" type="Sprite2D" parent="Visuals"]
+[node name="Body" type="AnimatedSprite2D" parent="Visuals"]
 unique_name_in_owner = true
 position = Vector2(0, 1)
+animation = &"run"
 
-[node name="Outfit" type="Sprite2D" parent="Visuals"]
+[node name="Outfit" type="AnimatedSprite2D" parent="Visuals"]
 unique_name_in_owner = true
 position = Vector2(0, 1)
+animation = &"idle"
 
-[node name="Eyes" type="Sprite2D" parent="Visuals"]
+[node name="Eyes" type="AnimatedSprite2D" parent="Visuals"]
 unique_name_in_owner = true
 position = Vector2(0, 1)
+animation = &"idle"
 
-[node name="Accessory" type="Sprite2D" parent="Visuals"]
+[node name="Accessory" type="AnimatedSprite2D" parent="Visuals"]
 unique_name_in_owner = true
 position = Vector2(0, 1)
+animation = &"idle"
 
-[node name="Hair" type="Sprite2D" parent="Visuals"]
+[node name="Hair" type="AnimatedSprite2D" parent="Visuals"]
 unique_name_in_owner = true
 position = Vector2(0, -3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8)
+position = Vector2(0, 7)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_1k5aj")

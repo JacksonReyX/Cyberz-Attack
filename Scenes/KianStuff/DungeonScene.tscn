@@ -51,9 +51,9 @@
 [ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://Scenes/JacksonStuff/FisherEnemy.tscn" id="32_p1g1e"]
 [ext_resource type="Texture2D" uid="uid://bd8b40ennr78r" path="res://Assets/Menus/Card/VolumeSliderFocused.png" id="33_d3nvm"]
 [ext_resource type="Texture2D" uid="uid://cx265xv42yk88" path="res://Assets/Menus/Buttons/Nothing.png" id="33_vvkc4"]
-[ext_resource type="PackedScene" uid="uid://bdk7s55tilwt0" path="res://Scenes/JacksonStuff/hacker_enemy.tscn" id="52_cc4fk"]
+[ext_resource type="PackedScene" uid="uid://bdk7s55tilwt0" path="res://scenes/JacksonStuff/hacker_enemy.tscn" id="52_cc4fk"]
 [ext_resource type="Script" path="res://Scripts/preBattleState.gd" id="53_c222u"]
-[ext_resource type="PackedScene" uid="uid://s3mpivfnm1tj" path="res://Scenes/JacksonStuff/virusEnemy.tscn" id="54_oeyak"]
+[ext_resource type="PackedScene" uid="uid://s3mpivfnm1tj" path="res://scenes/JacksonStuff/virusEnemy.tscn" id="54_oeyak"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
 texture = ExtResource("2_og63f")
@@ -6531,7 +6531,7 @@ position = Vector2(103, -984)
 position = Vector2(56, -712)
 
 [node name="Chest6" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
-position = Vector2(408, -1290)
+position = Vector2(249, -1209)
 
 [node name="Chest10" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(423, -1752)

@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://trnc0xxiabh4"]
+
+[ext_resource type="Texture2D" uid="uid://uoixqcterx0t" path="res://Assets/Characters/CharactersAnimations/wizard_accessory_idle.png" id="1_yhh5e"]
+[ext_resource type="Texture2D" uid="uid://j4pfmwcdwb8g" path="res://Assets/Characters/CharactersAnimations/wizard_accessory_run.png" id="2_6suws"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvjre"]
+atlas = ExtResource("1_yhh5e")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kf4ar"]
+atlas = ExtResource("1_yhh5e")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbh7k"]
+atlas = ExtResource("1_yhh5e")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ux3h4"]
+atlas = ExtResource("1_yhh5e")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wf2i"]
+atlas = ExtResource("2_6suws")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qarud"]
+atlas = ExtResource("2_6suws")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8jds"]
+atlas = ExtResource("2_6suws")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_be8vb"]
+atlas = ExtResource("2_6suws")
+region = Rect2(48, 0, 16, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvjre")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kf4ar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbh7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ux3h4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wf2i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qarud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8jds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_be8vb")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]

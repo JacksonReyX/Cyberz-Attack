@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://7sxc2eh041t"]
+
+[ext_resource type="Texture2D" uid="uid://ch2a6645o5nur" path="res://Assets/Characters/CharactersAnimations/wizard_eyes_idle.png" id="1_222mv"]
+[ext_resource type="Texture2D" uid="uid://me7j3t5dhcm7" path="res://Assets/Characters/CharactersAnimations/wizard_eyes_run.png" id="2_810xm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tm72"]
+atlas = ExtResource("1_222mv")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toxs8"]
+atlas = ExtResource("1_222mv")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iohly"]
+atlas = ExtResource("1_222mv")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jqcw"]
+atlas = ExtResource("1_222mv")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pnaq"]
+atlas = ExtResource("2_810xm")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oduul"]
+atlas = ExtResource("2_810xm")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhnpm"]
+atlas = ExtResource("2_810xm")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6mkl"]
+atlas = ExtResource("2_810xm")
+region = Rect2(48, 0, 16, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tm72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_toxs8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iohly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jqcw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0pnaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oduul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhnpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6mkl")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]
