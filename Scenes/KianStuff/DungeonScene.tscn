@@ -51,9 +51,9 @@
 [ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://Scenes/JacksonStuff/FisherEnemy.tscn" id="32_p1g1e"]
 [ext_resource type="Texture2D" uid="uid://bd8b40ennr78r" path="res://Assets/Menus/Card/VolumeSliderFocused.png" id="33_d3nvm"]
 [ext_resource type="Texture2D" uid="uid://cx265xv42yk88" path="res://Assets/Menus/Buttons/Nothing.png" id="33_vvkc4"]
-[ext_resource type="PackedScene" uid="uid://bdk7s55tilwt0" path="res://scenes/JacksonStuff/hacker_enemy.tscn" id="52_cc4fk"]
+[ext_resource type="PackedScene" uid="uid://bdk7s55tilwt0" path="res://Scenes/JacksonStuff/hacker_enemy.tscn" id="52_cc4fk"]
 [ext_resource type="Script" path="res://Scripts/preBattleState.gd" id="53_c222u"]
-[ext_resource type="PackedScene" uid="uid://s3mpivfnm1tj" path="res://scenes/JacksonStuff/virusEnemy.tscn" id="54_oeyak"]
+[ext_resource type="PackedScene" uid="uid://s3mpivfnm1tj" path="res://Scenes/JacksonStuff/virusEnemy.tscn" id="54_oeyak"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
 texture = ExtResource("2_og63f")
