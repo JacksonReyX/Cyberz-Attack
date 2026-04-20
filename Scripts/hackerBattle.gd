@@ -7,10 +7,18 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		# Safely change the scenea
+		if GameState.returning_from_battle:
+			return
+		
+		# GET THE PARENT NAME
+		# If your hierarchy is Enemy(Node2D) -> Area2D, 
+		# then get_parent().name is the unique name (e.g., "Fisher1")
+		var actual_enemy_name = get_parent().name
+		GameState.active_enemy_name = actual_enemy_name
+		
 		GameState.playerPosition = body.global_position
-		GameState.active_enemy_name = self.name
 		GameState.returning_from_battle = true
+		
 		textbox.show()
 		textTimer.start()
 

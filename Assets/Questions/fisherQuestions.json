@@ -1,109 +1,152 @@
 [
-	{
-		"question": "You receive a text from an unknown number asking you to click a link to claim a prize. What do you do?",
-		"options": ["Click the link", "Ignore and delete it", "Reply asking who it is", "Forward it to friends"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You get an email saying your account will be locked unless you enter your password. What do you do?",
-		"options": ["Enter your password", "Ignore the email", "Report it as phishing", "Reply to the sender"],
-		"correctIndex": 2
-	},
-	{
-		"question": "A message says you won a free phone but asks for personal info. What do you do?",
-		"options": ["Give your info", "Ignore it", "Click the link", "Share it"],
-		"correctIndex": 1
-	},
-	{
-		"question": "An email looks like it's from your school but has spelling mistakes. What do you do?",
-		"options": ["Trust it", "Delete it", "Click links", "Reply"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You get a message asking for your login details. What do you do?",
-		"options": ["Send details", "Ignore it", "Screenshot it", "Forward it"],
-		"correctIndex": 1
-	},
-	{
-		"question": "A friend sends a strange link you weren't expecting. What do you do?",
-		"options": ["Click it", "Ask them first", "Ignore it forever", "Post it"],
-		"correctIndex": 1
-	},
-	{
-		"question": "An email says 'urgent action required' with a link. What do you do?",
-		"options": ["Click fast", "Check sender carefully", "Reply quickly", "Forward it"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You get a fake-looking invoice email. What do you do?",
-		"options": ["Pay it", "Delete it", "Click link", "Reply"],
-		"correctIndex": 1
-	},
-	{
-		"question": "A website asks for your password after clicking a link. What do you do?",
-		"options": ["Enter it", "Close the site", "Share it", "Refresh"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You see a suspicious message with bad grammar. What do you do?",
-		"options": ["Trust it", "Ignore it", "Reply", "Click"],
-		"correctIndex": 1
-	},
-
-	{
-		"question": "A message offers free game coins if you log in. What do you do?",
-		"options": ["Log in", "Ignore it", "Share it", "Reply"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You get an email from 'support' asking for info. What do you do?",
-		"options": ["Send info", "Verify sender", "Reply", "Click link"],
-		"correctIndex": 1
-	},
-	{
-		"question": "A text says your package is delayed, click link. What do you do?",
-		"options": ["Click it", "Ignore it", "Reply", "Call"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You receive a fake login page. What do you do?",
-		"options": ["Enter info", "Close it", "Share it", "Refresh"],
-		"correctIndex": 1
-	},
-	{
-		"question": "Someone asks for your password in chat. What do you do?",
-		"options": ["Give it", "Refuse", "Ignore", "Report"],
-		"correctIndex": 3
-	},
-	{
-		"question": "A message claims to be from a bank you don't use. What do you do?",
-		"options": ["Respond", "Ignore", "Click link", "Call"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You get a suspicious QR code. What do you do?",
-		"options": ["Scan it", "Ignore it", "Share it", "Print it"],
-		"correctIndex": 1
-	},
-	{
-		"question": "An email says you've been hacked, click link. What do you do?",
-		"options": ["Click", "Ignore", "Reply", "Forward"],
-		"correctIndex": 1
-	},
-	{
-		"question": "A message asks for your address. What do you do?",
-		"options": ["Send it", "Ignore", "Reply", "Click"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You see a fake giveaway post. What do you do?",
-		"options": ["Enter", "Ignore", "Share", "Like"],
-		"correctIndex": 1
-	},
-
-	{
-		"question": "A link looks suspicious and shortened. What do you do?",
-		"options": ["Click", "Avoid it", "Share", "Reply"],
-		"correctIndex": 1
-	}
+  {
+	"question": "An email from 'Netflix Support' says your account is suspended and has a 'Log In' button. \nThe sender address is 'netflix-security@gmail.com'. What is the red flag?",
+	"options": ["The account is suspended", "The use of a Gmail address for official business", "The button color", "The subject line"],
+	"correctIndex": 1
+  },
+  {
+	"question": "A friend DMs you: 'OMG, you're in this video!' with a link. What should you do before clicking?",
+	"options": ["Click it to see the video", "Comment on the post immediately", "Ask your friend in person or via a different app if they sent it", "Block the friend forever"],
+	"correctIndex": 2
+  },
+  {
+	"question": "What is 'Spear Phishing'?",
+	"options": ["Fishing with a spear in the ocean", "A generic scam sent to millions of people", "\nA targeted attack using personal info to trick a specific person", "A virus that deletes your hard drive"],
+	"correctIndex": 2
+  },
+  {
+	"question": "You get an email about a 'Required Password Reset' for your school account. \nThe link goes to 'schools-portal.net' instead of '.edu'. This is likely:",
+	"options": ["A helpful reminder", "A typo by the school IT department", "A phishing site designed to steal your credentials", "A faster way to log in"],
+	"correctIndex": 2
+  },
+  {
+	"question": "A pop-up says: 'VIRUS DETECTED! Call 1-800-MY-TECH-HELP now to save your files.' \nWhat is the safest move?",
+	"options": ["Call the number immediately", "Pay the fee they ask for", "Close your browser and restart your computer", "Install the 'cleaner' software they recommend"],
+	"correctIndex": 2
+  },
+  {
+	"question": "Why do phishers often create a 'sense of urgency' (e.g., 'Do this in 10 minutes or lose your account!')?",
+	"options": ["They are very busy people", "To make you act before you have time to think", "Because their servers are slow", "To help you finish your tasks faster"],
+	"correctIndex": 1
+  },
+  {
+	"question": "You see an ad for 'Free V-Bucks' or 'Free Robux' that asks for your login and password.\n What will likely happen?",
+	"options": ["You get the currency instantly", "Your account will be hacked and stolen", "You get a small amount as a trial", "Nothing, it is totally safe"],
+	"correctIndex": 1
+  },
+  {
+	"question": "When you hover your mouse over a link in an email, a different web address appears in the corner of your screen.\n Which one is the real destination?",
+	"options": ["The one written in the email", "The one shown in the hover-over preview", "Neither, both are fake", "The one with the most letters"],
+	"correctIndex": 1
+  },
+  {
+	"question": "An email claims to be from the government asking for your Social Security Number via email. \nWhy is this a scam?",
+	"options": ["Government agencies don't ask for sensitive info over email", "The email didn't have a cool logo", "It was sent on a Saturday", "The font was too small"],
+	"correctIndex": 0
+  },
+  {
+	"question": "What does the 'S' in HTTPS stand for, and does it guarantee a site is safe?",
+	"options": ["Simple; Yes", "Secret; No", "Secure; No, scammers can use HTTPS too", "System; Yes"],
+	"correctIndex": 2
+  },
+  {
+	"question": "Which of these is a common 'Pretexting' scam?",
+	"options": ["A website offering free movies", "A caller pretending to be your grandpa in trouble needing money", "A software update from Apple", "A low battery notification"],
+	"correctIndex": 1
+  },
+  {
+	"question": "You receive an invoice for a $500 purchase you never made.\n It has an attached PDF named 'View_Receipt.exe'. Why is this dangerous?",
+	"options": ["The price is too high", "PDFs should not end in '.exe' (which is a program file)", "The font on the invoice is ugly", "You didn't buy anything"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is the best way to check if a 'Security Alert' email from your bank is real?",
+	"options": ["Reply to the email and ask", "Call the number listed in the email footer", "Log in through the bank's official app or website separately", "Click the 'Verify Now' button"],
+	"correctIndex": 2
+  },
+  {
+	"question": "A scammer uses 'MFA Fatigue' by sending dozens of login approval pings to your phone.\n What should you do?",
+	"options": ["Approve one so they stop", "Deny them and change your password immediately", "Turn off your phone for a week", "Ignore them and hope they go away"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Which of these looks most like a 'Spoofed' URL?",
+	"options": ["microsoft.com", "mircosoft.com", "support.microsoft.com", "login.microsoft.com"],
+	"correctIndex": 1
+  },
+  {
+	"question": "You get a text saying 'Your FedEx package is delayed. Pay $1 to reschedule.' You aren't expecting a package. What do you do?",
+	"options": ["Pay the $1 because it's cheap", "Enter your card info to see what the package is", "Delete the text and block the number", "Reply 'STOP'"],
+	"correctIndex": 2
+  },
+  {
+	"question": "What is 'Smishing'?",
+	"options": ["Phishing that happens via SMS (Text Messages)", "Phishing that happens on social media", "A small version of a computer virus", "Phishing through smart watches"],
+	"correctIndex": 0
+  },
+  {
+	"question": "A website offers you a 'Free iPhone 15' if you just fill out a survey with your address and phone number.\n What is the catch?",
+	"options": ["The survey takes a long time", "They will sell your data to scammers and you won't get a phone", "The iPhone is a refurbished model", "You have to pay for shipping"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Why is it dangerous to use the same password for your email and your games?",
+	"options": ["It's too hard to remember", "If a phisher gets your game password, they can also get into your email", "The computer gets confused", "Your friends might guess it"],
+	"correctIndex": 1
+  },
+  {
+	"question": "You receive a LinkedIn request from a recruiter at a famous company, \nbut their profile has no photo and only 2 connections. This is likely:",
+	"options": ["A very busy recruiter", "A 'Catfishing' or Phishing attempt", "A new employee", "A secret job offer"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What should you do if you realize you accidentally entered your password into a phishing site?",
+	"options": ["Nothing, it's too late", "Change your password on that site and all others immediately", "Wait to see if someone logs in", "Delete your browser history"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Which of these is a sign of a professional-looking phishing email?",
+	"options": ["Generic greetings like 'Dear Valued Customer'", "Perfect grammar throughout", "A sender address that matches the company name exactly", "A link to the actual company homepage"],
+	"correctIndex": 0
+  },
+  {
+	"question": "A phisher calls you pretending to be 'Microsoft Tech Support' and asks for remote access to your laptop.\n What should you do?",
+	"options": ["Give them access so they can fix the speed", "Hang up immediately", "Ask them for their employee ID first", "Let them see just your desktop"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is 'Vishing'?",
+	"options": ["Phishing through Video games", "Phishing through Voice calls", "Virtual Phishing", "Very fast Phishing"],
+	"correctIndex": 1
+  },
+  {
+	"question": "If a website asks you to 'Update your browser' by downloading a file from their page, what should you do?",
+	"options": ["Download it to stay safe", "Only update through your computer's official settings or app store", "Ask a friend to download it first", "Ignore the warning and keep browsing"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Which part of this email address is the 'Domain'? 'security@amazon.deals.com'",
+	"options": ["security", "amazon", "deals.com", "amazon.deals.com"],
+	"correctIndex": 3
+  },
+  {
+	"question": "You get an email with a subject line 'RE: Your Application' \nbut you never applied for a job. Why did they use 'RE:'?",
+	"options": ["They made a mistake", "To make it look like a reply to a conversation you already started", "It stands for 'Real Email'", "To show it is an urgent matter"],
+	"correctIndex": 1
+  },
+  {
+	"question": "How can Multi-Factor Authentication (MFA) stop a phishing attack?",
+	"options": ["It prevents the scammer from seeing the email", "Even if they have your password, they still need the code from your phone", "It deletes the phishing email automatically", "It blocks the scammer's IP address"],
+	"correctIndex": 1
+  },
+  {
+	"question": "A 'Quishing' attack uses what to lead you to a fake website?",
+	"options": ["Quick emails", "QR Codes", "Quest logs in games", "Quiet notifications"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is the safest way to browse the internet on public Wi-Fi?",
+	"options": ["Don't log into sensitive accounts or use a VPN", "Use the 'Incognito' mode only", "Only visit sites you know", "Public Wi-Fi is always safe"],
+	"correctIndex": 0
+  }
 ]

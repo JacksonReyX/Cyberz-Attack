@@ -1,110 +1,152 @@
 [
-	{
-		"question": "Someone guesses your password easily. What should you do?",
-		"options": ["Keep using it", "Change to stronger password", "Share it", "Ignore"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You use the same password everywhere. What is best practice?",
-		"options": ["Keep doing it", "Use different passwords", "Share passwords", "Write online"],
-		"correctIndex": 1
-	},
-	{
-		"question": "A public Wi-Fi asks for no password. What should you do?",
-		"options": ["Use it freely", "Be cautious", "Enter passwords", "Download files"],
-		"correctIndex": 1
-	},
-	{
-		"question": "Your friend asks for your login info. What do you do?",
-		"options": ["Give it", "Say no", "Ignore", "Post it"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You see a download from an unknown site. What do you do?",
-		"options": ["Download", "Avoid it", "Share it", "Open it"],
-		"correctIndex": 1
-	},
-	{
-		"question": "Your device asks for an update. What do you do?",
-		"options": ["Ignore", "Update it", "Delete it", "Turn off"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You get a random USB drive. What do you do?",
-		"options": ["Plug it in", "Ignore it", "Give friend", "Throw lightly"],
-		"correctIndex": 1
-	},
-	{
-		"question": "A game asks for too many permissions. What do you do?",
-		"options": ["Allow all", "Review permissions", "Ignore", "Delete phone"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You leave your device unlocked. What should you do?",
-		"options": ["Nothing", "Lock it", "Share it", "Post"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You download apps from unknown stores. What should you do?",
-		"options": ["Keep doing it", "Use trusted stores", "Share apps", "Ignore"],
-		"correctIndex": 1
-	},
-
-	{
-		"question": "Someone sends you a file you didn't expect. What do you do?",
-		"options": ["Open it", "Scan or delete", "Forward it", "Reply"],
-		"correctIndex": 1
-	},
-	{
-		"question": "Your account gets hacked. What should you do first?",
-		"options": ["Ignore", "Change password", "Delete account", "Post online"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You use '123456' as a password. What should you do?",
-		"options": ["Keep it", "Change it", "Share it", "Ignore"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You get a security alert you don't recognize. What do you do?",
-		"options": ["Ignore", "Check account", "Delete email", "Reply"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You install unknown browser extensions. What do you do?",
-		"options": ["Keep them", "Remove them", "Share them", "Ignore"],
-		"correctIndex": 1
-	},
-	{
-		"question": "Your friend’s account sends spam. What do you do?",
-		"options": ["Reply", "Warn friend", "Click links", "Ignore"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You share personal info in games. What should you do?",
-		"options": ["Keep sharing", "Stop sharing", "Post more", "Ignore"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You see a fake login screen. What do you do?",
-		"options": ["Log in", "Close it", "Share", "Refresh"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You click a suspicious link accidentally. What do you do?",
-		"options": ["Ignore", "Close it and scan device", "Share it", "Reply"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You get pop-ups saying you have a virus. What do you do?",
-		"options": ["Click them", "Ignore and close", "Download app", "Reply"],
-		"correctIndex": 1
-	},
-
-	
-	{
-		"question": "You don't use two-factor authentication. What should you do?",
-		"options": ["Ignore", "Enable it", "Share account", "Delete apps"],
-		"correctIndex": 1
-	}
+  {
+	"question": "What is a 'White Hat' hacker?",
+	"options": ["A hacker who only steals from rich people", "An ethical hacker who finds security holes to help fix them", "A hacker who wears a literal white hat", "A hacker who only works in the winter"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Which of these makes a password 'Strong'?",
+	"options": ["Using your pet's name so you don't forget", "A long mix of uppercase, lowercase, numbers, and symbols", "Using '12345678' because it is long", "Your birthdate"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is 'Brute Force' hacking?",
+	"options": ["Breaking a computer with a hammer", "Using a program to guess thousands of password combinations until one works", "Hacking into a gym's website", "Yelling at the computer until it unlocks"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Why is it dangerous to use 'Public Wi-Fi' (like at a cafe) for online banking?",
+	"options": ["The connection is too slow", "Hackers on the same network can 'sniff' your data as it travels through the air", "It costs too much money", "The cafe might see your screen"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is 'Two-Factor Authentication' (2FA)?",
+	"options": ["Having two different computers", "Requiring a second 'key' (like a code on your phone) in addition to your password", "Typing your password twice", "Answering two security questions"],
+	"correctIndex": 1
+  },
+  {
+	"question": "A hacker finds your password from a data breach at a small game site and tries it on your Gmail. This is called:",
+	"options": ["Credential Stuffing", "Lucky guessing", "Spamming", "Data mining"],
+	"correctIndex": 0
+  },
+  {
+	"question": "Which of these is the MOST secure 'Security Question' to use?",
+	"options": ["What city were you born in?", "What is your mother's maiden name?", "A random phrase that only you know the answer to", "What high school did you go to?"],
+	"correctIndex": 2
+  },
+  {
+	"question": "What is 'Shoulder Surfing'?",
+	"options": ["A virus that affects surfers", "Watching someone over their shoulder to see their PIN or password", "Hacking into a webcam", "Using a computer while at the beach"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What does a 'Password Manager' do?",
+	"options": ["Deletes old passwords", "Stores and encrypts all your unique passwords so you only have to remember one 'Master' key", "Tells your friends your passwords", "Changes your password every day automatically"],
+	"correctIndex": 1
+  },
+  {
+	"question": "If you see a 'New Login Detected' email from an app you use,\n but you didn't log in, what should you do?",
+	"options": ["Ignore it; it's probably a mistake", "Click 'This wasn't me' and change your password immediately", "Reply to the email and say 'Hey!'", "Delete the app"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is 'Social Engineering'?",
+	"options": ["Building a social media site", "Manipulating people into giving up secret info by pretending to be someone they trust", "Being very popular online", "Fixing a friend's computer"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Why shouldn't you post photos of your house or school with 'Location Tags' on?",
+	"options": ["The photo looks better without them", "It helps hackers or strangers track exactly where you spend your time", "It uses too much battery", "It makes the file size too large"],
+	"correctIndex": 1
+  },
+  {
+	"question": "A hacker calls you and says they are from 'Amazon' \nand need your 2FA code to cancel an accidental order. Should you give it?",
+	"options": ["Yes, to save money", "No; companies will never ask for your 2FA code over the phone", "Yes, but only if they sound nice", "No, unless they know your name"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is 'Doxing'?",
+	"options": ["A type of medical hacking", "Searching for and publishing private info about someone online to harass them", "Winning a game very quickly", "Cleaning your computer's hard drive"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Which of these is a 'Red Flag' that a website is a fake login page?",
+	"options": ["It has a 'Contact Us' page", "The URL has extra letters like 'faceb00k.com' instead of 'facebook.com'", "It uses blue and white colors", "It has a search bar"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is the risk of using 'Auto-fill' for passwords on a shared family computer?",
+	"options": ["It makes logging in too fast", "Anyone else using that computer can log into your accounts without knowing your password", "It uses too much memory", "It deletes your history"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is a 'VPN' (Virtual Private Network) primarily used for?",
+	"options": ["Making games run faster", "Encrypting your internet connection to keep your data private from hackers on the network", "Downloading movies for free", "Fixing a broken monitor"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Why is 'Passphrase' (e.g., 'Correct-Horse-Battery-Staple') often better than a complex 'Password' (e.g., 'Tr0ub4dor&3')?",
+	"options": ["It is shorter", "It's easier for humans to remember but much harder for computers to crack due to length", "It doesn't use any symbols", "It is only one word"],
+	"correctIndex": 1
+  },
+  {
+	"question": "A hacker 'Sim Swaps' your phone. What is their goal?",
+	"options": ["To steal your physical phone", "To trick your phone company into moving your number to their device to bypass 2FA", "To give you a better data plan", "To listen to your music"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is 'Piggybacking' in cybersecurity?",
+	"options": ["Carrying a computer on your back", "Following an authorized person into a restricted area or using their active session", "Hacking into a farm's database", "Using two mice at once"],
+	"correctIndex": 1
+  },
+  {
+	"question": "If you receive a 'friend request' from someone you are already friends with, what is likely happening?",
+	"options": ["They made a second account for fun", "A hacker has 'cloned' their profile to try and scam their friends", "They accidentally deleted you", "Your computer is glitching"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is an 'Evil Twin' attack?",
+	"options": ["A hacker who looks exactly like you", "A fake Wi-Fi hotspot designed to look like a real one (e.g., 'Starbucks_Guest_Real')", "Two viruses attacking at once", "A hacked social media account"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What does it mean if an account has 'Admin Privileges'?",
+	"options": ["It can only play games", "It has full control to change settings, install software, and see all files", "It is a guest account", "It is for kids only"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Why is 'Security through Obscurity' \n(e.g., hiding a password in a text file named 'Not_Passwords') bad?",
+	"options": ["The file is too hard to find", "Hackers know all the common hiding spots and use tools to search for them", "The computer might delete the file", "It takes up too much space"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is a 'Dictionary Attack'?",
+	"options": ["Throwing a book at a hacker", "Using a list of common words and known passwords to try and break into an account", "A virus that changes your language", "A very slow hacking method"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What should you check before typing your password into a website?",
+	"options": ["If the site has cool pictures", "If the URL is spelled correctly and has a padlock symbol (though padlocks aren't 100% proof)", "If the site is popular", "If you have enough battery"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is 'Juice Jacking'?",
+	"options": ["Stealing someone's drink", "When a hacker uses a public USB charging station to steal data or install malware on your phone", "Charging your phone too fast", "A battery-saving hack"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Why is it important to 'Wipe' a phone or game console before selling it?",
+	"options": ["To make it look shiny", "To remove all your personal accounts and data so the buyer can't access them", "To make it weigh less", "To speed up the internet"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is a 'Session Hijack'?",
+	"options": ["When a hacker takes over your active log-in 'session' after you've already typed your password", "When a hacker interrupts your game", "When a computer shuts down randomly", "When someone steals your keyboard"],
+	"correctIndex": 0
+  },
+  {
+	"question": "How can you tell if your webcam has been hacked?",
+	"options": ["The screen gets blurry", "The indicator light might turn on when you aren't using it (though some hackers can bypass this)", "The computer gets hot", "The volume goes up"],
+	"correctIndex": 1
+  }
 ]
