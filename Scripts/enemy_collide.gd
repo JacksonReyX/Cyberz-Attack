@@ -1,9 +1,17 @@
 extends Area2D
 @onready var textTimer = $"../textTimer"
 @onready var textbox = $Textbox
+signal battle_triggered(enemy_node)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		battle_triggered.emit(self)
+		
+		#save game state 
+		GameState.playerPosition = body.global_position
+		GameState.active_enemy_name = self.name
+		GameState.returning_from_battle = true
+		
 		textbox.show()
 		textTimer.start()
 		

@@ -4,8 +4,10 @@ extends Node
 var coins: int = 0
 var health_potions: int = 0
 var keys: int = 0
-var playerPosition: Vector2
-var defeatedEnemyID : String = ""
+var playerPosition = Vector2.ZERO
+var defeatedEnemies = []
+var active_enemy_name : String = ""
+var returning_from_battle = false
 
 
 func add_coins(amount: int) -> void:

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kqnv0t3oh0g2"
-path="res://.godot/imported/dungeontileset-extended-palette.png-15014b0870ada8cdb7971b9f37125d86.ctex"
+path="res://.godot/imported/dungeontileset-extended-palette.png-1886128f8634af1b848ee1521f29f03e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/dungeontiles-extended v1.1/dungeontileset-extended-palette.png"
-dest_files=["res://.godot/imported/dungeontileset-extended-palette.png-15014b0870ada8cdb7971b9f37125d86.ctex"]
+source_file="res://Assets/Tiles/dungeontiles-extended v1.1/dungeontileset-extended-palette.png"
+dest_files=["res://.godot/imported/dungeontileset-extended-palette.png-1886128f8634af1b848ee1521f29f03e.ctex"]
 
 [params]
 

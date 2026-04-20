@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv6cm8e2vaj4y"
-path="res://.godot/imported/hacker.png-986d200b57bfc71368833af323f6f854.ctex"
+path="res://.godot/imported/hacker.png-3dc99f9b7b9720c4306d18b74bcd67a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PlayerModels/hacker.png"
-dest_files=["res://.godot/imported/hacker.png-986d200b57bfc71368833af323f6f854.ctex"]
+source_file="res://Assets/PlayerModels/hacker.png"
+dest_files=["res://.godot/imported/hacker.png-3dc99f9b7b9720c4306d18b74bcd67a2.ctex"]
 
 [params]
 

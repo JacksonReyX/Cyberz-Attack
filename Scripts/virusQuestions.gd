@@ -20,7 +20,7 @@ var Items : Array = read_json_file("res://Assets/Questions/virusQuestions.json")
 var item : Dictionary
 var index_item : int = randi_range(0,1)
 var correctCount : float  = 0
-var isCorrect : bool 
+var isCorrect : Variant = null 
 var healthPercent : int = 100
 var enemyHealth : int = 100
 var score : int = 0
@@ -105,6 +105,8 @@ func _on_button_pressed() -> void:
 		if(healthPercent <= 0):
 			DisplayText.text = "Game Over"
 			deathTimer.start()
+	isCorrect = null 
+	ListItem.deselect_all()
 	refresh_scene()
 		
 
@@ -118,6 +120,7 @@ func _on_death_timer_timeout() -> void:
 
 func _on_win_timer_timeout() -> void:
 	#GameState.battleReset()
+	GameState.defeatedEnemies.append(GameState.active_enemy_name)
 	get_tree().change_scene_to_file("res://Scenes/KianStuff/DungeonScene.tscn")
 
 

@@ -8,6 +8,9 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		# Safely change the scenea
+		GameState.playerPosition = body.global_position
+		GameState.active_enemy_name = self.name
+		GameState.returning_from_battle = true
 		textbox.show()
 		textTimer.start()
 

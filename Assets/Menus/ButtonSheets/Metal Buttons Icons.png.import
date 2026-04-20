@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cegu20ikqqc3k"
-path="res://.godot/imported/Metal Buttons Icons.png-1b4e2fb6308bb00f35a119295ab2f41d.ctex"
+path="res://.godot/imported/Metal Buttons Icons.png-e64cdbf452c0abe539591280b4daee8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Menus/ButtonSheets/Metal Buttons Icons.png"
-dest_files=["res://.godot/imported/Metal Buttons Icons.png-1b4e2fb6308bb00f35a119295ab2f41d.ctex"]
+source_file="res://Assets/Menus/ButtonSheets/Metal Buttons Icons.png"
+dest_files=["res://.godot/imported/Metal Buttons Icons.png-e64cdbf452c0abe539591280b4daee8a.ctex"]
 
 [params]
 

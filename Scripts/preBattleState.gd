@@ -6,8 +6,8 @@ var playerPosition : Vector2
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	playerPosition = player.position
-	GameState.playerPosition = playerPosition
-	GameState.defeatedEnemyID = enemyID.text
+	#GameState.playerPosition = playerPosition
+	#GameState.defeatedEnemyID = enemyID.text
 	
 
 

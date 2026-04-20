@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://c3i5g33raonqj"
-path="res://.godot/imported/UIClick_BLEEOOP_Keycap_Roll.ogg-0682a00f9e31af55eefc51abce2a7d82.oggvorbisstr"
+path="res://.godot/imported/UIClick_BLEEOOP_Keycap_Roll.ogg-2414b3e7dfe2d5ed072f7ccc2ec56087.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/Audio/UI/UIClick_BLEEOOP_Keycap_Roll.ogg"
-dest_files=["res://.godot/imported/UIClick_BLEEOOP_Keycap_Roll.ogg-0682a00f9e31af55eefc51abce2a7d82.oggvorbisstr"]
+source_file="res://Assets/Audio/UI/UIClick_BLEEOOP_Keycap_Roll.ogg"
+dest_files=["res://.godot/imported/UIClick_BLEEOOP_Keycap_Roll.ogg-2414b3e7dfe2d5ed072f7ccc2ec56087.oggvorbisstr"]
 
 [params]
 
