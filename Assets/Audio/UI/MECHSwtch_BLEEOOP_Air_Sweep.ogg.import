@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://gkulg2vwch10"
-path="res://.godot/imported/MECHSwtch_BLEEOOP_Air_Sweep.ogg-95e2f5777f809c93217b4a10baa3bf21.oggvorbisstr"
+path="res://.godot/imported/MECHSwtch_BLEEOOP_Air_Sweep.ogg-e746799ad3444e7e5b53931a2c8f000c.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/Audio/UI/MECHSwtch_BLEEOOP_Air_Sweep.ogg"
-dest_files=["res://.godot/imported/MECHSwtch_BLEEOOP_Air_Sweep.ogg-95e2f5777f809c93217b4a10baa3bf21.oggvorbisstr"]
+source_file="res://Assets/Audio/UI/MECHSwtch_BLEEOOP_Air_Sweep.ogg"
+dest_files=["res://.godot/imported/MECHSwtch_BLEEOOP_Air_Sweep.ogg-e746799ad3444e7e5b53931a2c8f000c.oggvorbisstr"]
 
 [params]
 

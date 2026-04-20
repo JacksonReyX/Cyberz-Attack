@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://bnk3v33m410sl"]
+
+[ext_resource type="Texture2D" uid="uid://ccbrufuqqp5ha" path="res://Assets/Characters/CharactersAnimations/knight_accessory_idle.png" id="1_y133n"]
+[ext_resource type="Texture2D" uid="uid://dsa6l207ebne5" path="res://Assets/Characters/CharactersAnimations/knight_accessory_run.png" id="2_osdxi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uh1o3"]
+atlas = ExtResource("1_y133n")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w125l"]
+atlas = ExtResource("1_y133n")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5he6t"]
+atlas = ExtResource("1_y133n")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lftvl"]
+atlas = ExtResource("1_y133n")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tei1"]
+atlas = ExtResource("2_osdxi")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myp80"]
+atlas = ExtResource("2_osdxi")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3q42d"]
+atlas = ExtResource("2_osdxi")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pi2ch"]
+atlas = ExtResource("2_osdxi")
+region = Rect2(48, 0, 16, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uh1o3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w125l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5he6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lftvl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tei1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myp80")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3q42d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pi2ch")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]

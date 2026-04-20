@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://dydu57vpr32re"]
+
+[ext_resource type="Texture2D" uid="uid://do7tbvlo44m6a" path="res://Assets/Characters/CharactersAnimations/wizard_outfit_idle.png" id="1_o653j"]
+[ext_resource type="Texture2D" uid="uid://4im5ei817k3d" path="res://Assets/Characters/CharactersAnimations/wizard_outfit_run.png" id="2_dx4yu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aj3d3"]
+atlas = ExtResource("1_o653j")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f57o5"]
+atlas = ExtResource("1_o653j")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yqqb"]
+atlas = ExtResource("1_o653j")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wy6t"]
+atlas = ExtResource("1_o653j")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8po0"]
+atlas = ExtResource("2_dx4yu")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vy3oe"]
+atlas = ExtResource("2_dx4yu")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rs8gl"]
+atlas = ExtResource("2_dx4yu")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lib51"]
+atlas = ExtResource("2_dx4yu")
+region = Rect2(48, 0, 16, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aj3d3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f57o5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yqqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wy6t")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8po0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vy3oe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rs8gl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lib51")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://diee13h4bqtgo"
-path="res://.godot/imported/incorrectSFX.mp3-f4d1ac0463925f22c3e56c90694b2c40.mp3str"
+path="res://.godot/imported/incorrectSFX.mp3-7245213f5c9cb012ab254b1c6c2d785e.mp3str"
 
 [deps]
 
-source_file="res://assets/sounds/incorrectSFX.mp3"
-dest_files=["res://.godot/imported/incorrectSFX.mp3-f4d1ac0463925f22c3e56c90694b2c40.mp3str"]
+source_file="res://Assets/sounds/incorrectSFX.mp3"
+dest_files=["res://.godot/imported/incorrectSFX.mp3-7245213f5c9cb012ab254b1c6c2d785e.mp3str"]
 
 [params]
 
