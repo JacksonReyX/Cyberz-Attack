@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://dru0dndidb6p4"]
+
+[ext_resource type="Script" path="res://Scripts/health_segment.gd" id="1_l8m1f"]
+[ext_resource type="Texture2D" uid="uid://hgxfpdg4muj2" path="res://Assets/Menus/Health/HealthSegment.png" id="2_47m7q"]
+[ext_resource type="Texture2D" uid="uid://cryf38o2r88xe" path="res://Assets/Menus/Health/HealthSegmentHealed.png" id="3_nrx6f"]
+[ext_resource type="Texture2D" uid="uid://bs88eo764q6cb" path="res://Assets/Menus/Health/HealthSegmentEmpty.png" id="4_ejemc"]
+
+[node name="HealthSegment" type="Node2D"]
+script = ExtResource("1_l8m1f")
+full_texture = ExtResource("2_47m7q")
+heal_flash_texture = ExtResource("3_nrx6f")
+empty_texture = ExtResource("4_ejemc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.5, 0.5)

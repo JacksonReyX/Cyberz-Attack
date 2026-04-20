@@ -1,0 +1,109 @@
+[
+	{
+		"question": "You receive a text from an unknown number asking you to click a link to claim a prize. What do you do?",
+		"options": ["Click the link", "Ignore and delete it", "Reply asking who it is", "Forward it to friends"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You get an email saying your account will be locked unless you enter your password. What do you do?",
+		"options": ["Enter your password", "Ignore the email", "Report it as phishing", "Reply to the sender"],
+		"correctIndex": 2
+	},
+	{
+		"question": "A message says you won a free phone but asks for personal info. What do you do?",
+		"options": ["Give your info", "Ignore it", "Click the link", "Share it"],
+		"correctIndex": 1
+	},
+	{
+		"question": "An email looks like it's from your school but has spelling mistakes. What do you do?",
+		"options": ["Trust it", "Delete it", "Click links", "Reply"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You get a message asking for your login details. What do you do?",
+		"options": ["Send details", "Ignore it", "Screenshot it", "Forward it"],
+		"correctIndex": 1
+	},
+	{
+		"question": "A friend sends a strange link you weren't expecting. What do you do?",
+		"options": ["Click it", "Ask them first", "Ignore it forever", "Post it"],
+		"correctIndex": 1
+	},
+	{
+		"question": "An email says 'urgent action required' with a link. What do you do?",
+		"options": ["Click fast", "Check sender carefully", "Reply quickly", "Forward it"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You get a fake-looking invoice email. What do you do?",
+		"options": ["Pay it", "Delete it", "Click link", "Reply"],
+		"correctIndex": 1
+	},
+	{
+		"question": "A website asks for your password after clicking a link. What do you do?",
+		"options": ["Enter it", "Close the site", "Share it", "Refresh"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You see a suspicious message with bad grammar. What do you do?",
+		"options": ["Trust it", "Ignore it", "Reply", "Click"],
+		"correctIndex": 1
+	},
+
+	{
+		"question": "A message offers free game coins if you log in. What do you do?",
+		"options": ["Log in", "Ignore it", "Share it", "Reply"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You get an email from 'support' asking for info. What do you do?",
+		"options": ["Send info", "Verify sender", "Reply", "Click link"],
+		"correctIndex": 1
+	},
+	{
+		"question": "A text says your package is delayed, click link. What do you do?",
+		"options": ["Click it", "Ignore it", "Reply", "Call"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You receive a fake login page. What do you do?",
+		"options": ["Enter info", "Close it", "Share it", "Refresh"],
+		"correctIndex": 1
+	},
+	{
+		"question": "Someone asks for your password in chat. What do you do?",
+		"options": ["Give it", "Refuse", "Ignore", "Report"],
+		"correctIndex": 3
+	},
+	{
+		"question": "A message claims to be from a bank you don't use. What do you do?",
+		"options": ["Respond", "Ignore", "Click link", "Call"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You get a suspicious QR code. What do you do?",
+		"options": ["Scan it", "Ignore it", "Share it", "Print it"],
+		"correctIndex": 1
+	},
+	{
+		"question": "An email says you've been hacked, click link. What do you do?",
+		"options": ["Click", "Ignore", "Reply", "Forward"],
+		"correctIndex": 1
+	},
+	{
+		"question": "A message asks for your address. What do you do?",
+		"options": ["Send it", "Ignore", "Reply", "Click"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You see a fake giveaway post. What do you do?",
+		"options": ["Enter", "Ignore", "Share", "Like"],
+		"correctIndex": 1
+	},
+
+	{
+		"question": "A link looks suspicious and shortened. What do you do?",
+		"options": ["Click", "Avoid it", "Share", "Reply"],
+		"correctIndex": 1
+	}
+]

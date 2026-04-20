@@ -37,39 +37,103 @@ const WIZARD_ACCESSORY := preload("res://Assets/Characters/Wizard/WizardAccessor
 @onready var class_left: TextureButton = %ClassLeft
 @onready var class_right: TextureButton = %ClassRight
 
-# Tab list (for forced exclusivity)
+# Tab list
 @onready var tabs: Array[BaseButton] = [hair_tab, body_tab, eyes_tab, outfit_tab, accessory_tab]
 
-var classes := ["Knight", "Wizard"]
+var classes := ["Knight", "Wizard", "Knight 2", "Wizard 2", "Witch"]
 var class_index := 0
 
 func _ready() -> void:
+	GameState.load_data()
 	UISfx.wire_buttons(self)
-
-	# Class change buttons
 	class_left.pressed.connect(func(): _change_class(-1))
 	class_right.pressed.connect(func(): _change_class(1))
 
-	# Force tabs to behave like a real tab bar
 	for t in tabs:
 		t.toggle_mode = true
-		# Use pressed (not toggled) so we only react when user selects a tab
 		t.pressed.connect(func(tab := t): _select_tab(tab))
 
-	# Default selected tab
 	_select_tab(hair_tab)
 
-	# Load saved class
 	class_index = classes.find(PlayerCustomization.selected_class)
 	if class_index == -1:
 		class_index = 0
+
+	if not _is_class_unlocked(classes[class_index]):
+		class_index = 0
+
 	_apply_class()
+	_connect_swatches()
+
+
+func _connect_swatches() -> void:
+	_wire_swatch_panel(hair_panel, "hair")
+	_wire_swatch_panel(outfit_panel, "outfit")
+	_wire_swatch_panel(accessory_panel, "accessory")
+	_wire_swatch_panel(body_panel, "body")
+	_wire_swatch_panel(eyes_panel, "eyes")
+
+	for swatch in hair_panel.get_children():
+		if not swatch is TextureButton:
+			continue
+		var color = swatch.get_node("ColorRect").color
+		swatch.pressed.connect(func(): _pick_color("hair", color))
+	for swatch in outfit_panel.get_children():
+		if not swatch is TextureButton:
+			continue
+		var color = swatch.get_node("ColorRect").color
+		swatch.pressed.connect(func(): _pick_color("outfit", color))
+	for swatch in accessory_panel.get_children():
+		if not swatch is TextureButton:
+			continue
+		var color = swatch.get_node("ColorRect").color
+		swatch.pressed.connect(func(): _pick_color("accessory", color))
+	for swatch in body_panel.get_children():
+		if not swatch is TextureButton:
+			continue
+		var color = swatch.get_node("ColorRect").color
+		swatch.pressed.connect(func(): _pick_color("body", color))
+	for swatch in eyes_panel.get_children():
+		if not swatch is TextureButton:
+			continue
+		var color = swatch.get_node("ColorRect").color
+		swatch.pressed.connect(func(): _pick_color("eyes", color))
+
+func _wire_swatch_panel(panel: Control, layer: String) -> void:
+	for swatch in panel.get_children():
+		if not swatch is TextureButton:
+			continue
+		swatch.toggle_mode = true
+		var color = swatch.get_node("ColorRect").color
+		swatch.pressed.connect(func():
+			for s in panel.get_children():
+				if s is TextureButton:
+					s.button_pressed = false
+			swatch.button_pressed = true
+			_pick_color(layer, color)
+		)
+
+func _pick_color(layer: String, color: Color) -> void:
+	match layer:
+		"outfit":
+			PlayerCustomization.color_outfit = color
+			outfit.modulate = color
+		"accessory":
+			PlayerCustomization.color_accessory = color
+			accessory.modulate = color
+		"body":
+			PlayerCustomization.color_body = color
+			body.modulate = color
+		"eyes":
+			PlayerCustomization.color_eyes = color
+			eyes.modulate = color
+		"hair":
+			PlayerCustomization.color_hair = color
+			hair.modulate = color
 
 func _select_tab(selected: BaseButton) -> void:
-	# Make ONLY the selected tab pressed; others unpressed (returns them to dim normal)
 	for t in tabs:
 		t.button_pressed = (t == selected)
-
 	_update_tab_panels()
 
 func _update_tab_panels() -> void:
@@ -78,28 +142,70 @@ func _update_tab_panels() -> void:
 	eyes_panel.visible = eyes_tab.button_pressed
 	outfit_panel.visible = outfit_tab.button_pressed
 	accessory_panel.visible = accessory_tab.button_pressed
+	print("hair panel visible: ", hair_panel.visible)
 
 func _change_class(dir: int) -> void:
-	class_index = wrapi(class_index + dir, 0, classes.size())
+	var attempts := 0
+	var next := class_index
+	while attempts < classes.size():
+		next = wrapi(next + dir, 0, classes.size())
+		if _is_class_unlocked(classes[next]):
+			class_index = next
+			break
+		attempts += 1
 	_apply_class()
+
+func _is_class_unlocked(cname: String) -> bool:
+	match cname:
+		"Knight", "Wizard":
+			return true
+		"Knight 2":
+			return "skin2" in GameState.owned_skins
+		"Wizard 2":
+			return "skin1" in GameState.owned_skins
+		"Witch":
+			return "skin3" in GameState.owned_skins
+	return false
 
 func _apply_class() -> void:
 	var cname: String = classes[class_index]
 	PlayerCustomization.selected_class = cname
 	class_label.text = cname
 
-	if cname == "Knight":
-		body.texture = null
-		eyes.texture = null
-		hair.texture = null
-		outfit.texture = KNIGHT_OUTFIT
-		accessory.texture = KNIGHT_ACCESSORY
-	else:
-		body.texture = WIZARD_BODY
-		eyes.texture = WIZARD_EYES
-		hair.texture = null
-		outfit.texture = WIZARD_OUTFIT
-		accessory.texture = WIZARD_ACCESSORY
+	match cname:
+		"Knight":
+			body.texture = null
+			eyes.texture = null
+			hair.texture = null
+			outfit.texture = KNIGHT_OUTFIT
+			accessory.texture = KNIGHT_ACCESSORY
+		"Wizard":
+			body.texture = WIZARD_BODY
+			eyes.texture = WIZARD_EYES
+			hair.texture = null
+			outfit.texture = WIZARD_OUTFIT
+			accessory.texture = WIZARD_ACCESSORY
+		"Knight 2":
+			body.texture = null
+			eyes.texture = null
+			hair.texture = null
+			outfit.texture = preload("res://assets/PlayerModels/Knight2.png")
+			accessory.texture = null
+		"Wizard 2":
+			body.texture = null
+			eyes.texture = null
+			hair.texture = null
+			outfit.texture = preload("res://assets/PlayerModels/Wizard.png")
+			accessory.texture = null
+		"Witch":
+			body.texture = null
+			eyes.texture = null
+			hair.texture = null
+			outfit.texture = preload("res://assets/PlayerModels/Witch.png")
+			accessory.texture = null
+
+func _apply_selected_skin() -> void:
+	pass
 
 func _on_play_button_pressed() -> void:
 	MusicManager.play_dungeon()

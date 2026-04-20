@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://dh12demi0cphj"]
+
+[ext_resource type="Script" path="res://Scripts/cursor_manager.gd" id="1_bbj2q"]
+[ext_resource type="Texture2D" uid="uid://bfsnjwr5qvj5f" path="res://Assets/Menus/Buttons/Cursor.png" id="2_bfgxa"]
+[ext_resource type="Texture2D" uid="uid://bv7vimhnqbxp8" path="res://Assets/Menus/Buttons/CursorClicked.png" id="3_oascq"]
+
+[node name="CursorManager" type="Node2D"]
+scale = Vector2(8, 8)
+script = ExtResource("1_bbj2q")
+normal_cursor = ExtResource("2_bfgxa")
+clicked_cursor = ExtResource("3_oascq")

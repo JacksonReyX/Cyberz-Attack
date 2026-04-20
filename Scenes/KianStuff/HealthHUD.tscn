@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://bh6af5v8500yi"]
+
+[ext_resource type="Script" path="res://Scripts/health_hud.gd" id="1_onhfo"]
+[ext_resource type="Texture2D" uid="uid://bn445kvwq1wge" path="res://Assets/Menus/Health/HealthBar.png" id="1_srh08"]
+[ext_resource type="PackedScene" uid="uid://dru0dndidb6p4" path="res://Scenes/KianStuff/HealthSegment.tscn" id="2_ba0co"]
+[ext_resource type="Texture2D" uid="uid://cltdcurvhc5l" path="res://Assets/Menus/Health/HeartOverlay.png" id="3_5m3ug"]
+[ext_resource type="Texture2D" uid="uid://dovs12h7fmh3s" path="res://Assets/Menus/Health/HeartOverlayEmpty.png" id="3_ab28s"]
+[ext_resource type="Texture2D" uid="uid://ca01v106ym427" path="res://Assets/Menus/Health/HealthBarEmpty.png" id="3_fvj6q"]
+[ext_resource type="Texture2D" uid="uid://c2buyurbuyts3" path="res://Assets/Menus/Card/TopLeftPanel.png" id="6_g7yiq"]
+
+[node name="HealthHud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_onhfo")
+health_full_texture = ExtResource("1_srh08")
+health_empty_texture = ExtResource("3_fvj6q")
+heart_full_texture = ExtResource("3_5m3ug")
+heart_empty_texture = ExtResource("3_ab28s")
+
+[node name="HealthBarBackground" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(44, 13.5)
+texture = ExtResource("6_g7yiq")
+
+[node name="Segment1" parent="." instance=ExtResource("2_ba0co")]
+unique_name_in_owner = true
+position = Vector2(16, 9)
+
+[node name="Segment2" parent="." instance=ExtResource("2_ba0co")]
+unique_name_in_owner = true
+position = Vector2(22, 9)
+
+[node name="Segment3" parent="." instance=ExtResource("2_ba0co")]
+unique_name_in_owner = true
+position = Vector2(28, 9)
+
+[node name="Segment4" parent="." instance=ExtResource("2_ba0co")]
+unique_name_in_owner = true
+position = Vector2(34, 9)
+
+[node name="Segment5" parent="." instance=ExtResource("2_ba0co")]
+unique_name_in_owner = true
+position = Vector2(40, 9)
+
+[node name="Segment6" parent="." instance=ExtResource("2_ba0co")]
+unique_name_in_owner = true
+position = Vector2(46, 9)
+
+[node name="Segment7" parent="." instance=ExtResource("2_ba0co")]
+unique_name_in_owner = true
+position = Vector2(52, 9)
+
+[node name="Segment8" parent="." instance=ExtResource("2_ba0co")]
+unique_name_in_owner = true
+position = Vector2(58, 9)
+
+[node name="Segment9" parent="." instance=ExtResource("2_ba0co")]
+unique_name_in_owner = true
+position = Vector2(64, 9)
+
+[node name="Segment10" parent="." instance=ExtResource("2_ba0co")]
+unique_name_in_owner = true
+position = Vector2(70, 9)
+
+[node name="Segment11" parent="." instance=ExtResource("2_ba0co")]
+unique_name_in_owner = true
+position = Vector2(76, 9)
+
+[node name="Segment12" parent="." instance=ExtResource("2_ba0co")]
+unique_name_in_owner = true
+position = Vector2(82, 9)
+
+[node name="HeartOverlay" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(10.5, 9)
+texture = ExtResource("3_5m3ug")

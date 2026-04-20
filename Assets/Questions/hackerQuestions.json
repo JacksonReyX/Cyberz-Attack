@@ -1,0 +1,110 @@
+[
+	{
+		"question": "Someone guesses your password easily. What should you do?",
+		"options": ["Keep using it", "Change to stronger password", "Share it", "Ignore"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You use the same password everywhere. What is best practice?",
+		"options": ["Keep doing it", "Use different passwords", "Share passwords", "Write online"],
+		"correctIndex": 1
+	},
+	{
+		"question": "A public Wi-Fi asks for no password. What should you do?",
+		"options": ["Use it freely", "Be cautious", "Enter passwords", "Download files"],
+		"correctIndex": 1
+	},
+	{
+		"question": "Your friend asks for your login info. What do you do?",
+		"options": ["Give it", "Say no", "Ignore", "Post it"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You see a download from an unknown site. What do you do?",
+		"options": ["Download", "Avoid it", "Share it", "Open it"],
+		"correctIndex": 1
+	},
+	{
+		"question": "Your device asks for an update. What do you do?",
+		"options": ["Ignore", "Update it", "Delete it", "Turn off"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You get a random USB drive. What do you do?",
+		"options": ["Plug it in", "Ignore it", "Give friend", "Throw lightly"],
+		"correctIndex": 1
+	},
+	{
+		"question": "A game asks for too many permissions. What do you do?",
+		"options": ["Allow all", "Review permissions", "Ignore", "Delete phone"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You leave your device unlocked. What should you do?",
+		"options": ["Nothing", "Lock it", "Share it", "Post"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You download apps from unknown stores. What should you do?",
+		"options": ["Keep doing it", "Use trusted stores", "Share apps", "Ignore"],
+		"correctIndex": 1
+	},
+
+	{
+		"question": "Someone sends you a file you didn't expect. What do you do?",
+		"options": ["Open it", "Scan or delete", "Forward it", "Reply"],
+		"correctIndex": 1
+	},
+	{
+		"question": "Your account gets hacked. What should you do first?",
+		"options": ["Ignore", "Change password", "Delete account", "Post online"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You use '123456' as a password. What should you do?",
+		"options": ["Keep it", "Change it", "Share it", "Ignore"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You get a security alert you don't recognize. What do you do?",
+		"options": ["Ignore", "Check account", "Delete email", "Reply"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You install unknown browser extensions. What do you do?",
+		"options": ["Keep them", "Remove them", "Share them", "Ignore"],
+		"correctIndex": 1
+	},
+	{
+		"question": "Your friend’s account sends spam. What do you do?",
+		"options": ["Reply", "Warn friend", "Click links", "Ignore"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You share personal info in games. What should you do?",
+		"options": ["Keep sharing", "Stop sharing", "Post more", "Ignore"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You see a fake login screen. What do you do?",
+		"options": ["Log in", "Close it", "Share", "Refresh"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You click a suspicious link accidentally. What do you do?",
+		"options": ["Ignore", "Close it and scan device", "Share it", "Reply"],
+		"correctIndex": 1
+	},
+	{
+		"question": "You get pop-ups saying you have a virus. What do you do?",
+		"options": ["Click them", "Ignore and close", "Download app", "Reply"],
+		"correctIndex": 1
+	},
+
+	
+	{
+		"question": "You don't use two-factor authentication. What should you do?",
+		"options": ["Ignore", "Enable it", "Share account", "Delete apps"],
+		"correctIndex": 1
+	}
+]

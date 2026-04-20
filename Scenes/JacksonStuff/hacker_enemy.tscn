@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdk7s55tilwt0"]
+
+[ext_resource type="Script" path="res://Scripts/hackerBattle.gd" id="1_2ica5"]
+[ext_resource type="Texture2D" uid="uid://cv6cm8e2vaj4y" path="res://Assets/PlayerModels/hacker.png" id="2_bnxqc"]
+[ext_resource type="PackedScene" uid="uid://ojufl0hq3ajx" path="res://Scenes/JacksonStuff/textboxHacker.tscn" id="3_b1q4c"]
+[ext_resource type="Script" path="res://Scripts/textboxHacker.gd" id="4_8jf1o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8l1k"]
+size = Vector2(26.75, 29)
+
+[node name="HackerEnemy" type="Node2D" groups=["enemies"]]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-10, 1)
+script = ExtResource("1_2ica5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(8.975, 5.1)
+scale = Vector2(0.732927, 0.522222)
+texture = ExtResource("2_bnxqc")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(9, 5.5)
+shape = SubResource("RectangleShape2D_h8l1k")
+
+[node name="id" type="Label" parent="Area2D"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "1"
+
+[node name="Textbox" parent="Area2D" instance=ExtResource("3_b1q4c")]
+script = ExtResource("4_8jf1o")
+
+[node name="textTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="timeout" from="textTimer" to="Area2D" method="_on_text_timer_timeout"]

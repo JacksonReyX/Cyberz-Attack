@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Cyberz-Attack"
 run/main_scene="res://Scenes/KianStuff/MainMenu.tscn"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [audio]
@@ -31,6 +31,7 @@ UISfx="*res://Scenes/KianStuff/UISfx.tscn"
 Sfx="*res://Scenes/KianStuff/Sfx.tscn"
 GameState="*res://Scripts/game_state.gd"
 SettingsState="*res://Scenes/KianStuff/SettingsState.tscn"
+CursorManager="*res://Scenes/KianStuff/CursorManager.tscn"
 
 [display]
 
@@ -39,6 +40,10 @@ window/size/viewport_height=360
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="canvas_items"
+
+[global_group]
+
+enemies=""
 
 [input]
 
