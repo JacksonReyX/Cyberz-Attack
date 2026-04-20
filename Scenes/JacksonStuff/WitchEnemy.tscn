@@ -1,29 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://ngkgdrur33ww"]
+[gd_scene load_steps=6 format=3 uid="uid://tds5j2t07fpe"]
 
-[ext_resource type="Script" path="res://Scripts/enemy_collide.gd" id="1_pk3xu"]
-[ext_resource type="Texture2D" uid="uid://celyeexjnwlpw" path="res://Assets/PlayerModels/oldfisherman.png" id="2_yk2t8"]
+[ext_resource type="Script" path="res://Scripts/witchBattleTrigger.gd" id="1_vyint"]
+[ext_resource type="Texture2D" uid="uid://b6tko3r8q07m4" path="res://Assets/PlayerModels/Witch.png" id="2_aluxg"]
 [ext_resource type="PackedScene" uid="uid://cty5lg0a4vev" path="res://Scenes/JacksonStuff/textboxFisher.tscn" id="3_s82jg"]
+[ext_resource type="Script" path="res://Scripts/textboxWitch.gd" id="4_8flhd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h8l1k"]
-size = Vector2(26.75, 29)
+size = Vector2(19, 24)
 
 [node name="FisherEnemy" type="Node2D" groups=["enemies"]]
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-10, 1)
-script = ExtResource("1_pk3xu")
+script = ExtResource("1_vyint")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-position = Vector2(23, -2)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_yk2t8")
+position = Vector2(9, 1)
+scale = Vector2(1.36017, 1.02329)
+texture = ExtResource("2_aluxg")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(9.625, 1.5)
+position = Vector2(10.5, 2)
 shape = SubResource("RectangleShape2D_h8l1k")
 
 [node name="Textbox" parent="Area2D" instance=ExtResource("3_s82jg")]
+script = ExtResource("4_8flhd")
 
 [node name="textTimer" type="Timer" parent="."]
 wait_time = 3.0

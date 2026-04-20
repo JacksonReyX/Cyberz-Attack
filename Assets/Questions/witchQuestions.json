@@ -1,0 +1,152 @@
+[
+  {
+	"question": "Alex texts: 'GG! That was a close game. Want to party up and play another round? I'll send an in-game invite.'",
+	"options": ["Decline and block Alex", "Accept the in-game invite; it's a safe way to play together", "Tell Alex your home address first", "Give Alex your password to play for you"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Alex texts: 'I found a cool strategy guide on the official game wiki. Search for \"Boss Guide\" on their site to find it!'",
+	"options": ["Tell Alex you don't trust them", "Click a link Alex sends instead", "Follow the advice; they suggested a safe search on an official site", "Report Alex for being too helpful"],
+	"correctIndex": 2
+  },
+  {
+	"question": "Alex texts: 'Hey, I’m stuck on this level. Can you tell me your password so I can see how you beat it?'",
+	"options": ["Give the password", "Tell Alex your mother's maiden name instead", "Refuse; never share passwords even to 'help' a friend", "Share your location"],
+	"correctIndex": 2
+  },
+  {
+	"question": "Alex texts: 'I saw a funny meme today! I'll post it on my public social media page if you want to go look at it.'",
+	"options": ["Ask for their password", "This is safe; viewing a public post doesn't risk your data", "Give them your phone number", "Tell them to send it as a .zip file"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Alex texts: 'I'm trying to win a contest and I need your home address to prove I have 'local' friends. Can you send it?'",
+	"options": ["Send the address", "Send your school address", "Refuse; home addresses are private and shouldn't be shared online", "Send a map of your city"],
+	"correctIndex": 2
+  },
+  {
+	"question": "Alex texts: 'Happy Birthday! I made you a digital card. I’m going to upload it to the chat app we are already using. Is that okay?'",
+	"options": ["Tell them to email it as an .exe", "Accept; using the built-in features of a safe app is generally okay", "Decline; cards are dangerous", "Give them your credit card info"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Alex texts: 'I’m making a list of everyone’s favorite pizza toppings for a poll. What’s yours? Mine is pepperoni!'",
+	"options": ["Tell them your topping; this is a safe, non-private preference", "Tell them your city", "Tell them your Social Security number", "Block them for asking questions"],
+	"correctIndex": 0
+  },
+  {
+	"question": "Alex texts: 'I forgot my password and I’m locked out! Can I send a 'Reset Code' to your phone since we are friends?'",
+	"options": ["Yes, give them the code", "Tell them the name of your school", "Refuse; this is a trick to hack YOUR account", "Call the police"],
+	"correctIndex": 2
+  },
+  {
+	"question": "Alex texts: 'Do you have any advice for the math homework? I'm stuck on problem #4.'",
+	"options": ["Give them your login to the school site", "Explain how you solved the math problem", "Give them your home address", "Tell them your birthday"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Alex texts: 'I found a glitch for free money! Just download this 'MoneyMod.exe' file I attached and run it.'",
+	"options": ["Run the file", "Send it to your parents", "Refuse; .exe files from strangers/online friends are usually viruses", "Download it but don't open it"],
+	"correctIndex": 2
+  },
+  {
+	"question": "Alex texts: 'What’s your favorite color? I’m drawing our game characters and want to get the outfits right.'",
+	"options": ["Tell them your favorite color", "Tell them your full legal name", "Tell them your password", "Block them"],
+	"correctIndex": 0
+  },
+  {
+	"question": "Alex texts: 'I just got a new high score! I'm so excited. Did you see it on the global leaderboard?'",
+	"options": ["Give them your phone number", "Congratulate them; checking a public leaderboard is safe", "Tell them your street name", "Ask for their login info"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Alex texts: 'I'm starting a YouTube channel. Search for \"AlexPlaysGames\" and subscribe if you want to! No pressure.'",
+	"options": ["Click a link they send in DM", "Search for the name yourself; this is a safe way to support a friend", "Give them your email password", "Report them for spam"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Alex texts: 'I’m so lonely. If you really care about me, you’ll send me a photo of your house so I can feel closer to you.'",
+	"options": ["Send the photo", "Send a photo of a random house", "Recognize the emotional manipulation and refuse", "Tell them your zip code"],
+	"correctIndex": 2
+  },
+  {
+	"question": "Alex texts: 'Do you like the new update for the game? I think the new map is awesome.'",
+	"options": ["Tell them your home address", "Share your opinion on the game; it's a safe conversation", "Tell them your middle name", "Give them your 2FA code"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Alex texts: 'I'm a Moderator now! I need to verify your account. Give me your password or I'll have to ban you.'",
+	"options": ["Give the password", "Apologize and give it", "Refuse; real moderators will never ask for your password or threaten you", "Ask for a promotion"],
+	"correctIndex": 2
+  },
+  {
+	"question": "Alex texts: 'I found a cool song. I'll send you the name of the artist so you can look it up on Spotify/YouTube!'",
+	"options": ["Tell them your password", "Look up the artist yourself; this is a safe interaction", "Click a link they send you instead", "Give them your phone number"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Alex texts: 'I'm trying to remember... what school did you say you went to? I want to see if we have the same mascot.'",
+	"options": ["Tell them the school name", "Tell them a fake school", "Refuse; this is a common security question and reveals your location", "Tell them your teacher's name"],
+	"correctIndex": 2
+  },
+  {
+	"question": "Alex texts: 'I’m having a bad day. Want to just chat about the game for a bit? It helps me take my mind off things.'",
+	"options": ["Give them your address to cheer them up", "Chat about the game; talking about hobbies is safe", "Give them your email", "Tell them your mother's maiden name"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Alex texts: 'Check out this 'Private' chat room I made. You just have to enter your Gmail password to verify you are a 'Real Friend'.'",
+	"options": ["Enter your password", "Enter a fake password", "Refuse; this is a 'Phishing' site designed to steal your credentials", "Share the link with others"],
+	"correctIndex": 2
+  },
+  {
+	"question": "Alex texts: 'I'm doing a school project on favorite movies. What's yours? I'm picking Star Wars!'",
+	"options": ["Tell them your favorite movie", "Tell them your Netflix password", "Tell them your birthday", "Tell them where you live"],
+	"correctIndex": 0
+  },
+  {
+	"question": "Alex texts: 'My internet is slow. Can you give me your Netflix login so I can download one episode of a show?'",
+	"options": ["Give the login", "Give the login but change the password later", "Refuse; never share account logins with online-only friends", "Give them your parents' login"],
+	"correctIndex": 2
+  },
+  {
+	"question": "Alex texts: 'I'm making a custom emote for you! What's the name of your character so I can tag you when I'm done?'",
+	"options": ["Give your character/username; this is safe to share within the game", "Give your real full name", "Give your email address", "Give your phone number"],
+	"correctIndex": 0
+  },
+  {
+	"question": "Alex texts: 'I think we are neighbor friends! I’m at the park on 5th Street. Where are you right now?'",
+	"options": ["Tell them exactly where you are", "Send them a 'Live Location' pin", "Don't share your location; keep online friends online", "Go to the park immediately"],
+	"correctIndex": 2
+  },
+  {
+	"question": "Alex texts: 'I'm so glad we're friends. It's nice having someone to talk to who likes the same stuff as me.'",
+	"options": ["Give them your password as a gift", "Respond kindly; safe conversation doesn't require sharing data", "Give them your address", "Tell them your security questions"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Alex texts: 'I accidentally bought two gift cards! Want the code for one? I'll just type the numbers here for you.'",
+	"options": ["Give Alex your password first", "Accept the code if it's just typed in chat and doesn't require a login", "Give Alex your credit card info to 'pay' them back", "Click a link to 'claim' the card"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Alex texts: 'I'm bored... let's see who has a cooler middle name! Mine is James. What's yours?'",
+	"options": ["Tell them your middle name", "Tell them a fake name", "Refuse; middle names are often used to verify identity", "Tell them your birthday"],
+	"correctIndex": 2
+  },
+  {
+	"question": "Alex texts: 'I just got a new puppy! Want to see a photo? I'll send it through the normal chat app.'",
+	"options": ["Accept the photo; normal image files in-app are generally safe", "Give them your address to visit the puppy", "Give them your phone number", "Ask for a .zip file of puppy photos"],
+	"correctIndex": 0
+  },
+  {
+	"question": "Alex texts: 'I found your old social media account from 3 years ago! Why was your 'Security Question' so easy? Was it your dog's name?'",
+	"options": ["Confirm the name", "Tell them your new security question", "Change all your security questions and passwords immediately", "Tell them you don't have a dog"],
+	"correctIndex": 2
+  },
+  {
+	"question": "Alex texts: 'I’m going to be away for a week. Can I have your login just to keep our 'Best Friends' streak alive while I'm gone?'",
+	"options": ["Give the login", "Let the streak end; account safety is more important than a game streak", "Give them your email instead", "Give them a temporary password"],
+	"correctIndex": 1
+  }
+]
