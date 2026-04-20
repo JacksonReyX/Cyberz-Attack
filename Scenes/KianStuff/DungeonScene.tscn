@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=80 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://de1fym16t3g5d" path="res://Scenes/KianStuff/DoorTrigger.tscn" id="8_5730i"]
 [ext_resource type="PackedScene" uid="uid://cg0a3i8qru1ei" path="res://Scenes/KianStuff/Chest.tscn" id="8_cthv1"]
 [ext_resource type="Script" path="res://Scripts/coins_hud.gd" id="9_5yy4f"]
+[ext_resource type="PackedScene" uid="uid://ct6ka3lfhwoco" path="res://Scenes/KianStuff/Pillar.tscn" id="10_67bu3"]
 [ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="11_gyowf"]
 [ext_resource type="PackedScene" uid="uid://wh66v8lxv0la" path="res://Scenes/sabella/key.tscn" id="12_hetau"]
 [ext_resource type="PackedScene" uid="uid://dh4me51kb1tpd" path="res://Scenes/KianStuff/Sign.tscn" id="12_ua63u"]
@@ -54,7 +55,7 @@
 [ext_resource type="PackedScene" uid="uid://bdk7s55tilwt0" path="res://Scenes/JacksonStuff/hacker_enemy.tscn" id="52_cc4fk"]
 [ext_resource type="Script" path="res://Scripts/preBattleState.gd" id="53_c222u"]
 [ext_resource type="PackedScene" uid="uid://s3mpivfnm1tj" path="res://Scenes/JacksonStuff/virusEnemy.tscn" id="54_oeyak"]
-[ext_resource type="PackedScene" uid="uid://bo7jxpp2nhqqg" path="res://Scenes/JacksonStuff/FisherEnemyLayingDown.tscn" id="55_clf2h"]
+[ext_resource type="PackedScene" path="res://Scenes/JacksonStuff/FisherEnemyLayingDown.tscn" id="55_clf2h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
 texture = ExtResource("2_og63f")
@@ -5927,6 +5928,7 @@ HSlider/styles/grabber_area_highlight = null
 HSlider/styles/slider = SubResource("StyleBoxEmpty_b7187")
 
 [node name="DungeonScene" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_nv8n0")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_q2ont")]
@@ -5948,7 +5950,8 @@ tile_set = SubResource("TileSet_lu5cv")
 
 [node name="ExtraWalls" type="TileMapLayer" parent="StartBase"]
 z_index = 2
-tile_map_data = PackedByteArray("AAAMAP7/AAACAAAAAAD+//n/AAAGAAAAAAABAPn/AAAFAAAAAAD9//n/AQARAAAAAAD9//r/AQARAAAAAAD9//v/AQARAAAAAAD9//z/AQARAAAAAAACAPn/AQAQAAAAAAACAPr/AQAQAAAAAAACAPv/AQAQAAAAAAACAPz/AQAQAAAAAAD4//z/AgAEAAMAAAAHAPz/AgAEAAMAAAAHAPT/AgAEAAMAAAD4//T/AgAEAAMAAAAFAAAAAAAFAAcAAAAFAP//AAAFAAYAAAAFAP7/AgAHAAAAAAADAAQAAAAFAAcAAAADAAMAAAAFAAYAAAADAAIAAgAHAAAAAAD8/wMAAAAFAAYAAAD8/wIAAgAHAAAAAAD6//7/AgAHAAAAAAD6////AAAFAAYAAAD6/wAAAAAFAAcAAAD8/wQAAAAFAAcAAAD9//j/AQAFAAEAAAD+//j/AQAFAAEAAAD///j/AQAFAAEAAAAAAPj/AQAFAAEAAAABAPj/AQAFAAEAAAACAPj/AQAFAAEAAAA=")
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAMAP7/AAACAAAAAAD+//n/AAAGAAAAAAABAPn/AAAFAAAAAAD9//n/AQARAAAAAAD9//r/AQARAAAAAAD9//v/AQARAAAAAAD9//z/AQARAAAAAAACAPn/AQAQAAAAAAACAPr/AQAQAAAAAAACAPv/AQAQAAAAAAACAPz/AQAQAAAAAAD4//z/AgAEAAMAAAAHAPz/AgAEAAMAAAAHAPT/AgAEAAMAAAD4//T/AgAEAAMAAAD9//j/AQAFAAEAAAD+//j/AQAFAAEAAAD///j/AQAFAAEAAAAAAPj/AQAFAAEAAAABAPj/AQAFAAEAAAACAPj/AQAFAAEAAAA=")
 tile_set = SubResource("TileSet_lu5cv")
 
 [node name="Stairs" type="TileMapLayer" parent="StartBase"]
@@ -6002,6 +6005,7 @@ position = Vector2(40, -194)
 
 [node name="Decor" type="TileMapLayer" parent="StartBase/Decor"]
 z_index = 5
+y_sort_enabled = true
 tile_map_data = PackedByteArray("AAD+//H/AAAJAAQAAAD///H/AAAOAAQAAAAAAPH/AAAQAAQAAAABAPH/AAAKAAQAAAD+//L/AAAJAAUAAAABAPL/AAAKAAUAAAD///L/AAAOAAUAAAAAAPL/AAAQAAUAAAD+//P/AAAJAAYAAAABAPP/AAAKAAYAAAD///P/AAAOAAYAAAAAAPP/AAAQAAYAAAD+//T/AAAJAAcAAAD///T/AAAOAAcAAAAAAPT/AAAQAAcAAAABAPT/AAAKAAcAAAD9//z/AAAJAAUAAAD+//z/AAAJAAUAAAD///z/AAAJAAUAAAAAAPz/AAAJAAUAAAABAPz/AAAJAAUAAAACAPz/AAAJAAUAAAAFAPv/AAADAAMAAAD5//n/AAADAAIAAAD6//z/AAADAAMAAAAHAPT/AAAEAAMAAAAQAPb/AAASABcAAAD7//X/AAASABYAAAD7//T/AAASABUAAAD/////AAADABIAAAAAAP//AAADABIAAAD//wEAAAADABMAAAAAAAEAAAADABMAAAACAAAAAAACABIAAAD9/wAAAAABABIAAAD9////AAABABEAAAACAP//AAACABEAAAD9/wEAAAABABMAAAACAAEAAAACABMAAAD+////AAADABIAAAABAP//AAADABIAAAABAAEAAAADABMAAAD+/wAAAAADABEAAAD//wAAAAADABEAAAAAAAAAAAADABEAAAABAAAAAAADABEAAAAGAP3/AAASABMAAAAOAPb/AAASABYAAAAOAPX/AAASABUAAAD3/wEAAAASABcAABABAPD/AAAVABgAAAD+/wEAAAADABMAAAA=")
 tile_set = SubResource("TileSet_22n2i")
 
@@ -7109,3 +7113,19 @@ position = Vector2(290, -1406)
 [node name="FisherEnemy3" parent="Enemies" instance=ExtResource("55_clf2h")]
 position = Vector2(783, -1225)
 rotation = 1.59442
+
+[node name="Pillar" parent="." instance=ExtResource("10_67bu3")]
+z_index = 4
+position = Vector2(-56, 60)
+
+[node name="Pillar2" parent="." instance=ExtResource("10_67bu3")]
+z_index = 4
+position = Vector2(-88, -4)
+
+[node name="Pillar3" parent="." instance=ExtResource("10_67bu3")]
+z_index = 4
+position = Vector2(56, 60)
+
+[node name="Pillar4" parent="." instance=ExtResource("10_67bu3")]
+z_index = 4
+position = Vector2(88, -4)
