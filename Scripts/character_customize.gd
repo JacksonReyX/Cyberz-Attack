@@ -37,7 +37,7 @@ const WIZARD_ACCESSORY := preload("res://Assets/Characters/Wizard/WizardAccessor
 @onready var class_left: TextureButton = %ClassLeft
 @onready var class_right: TextureButton = %ClassRight
 
-# Tab list (for forced exclusivity)
+# Tab list
 @onready var tabs: Array[BaseButton] = [hair_tab, body_tab, eyes_tab, outfit_tab, accessory_tab]
 
 var classes := ["Knight", "Wizard", "Knight 2", "Wizard 2", "Witch"]
@@ -63,6 +63,73 @@ func _ready() -> void:
 		class_index = 0
 
 	_apply_class()
+	_connect_swatches()
+
+
+func _connect_swatches() -> void:
+	_wire_swatch_panel(hair_panel, "hair")
+	_wire_swatch_panel(outfit_panel, "outfit")
+	_wire_swatch_panel(accessory_panel, "accessory")
+	_wire_swatch_panel(body_panel, "body")
+	_wire_swatch_panel(eyes_panel, "eyes")
+
+	for swatch in hair_panel.get_children():
+		if not swatch is TextureButton:
+			continue
+		var color = swatch.get_node("ColorRect").color
+		swatch.pressed.connect(func(): _pick_color("hair", color))
+	for swatch in outfit_panel.get_children():
+		if not swatch is TextureButton:
+			continue
+		var color = swatch.get_node("ColorRect").color
+		swatch.pressed.connect(func(): _pick_color("outfit", color))
+	for swatch in accessory_panel.get_children():
+		if not swatch is TextureButton:
+			continue
+		var color = swatch.get_node("ColorRect").color
+		swatch.pressed.connect(func(): _pick_color("accessory", color))
+	for swatch in body_panel.get_children():
+		if not swatch is TextureButton:
+			continue
+		var color = swatch.get_node("ColorRect").color
+		swatch.pressed.connect(func(): _pick_color("body", color))
+	for swatch in eyes_panel.get_children():
+		if not swatch is TextureButton:
+			continue
+		var color = swatch.get_node("ColorRect").color
+		swatch.pressed.connect(func(): _pick_color("eyes", color))
+
+func _wire_swatch_panel(panel: Control, layer: String) -> void:
+	for swatch in panel.get_children():
+		if not swatch is TextureButton:
+			continue
+		swatch.toggle_mode = true
+		var color = swatch.get_node("ColorRect").color
+		swatch.pressed.connect(func():
+			for s in panel.get_children():
+				if s is TextureButton:
+					s.button_pressed = false
+			swatch.button_pressed = true
+			_pick_color(layer, color)
+		)
+
+func _pick_color(layer: String, color: Color) -> void:
+	match layer:
+		"outfit":
+			PlayerCustomization.color_outfit = color
+			outfit.modulate = color
+		"accessory":
+			PlayerCustomization.color_accessory = color
+			accessory.modulate = color
+		"body":
+			PlayerCustomization.color_body = color
+			body.modulate = color
+		"eyes":
+			PlayerCustomization.color_eyes = color
+			eyes.modulate = color
+		"hair":
+			PlayerCustomization.color_hair = color
+			hair.modulate = color
 
 func _select_tab(selected: BaseButton) -> void:
 	for t in tabs:
@@ -75,6 +142,7 @@ func _update_tab_panels() -> void:
 	eyes_panel.visible = eyes_tab.button_pressed
 	outfit_panel.visible = outfit_tab.button_pressed
 	accessory_panel.visible = accessory_tab.button_pressed
+	print("hair panel visible: ", hair_panel.visible)
 
 func _change_class(dir: int) -> void:
 	var attempts := 0
@@ -116,7 +184,7 @@ func _apply_class() -> void:
 			eyes.texture = WIZARD_EYES
 			hair.texture = null
 			outfit.texture = WIZARD_OUTFIT
-			accessory.texture = null
+			accessory.texture = WIZARD_ACCESSORY
 		"Knight 2":
 			body.texture = null
 			eyes.texture = null
@@ -136,7 +204,6 @@ func _apply_class() -> void:
 			outfit.texture = preload("res://assets/PlayerModels/Witch.png")
 			accessory.texture = null
 
-# Kept as stub so other scripts referencing it don't break
 func _apply_selected_skin() -> void:
 	pass
 

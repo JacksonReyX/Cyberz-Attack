@@ -10,6 +10,8 @@ func _ready() -> void:
 	GameState.load_data()
 	update_coin_display()
 	_update_ui()
+	$Torch.disable_torch()
+	$Torch2.disable_torch()
 	#reset item shop
 	#GameState.reset_data()
 

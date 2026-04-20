@@ -4,6 +4,7 @@ extends Area2D
 @onready var prompt: Sprite2D = $buttonPrompt
 @onready var collision_shape_2d: CollisionShape2D = $StaticBody2D/CollisionShape2D
 @onready var locked_label: Label = $LockedLabel
+@onready var key_icon: TextureRect = $"../../../HUDLayer/HUDRoot/InventorySection/Slot2/ItemIcon"
 
 
 var player_in_range = false
@@ -20,7 +21,8 @@ func _process(_delta):
 		return
 	if player_in_range and Input.is_action_just_pressed("interact"):
 		if GameState.keys > 0:
-			GameState.keys -= 1
+			GameState.keys = 0
+			key_icon.visible = false
 			sprite.play("open")
 			collision_shape_2d.disabled = true
 			prompt.visible = false
