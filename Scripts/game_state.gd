@@ -1,15 +1,25 @@
 extends Node
 
-
 var coins: int = 0
 var health_potions: int = 0
 var keys: int = 0
 var playerPosition: Vector2
 var defeatedEnemyID : String = ""
 
+func get_label():
+	return get_node_or_null("/root/DungeonScene/HUDLayer/HUDRoot/CoinSection/CoinsForItemShopLabel")
 
 func add_coins(amount: int) -> void:
 	coins += amount
+	if coins == 1:
+		var label = get_label()
+		if label:
+			label.visible = true
+			await get_tree().create_timer(3.0).timeout
+			label.visible = false
+		else:
+			print("Label not found!")
+	
 	save_data()
 
 ##### item shop
