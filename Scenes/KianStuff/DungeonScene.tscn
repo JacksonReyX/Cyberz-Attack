@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=80 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
@@ -55,6 +55,7 @@
 [ext_resource type="Script" path="res://Scripts/preBattleState.gd" id="53_c222u"]
 [ext_resource type="PackedScene" uid="uid://s3mpivfnm1tj" path="res://Scenes/JacksonStuff/virusEnemy.tscn" id="54_oeyak"]
 [ext_resource type="PackedScene" uid="uid://bo7jxpp2nhqqg" path="res://Scenes/JacksonStuff/FisherEnemyLayingDown.tscn" id="55_clf2h"]
+[ext_resource type="PackedScene" uid="uid://tds5j2t07fpe" path="res://Scenes/JacksonStuff/WitchEnemy.tscn" id="56_bnni4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
 texture = ExtResource("2_og63f")
@@ -7109,3 +7110,15 @@ position = Vector2(290, -1406)
 [node name="FisherEnemy3" parent="Enemies" instance=ExtResource("55_clf2h")]
 position = Vector2(783, -1225)
 rotation = 1.59442
+
+[node name="WitchEnemy1" parent="Enemies" instance=ExtResource("56_bnni4")]
+position = Vector2(-137, -1525)
+
+[node name="VirusEnemy3" parent="Enemies" instance=ExtResource("54_oeyak")]
+position = Vector2(113, -1617)
+
+[node name="HackerEnemy4" parent="Enemies" instance=ExtResource("52_cc4fk")]
+position = Vector2(569, -1542)
+
+[node name="FisherEnemy4" parent="Enemies" instance=ExtResource("56_bnni4")]
+position = Vector2(810, -1425)
