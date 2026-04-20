@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=79 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
@@ -54,6 +54,7 @@
 [ext_resource type="PackedScene" uid="uid://bdk7s55tilwt0" path="res://Scenes/JacksonStuff/hacker_enemy.tscn" id="52_cc4fk"]
 [ext_resource type="Script" path="res://Scripts/preBattleState.gd" id="53_c222u"]
 [ext_resource type="PackedScene" uid="uid://s3mpivfnm1tj" path="res://Scenes/JacksonStuff/virusEnemy.tscn" id="54_oeyak"]
+[ext_resource type="PackedScene" uid="uid://bo7jxpp2nhqqg" path="res://Scenes/JacksonStuff/FisherEnemyLayingDown.tscn" id="55_clf2h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
 texture = ExtResource("2_og63f")
@@ -7071,10 +7072,10 @@ text = "UI SFX"
 [node name="Enemies" type="Node" parent="."]
 
 [node name="HackerEnemy" parent="Enemies" instance=ExtResource("52_cc4fk")]
-position = Vector2(-2, -695)
+position = Vector2(-28, -682)
 
 [node name="HackerEnemy2" parent="Enemies" instance=ExtResource("52_cc4fk")]
-position = Vector2(537, -563)
+position = Vector2(451, -562)
 
 [node name="FisherEnemy" parent="Enemies" instance=ExtResource("32_p1g1e")]
 position = Vector2(-2, -458)
@@ -7087,7 +7088,7 @@ offset_bottom = 23.0
 text = "1"
 
 [node name="FisherEnemy2" parent="Enemies" instance=ExtResource("32_p1g1e")]
-position = Vector2(-200, -842)
+position = Vector2(-200, -806)
 script = ExtResource("53_c222u")
 
 [node name="id" type="Label" parent="Enemies/FisherEnemy2"]
@@ -7097,4 +7098,14 @@ offset_bottom = 23.0
 text = "1"
 
 [node name="VirusEnemy" parent="Enemies" instance=ExtResource("54_oeyak")]
-position = Vector2(-6, -962)
+position = Vector2(338, -814)
+
+[node name="HackerEnemy3" parent="Enemies" instance=ExtResource("52_cc4fk")]
+position = Vector2(117, -1163)
+
+[node name="VirusEnemy2" parent="Enemies" instance=ExtResource("54_oeyak")]
+position = Vector2(290, -1406)
+
+[node name="FisherEnemy3" parent="Enemies" instance=ExtResource("55_clf2h")]
+position = Vector2(783, -1225)
+rotation = 1.59442

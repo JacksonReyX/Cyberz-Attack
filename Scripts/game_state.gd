@@ -10,6 +10,12 @@ var active_enemy_name : String = ""
 var returning_from_battle = false
 
 
+func setScene():
+	playerPosition = Vector2.ZERO
+	defeatedEnemies = []
+	active_enemy_name = ""
+	returning_from_battle = false
+
 func add_coins(amount: int) -> void:
 	coins += amount
 	save_data()
@@ -33,13 +39,17 @@ func save_data():
 	f.store_var({"coins": coins, "owned_skins": owned_skins, "selected_skin": selected_skin})
 	print("SAVING:", coins)
 
+# In GameState.gd
 func load_data():
 	if FileAccess.file_exists("user://save.dat"):
 		var f = FileAccess.open("user://save.dat", FileAccess.READ)
 		var data = f.get_var()
-		coins = data["coins"]
-		owned_skins = data["owned_skins"]
-		selected_skin = data["selected_skin"]
+		# We ONLY load persistent things like coins and skins
+		coins = data.get("coins", 0)
+		owned_skins = data.get("owned_skins", ["default"])
+		selected_skin = data.get("selected_skin", "default")
+		# DO NOT load defeatedEnemies here. 
+		# Keeping it out of this function ensures they respawn on a fresh launch.
 	
 func battleReset(): 
 	if GameState.playerPosition != null:

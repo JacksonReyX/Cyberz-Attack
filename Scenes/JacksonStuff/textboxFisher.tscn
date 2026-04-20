@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cty5lg0a4vev"]
+[gd_scene load_steps=4 format=3 uid="uid://cty5lg0a4vev"]
 
 [ext_resource type="Script" path="res://Scripts/textbox.gd" id="1_t3f2e"]
 
@@ -8,6 +8,9 @@ border_width_left = 4
 border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_skc8a"]
+font_size = 12
 
 [node name="Textbox" type="CanvasLayer"]
 script = ExtResource("1_t3f2e")
@@ -40,15 +43,19 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TextboxContainer/MarginContainer/Panel"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.16
+anchor_bottom = 0.16
 offset_left = 18.0
-offset_top = -26.9469
+offset_top = -7.48
 offset_right = 532.0
-offset_bottom = 75.0531
+offset_bottom = 62.52
 
 [node name="chat" type="Label" parent="TextboxContainer/MarginContainer/Panel/HBoxContainer"]
 layout_mode = 2
 text = "WHO GOES THERE, I WANT YOUR INFORMATION. GIMME!"
+label_settings = SubResource("LabelSettings_skc8a")
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="visibility_changed" from="TextboxContainer/MarginContainer/Panel/HBoxContainer/chat" to="." method="_on_chat_visibility_changed"]

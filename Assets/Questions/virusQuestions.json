@@ -1,12 +1,152 @@
 [
-	{
-		"question": "Your computer gets a password, it demands you pay money to get your computer back \n what do you not do?",
-		"options": ["Report to authorities", "Pay the money", "Take it to a pro to get fixed", "Research the virus"],
-		"correctIndex": 1
-	},
-	{
-		"question": "You've recieved an email with a zip file, what do you do",
-		"options": ["Download it", "Unzip it", "Report it", "Send it to you friends"],
-		"correctIndex": 2
-	},
+  {
+	"question": "What is the main difference between a 'Virus' and a 'Worm'?",
+	"options": ["A virus is bigger", "A worm can spread by itself without a person opening a file", "A virus only affects phones", "Worms are actually helpful"],
+	"correctIndex": 1
+  },
+  {
+	"question": "A 'Trojan Horse' virus gets its name because:",
+	"options": ["It only attacks computers in Greece", "It is very fast", "It pretends to be a useful program or game to trick you into installing it", "It is shaped like a horse"],
+	"correctIndex": 2
+  },
+  {
+	"question": "You download a 'Minecraft Mod' from a random site, and suddenly your files are locked with a demand for money. What is this called?",
+	"options": ["Spyware", "Adware", "Ransomware", "A glitch"],
+	"correctIndex": 2
+  },
+  {
+	"question": "What does 'Spyware' do on your computer?",
+	"options": ["Changes your wallpaper", "Secretly records your keystrokes and watches what you do", "Speeds up your internet", "Deletes your homework"],
+	"correctIndex": 1
+  },
+  {
+	"options": ["Every 10 years", "Never", "As soon as they are available to fix 'bugs' and security holes", "\nOnly when the computer breaks"],
+	"question": "How often should you update your computer's Operating System (OS)?",
+	"correctIndex": 2
+  },
+  {
+	"question": "What is a 'Zero-Day' vulnerability?",
+	"options": ["A virus that lasts 24 hours", "A security flaw that is discovered and attacked before the creators can fix it", "A computer with zero files", "The day a computer is made"],
+	"correctIndex": 1
+  },
+  {
+	"question": "You plug in a USB drive you found in the school parking lot. Why is this dangerous?",
+	"options": ["The drive might be empty", "It could automatically install malware as soon as it is plugged in", "It might be too small for your files", "The school might see your files"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Which of these file extensions is the MOST suspicious if you see it in an email attachment?",
+	"options": [".png", ".docx", ".exe", ".mp3"],
+	"correctIndex": 2
+  },
+  {
+	"question": "What is the purpose of a 'Firewall' on your computer?",
+	"options": ["To keep the computer from overheating", "To act as a gatekeeper that blocks unauthorized data from entering your network", "To delete old files", "To make your screen brighter"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is a 'Botnet'?",
+	"options": ["A group of hackers playing games", "A network of infected computers controlled by a hacker to attack other sites", "A specialized internet for robots", "A fast type of Wi-Fi"],
+	"correctIndex": 1
+  },
+  {
+	"question": "A pop-up tells you that you are the '1,000,000th Visitor' and must click to win.\n What is the most likely outcome of clicking?",
+	"options": ["You get a free iPad", "A 'Drive-by Download' installs malware without you knowing", "The website closes", "Your internet gets faster"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Which of these is a sign that your computer might be infected with malware?",
+	"options": ["The fan is running quietly", "Your computer is suddenly very slow and shows constant pop-up ads", "Your mouse is working perfectly", "The screen is bright"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is 'Adware'?",
+	"options": ["Software that adds more RAM to your computer", "Malware that hides in your system and forces you to see unwanted advertisements", "A program for making posters", "A type of virus that only affects TV"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Why should you avoid 'Cracked' or 'Pirated' versions of expensive games?",
+	"options": ["The graphics are always bad", "They often contain hidden 'Backdoor' viruses", "They take too long to download", "The music is missing"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is a 'Keylogger'?",
+	"options": ["A tool for opening locked files", "Malware that records every letter you type, including passwords", "A program that organizes your keys", "A game about typing"],
+	"correctIndex": 1
+  },
+  {
+	"question": "If you are using a public computer (like at a library), \nwhat should you always do before leaving?",
+	"options": ["Turn the monitor off", "Log out of all accounts and clear the browser history", "Leave your tabs open for the next person", "Change the desktop background"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What does Antivirus software do when it 'Quarantines' a file?",
+	"options": ["Deletes the file immediately", "Moves the file to a safe, isolated area so it can't infect the rest of the system", "Shares the file with your friends", "Fixes the file so it works again"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Why is it important to back up your files to a cloud or external drive regularly?",
+	"options": ["So you can delete them from your computer", "So you don't lose your work if a virus wipes your hard drive", "To make the files smaller", "Because files get 'tired' after a while"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is 'Social Engineering' in the context of viruses?",
+	"options": ["Coding a virus for social media", "Tricking people into giving up passwords or clicking bad links using psychology", "Building a computer with friends", "Fixing a broken community"],
+	"correctIndex": 1
+  },
+  {
+	"question": "You see an alert: 'Antivirus Expired! Click here to renew.' \nBut you don't recognize the brand. This is likely:",
+	"options": ["A helpful reminder", "Scareware (Fake software designed to trick you into paying or downloading a virus)", "A free upgrade", "A system error"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is a 'Rootkit'?",
+	"options": ["A kit for fixing computer hardware", "Malware that hides deep inside the OS and gives a hacker full control", "A program that helps trees grow", "The first file ever created"],
+	"correctIndex": 1
+  },
+  {
+	"question": "How can a virus spread through a 'Macro'?",
+	"options": ["By eating small files", "By hiding inside a script in a document like Word or Excel", "By using a large monitor", "By changing your keyboard settings"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Which of these is the safest way to install a new app on your phone?",
+	"options": ["Download a file from a forum", "Use the official App Store or Google Play Store", "Scan a QR code on a bathroom stall", "Get it from a 'free apps' website"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is 'Fileless Malware'?",
+	"options": ["A virus that doesn't exist", "Malware that lives in the computer's RAM and doesn't save a file to the hard drive", "A virus that only deletes folders", "A program that makes your files invisible"],
+	"correctIndex": 1
+  },
+  {
+	"question": "A website asks you to 'Allow Notifications' as soon as you land on it. What is the risk?",
+	"options": ["You might miss important news", "They can spam you with fake 'Virus Detected' alerts to trick you into clicking", "Your browser will get slower", "Nothing, it is standard"],
+	"correctIndex": 1
+  },
+  {
+	"question": "Why is 'Incognito' or 'Private' mode NOT a defense against viruses?",
+	"options": ["It makes the screen too dark", "It only hides your history from other people using your computer, not from websites or malware", "It only works for 30 minutes", "It is only for experts"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What does it mean when a hacker 'Backdoors' a system?",
+	"options": ["They physically enter the building", "They create a secret way to bypass security and enter your computer later", "They use the computer's rear ports", "They delete the 'Home' button"],
+	"correctIndex": 1
+  },
+  {
+	"question": "You find a 'Game Cheat' that requires you to 'Disable Antivirus' to work. \nWhat should you do?",
+	"options": ["Disable it for 5 minutes", "Do not run it; real software almost never asks you to turn off security", "Run it on your parents' computer instead", "Turn off the firewall too"],
+	"correctIndex": 1
+  },
+  {
+	"question": "What is the 'Principle of Least Privilege'?",
+	"options": ["Having as many games as possible", "Only giving users the access they absolutely need (e.g., not using an Admin account for daily gaming)", "Buying the cheapest computer", "Deleting all your passwords"],
+	"correctIndex": 1
+  },
+  {
+	"question": "If your computer gets a virus, what is the best first step?",
+	"options": ["Keep using it and hope it goes away", "Disconnect from the internet to stop the virus from 'talking' to the hacker", "Delete your browser", "Post about it on social media"],
+	"correctIndex": 1
+  }
 ]
