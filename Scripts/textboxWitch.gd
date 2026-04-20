@@ -4,7 +4,7 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	addText("Answer my phshing questions to pass")
+	addText("Hi I'm Alex Let's be friends!!")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
