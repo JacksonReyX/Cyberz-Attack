@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://assets/Menus/Buttons/Back.png" id="7_q12tm"]
 [ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://assets/Menus/Buttons/BackPressed.png" id="8_vh0se"]
 [ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://assets/Menus/Buttons/BackHover.png" id="9_1tvsk"]
-[ext_resource type="Texture2D" uid="uid://ma8r2frixn17" path="res://scenes/sabella/New Piskel (1).png" id="11_qntp1"]
+[ext_resource type="Texture2D" uid="uid://ma8r2frixn17" path="res://scenes/sabella/images/New Piskel (1).png" id="11_qntp1"]
 [ext_resource type="PackedScene" uid="uid://bluviblfhyg08" path="res://scenes/AnimatedDecor/Torch.tscn" id="12_op46a"]
 
 [node name="ItemShop" type="Node2D"]
@@ -18,7 +18,7 @@ position = Vector2(1, -1)
 script = ExtResource("1_yrxvl")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(328, 177)
+position = Vector2(328, 182)
 scale = Vector2(0.562419, 0.478455)
 texture = ExtResource("1_b0wkj")
 

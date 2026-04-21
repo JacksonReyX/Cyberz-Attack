@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ma8r2frixn17"
-path="res://.godot/imported/New Piskel (1).png-5b24ef3dc2d3f64257404c34cb68783c.ctex"
+uid="uid://1ewufoitjwjk"
+path="res://.godot/imported/SpiderIdleUp3.png-373b31ca33f8bdce87e757db4507dc42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/New Piskel (1).png"
-dest_files=["res://.godot/imported/New Piskel (1).png-5b24ef3dc2d3f64257404c34cb68783c.ctex"]
+source_file="res://scenes/sabella/images/SpiderPack/IdlePurple/SpiderIdleUp3.png"
+dest_files=["res://.godot/imported/SpiderIdleUp3.png-373b31ca33f8bdce87e757db4507dc42.ctex"]
 
 [params]
 

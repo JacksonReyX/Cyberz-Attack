@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://d34a35mkjio"]
+
+[ext_resource type="Texture2D" uid="uid://du3p2pivlhvbd" path="res://scenes/sabella/images/32x32-bat-sprite.png" id="1_wgapy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh31i"]
+atlas = ExtResource("1_wgapy")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttldg"]
+atlas = ExtResource("1_wgapy")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6sqqr"]
+atlas = ExtResource("1_wgapy")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4ucu"]
+atlas = ExtResource("1_wgapy")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a5wb8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jh31i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttldg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6sqqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4ucu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Bat2" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.375, 0.375)
+scale = Vector2(0.523438, 0.460938)
+sprite_frames = SubResource("SpriteFrames_a5wb8")
+autoplay = "default"
+frame_progress = 0.622552
