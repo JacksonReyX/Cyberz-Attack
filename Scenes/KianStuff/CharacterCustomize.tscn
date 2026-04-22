@@ -1,38 +1,39 @@
-[gd_scene load_steps=40 format=3 uid="uid://c1qwr34in1lv6"]
+[gd_scene load_steps=41 format=3 uid="uid://c1qwr34in1lv6"]
 
-[ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://assets/Menus/Buttons/BackHover.png" id="1_d061v"]
+[ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://Assets/Menus/Buttons/BackHover.png" id="1_d061v"]
 [ext_resource type="Script" path="res://Scripts/character_customize.gd" id="1_ogjvl"]
-[ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://assets/Menus/Buttons/Back.png" id="1_vcgky"]
-[ext_resource type="Texture2D" uid="uid://dtmo876xe2hpm" path="res://assets/Menus/Card/CharCustCard.png" id="1_y3noa"]
-[ext_resource type="Texture2D" uid="uid://cdwqd0gniyd38" path="res://assets/Menus/Buttons/Play.png" id="3_4a3q7"]
-[ext_resource type="Texture2D" uid="uid://0atkqlxedi60" path="res://assets/Menus/Buttons/PlayPressed.png" id="5_2y0fi"]
-[ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://assets/Menus/Buttons/BackPressed.png" id="6_4e8e1"]
-[ext_resource type="Texture2D" uid="uid://bmai6bfhki511" path="res://assets/Menus/Buttons/PlayHover.png" id="6_rxag3"]
-[ext_resource type="Texture2D" uid="uid://d4hg4c7peel8h" path="res://assets/Menus/Card/PreviewFrame.png" id="9_0vabe"]
-[ext_resource type="Texture2D" uid="uid://bvo6r8uygoww2" path="res://assets/Menus/Buttons/Previous.png" id="9_vqqy5"]
-[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="10_8kkrl"]
-[ext_resource type="Texture2D" uid="uid://d4hmeivjoqfo7" path="res://assets/Menus/Buttons/Next.png" id="10_73x0q"]
-[ext_resource type="Texture2D" uid="uid://dcfqakkl07eda" path="res://assets/Menus/Buttons/PreviousPressed.png" id="12_ymjls"]
-[ext_resource type="Texture2D" uid="uid://bf5mmqhdrijpj" path="res://assets/Menus/Buttons/PreviousHover.png" id="13_oqjsb"]
-[ext_resource type="Texture2D" uid="uid://coscc4hnyowdk" path="res://assets/Menus/Buttons/NextPressed.png" id="15_3xj7h"]
-[ext_resource type="Texture2D" uid="uid://dt5gjr2fpi3mf" path="res://assets/Menus/Buttons/NextHover.png" id="16_128od"]
-[ext_resource type="PackedScene" uid="uid://bluviblfhyg08" path="res://scenes/AnimatedDecor/Torch.tscn" id="17_bjdkw"]
-[ext_resource type="Texture2D" uid="uid://dqyjvbl7vafyc" path="res://assets/Menus/Card/CustomizerCard.png" id="18_agvjx"]
-[ext_resource type="Texture2D" uid="uid://g8cg4ioe46m0" path="res://assets/Menus/Card/Hair.png" id="19_frt37"]
-[ext_resource type="Texture2D" uid="uid://ea8qa2rbxch2" path="res://assets/Menus/Card/HairHover.png" id="20_0udql"]
-[ext_resource type="Texture2D" uid="uid://dgdp1u6dec5am" path="res://assets/Menus/Card/HairUnselected.png" id="21_nwp4s"]
-[ext_resource type="Texture2D" uid="uid://bc2ofuc4r6767" path="res://assets/Menus/Card/Eyes.png" id="22_5dyvk"]
-[ext_resource type="Texture2D" uid="uid://xixdvms7fxnp" path="res://assets/Menus/Card/EyesHover.png" id="23_vk0xs"]
-[ext_resource type="Texture2D" uid="uid://bu0b4nomtg34w" path="res://assets/Menus/Card/EyesUnselected.png" id="24_h0epr"]
-[ext_resource type="Texture2D" uid="uid://jpr83nwn0eh5" path="res://assets/Menus/Card/Body.png" id="25_qqxio"]
-[ext_resource type="Texture2D" uid="uid://c0ib4bu1cd88y" path="res://assets/Menus/Card/BodyHover.png" id="26_d3vcd"]
-[ext_resource type="Texture2D" uid="uid://bdc54cxto6mrw" path="res://assets/Menus/Card/BodyUnselected.png" id="27_ivwtw"]
-[ext_resource type="Texture2D" uid="uid://c5ylul7mlb755" path="res://assets/Menus/Card/Shirt.png" id="28_hdd42"]
-[ext_resource type="Texture2D" uid="uid://dxev5rs3woa32" path="res://assets/Menus/Card/ShirtHover.png" id="29_eb33q"]
-[ext_resource type="Texture2D" uid="uid://bg7rmfc5n8acv" path="res://assets/Menus/Card/ShirtUnselected.png" id="30_e4cf6"]
-[ext_resource type="Texture2D" uid="uid://chamnv1k7rktu" path="res://assets/Menus/Card/Accessory.png" id="31_gbnaj"]
-[ext_resource type="Texture2D" uid="uid://dxa1b3vqs58s" path="res://assets/Menus/Card/AccessoryHover.png" id="32_hjmbo"]
-[ext_resource type="Texture2D" uid="uid://ccnae655cne6r" path="res://assets/Menus/Card/AccessoryUnselected.png" id="33_egsed"]
+[ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://Assets/Menus/Buttons/Back.png" id="1_vcgky"]
+[ext_resource type="Texture2D" uid="uid://dtmo876xe2hpm" path="res://Assets/Menus/Card/CharCustCard.png" id="1_y3noa"]
+[ext_resource type="Texture2D" uid="uid://cdwqd0gniyd38" path="res://Assets/Menus/Buttons/Play.png" id="3_4a3q7"]
+[ext_resource type="Texture2D" uid="uid://0atkqlxedi60" path="res://Assets/Menus/Buttons/PlayPressed.png" id="5_2y0fi"]
+[ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://Assets/Menus/Buttons/BackPressed.png" id="6_4e8e1"]
+[ext_resource type="Texture2D" uid="uid://bmai6bfhki511" path="res://Assets/Menus/Buttons/PlayHover.png" id="6_rxag3"]
+[ext_resource type="Texture2D" uid="uid://d4hg4c7peel8h" path="res://Assets/Menus/Card/PreviewFrame.png" id="9_0vabe"]
+[ext_resource type="Texture2D" uid="uid://bvo6r8uygoww2" path="res://Assets/Menus/Buttons/Previous.png" id="9_vqqy5"]
+[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="10_8kkrl"]
+[ext_resource type="Texture2D" uid="uid://d4hmeivjoqfo7" path="res://Assets/Menus/Buttons/Next.png" id="10_73x0q"]
+[ext_resource type="Texture2D" uid="uid://dcfqakkl07eda" path="res://Assets/Menus/Buttons/PreviousPressed.png" id="12_ymjls"]
+[ext_resource type="Texture2D" uid="uid://bf5mmqhdrijpj" path="res://Assets/Menus/Buttons/PreviousHover.png" id="13_oqjsb"]
+[ext_resource type="Texture2D" uid="uid://coscc4hnyowdk" path="res://Assets/Menus/Buttons/NextPressed.png" id="15_3xj7h"]
+[ext_resource type="Texture2D" uid="uid://dt5gjr2fpi3mf" path="res://Assets/Menus/Buttons/NextHover.png" id="16_128od"]
+[ext_resource type="PackedScene" uid="uid://bluviblfhyg08" path="res://Scenes/AnimatedDecor/Torch.tscn" id="17_bjdkw"]
+[ext_resource type="Texture2D" uid="uid://dqyjvbl7vafyc" path="res://Assets/Menus/Card/CustomizerCard.png" id="18_agvjx"]
+[ext_resource type="Texture2D" uid="uid://g8cg4ioe46m0" path="res://Assets/Menus/Card/Hair.png" id="19_frt37"]
+[ext_resource type="Texture2D" uid="uid://ea8qa2rbxch2" path="res://Assets/Menus/Card/HairHover.png" id="20_0udql"]
+[ext_resource type="Texture2D" uid="uid://dgdp1u6dec5am" path="res://Assets/Menus/Card/HairUnselected.png" id="21_nwp4s"]
+[ext_resource type="Texture2D" uid="uid://bc2ofuc4r6767" path="res://Assets/Menus/Card/Eyes.png" id="22_5dyvk"]
+[ext_resource type="PackedScene" uid="uid://dybql1oxbrpuj" path="res://Scenes/KianStuff/ColorSwatch.tscn" id="22_6piv5"]
+[ext_resource type="Texture2D" uid="uid://xixdvms7fxnp" path="res://Assets/Menus/Card/EyesHover.png" id="23_vk0xs"]
+[ext_resource type="Texture2D" uid="uid://bu0b4nomtg34w" path="res://Assets/Menus/Card/EyesUnselected.png" id="24_h0epr"]
+[ext_resource type="Texture2D" uid="uid://jpr83nwn0eh5" path="res://Assets/Menus/Card/Body.png" id="25_qqxio"]
+[ext_resource type="Texture2D" uid="uid://c0ib4bu1cd88y" path="res://Assets/Menus/Card/BodyHover.png" id="26_d3vcd"]
+[ext_resource type="Texture2D" uid="uid://bdc54cxto6mrw" path="res://Assets/Menus/Card/BodyUnselected.png" id="27_ivwtw"]
+[ext_resource type="Texture2D" uid="uid://c5ylul7mlb755" path="res://Assets/Menus/Card/Shirt.png" id="28_hdd42"]
+[ext_resource type="Texture2D" uid="uid://dxev5rs3woa32" path="res://Assets/Menus/Card/ShirtHover.png" id="29_eb33q"]
+[ext_resource type="Texture2D" uid="uid://bg7rmfc5n8acv" path="res://Assets/Menus/Card/ShirtUnselected.png" id="30_e4cf6"]
+[ext_resource type="Texture2D" uid="uid://chamnv1k7rktu" path="res://Assets/Menus/Card/Accessory.png" id="31_gbnaj"]
+[ext_resource type="Texture2D" uid="uid://dxa1b3vqs58s" path="res://Assets/Menus/Card/AccessoryHover.png" id="32_hjmbo"]
+[ext_resource type="Texture2D" uid="uid://ccnae655cne6r" path="res://Assets/Menus/Card/AccessoryUnselected.png" id="33_egsed"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_35nb7"]
 texture = ExtResource("1_y3noa")
@@ -196,17 +197,6 @@ offset_right = 494.0
 offset_bottom = 255.0
 texture = ExtResource("18_agvjx")
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 302.0
-offset_top = 184.0
-offset_right = 466.0
-offset_bottom = 207.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("10_8kkrl")
-theme_override_font_sizes/font_size = 16
-text = "In progress"
-
 [node name="Tabs" type="Node" parent="CanvasLayer"]
 
 [node name="HairTab" type="TextureButton" parent="CanvasLayer/Tabs"]
@@ -277,8 +267,107 @@ anchors_preset = 0
 [node name="HairPanel" type="Control" parent="CanvasLayer/ContentStack"]
 unique_name_in_owner = true
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 301.0
+offset_top = 113.0
+offset_right = 341.0
+offset_bottom = 153.0
+
+[node name="ColorSwatchWhite" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 78.0
+offset_right = 57.0
+offset_bottom = 102.0
+
+[node name="ColorSwatchBlack" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 78.0
+offset_right = 73.0
+offset_bottom = 102.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchBlack" index="0"]
+color = Color(0.0110876, 0.0110876, 0.0110876, 1)
+
+[node name="ColorSwatchPurple" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 78.0
+offset_right = 89.0
+offset_bottom = 102.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchPurple" index="0"]
+color = Color(0.496437, 0.000180875, 0.498631, 1)
+
+[node name="ColorSwatchPink" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 78.0
+offset_right = 105.0
+offset_bottom = 102.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchPink" index="0"]
+color = Color(1, 0.380999, 0.998583, 1)
+
+[node name="ColorSwatchBlue" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 78.0
+offset_right = 121.0
+offset_bottom = 102.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchBlue" index="0"]
+color = Color(0, 0.399335, 0.643463, 1)
+
+[node name="ColorSwatchGreen" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 54.0
+offset_right = 89.0
+offset_bottom = 78.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchGreen" index="0"]
+color = Color(0, 0.752941, 0.345098, 1)
+
+[node name="ColorSwatchYellow" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 54.0
+offset_right = 105.0
+offset_bottom = 78.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchYellow" index="0"]
+color = Color(1, 0.94902, 0.0784314, 1)
+
+[node name="ColorSwatchOrange" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 54.0
+offset_right = 121.0
+offset_bottom = 78.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchOrange" index="0"]
+color = Color(1, 0.591352, 0.196581, 1)
+
+[node name="ColorSwatchRed" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 54.0
+offset_right = 73.0
+offset_bottom = 78.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchRed" index="0"]
+color = Color(1, 0.25544, 0.166839, 1)
+
+[node name="ColorSwatchBrown" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 54.0
+offset_right = 57.0
+offset_bottom = 78.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchBrown" index="0"]
+color = Color(0.582465, 0.228018, 0.117232, 1)
 
 [node name="BodyPanel" type="Control" parent="CanvasLayer/ContentStack"]
 unique_name_in_owner = true
@@ -286,11 +375,207 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="ColorSwatchWhite" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 191.0
+offset_right = 358.0
+offset_bottom = 215.0
+
+[node name="ColorSwatchBlack" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 191.0
+offset_right = 374.0
+offset_bottom = 215.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBlack" index="0"]
+color = Color(0.0110876, 0.0110876, 0.0110876, 1)
+
+[node name="ColorSwatchPurple" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 191.0
+offset_right = 390.0
+offset_bottom = 215.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchPurple" index="0"]
+color = Color(0.496437, 0.000180875, 0.498631, 1)
+
+[node name="ColorSwatchPink" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 191.0
+offset_right = 406.0
+offset_bottom = 215.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchPink" index="0"]
+color = Color(1, 0.380999, 0.998583, 1)
+
+[node name="ColorSwatchBlue" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 191.0
+offset_right = 422.0
+offset_bottom = 215.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBlue" index="0"]
+color = Color(0, 0.399335, 0.643463, 1)
+
+[node name="ColorSwatchGreen" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 167.0
+offset_right = 390.0
+offset_bottom = 191.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchGreen" index="0"]
+color = Color(0, 0.752941, 0.345098, 1)
+
+[node name="ColorSwatchYellow" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 167.0
+offset_right = 406.0
+offset_bottom = 191.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchYellow" index="0"]
+color = Color(1, 0.94902, 0.0784314, 1)
+
+[node name="ColorSwatchOrange" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 167.0
+offset_right = 422.0
+offset_bottom = 191.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchOrange" index="0"]
+color = Color(1, 0.591352, 0.196581, 1)
+
+[node name="ColorSwatchRed" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 167.0
+offset_right = 374.0
+offset_bottom = 191.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchRed" index="0"]
+color = Color(1, 0.25544, 0.166839, 1)
+
+[node name="ColorSwatchBrown" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 167.0
+offset_right = 358.0
+offset_bottom = 191.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBrown" index="0"]
+color = Color(0.582465, 0.228018, 0.117232, 1)
+
 [node name="EyesPanel" type="Control" parent="CanvasLayer/ContentStack"]
 unique_name_in_owner = true
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 301.0
+offset_top = 113.0
+offset_right = 341.0
+offset_bottom = 153.0
+
+[node name="ColorSwatchWhite" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 78.0
+offset_right = 57.0
+offset_bottom = 102.0
+
+[node name="ColorSwatchBlack" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 78.0
+offset_right = 73.0
+offset_bottom = 102.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBlack" index="0"]
+color = Color(0.0110876, 0.0110876, 0.0110876, 1)
+
+[node name="ColorSwatchPurple" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 78.0
+offset_right = 89.0
+offset_bottom = 102.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchPurple" index="0"]
+color = Color(0.496437, 0.000180875, 0.498631, 1)
+
+[node name="ColorSwatchPink" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 78.0
+offset_right = 105.0
+offset_bottom = 102.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchPink" index="0"]
+color = Color(1, 0.380999, 0.998583, 1)
+
+[node name="ColorSwatchBlue" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 78.0
+offset_right = 121.0
+offset_bottom = 102.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBlue" index="0"]
+color = Color(0, 0.399335, 0.643463, 1)
+
+[node name="ColorSwatchGreen" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 54.0
+offset_right = 89.0
+offset_bottom = 78.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchGreen" index="0"]
+color = Color(0, 0.752941, 0.345098, 1)
+
+[node name="ColorSwatchYellow" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 54.0
+offset_right = 105.0
+offset_bottom = 78.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchYellow" index="0"]
+color = Color(1, 0.94902, 0.0784314, 1)
+
+[node name="ColorSwatchOrange" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 54.0
+offset_right = 121.0
+offset_bottom = 78.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchOrange" index="0"]
+color = Color(1, 0.591352, 0.196581, 1)
+
+[node name="ColorSwatchRed" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 54.0
+offset_right = 73.0
+offset_bottom = 78.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchRed" index="0"]
+color = Color(1, 0.25544, 0.166839, 1)
+
+[node name="ColorSwatchBrown" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 54.0
+offset_right = 57.0
+offset_bottom = 78.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBrown" index="0"]
+color = Color(0.582465, 0.228018, 0.117232, 1)
 
 [node name="OutfitPanel" type="Control" parent="CanvasLayer/ContentStack"]
 unique_name_in_owner = true
@@ -298,11 +583,256 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="ColorSwatchWhite" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 191.0
+offset_right = 358.0
+offset_bottom = 215.0
+
+[node name="ColorSwatchBlack" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 191.0
+offset_right = 374.0
+offset_bottom = 215.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBlack" index="0"]
+color = Color(0.0110876, 0.0110876, 0.0110876, 1)
+
+[node name="ColorSwatchPurple" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 191.0
+offset_right = 390.0
+offset_bottom = 215.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchPurple" index="0"]
+color = Color(0.496437, 0.000180875, 0.498631, 1)
+
+[node name="ColorSwatchPink" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 191.0
+offset_right = 406.0
+offset_bottom = 215.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchPink" index="0"]
+color = Color(1, 0.380999, 0.998583, 1)
+
+[node name="ColorSwatchBlue" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 191.0
+offset_right = 422.0
+offset_bottom = 215.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBlue" index="0"]
+color = Color(0, 0.399335, 0.643463, 1)
+
+[node name="ColorSwatchGreen" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 167.0
+offset_right = 390.0
+offset_bottom = 191.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchGreen" index="0"]
+color = Color(0, 0.752941, 0.345098, 1)
+
+[node name="ColorSwatchYellow" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 167.0
+offset_right = 406.0
+offset_bottom = 191.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchYellow" index="0"]
+color = Color(1, 0.94902, 0.0784314, 1)
+
+[node name="ColorSwatchOrange" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 167.0
+offset_right = 422.0
+offset_bottom = 191.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchOrange" index="0"]
+color = Color(1, 0.591352, 0.196581, 1)
+
+[node name="ColorSwatchRed" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 167.0
+offset_right = 374.0
+offset_bottom = 191.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchRed" index="0"]
+color = Color(1, 0.25544, 0.166839, 1)
+
+[node name="ColorSwatchBrown" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 167.0
+offset_right = 358.0
+offset_bottom = 191.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBrown" index="0"]
+color = Color(0.582465, 0.228018, 0.117232, 1)
+
 [node name="AccessoryPanel" type="Control" parent="CanvasLayer/ContentStack"]
 unique_name_in_owner = true
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="ColorSwatchWhite" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 191.0
+offset_right = 358.0
+offset_bottom = 215.0
+
+[node name="ColorSwatchBlack" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 191.0
+offset_right = 374.0
+offset_bottom = 215.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchBlack" index="0"]
+color = Color(0.0110876, 0.0110876, 0.0110876, 1)
+
+[node name="ColorSwatchPurple" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 191.0
+offset_right = 390.0
+offset_bottom = 215.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchPurple" index="0"]
+color = Color(0.496437, 0.000180875, 0.498631, 1)
+
+[node name="ColorSwatchPink" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 191.0
+offset_right = 406.0
+offset_bottom = 215.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchPink" index="0"]
+color = Color(1, 0.380999, 0.998583, 1)
+
+[node name="ColorSwatchBlue" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 191.0
+offset_right = 422.0
+offset_bottom = 215.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchBlue" index="0"]
+color = Color(0, 0.399335, 0.643463, 1)
+
+[node name="ColorSwatchGreen" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 167.0
+offset_right = 390.0
+offset_bottom = 191.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchGreen" index="0"]
+color = Color(0, 0.752941, 0.345098, 1)
+
+[node name="ColorSwatchYellow" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 167.0
+offset_right = 406.0
+offset_bottom = 191.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchYellow" index="0"]
+color = Color(1, 0.94902, 0.0784314, 1)
+
+[node name="ColorSwatchOrange" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 167.0
+offset_right = 422.0
+offset_bottom = 191.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchOrange" index="0"]
+color = Color(1, 0.591352, 0.196581, 1)
+
+[node name="ColorSwatchRed" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 167.0
+offset_right = 374.0
+offset_bottom = 191.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchRed" index="0"]
+color = Color(1, 0.25544, 0.166839, 1)
+
+[node name="ColorSwatchBrown" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 167.0
+offset_right = 358.0
+offset_bottom = 191.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchBrown" index="0"]
+color = Color(0.582465, 0.228018, 0.117232, 1)
+
 [connection signal="pressed" from="CanvasLayer/Buttons/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Buttons/PlayButton" to="." method="_on_play_button_pressed"]
+
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchWhite"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchBlack"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchPurple"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchPink"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchBlue"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchGreen"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchYellow"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchOrange"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchRed"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchBrown"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchWhite"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBlack"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchPurple"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchPink"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBlue"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchGreen"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchYellow"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchOrange"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchRed"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBrown"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchWhite"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBlack"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchPurple"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchPink"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBlue"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchGreen"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchYellow"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchOrange"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchRed"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBrown"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchWhite"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBlack"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchPurple"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchPink"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBlue"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchGreen"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchYellow"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchOrange"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchRed"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBrown"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchWhite"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchBlack"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchPurple"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchPink"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchBlue"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchGreen"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchYellow"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchOrange"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchRed"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchBrown"]

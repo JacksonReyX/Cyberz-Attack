@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://cj8buwsv5yjsc"]
+
+[ext_resource type="Texture2D" uid="uid://bjhxp0to6vawo" path="res://Assets/Characters/CharactersAnimations/wizard_body_idle.png" id="1_ioh46"]
+[ext_resource type="Texture2D" uid="uid://b2wlhk2g8ifwp" path="res://Assets/Characters/CharactersAnimations/wizard_body_run.png" id="2_khuxk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rv8x"]
+atlas = ExtResource("1_ioh46")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifxjh"]
+atlas = ExtResource("1_ioh46")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0q15l"]
+atlas = ExtResource("1_ioh46")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_joaam"]
+atlas = ExtResource("1_ioh46")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ltgn"]
+atlas = ExtResource("2_khuxk")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ta6t1"]
+atlas = ExtResource("2_khuxk")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_saoq4"]
+atlas = ExtResource("2_khuxk")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrkde"]
+atlas = ExtResource("2_khuxk")
+region = Rect2(48, 0, 16, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rv8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ifxjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0q15l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_joaam")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ltgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ta6t1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_saoq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrkde")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]

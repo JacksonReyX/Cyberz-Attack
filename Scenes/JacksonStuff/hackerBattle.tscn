@@ -12,7 +12,7 @@
 ItemList/colors/font_color = Color(0.999808, 0.984876, 0.983107, 1)
 ItemList/colors/font_hovered_color = Color(0.800821, 0.7859, 0.861224, 1)
 ItemList/colors/guide_color = Color(0.898589, 0.52493, 1, 0.25)
-ItemList/font_sizes/font_size = 11
+ItemList/font_sizes/font_size = 7
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1p8wd"]
 texture = ExtResource("3_4fphf")
@@ -672,25 +672,27 @@ script = ExtResource("1_l7fk6")
 
 [node name="DisplayText" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = -169.0
-offset_top = 34.0
-offset_right = -57.0
-offset_bottom = 57.0
+offset_left = -310.0
+offset_top = 20.0
+offset_right = -128.0
+offset_bottom = 56.0
 scale = Vector2(0.388914, 0.747241)
+theme_override_font_sizes/font_size = 26
 text = "Question Here"
 
 [node name="ItemList" type="ItemList" parent="Control"]
 layout_mode = 0
-offset_left = -157.0
-offset_top = 103.0
-offset_right = 167.0
-offset_bottom = 158.0
+offset_left = -297.0
+offset_top = 82.0
+offset_right = 27.0
+offset_bottom = 154.0
+scale = Vector2(1.84, 1.44)
 theme = SubResource("Theme_8aioo")
 max_text_lines = 3
 auto_height = true
 item_count = 4
 max_columns = 2
-fixed_column_width = 150
+fixed_column_width = 151
 item_0/text = "Test"
 item_1/text = "text"
 item_2/text = "test"
@@ -703,10 +705,10 @@ anchor_left = 1.0
 anchor_top = 4.312
 anchor_right = 1.0
 anchor_bottom = 4.312
-offset_left = -98.0
-offset_top = -6.48
-offset_right = 16.0
-offset_bottom = 34.52
+offset_left = -99.0
+offset_top = 28.52
+offset_right = 15.0
+offset_bottom = 69.52
 text = "Submit"
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -725,6 +727,7 @@ rotation = 1.5708
 color = Color(0.819608, 0, 0.0901961, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="."]
+visible = false
 offset_left = 162.0
 offset_top = 93.0
 offset_right = 165.0
@@ -732,6 +735,7 @@ offset_bottom = 425.0
 rotation = 1.5708
 
 [node name="ColorRect3" type="ColorRect" parent="."]
+visible = false
 offset_left = 162.0
 offset_top = 154.0
 offset_right = 165.0
@@ -739,12 +743,14 @@ offset_bottom = 486.0
 rotation = 1.5708
 
 [node name="ColorRect6" type="ColorRect" parent="."]
+visible = false
 offset_left = 159.0
 offset_top = 93.0
 offset_right = 162.0
 offset_bottom = 156.0
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
 offset_left = -170.0
 offset_top = 95.0
 offset_right = -167.0
@@ -761,10 +767,10 @@ text = "A Hacker Aproaches"
 
 [node name="correctAnswer" type="Label" parent="."]
 visible = false
-offset_left = -305.0
-offset_top = 176.0
-offset_right = -177.0
-offset_bottom = 199.0
+offset_left = -304.0
+offset_top = 194.0
+offset_right = -176.0
+offset_bottom = 217.0
 scale = Vector2(0.9982, 1)
 theme_override_font_sizes/font_size = 11
 text = "Correct! Security is key"
@@ -772,30 +778,37 @@ text = "Correct! Security is key"
 [node name="wrongAnswer" type="Label" parent="."]
 visible = false
 offset_left = -306.0
-offset_top = 205.0
-offset_right = -178.0
-offset_bottom = 228.0
+offset_top = 220.0
+offset_right = -61.0
+offset_bottom = 243.0
 scale = Vector2(0.9982, 1)
 theme_override_font_sizes/font_size = 11
 text = "Wrong! Does this answer keep your data safe?"
 
 [node name="health" type="Label" parent="."]
-offset_left = 251.0
-offset_top = 183.0
-offset_right = 291.0
-offset_bottom = 206.0
+offset_left = 261.0
+offset_top = 210.0
+offset_right = 301.0
+offset_bottom = 233.0
 
 [node name="enemyHealth" type="Label" parent="."]
-offset_left = 60.0
-offset_top = -58.0
-offset_right = 100.0
-offset_bottom = -35.0
+offset_left = 271.0
+offset_top = -75.0
+offset_right = 311.0
+offset_bottom = -52.0
+
+[node name="enemyHealth2" type="Label" parent="."]
+offset_left = 151.0
+offset_top = -76.0
+offset_right = 264.0
+offset_bottom = -53.0
+text = "Enemy Health:"
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 138.0
-offset_top = 182.0
-offset_right = 292.0
-offset_bottom = 205.0
+offset_left = 141.0
+offset_top = 206.0
+offset_right = 295.0
+offset_bottom = 229.0
 text = "Player Health: "
 
 [node name="deathTimer" type="Timer" parent="."]

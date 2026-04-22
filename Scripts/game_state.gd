@@ -3,8 +3,18 @@ extends Node
 var coins: int = 0
 var health_potions: int = 0
 var keys: int = 0
-var playerPosition: Vector2
-var defeatedEnemyID : String = ""
+var playerPosition = Vector2.ZERO
+var defeatedEnemies = []
+var active_enemy_name : String = ""
+var returning_from_battle = false
+
+
+func setScene():
+	playerPosition = Vector2.ZERO
+	defeatedEnemies = []
+	active_enemy_name = ""
+	returning_from_battle = false
+
 
 func get_label():
 	return get_node_or_null("/root/DungeonScene/HUDLayer/HUDRoot/CoinSection/CoinsForItemShopLabel")
@@ -68,7 +78,6 @@ func load_data():
 	coins = data.get("coins", 0)
 	owned_skins = data.get("owned_skins", ["default"])
 	selected_skin = data.get("selected_skin", "default")
-
 
 
 

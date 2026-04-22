@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://dokduudl2f1pv"]
+
+[ext_resource type="Texture2D" uid="uid://d2lj5sb5aqtrj" path="res://Assets/Characters/CharactersAnimations/knight_outfit_idle.png" id="1_mc3iy"]
+[ext_resource type="Texture2D" uid="uid://bbwknldkt2qks" path="res://Assets/Characters/CharactersAnimations/knight_outfit_run.png" id="2_1vsmu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugnse"]
+atlas = ExtResource("1_mc3iy")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jfd7"]
+atlas = ExtResource("1_mc3iy")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igu2o"]
+atlas = ExtResource("1_mc3iy")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17g0b"]
+atlas = ExtResource("1_mc3iy")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofx6v"]
+atlas = ExtResource("2_1vsmu")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkkkq"]
+atlas = ExtResource("2_1vsmu")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_df0hk"]
+atlas = ExtResource("2_1vsmu")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1je26"]
+atlas = ExtResource("2_1vsmu")
+region = Rect2(48, 0, 16, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugnse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jfd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igu2o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17g0b")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofx6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkkkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_df0hk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1je26")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]

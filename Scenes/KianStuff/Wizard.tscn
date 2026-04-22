@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dg2lmqxp0gse6"]
+
+[node name="Wizard" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]

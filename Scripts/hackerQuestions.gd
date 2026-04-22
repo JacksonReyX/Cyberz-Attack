@@ -22,7 +22,7 @@ var Items : Array = read_json_file("res://Assets/Questions/hackerQuestions.json"
 var item : Dictionary
 var index_item : int = randi_range(0,20)
 var correctCount : float  = 0
-var isCorrect : bool 
+var isCorrect : Variant = null
 var healthPercent : int = 100
 var enemyHealth : int = 100
 var score : int = 0
@@ -32,27 +32,38 @@ func _ready() -> void:
 
 	
 func refresh_scene():
+	# 1. ALWAYS update the text labels first so the player sees the 0%
+	health.text = str(healthPercent) + "%"
+	enemyHealthBar.text = str(enemyHealth) + "%"
+	
 	var greet
 	if enemyHealth <= 0:
+		enemyHealthBar.text = "0%" 
+		
 		ListItem.hide()
-		greet = "Congraduations, You Win!"
+		greet = "Congratulations, You Win!" # Fixed spelling too :)
 		DisplayText.text = "{greet} ! Your Score is {score}".format({"greet": greet, "score": score})
 		winTimer.start()
+	elif healthPercent <= 0:
+		# Handle player death here if needed
+		health.text = "0%"
+		DisplayText.text = "Game Over"
+		deathTimer.start()
 	else:
 		show_questions()
 		
 func show_questions():
 	ListItem.show()
-	#RestartButton.hide()
 	ListItem.clear()
+	
+	# Safety check for index out of bounds
 	item = Items[index_item]
-	if(healthPercent > 0):
-		DisplayText.text = item.question
+	
+	DisplayText.text = item.question
 	var options = item.options
 	for option in options:
 		ListItem.add_item(option)
-	health.text = str(healthPercent) + "%"
-	enemyHealthBar.text = str(enemyHealth) + "%"
+	
 
 		
 		
@@ -90,7 +101,7 @@ func _on_item_list_item_selected(index: int) -> void:
 func _on_button_pressed() -> void:
 	if isCorrect:
 		correctCount += 1
-		enemyHealth -= 60
+		enemyHealth -= 35
 		index_item = randi_range(0,20)
 		score += 10
 		correctSFX.play()
@@ -98,7 +109,7 @@ func _on_button_pressed() -> void:
 		rightTimer.start()
 	else:
 		incorrectSFX.play()
-		index_item = randi_range(0,20)
+		#index_item = randi_range(0,20)
 		healthPercent -= 20
 		wrongAnswer.visible = true
 		wrongTimer.start()
@@ -107,6 +118,8 @@ func _on_button_pressed() -> void:
 		if(healthPercent <= 0):
 			DisplayText.text = "Game Over"
 			deathTimer.start()
+	isCorrect = null 
+	ListItem.deselect_all()
 	refresh_scene()
 		
 
@@ -120,6 +133,7 @@ func _on_death_timer_timeout() -> void:
 
 func _on_win_timer_timeout() -> void:
 	#GameState.battleReset()
+	GameState.defeatedEnemies.append(GameState.active_enemy_name)
 	get_tree().change_scene_to_file("res://Scenes/KianStuff/DungeonScene.tscn")
 
 
