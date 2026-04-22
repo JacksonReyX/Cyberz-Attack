@@ -42,13 +42,36 @@ func save_data():
 	print("SAVING:", coins)
 
 func load_data():
-	if FileAccess.file_exists("user://save.dat"):
-		var f = FileAccess.open("user://save.dat", FileAccess.READ)
-		var data = f.get_var()
-		coins = data["coins"]
-		owned_skins = data["owned_skins"]
-		selected_skin = data["selected_skin"]
+	if not FileAccess.file_exists("user://save.dat"):
+		return
+
+	var f = FileAccess.open("user://save.dat", FileAccess.READ)
 	
+	if f == null:
+		print("Failed to open save file")
+		return
+	
+	if f.get_length() == 0:
+		print("Save file empty, resetting")
+		#reset_data()
+		return
+
+	var data = f.get_var()
+
+	# SAFETY CHECK
+	if typeof(data) != TYPE_DICTIONARY:
+		print("Corrupted save file, resetting")
+		#reset_data()
+		return
+
+	# SAFE ACCESS (prevents crashes if keys missing)
+	coins = data.get("coins", 0)
+	owned_skins = data.get("owned_skins", ["default"])
+	selected_skin = data.get("selected_skin", "default")
+
+
+
+
 func battleReset(): 
 	if GameState.playerPosition != null:
 		$CharacterBody2D.position = GameState.playerPosition
