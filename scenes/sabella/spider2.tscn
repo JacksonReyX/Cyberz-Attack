@@ -1,0 +1,70 @@
+[gd_scene load_steps=12 format=3 uid="uid://bdrdi3kqaoiv3"]
+
+[ext_resource type="Script" path="res://Scripts/spider_2.gd" id="1_5bv2n"]
+[ext_resource type="Texture2D" uid="uid://bljh22tdfb0lj" path="res://scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalking1.png" id="1_lk27u"]
+[ext_resource type="Texture2D" uid="uid://b7hv4gc2uo15s" path="res://scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalking2.png" id="2_1ewx3"]
+[ext_resource type="Texture2D" uid="uid://dkyv80pxqukgb" path="res://scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalking3.png" id="3_y0td2"]
+[ext_resource type="Texture2D" uid="uid://flgkhrfg3vwn" path="res://scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalking4.png" id="4_kj133"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hb5h"]
+atlas = ExtResource("1_lk27u")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv3x3"]
+atlas = ExtResource("2_1ewx3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkgo1"]
+atlas = ExtResource("3_y0td2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwqil"]
+atlas = ExtResource("4_kj133")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v1ewt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hb5h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fv3x3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkgo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwqil")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dv3f2"]
+radius = 10.6667
+
+[node name="Spider2" type="CharacterBody2D"]
+script = ExtResource("1_5bv2n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.19209e-07, 0)
+scale = Vector2(0.5625, 0.4375)
+sprite_frames = SubResource("SpriteFrames_v1ewt")
+autoplay = "default"
+frame_progress = 0.11789
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
+shape = SubResource("CircleShape2D_dv3f2")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(1.19209e-07, 0)
+scale = Vector2(0.5625, 0.4375)
+target_position = Vector2(-2.11927e-07, -18.2857)
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2(1.19209e-07, 0)
+scale = Vector2(0.5625, 0.4375)
+target_position = Vector2(-2.11927e-07, 18.2857)

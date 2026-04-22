@@ -1,0 +1,167 @@
+[gd_scene load_steps=23 format=3 uid="uid://ctikdqjam5smm"]
+
+[ext_resource type="Texture2D" uid="uid://dox1tgt5i5yvv" path="res://scenes/sabella/images/Characters.png" id="1_2ianw"]
+[ext_resource type="Script" path="res://Scripts/guard.gd" id="1_whdqd"]
+[ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://assets/Menus/Buttons/prompt_normal.png" id="3_bdpat"]
+[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_6r3qk"]
+[ext_resource type="Texture2D" uid="uid://dcbkf5ybaaim4" path="res://scenes/sabella/images/Pixelart arrow icon pack 1.0.png" id="5_rx60n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8jep"]
+atlas = ExtResource("1_2ianw")
+region = Rect2(0, 288, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0eaeo"]
+atlas = ExtResource("1_2ianw")
+region = Rect2(16, 288, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cee25"]
+atlas = ExtResource("1_2ianw")
+region = Rect2(32, 288, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk235"]
+atlas = ExtResource("1_2ianw")
+region = Rect2(48, 288, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucfah"]
+atlas = ExtResource("1_2ianw")
+region = Rect2(64, 288, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_met8q"]
+atlas = ExtResource("1_2ianw")
+region = Rect2(80, 288, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1uge"]
+atlas = ExtResource("1_2ianw")
+region = Rect2(96, 288, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tgk0"]
+atlas = ExtResource("1_2ianw")
+region = Rect2(112, 288, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lvty"]
+atlas = ExtResource("1_2ianw")
+region = Rect2(128, 288, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8u6wr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8jep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0eaeo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cee25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk235")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucfah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_met8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1uge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tgk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lvty")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t1hnn"]
+radius = 8.72727
+height = 27.1515
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eanom"]
+atlas = ExtResource("5_rx60n")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8qqg"]
+atlas = ExtResource("5_rx60n")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhnoc"]
+atlas = ExtResource("5_rx60n")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ise74"]
+atlas = ExtResource("5_rx60n")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3x6ci"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eanom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8qqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhnoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ise74")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nrvcs"]
+radius = 8.0
+height = 24.0
+
+[node name="Guard" type="Area2D"]
+script = ExtResource("1_whdqd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.3125, -13.625)
+scale = Vector2(0.960938, 1.02344)
+sprite_frames = SubResource("SpriteFrames_8u6wr")
+autoplay = "default"
+frame_progress = 0.536802
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -8)
+scale = Vector2(0.96875, 1.03125)
+shape = SubResource("CapsuleShape2D_t1hnn")
+
+[node name="Eprompt" type="Sprite2D" parent="."]
+position = Vector2(-1, -22)
+scale = Vector2(0.36875, 0.304167)
+texture = ExtResource("3_bdpat")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -29.0
+offset_top = -33.0
+offset_right = 261.0
+offset_bottom = 3.0
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/font = ExtResource("4_6r3qk")
+text = "Prepare yourself... enemies ahead."
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="arrow" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -25)
+rotation = 3.12414
+scale = Vector2(0.484912, 0.560881)
+sprite_frames = SubResource("SpriteFrames_3x6ci")
+autoplay = "default"
+frame_progress = 0.798033
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, -7)
+shape = SubResource("CapsuleShape2D_nrvcs")
