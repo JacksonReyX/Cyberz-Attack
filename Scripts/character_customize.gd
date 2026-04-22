@@ -142,7 +142,6 @@ func _update_tab_panels() -> void:
 	eyes_panel.visible = eyes_tab.button_pressed
 	outfit_panel.visible = outfit_tab.button_pressed
 	accessory_panel.visible = accessory_tab.button_pressed
-	print("hair panel visible: ", hair_panel.visible)
 
 func _change_class(dir: int) -> void:
 	var attempts := 0
