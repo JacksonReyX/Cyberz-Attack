@@ -83,7 +83,7 @@ func _on_item_list_item_selected(index: int) -> void:
 func _on_button_pressed() -> void:
 	if isCorrect:
 		correctCount += 1
-		enemyHealth -= 20
+		enemyHealth -= 30
 		index_item = randi_range(0,20)
 		score += 10
 		correctSFX.play()
