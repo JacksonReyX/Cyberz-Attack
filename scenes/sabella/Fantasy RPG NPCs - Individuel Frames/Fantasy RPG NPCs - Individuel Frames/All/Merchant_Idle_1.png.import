@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qq67j1uqmjfq"
-path="res://.godot/imported/Merchant_Idle_1.png-24023c0002320e66f62591d021ff5125.ctex"
+path="res://.godot/imported/Merchant_Idle_1.png-dc8f86ac7906a0f28f6b3a4932933e26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Merchant_Idle_1.png"
-dest_files=["res://.godot/imported/Merchant_Idle_1.png-24023c0002320e66f62591d021ff5125.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Merchant_Idle_1.png"
+dest_files=["res://.godot/imported/Merchant_Idle_1.png-dc8f86ac7906a0f28f6b3a4932933e26.ctex"]
 
 [params]
 

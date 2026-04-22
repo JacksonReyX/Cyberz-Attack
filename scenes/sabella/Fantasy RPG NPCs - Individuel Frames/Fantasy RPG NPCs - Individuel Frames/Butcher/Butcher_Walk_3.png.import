@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3mqtlhp8kfd6"
-path="res://.godot/imported/Butcher_Walk_3.png-4b6e9138523dfe99d5acf0c205f62392.ctex"
+path="res://.godot/imported/Butcher_Walk_3.png-4ded10c5ec44e1b06d5b0083033a581b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Butcher/Butcher_Walk_3.png"
-dest_files=["res://.godot/imported/Butcher_Walk_3.png-4b6e9138523dfe99d5acf0c205f62392.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Butcher/Butcher_Walk_3.png"
+dest_files=["res://.godot/imported/Butcher_Walk_3.png-4ded10c5ec44e1b06d5b0083033a581b.ctex"]
 
 [params]
 

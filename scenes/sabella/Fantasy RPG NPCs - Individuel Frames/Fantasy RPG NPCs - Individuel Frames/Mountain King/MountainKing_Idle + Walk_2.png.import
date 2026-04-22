@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d37eabsrqxh6p"
-path="res://.godot/imported/MountainKing_Idle + Walk_2.png-ca2488f271c52550a2b80d99379721fc.ctex"
+path="res://.godot/imported/MountainKing_Idle + Walk_2.png-cd853ed6405819d2fbc5cbedeb279bdc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Mountain King/MountainKing_Idle + Walk_2.png"
-dest_files=["res://.godot/imported/MountainKing_Idle + Walk_2.png-ca2488f271c52550a2b80d99379721fc.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Mountain King/MountainKing_Idle + Walk_2.png"
+dest_files=["res://.godot/imported/MountainKing_Idle + Walk_2.png-cd853ed6405819d2fbc5cbedeb279bdc.ctex"]
 
 [params]
 

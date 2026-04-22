@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6r75de31dip2"
-path="res://.godot/imported/Bishop_Idle + Walk_2.png-fb140a3ea241ce6b8fa4889920949509.ctex"
+path="res://.godot/imported/Bishop_Idle + Walk_2.png-bc9f194e05b5ce23d4cf95f7e40516a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Bishop/Bishop_Idle + Walk_2.png"
-dest_files=["res://.godot/imported/Bishop_Idle + Walk_2.png-fb140a3ea241ce6b8fa4889920949509.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Bishop/Bishop_Idle + Walk_2.png"
+dest_files=["res://.godot/imported/Bishop_Idle + Walk_2.png-bc9f194e05b5ce23d4cf95f7e40516a7.ctex"]
 
 [params]
 

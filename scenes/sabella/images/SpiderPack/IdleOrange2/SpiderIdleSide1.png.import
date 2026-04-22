@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d25mlx4pmuueo"
-path="res://.godot/imported/SpiderIdleSide1.png-90cf38630d3fb29ef73ae4d4d137326c.ctex"
+path="res://.godot/imported/SpiderIdleSide1.png-9ae038979023ad8e2890f52f32008c8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/images/SpiderPack/IdleOrange2/SpiderIdleSide1.png"
-dest_files=["res://.godot/imported/SpiderIdleSide1.png-90cf38630d3fb29ef73ae4d4d137326c.ctex"]
+source_file="res://Scenes/sabella/images/SpiderPack/IdleOrange2/SpiderIdleSide1.png"
+dest_files=["res://.godot/imported/SpiderIdleSide1.png-9ae038979023ad8e2890f52f32008c8b.ctex"]
 
 [params]
 

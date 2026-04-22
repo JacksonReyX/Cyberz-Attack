@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4fxgp2objuc8"
-path="res://.godot/imported/Merchant_Walk_2.png-be8a724994cdcbeb9e3b3320c5852833.ctex"
+path="res://.godot/imported/Merchant_Walk_2.png-36dd1d756a8bb9066f5451903ebc885c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Merchant_Walk_2.png"
-dest_files=["res://.godot/imported/Merchant_Walk_2.png-be8a724994cdcbeb9e3b3320c5852833.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Merchant_Walk_2.png"
+dest_files=["res://.godot/imported/Merchant_Walk_2.png-36dd1d756a8bb9066f5451903ebc885c.ctex"]
 
 [params]
 

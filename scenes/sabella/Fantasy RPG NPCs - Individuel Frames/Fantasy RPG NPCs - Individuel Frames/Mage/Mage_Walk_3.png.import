@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bphqgxejgw3ot"
-path="res://.godot/imported/Mage_Walk_3.png-389a44e1f133b4e57e4d07861a9707bb.ctex"
+path="res://.godot/imported/Mage_Walk_3.png-748c6ec937f0d631c775ec5b58b35ea5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Mage/Mage_Walk_3.png"
-dest_files=["res://.godot/imported/Mage_Walk_3.png-389a44e1f133b4e57e4d07861a9707bb.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Mage/Mage_Walk_3.png"
+dest_files=["res://.godot/imported/Mage_Walk_3.png-748c6ec937f0d631c775ec5b58b35ea5.ctex"]
 
 [params]
 

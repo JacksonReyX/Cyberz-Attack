@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjvcu7uyihk7u"
-path="res://.godot/imported/HeavyKnight_Idle_4.png-265c61bd40af5bbb8a99598904921048.ctex"
+path="res://.godot/imported/HeavyKnight_Idle_4.png-dd4d361f4bfc079dfaf9638d1bc27ee1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/HeavyKnight_Idle_4.png"
-dest_files=["res://.godot/imported/HeavyKnight_Idle_4.png-265c61bd40af5bbb8a99598904921048.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/HeavyKnight_Idle_4.png"
+dest_files=["res://.godot/imported/HeavyKnight_Idle_4.png-dd4d361f4bfc079dfaf9638d1bc27ee1.ctex"]
 
 [params]
 

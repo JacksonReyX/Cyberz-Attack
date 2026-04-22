@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://168nqlc4deoi"
-path="res://.godot/imported/Alchemist_Walk_3.png-da21c4451e51a4e0aa4b961125da1dc8.ctex"
+path="res://.godot/imported/Alchemist_Walk_3.png-bdd75236b206b907af0f0d7a15b65225.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Alchemist/Alchemist_Walk_3.png"
-dest_files=["res://.godot/imported/Alchemist_Walk_3.png-da21c4451e51a4e0aa4b961125da1dc8.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Alchemist/Alchemist_Walk_3.png"
+dest_files=["res://.godot/imported/Alchemist_Walk_3.png-bdd75236b206b907af0f0d7a15b65225.ctex"]
 
 [params]
 

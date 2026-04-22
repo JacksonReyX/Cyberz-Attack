@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r6q8bont001g"
-path="res://.godot/imported/Princess_Idle_3.png-abbc1ad50b18720c3dfaf108932db139.ctex"
+path="res://.godot/imported/Princess_Idle_3.png-c2438c86f179280f91beb6f0c22a6a15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Princess_Idle_3.png"
-dest_files=["res://.godot/imported/Princess_Idle_3.png-abbc1ad50b18720c3dfaf108932db139.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Princess_Idle_3.png"
+dest_files=["res://.godot/imported/Princess_Idle_3.png-c2438c86f179280f91beb6f0c22a6a15.ctex"]
 
 [params]
 

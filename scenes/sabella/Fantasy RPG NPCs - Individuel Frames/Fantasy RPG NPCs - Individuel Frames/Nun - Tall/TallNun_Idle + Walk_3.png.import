@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxdu671x5b5wo"
-path="res://.godot/imported/TallNun_Idle + Walk_3.png-02329dcf9c496f9b0aec5a9ea576858e.ctex"
+path="res://.godot/imported/TallNun_Idle + Walk_3.png-5b9d5cb7811ffb5de44134f26b229c29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Nun - Tall/TallNun_Idle + Walk_3.png"
-dest_files=["res://.godot/imported/TallNun_Idle + Walk_3.png-02329dcf9c496f9b0aec5a9ea576858e.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Nun - Tall/TallNun_Idle + Walk_3.png"
+dest_files=["res://.godot/imported/TallNun_Idle + Walk_3.png-5b9d5cb7811ffb5de44134f26b229c29.ctex"]
 
 [params]
 

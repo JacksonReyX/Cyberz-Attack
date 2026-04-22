@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sjhydelt3d8m"
-path="res://.godot/imported/Herald_Walk_2.png-506f40b3978cccf4cfb24ea0685080c6.ctex"
+path="res://.godot/imported/Herald_Walk_2.png-7427008a31fed65e9370200dc6b91d9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Herald_Walk_2.png"
-dest_files=["res://.godot/imported/Herald_Walk_2.png-506f40b3978cccf4cfb24ea0685080c6.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Herald_Walk_2.png"
+dest_files=["res://.godot/imported/Herald_Walk_2.png-7427008a31fed65e9370200dc6b91d9b.ctex"]
 
 [params]
 

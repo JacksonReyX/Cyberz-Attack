@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsbhjb606dppr"
-path="res://.godot/imported/Mage_Idle_2.png-2c6c11e2270eeed391d9c3876b7b5d21.ctex"
+path="res://.godot/imported/Mage_Idle_2.png-45bd6808804063e323e2a952aa35f751.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Mage/Mage_Idle_2.png"
-dest_files=["res://.godot/imported/Mage_Idle_2.png-2c6c11e2270eeed391d9c3876b7b5d21.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Mage/Mage_Idle_2.png"
+dest_files=["res://.godot/imported/Mage_Idle_2.png-45bd6808804063e323e2a952aa35f751.ctex"]
 
 [params]
 

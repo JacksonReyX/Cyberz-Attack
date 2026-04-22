@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b02fp26dswi5w"
-path="res://.godot/imported/Alchemist_Idle_1.png-0f0b848a369031621a20e1d2d55dd816.ctex"
+path="res://.godot/imported/Alchemist_Idle_1.png-569ee2dc015b282a4681f8799fc618a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Alchemist_Idle_1.png"
-dest_files=["res://.godot/imported/Alchemist_Idle_1.png-0f0b848a369031621a20e1d2d55dd816.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Alchemist_Idle_1.png"
+dest_files=["res://.godot/imported/Alchemist_Idle_1.png-569ee2dc015b282a4681f8799fc618a6.ctex"]
 
 [params]
 

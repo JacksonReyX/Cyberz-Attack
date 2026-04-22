@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c800tx1baikgu"
-path="res://.godot/imported/Executioner_Walk_3.png-cb931d01f98f13ea931e4780cc90c246.ctex"
+path="res://.godot/imported/Executioner_Walk_3.png-a9b54e2cf5c1d5e0d01da3a86c3fae12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Executioner_Walk_3.png"
-dest_files=["res://.godot/imported/Executioner_Walk_3.png-cb931d01f98f13ea931e4780cc90c246.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Executioner_Walk_3.png"
+dest_files=["res://.godot/imported/Executioner_Walk_3.png-a9b54e2cf5c1d5e0d01da3a86c3fae12.ctex"]
 
 [params]
 

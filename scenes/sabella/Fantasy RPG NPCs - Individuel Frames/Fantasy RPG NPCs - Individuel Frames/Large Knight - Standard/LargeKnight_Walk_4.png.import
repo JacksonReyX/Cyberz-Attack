@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://baslhc6my01mt"
-path="res://.godot/imported/LargeKnight_Walk_4.png-42785270242a68e6f65751755039ca2c.ctex"
+path="res://.godot/imported/LargeKnight_Walk_4.png-1a0353174d9b58ac1a5ab632c2df6036.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Large Knight - Standard/LargeKnight_Walk_4.png"
-dest_files=["res://.godot/imported/LargeKnight_Walk_4.png-42785270242a68e6f65751755039ca2c.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Large Knight - Standard/LargeKnight_Walk_4.png"
+dest_files=["res://.godot/imported/LargeKnight_Walk_4.png-1a0353174d9b58ac1a5ab632c2df6036.ctex"]
 
 [params]
 

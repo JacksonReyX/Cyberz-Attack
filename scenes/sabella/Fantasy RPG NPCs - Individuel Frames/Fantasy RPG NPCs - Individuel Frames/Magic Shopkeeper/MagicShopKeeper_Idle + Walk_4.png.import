@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://eb2x0dfrhbqh"
-path="res://.godot/imported/MagicShopKeeper_Idle + Walk_4.png-646f72380d00848b8e37143bbbb4ada0.ctex"
+path="res://.godot/imported/MagicShopKeeper_Idle + Walk_4.png-30df3af25482c32fa30c3ffd36a12ae7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Magic Shopkeeper/MagicShopKeeper_Idle + Walk_4.png"
-dest_files=["res://.godot/imported/MagicShopKeeper_Idle + Walk_4.png-646f72380d00848b8e37143bbbb4ada0.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Magic Shopkeeper/MagicShopKeeper_Idle + Walk_4.png"
+dest_files=["res://.godot/imported/MagicShopKeeper_Idle + Walk_4.png-30df3af25482c32fa30c3ffd36a12ae7.ctex"]
 
 [params]
 
