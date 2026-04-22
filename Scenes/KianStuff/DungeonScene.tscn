@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=86 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
@@ -55,6 +55,7 @@
 [ext_resource type="Script" path="res://Scripts/preBattleState.gd" id="53_c222u"]
 [ext_resource type="PackedScene" uid="uid://s3mpivfnm1tj" path="res://Scenes/JacksonStuff/virusEnemy.tscn" id="54_oeyak"]
 [ext_resource type="PackedScene" uid="uid://cw41mv4uqlnt" path="res://Scenes/sabella/bat1.tscn" id="55_7bgvj"]
+[ext_resource type="PackedScene" uid="uid://tds5j2t07fpe" path="res://Scenes/JacksonStuff/WitchEnemy.tscn" id="55_e8ppr"]
 [ext_resource type="PackedScene" uid="uid://cj1decmy7gali" path="res://Scenes/sabella/spider1.tscn" id="56_6ygf5"]
 [ext_resource type="PackedScene" uid="uid://bdrdi3kqaoiv3" path="res://Scenes/sabella/spider2.tscn" id="57_5usby"]
 [ext_resource type="PackedScene" uid="uid://7puia2wfx82s" path="res://Scenes/sabella/spiderweb.tscn" id="58_kqrtd"]
@@ -7130,10 +7131,10 @@ text = "UI SFX"
 [node name="Enemies" type="Node" parent="."]
 
 [node name="HackerEnemy" parent="Enemies" instance=ExtResource("52_cc4fk")]
-position = Vector2(-2, -695)
+position = Vector2(-25, -680)
 
 [node name="HackerEnemy2" parent="Enemies" instance=ExtResource("52_cc4fk")]
-position = Vector2(537, -569)
+position = Vector2(464, -560)
 
 [node name="FisherEnemy" parent="Enemies" instance=ExtResource("32_p1g1e")]
 position = Vector2(-2, -458)
@@ -7156,7 +7157,19 @@ offset_bottom = 23.0
 text = "1"
 
 [node name="VirusEnemy" parent="Enemies" instance=ExtResource("54_oeyak")]
-position = Vector2(-6, -962)
+position = Vector2(337, -814)
+
+[node name="FisherEnemy3" parent="Enemies" instance=ExtResource("55_e8ppr")]
+position = Vector2(809, -1418)
+
+[node name="WitchEnemy1" parent="Enemies" instance=ExtResource("55_e8ppr")]
+position = Vector2(220, -1204)
+
+[node name="HackerEnemy3" parent="Enemies" instance=ExtResource("52_cc4fk")]
+position = Vector2(297, -1428)
+
+[node name="VirusEnemy2" parent="Enemies" instance=ExtResource("54_oeyak")]
+position = Vector2(766, -1231)
 
 [node name="ExtraDecor" type="Node" parent="."]
 
