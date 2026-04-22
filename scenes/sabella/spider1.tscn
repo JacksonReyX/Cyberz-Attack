@@ -1,0 +1,65 @@
+[gd_scene load_steps=12 format=3 uid="uid://cj1decmy7gali"]
+
+[ext_resource type="Texture2D" uid="uid://bjvkcp3hrotcs" path="res://scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalkingSide1.png" id="1_08qyi"]
+[ext_resource type="Script" path="res://Scripts/spider_1.gd" id="1_awx4v"]
+[ext_resource type="Texture2D" uid="uid://cxfm1fhx10tus" path="res://scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalkingSide2.png" id="2_mj5yc"]
+[ext_resource type="Texture2D" uid="uid://cux5dqxwh5wme" path="res://scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalkingSide3.png" id="3_tdglx"]
+[ext_resource type="Texture2D" uid="uid://bmxst1rn50ctk" path="res://scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalkingSide4.png" id="4_cy2mx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge13c"]
+atlas = ExtResource("1_08qyi")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s082c"]
+atlas = ExtResource("2_mj5yc")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44mu7"]
+atlas = ExtResource("3_tdglx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ar0ns"]
+atlas = ExtResource("4_cy2mx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i6ibe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge13c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s082c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44mu7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ar0ns")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qyc0q"]
+
+[node name="Spider1" type="StaticBody2D"]
+script = ExtResource("1_awx4v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 2.98023e-08)
+scale = Vector2(0.5, 0.429688)
+sprite_frames = SubResource("SpriteFrames_i6ibe")
+autoplay = "default"
+frame_progress = 0.799388
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
+shape = SubResource("CircleShape2D_qyc0q")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(9, 1)
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+target_position = Vector2(-8, 0)

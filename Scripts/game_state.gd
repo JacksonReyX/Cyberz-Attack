@@ -1,6 +1,5 @@
 extends Node
 
-
 var coins: int = 0
 var health_potions: int = 0
 var keys: int = 0
@@ -16,8 +15,21 @@ func setScene():
 	active_enemy_name = ""
 	returning_from_battle = false
 
+
+func get_label():
+	return get_node_or_null("/root/DungeonScene/HUDLayer/HUDRoot/CoinSection/CoinsForItemShopLabel")
+
 func add_coins(amount: int) -> void:
 	coins += amount
+	if coins == 1:
+		var label = get_label()
+		if label:
+			label.visible = true
+			await get_tree().create_timer(3.0).timeout
+			label.visible = false
+		else:
+			print("Label not found!")
+	
 	save_data()
 
 ##### item shop
@@ -39,18 +51,36 @@ func save_data():
 	f.store_var({"coins": coins, "owned_skins": owned_skins, "selected_skin": selected_skin})
 	print("SAVING:", coins)
 
-# In GameState.gd
 func load_data():
-	if FileAccess.file_exists("user://save.dat"):
-		var f = FileAccess.open("user://save.dat", FileAccess.READ)
-		var data = f.get_var()
-		# We ONLY load persistent things like coins and skins
-		coins = data.get("coins", 0)
-		owned_skins = data.get("owned_skins", ["default"])
-		selected_skin = data.get("selected_skin", "default")
-		# DO NOT load defeatedEnemies here. 
-		# Keeping it out of this function ensures they respawn on a fresh launch.
+	if not FileAccess.file_exists("user://save.dat"):
+		return
+
+	var f = FileAccess.open("user://save.dat", FileAccess.READ)
 	
+	if f == null:
+		print("Failed to open save file")
+		return
+	
+	if f.get_length() == 0:
+		print("Save file empty, resetting")
+		#reset_data()
+		return
+
+	var data = f.get_var()
+
+	# SAFETY CHECK
+	if typeof(data) != TYPE_DICTIONARY:
+		print("Corrupted save file, resetting")
+		#reset_data()
+		return
+
+	# SAFE ACCESS (prevents crashes if keys missing)
+	coins = data.get("coins", 0)
+	owned_skins = data.get("owned_skins", ["default"])
+	selected_skin = data.get("selected_skin", "default")
+
+
+
 func battleReset(): 
 	if GameState.playerPosition != null:
 		$CharacterBody2D.position = GameState.playerPosition

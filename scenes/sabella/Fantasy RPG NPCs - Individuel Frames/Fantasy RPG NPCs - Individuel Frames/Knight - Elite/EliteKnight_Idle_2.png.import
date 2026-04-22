@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ma8r2frixn17"
-path="res://.godot/imported/New Piskel (1).png-cd02e96e83845d9f1cc6afca49bf6231.ctex"
+uid="uid://bpp27rv2qlbb2"
+path="res://.godot/imported/EliteKnight_Idle_2.png-c09dd193ee8ce860e27335fff5a9bed1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/sabella/New Piskel (1).png"
-dest_files=["res://.godot/imported/New Piskel (1).png-cd02e96e83845d9f1cc6afca49bf6231.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Knight - Elite/EliteKnight_Idle_2.png"
+dest_files=["res://.godot/imported/EliteKnight_Idle_2.png-c09dd193ee8ce860e27335fff5a9bed1.ctex"]
 
 [params]
 

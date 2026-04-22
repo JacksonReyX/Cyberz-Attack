@@ -5,6 +5,7 @@ extends Area2D
 @onready var collision_shape_2d: CollisionShape2D = $StaticBody2D/CollisionShape2D
 @onready var locked_label: Label = $LockedLabel
 @onready var key_icon: TextureRect = $"../../../HUDLayer/HUDRoot/InventorySection/Slot2/ItemIcon"
+#@onready var key_icon = get_node("/root/DungeonScene/HUDLayer/HUDRoot/InventorySection/Slot2/ItemIcon")
 
 
 var player_in_range = false
