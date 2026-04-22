@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b72t2ooa262m0"
-path="res://.godot/imported/Herald_Idle_1.png-b561a26953540a7e094f7409de78133f.ctex"
+path="res://.godot/imported/Herald_Idle_1.png-b8a00b435d11307b3642a2a9f2ca372e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Herald_Idle_1.png"
-dest_files=["res://.godot/imported/Herald_Idle_1.png-b561a26953540a7e094f7409de78133f.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Herald_Idle_1.png"
+dest_files=["res://.godot/imported/Herald_Idle_1.png-b8a00b435d11307b3642a2a9f2ca372e.ctex"]
 
 [params]
 

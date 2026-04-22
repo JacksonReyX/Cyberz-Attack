@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dj6kyxprrnt18"
-path="res://.godot/imported/Archer_Walk_1.png-f3d53a754898553dd96fd1083b126d4a.ctex"
+path="res://.godot/imported/Archer_Walk_1.png-c115c2a11f47d15f509a3505e55409d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Archer/Archer_Walk_1.png"
-dest_files=["res://.godot/imported/Archer_Walk_1.png-f3d53a754898553dd96fd1083b126d4a.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Archer/Archer_Walk_1.png"
+dest_files=["res://.godot/imported/Archer_Walk_1.png-c115c2a11f47d15f509a3505e55409d3.ctex"]
 
 [params]
 

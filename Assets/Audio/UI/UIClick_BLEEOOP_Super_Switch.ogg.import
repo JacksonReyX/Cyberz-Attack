@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://c8culbowsa283"
-path="res://.godot/imported/UIClick_BLEEOOP_Super_Switch.ogg-2742f708745c635daa569533d4d582ce.oggvorbisstr"
+path="res://.godot/imported/UIClick_BLEEOOP_Super_Switch.ogg-a18423b028cbdf922bff1759463fbfbf.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/Audio/UI/UIClick_BLEEOOP_Super_Switch.ogg"
-dest_files=["res://.godot/imported/UIClick_BLEEOOP_Super_Switch.ogg-2742f708745c635daa569533d4d582ce.oggvorbisstr"]
+source_file="res://Assets/Audio/UI/UIClick_BLEEOOP_Super_Switch.ogg"
+dest_files=["res://.godot/imported/UIClick_BLEEOOP_Super_Switch.ogg-a18423b028cbdf922bff1759463fbfbf.oggvorbisstr"]
 
 [params]
 

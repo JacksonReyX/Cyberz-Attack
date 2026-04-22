@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ys6mjtlnpyjm"
-path="res://.godot/imported/King_Idle_4.png-638b676f388bd121d7279c26d771ea27.ctex"
+path="res://.godot/imported/King_Idle_4.png-12534133892e1461c0399353dc882fbc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/King_Idle_4.png"
-dest_files=["res://.godot/imported/King_Idle_4.png-638b676f388bd121d7279c26d771ea27.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/King_Idle_4.png"
+dest_files=["res://.godot/imported/King_Idle_4.png-12534133892e1461c0399353dc882fbc.ctex"]
 
 [params]
 

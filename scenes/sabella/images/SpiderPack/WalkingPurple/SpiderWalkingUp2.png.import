@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lnbnu321xdfh"
-path="res://.godot/imported/SpiderWalkingUp2.png-f8694689d7c7a214d5795ee61f61132d.ctex"
+path="res://.godot/imported/SpiderWalkingUp2.png-1ecc46607b2a4e82691d7f28505aabb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/images/SpiderPack/WalkingPurple/SpiderWalkingUp2.png"
-dest_files=["res://.godot/imported/SpiderWalkingUp2.png-f8694689d7c7a214d5795ee61f61132d.ctex"]
+source_file="res://Scenes/sabella/images/SpiderPack/WalkingPurple/SpiderWalkingUp2.png"
+dest_files=["res://.godot/imported/SpiderWalkingUp2.png-1ecc46607b2a4e82691d7f28505aabb4.ctex"]
 
 [params]
 

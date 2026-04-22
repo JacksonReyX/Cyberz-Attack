@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqmexofcy25vx"
-path="res://.godot/imported/Executioner_Idle_3.png-f760e7aaa51c1fbbc410976e3c43658c.ctex"
+path="res://.godot/imported/Executioner_Idle_3.png-ed9aa6e3d3a08db965527b7723b6f9c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Executioner_Idle_3.png"
-dest_files=["res://.godot/imported/Executioner_Idle_3.png-f760e7aaa51c1fbbc410976e3c43658c.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Executioner_Idle_3.png"
+dest_files=["res://.godot/imported/Executioner_Idle_3.png-ed9aa6e3d3a08db965527b7723b6f9c9.ctex"]
 
 [params]
 

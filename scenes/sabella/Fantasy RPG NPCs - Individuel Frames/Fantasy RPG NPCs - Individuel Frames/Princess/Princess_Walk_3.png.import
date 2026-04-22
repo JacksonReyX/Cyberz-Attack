@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmm8kuxtutaee"
-path="res://.godot/imported/Princess_Walk_3.png-20bf4873b6bcef8f2a39a577c5dcca11.ctex"
+path="res://.godot/imported/Princess_Walk_3.png-0d6aadf8e301bbdbf7e584858c863f62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Princess/Princess_Walk_3.png"
-dest_files=["res://.godot/imported/Princess_Walk_3.png-20bf4873b6bcef8f2a39a577c5dcca11.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Princess/Princess_Walk_3.png"
+dest_files=["res://.godot/imported/Princess_Walk_3.png-0d6aadf8e301bbdbf7e584858c863f62.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjp50ffcb2exc"
-path="res://.godot/imported/Townsfolk_M_Walk_1.png-87dd61bc4d9b5a01f09962f8b8eddbe5.ctex"
+path="res://.godot/imported/Townsfolk_M_Walk_1.png-634bc0589ef550f6bac8594217336740.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Townsfolk - Male/Townsfolk_M_Walk_1.png"
-dest_files=["res://.godot/imported/Townsfolk_M_Walk_1.png-87dd61bc4d9b5a01f09962f8b8eddbe5.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Townsfolk - Male/Townsfolk_M_Walk_1.png"
+dest_files=["res://.godot/imported/Townsfolk_M_Walk_1.png-634bc0589ef550f6bac8594217336740.ctex"]
 
 [params]
 

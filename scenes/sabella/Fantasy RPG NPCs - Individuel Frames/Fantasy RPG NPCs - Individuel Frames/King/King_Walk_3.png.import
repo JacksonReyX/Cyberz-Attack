@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://x00c1frw2q8r"
-path="res://.godot/imported/King_Walk_3.png-3485c02c336bf333186c845e9d376f6d.ctex"
+path="res://.godot/imported/King_Walk_3.png-9f509460d4f7da716fdc13736aa75fdc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/King/King_Walk_3.png"
-dest_files=["res://.godot/imported/King_Walk_3.png-3485c02c336bf333186c845e9d376f6d.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/King/King_Walk_3.png"
+dest_files=["res://.godot/imported/King_Walk_3.png-9f509460d4f7da716fdc13736aa75fdc.ctex"]
 
 [params]
 

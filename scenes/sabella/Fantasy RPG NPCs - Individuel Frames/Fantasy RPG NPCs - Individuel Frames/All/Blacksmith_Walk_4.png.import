@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dw8oh00jusro4"
-path="res://.godot/imported/Blacksmith_Walk_4.png-648372388838ee4a506f8df69784ceb3.ctex"
+path="res://.godot/imported/Blacksmith_Walk_4.png-1f67ea3234e5697a004fda08801d4ccb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Blacksmith_Walk_4.png"
-dest_files=["res://.godot/imported/Blacksmith_Walk_4.png-648372388838ee4a506f8df69784ceb3.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Blacksmith_Walk_4.png"
+dest_files=["res://.godot/imported/Blacksmith_Walk_4.png-1f67ea3234e5697a004fda08801d4ccb.ctex"]
 
 [params]
 

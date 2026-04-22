@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqrc5rt4dq7jw"
-path="res://.godot/imported/Archer_Idle_1.png-4194e2f42057fbe7d28567d86a5b305c.ctex"
+path="res://.godot/imported/Archer_Idle_1.png-3cff340de2dfc8ba76918d909f9ef476.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Archer/Archer_Idle_1.png"
-dest_files=["res://.godot/imported/Archer_Idle_1.png-4194e2f42057fbe7d28567d86a5b305c.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/Archer/Archer_Idle_1.png"
+dest_files=["res://.godot/imported/Archer_Idle_1.png-3cff340de2dfc8ba76918d909f9ef476.ctex"]
 
 [params]
 

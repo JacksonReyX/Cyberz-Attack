@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcbkf5ybaaim4"
-path="res://.godot/imported/Pixelart arrow icon pack 1.0.png-09394e9bc2958d3e3c522145a659820e.ctex"
+path="res://.godot/imported/Pixelart arrow icon pack 1.0.png-e302e5d929fad11e92f2aafb0cd4c4bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/images/Pixelart arrow icon pack 1.0.png"
-dest_files=["res://.godot/imported/Pixelart arrow icon pack 1.0.png-09394e9bc2958d3e3c522145a659820e.ctex"]
+source_file="res://Scenes/sabella/images/Pixelart arrow icon pack 1.0.png"
+dest_files=["res://.godot/imported/Pixelart arrow icon pack 1.0.png-e302e5d929fad11e92f2aafb0cd4c4bc.ctex"]
 
 [params]
 

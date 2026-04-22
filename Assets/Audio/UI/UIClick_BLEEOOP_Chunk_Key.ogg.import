@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://b8ujsavv1cqly"
-path="res://.godot/imported/UIClick_BLEEOOP_Chunk_Key.ogg-0e183d4f5382219ba04fad587598d61e.oggvorbisstr"
+path="res://.godot/imported/UIClick_BLEEOOP_Chunk_Key.ogg-8e51b27e7b45febbbbd1807da7fd468e.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/Audio/UI/UIClick_BLEEOOP_Chunk_Key.ogg"
-dest_files=["res://.godot/imported/UIClick_BLEEOOP_Chunk_Key.ogg-0e183d4f5382219ba04fad587598d61e.oggvorbisstr"]
+source_file="res://Assets/Audio/UI/UIClick_BLEEOOP_Chunk_Key.ogg"
+dest_files=["res://.godot/imported/UIClick_BLEEOOP_Chunk_Key.ogg-8e51b27e7b45febbbbd1807da7fd468e.oggvorbisstr"]
 
 [params]
 

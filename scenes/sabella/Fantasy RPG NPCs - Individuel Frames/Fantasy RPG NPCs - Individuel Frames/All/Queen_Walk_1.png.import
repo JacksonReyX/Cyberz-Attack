@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqi83srs34cyd"
-path="res://.godot/imported/Queen_Walk_1.png-9b68f88d7ee91756b9ee909dd7b9c33a.ctex"
+path="res://.godot/imported/Queen_Walk_1.png-429ac126b1da154e0f95512d4405db87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Queen_Walk_1.png"
-dest_files=["res://.godot/imported/Queen_Walk_1.png-9b68f88d7ee91756b9ee909dd7b9c33a.ctex"]
+source_file="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Queen_Walk_1.png"
+dest_files=["res://.godot/imported/Queen_Walk_1.png-429ac126b1da154e0f95512d4405db87.ctex"]
 
 [params]
 

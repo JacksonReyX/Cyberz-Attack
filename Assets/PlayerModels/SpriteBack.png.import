@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c82tfgqnagjv4"
-path="res://.godot/imported/SpriteBack.png-a40f4c136eee27cf0292676c9c452484.ctex"
+path="res://.godot/imported/SpriteBack.png-8ab78c3d97be53e168c641644a78ee52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PlayerModels/SpriteBack.png"
-dest_files=["res://.godot/imported/SpriteBack.png-a40f4c136eee27cf0292676c9c452484.ctex"]
+source_file="res://Assets/PlayerModels/SpriteBack.png"
+dest_files=["res://.godot/imported/SpriteBack.png-8ab78c3d97be53e168c641644a78ee52.ctex"]
 
 [params]
 

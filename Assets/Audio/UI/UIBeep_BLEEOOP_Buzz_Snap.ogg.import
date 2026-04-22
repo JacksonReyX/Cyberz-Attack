@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cnnjp2cnl6jp8"
-path="res://.godot/imported/UIBeep_BLEEOOP_Buzz_Snap.ogg-5582e4b076543eb92bd74b3bf67ef6bd.oggvorbisstr"
+path="res://.godot/imported/UIBeep_BLEEOOP_Buzz_Snap.ogg-154072ece6d59ea18c8d63c22b287cef.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/Audio/UI/UIBeep_BLEEOOP_Buzz_Snap.ogg"
-dest_files=["res://.godot/imported/UIBeep_BLEEOOP_Buzz_Snap.ogg-5582e4b076543eb92bd74b3bf67ef6bd.oggvorbisstr"]
+source_file="res://Assets/Audio/UI/UIBeep_BLEEOOP_Buzz_Snap.ogg"
+dest_files=["res://.godot/imported/UIBeep_BLEEOOP_Buzz_Snap.ogg-154072ece6d59ea18c8d63c22b287cef.oggvorbisstr"]
 
 [params]
 
