@@ -1,17 +1,17 @@
 [gd_scene load_steps=13 format=3 uid="uid://s0o5ne8dhlm7"]
 
-[ext_resource type="Texture2D" uid="uid://dtmo876xe2hpm" path="res://assets/Menus/Card/CharCustCard.png" id="1_b0wkj"]
+[ext_resource type="Texture2D" uid="uid://dtmo876xe2hpm" path="res://Assets/Menus/Card/CharCustCard.png" id="1_b0wkj"]
 [ext_resource type="Script" path="res://Scripts/item_shop.gd" id="1_yrxvl"]
-[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_grguu"]
-[ext_resource type="Texture2D" uid="uid://b4207duut6b75" path="res://assets/Sprites/Deco/Coin.png" id="3_w4588"]
-[ext_resource type="Texture2D" uid="uid://cubkxo8oar5r2" path="res://assets/PlayerModels/Wizard.png" id="4_lo1pv"]
-[ext_resource type="Texture2D" uid="uid://ddihs33po7wso" path="res://assets/PlayerModels/Knight2.png" id="5_yrxvl"]
-[ext_resource type="Texture2D" uid="uid://b6tko3r8q07m4" path="res://assets/PlayerModels/Witch.png" id="6_0ncwt"]
-[ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://assets/Menus/Buttons/Back.png" id="7_q12tm"]
-[ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://assets/Menus/Buttons/BackPressed.png" id="8_vh0se"]
-[ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://assets/Menus/Buttons/BackHover.png" id="9_1tvsk"]
-[ext_resource type="Texture2D" uid="uid://ma8r2frixn17" path="res://scenes/sabella/images/New Piskel (1).png" id="11_qntp1"]
-[ext_resource type="PackedScene" uid="uid://bluviblfhyg08" path="res://scenes/AnimatedDecor/Torch.tscn" id="12_op46a"]
+[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="2_grguu"]
+[ext_resource type="Texture2D" uid="uid://b4207duut6b75" path="res://Assets/Sprites/Deco/Coin.png" id="3_w4588"]
+[ext_resource type="Texture2D" uid="uid://bhw5qasjpdwr1" path="res://Scenes/sabella/shopSkins/ArcherImage.png" id="4_bmwcw"]
+[ext_resource type="Texture2D" uid="uid://8l76p7sw1br8" path="res://Scenes/sabella/shopSkins/Knight2image.png" id="5_deub0"]
+[ext_resource type="Texture2D" uid="uid://b01m48j3syhu3" path="res://Scenes/sabella/shopSkins/MageImage.png" id="6_581rl"]
+[ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://Assets/Menus/Buttons/Back.png" id="7_q12tm"]
+[ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://Assets/Menus/Buttons/BackPressed.png" id="8_vh0se"]
+[ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://Assets/Menus/Buttons/BackHover.png" id="9_1tvsk"]
+[ext_resource type="Texture2D" uid="uid://ma8r2frixn17" path="res://Scenes/sabella/images/New Piskel (1).png" id="11_qntp1"]
+[ext_resource type="PackedScene" uid="uid://bluviblfhyg08" path="res://Scenes/AnimatedDecor/Torch.tscn" id="12_op46a"]
 
 [node name="ItemShop" type="Node2D"]
 position = Vector2(1, -1)
@@ -75,10 +75,10 @@ theme_override_font_sizes/font_size = 12
 text = "100
 "
 
-[node name="WizardSkin" type="Sprite2D" parent="SkinContainer/Skin1"]
+[node name="ArcherSkin" type="Sprite2D" parent="SkinContainer/Skin1"]
 position = Vector2(169.5, 196.5)
 scale = Vector2(4.1875, 3.625)
-texture = ExtResource("4_lo1pv")
+texture = ExtResource("4_bmwcw")
 
 [node name="Label" type="Label" parent="SkinContainer/Skin1"]
 offset_left = 132.0
@@ -88,7 +88,7 @@ offset_bottom = 132.0
 theme_override_colors/font_color = Color(0.0126172, 0.0126172, 0.0126172, 1)
 theme_override_fonts/font = ExtResource("2_grguu")
 theme_override_font_sizes/font_size = 13
-text = "Wizard"
+text = "Archer"
 
 [node name="Skin2" type="Node" parent="SkinContainer"]
 
@@ -108,9 +108,9 @@ text = "100
 "
 
 [node name="KnightSkin" type="Sprite2D" parent="SkinContainer/Skin2"]
-position = Vector2(325.5, 195.5)
-scale = Vector2(4.3125, 3.70833)
-texture = ExtResource("5_yrxvl")
+position = Vector2(325.5, 194.292)
+scale = Vector2(4.3125, 3.82917)
+texture = ExtResource("5_deub0")
 
 [node name="Label" type="Label" parent="SkinContainer/Skin2"]
 offset_left = 289.0
@@ -136,10 +136,10 @@ theme_override_fonts/font = ExtResource("2_grguu")
 theme_override_font_sizes/font_size = 12
 text = "100"
 
-[node name="WitchSkin" type="Sprite2D" parent="SkinContainer/Skin3"]
-position = Vector2(485, 193)
-scale = Vector2(4.5, 3.5)
-texture = ExtResource("6_0ncwt")
+[node name="MageSkin" type="Sprite2D" parent="SkinContainer/Skin3"]
+position = Vector2(478, 195.625)
+scale = Vector2(4.375, 3.75)
+texture = ExtResource("6_581rl")
 
 [node name="Label" type="Label" parent="SkinContainer/Skin3"]
 offset_left = 447.0
@@ -149,7 +149,8 @@ offset_bottom = 140.0
 theme_override_colors/font_color = Color(0.0126172, 0.0126172, 0.0126172, 1)
 theme_override_fonts/font = ExtResource("2_grguu")
 theme_override_font_sizes/font_size = 13
-text = "Witch"
+text = "Mage"
+horizontal_alignment = 1
 
 [node name="BackButton" type="Node" parent="."]
 

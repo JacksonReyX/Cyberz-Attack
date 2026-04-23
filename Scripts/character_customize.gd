@@ -40,7 +40,7 @@ const WIZARD_ACCESSORY := preload("res://Assets/Characters/Wizard/WizardAccessor
 # Tab list
 @onready var tabs: Array[BaseButton] = [hair_tab, body_tab, eyes_tab, outfit_tab, accessory_tab]
 
-var classes := ["Knight", "Wizard", "Knight 2", "Wizard 2", "Witch"]
+var classes := ["Knight", "Wizard", "Knight 2", "Archer", "Mage"]
 var class_index := 0
 var is_shop_skin := false############
 
@@ -165,15 +165,15 @@ func _is_class_unlocked(cname: String) -> bool:
 			return true
 		"Knight 2":
 			return "skin2" in GameState.owned_skins
-		"Wizard 2":
+		"Archer":
 			return "skin1" in GameState.owned_skins
-		"Witch":
+		"Mage":
 			return "skin3" in GameState.owned_skins
 	return false
 
 func _apply_class() -> void:
 	var cname: String = classes[class_index]
-	is_shop_skin = cname in ["Knight 2", "Wizard 2", "Witch"] ########
+	is_shop_skin = cname in ["Knight 2", "Archer", "Mage"] ########
 	PlayerCustomization.selected_class = cname
 	class_label.text = cname
 
@@ -194,19 +194,19 @@ func _apply_class() -> void:
 			body.texture = null
 			eyes.texture = null
 			hair.texture = null
-			outfit.texture = preload("res://assets/PlayerModels/Knight2.png")
+			outfit.texture = preload("res://Scenes/sabella/shopSkins/Knight2image.png")
 			accessory.texture = null
-		"Wizard 2":
+		"Archer":
 			body.texture = null
 			eyes.texture = null
 			hair.texture = null
-			outfit.texture = preload("res://assets/PlayerModels/Wizard.png")
+			outfit.texture = preload("res://Scenes/sabella/shopSkins/ArcherImage.png")
 			accessory.texture = null
-		"Witch":
+		"Mage":
 			body.texture = null
 			eyes.texture = null
 			hair.texture = null
-			outfit.texture = preload("res://assets/PlayerModels/Witch.png")
+			outfit.texture = preload("res://Scenes/sabella/shopSkins/MageImage.png")
 			accessory.texture = null
 	if is_shop_skin:##################
 		body.modulate = Color(1, 1, 1, 1)

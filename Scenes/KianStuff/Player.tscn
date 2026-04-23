@@ -35,7 +35,7 @@ animation = &""
 unique_name_in_owner = true
 position = Vector2(0, -3)
 
-[node name="ShopSkin" type="Sprite2D" parent="Visuals"]
+[node name="ShopSkin" type="AnimatedSprite2D" parent="Visuals"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)

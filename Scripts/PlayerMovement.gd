@@ -16,14 +16,15 @@ const WIZARD_ACCESSORY_FRAMES := preload("res://Assets/Characters/CharactersAnim
 @onready var eyes: AnimatedSprite2D = %Eyes
 @onready var accessory: AnimatedSprite2D = %Accessory
 @onready var hair: AnimatedSprite2D = %Hair
-@onready var shop_skin: Sprite2D = $Visuals/ShopSkin
+@onready var shop_skin: AnimatedSprite2D = $Visuals/ShopSkin
+
 
 var active_layers: Array[AnimatedSprite2D] = []
 
 var shop_skins := {
-	"Knight 2": preload("res://assets/PlayerModels/Knight2.png"),
-	"Wizard 2": preload("res://assets/PlayerModels/Wizard.png"),
-	"Witch": preload("res://assets/PlayerModels/Witch.png")
+	"Knight 2": preload("res://Scenes/sabella/shopSkins/Knight2.tres"),
+	"Archer": preload("res://Scenes/sabella/shopSkins/Archer.tres"),
+	"Mage": preload("res://Scenes/sabella/shopSkins/Mage.tres")
 }
 
 func _ready() -> void:
@@ -63,12 +64,16 @@ func apply_customization() -> void:
 	hair.visible = false
 	accessory.visible = false
 	outfit.visible = false
+	shop_skin.visible = false    ##
 	active_layers.clear()
 	
 	if cname in shop_skins:
-		shop_skin.texture = shop_skins[cname]
+		shop_skin.sprite_frames = shop_skins[cname]
 		shop_skin.visible = true
-		return  
+		active_layers = [shop_skin]  
+
+		play_all("idle")
+		return
 		
 	match cname:
 		"Knight":
