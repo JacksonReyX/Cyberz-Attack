@@ -36,7 +36,8 @@ func _on_body_exited(body):
 	if body.is_in_group("player"):
 		player_in_range = false
 
-		# DO NOT interrupt dialogue
+		# IMPORTANT: do NOT stop dialogue here anymore
+		# Just hide prompt, don't touch dialogue or arrow yet
 		prompt.visible = false
 
 
@@ -56,9 +57,9 @@ func start_dialogue():
 	await get_tree().create_timer(0.15).timeout
 
 	dialogue_label.visible = true
-	await type_text("Prepare yourself... enemies ahead.")
+	await type_text("Dungeon cleared. You outsmarted the cyber threats!")
 
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(2.5).timeout
 
 	end_dialogue()
 
@@ -69,7 +70,7 @@ func end_dialogue():
 
 	is_talking = false
 
-	# Decide final state AFTER dialogue finishes
+	# NOW decide what to show AFTER everything is done
 	if player_in_range:
 		prompt.visible = true
 	else:

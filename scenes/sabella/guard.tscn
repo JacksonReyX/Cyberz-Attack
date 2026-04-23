@@ -1,10 +1,10 @@
 [gd_scene load_steps=23 format=3 uid="uid://ctikdqjam5smm"]
 
-[ext_resource type="Texture2D" uid="uid://dox1tgt5i5yvv" path="res://scenes/sabella/images/Characters.png" id="1_2ianw"]
+[ext_resource type="Texture2D" uid="uid://dox1tgt5i5yvv" path="res://Scenes/sabella/images/Characters.png" id="1_2ianw"]
 [ext_resource type="Script" path="res://Scripts/guard.gd" id="1_whdqd"]
-[ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://assets/Menus/Buttons/prompt_normal.png" id="3_bdpat"]
-[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_6r3qk"]
-[ext_resource type="Texture2D" uid="uid://dcbkf5ybaaim4" path="res://scenes/sabella/images/Pixelart arrow icon pack 1.0.png" id="5_rx60n"]
+[ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://Assets/Menus/Buttons/prompt_normal.png" id="3_bdpat"]
+[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="4_6r3qk"]
+[ext_resource type="Texture2D" uid="uid://dcbkf5ybaaim4" path="res://Scenes/sabella/images/Pixelart arrow icon pack 1.0.png" id="5_rx60n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q8jep"]
 atlas = ExtResource("1_2ianw")
@@ -129,7 +129,7 @@ position = Vector2(-1.3125, -13.625)
 scale = Vector2(0.960938, 1.02344)
 sprite_frames = SubResource("SpriteFrames_8u6wr")
 autoplay = "default"
-frame_progress = 0.536802
+frame_progress = 0.78309
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -8)

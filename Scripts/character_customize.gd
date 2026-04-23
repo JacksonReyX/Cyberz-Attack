@@ -42,6 +42,7 @@ const WIZARD_ACCESSORY := preload("res://Assets/Characters/Wizard/WizardAccessor
 
 var classes := ["Knight", "Wizard", "Knight 2", "Wizard 2", "Witch"]
 var class_index := 0
+var is_shop_skin := false############
 
 func _ready() -> void:
 	GameState.load_data()
@@ -114,6 +115,9 @@ func _wire_swatch_panel(panel: Control, layer: String) -> void:
 		)
 
 func _pick_color(layer: String, color: Color) -> void:
+	if is_shop_skin:##############
+		return ############
+	
 	match layer:
 		"outfit":
 			PlayerCustomization.color_outfit = color
@@ -169,6 +173,7 @@ func _is_class_unlocked(cname: String) -> bool:
 
 func _apply_class() -> void:
 	var cname: String = classes[class_index]
+	is_shop_skin = cname in ["Knight 2", "Wizard 2", "Witch"] ########
 	PlayerCustomization.selected_class = cname
 	class_label.text = cname
 
@@ -203,6 +208,12 @@ func _apply_class() -> void:
 			hair.texture = null
 			outfit.texture = preload("res://assets/PlayerModels/Witch.png")
 			accessory.texture = null
+	if is_shop_skin:##################
+		body.modulate = Color(1, 1, 1, 1)
+		outfit.modulate = Color(1, 1, 1, 1)
+		eyes.modulate = Color(1, 1, 1, 1)
+		accessory.modulate = Color(1, 1, 1, 1)
+		hair.modulate = Color(1, 1, 1, 1)##########
 
 func _apply_selected_skin() -> void:
 	pass

@@ -16,8 +16,15 @@ const WIZARD_ACCESSORY_FRAMES := preload("res://Assets/Characters/CharactersAnim
 @onready var eyes: AnimatedSprite2D = %Eyes
 @onready var accessory: AnimatedSprite2D = %Accessory
 @onready var hair: AnimatedSprite2D = %Hair
+@onready var shop_skin: Sprite2D = $Visuals/ShopSkin
 
 var active_layers: Array[AnimatedSprite2D] = []
+
+var shop_skins := {
+	"Knight 2": preload("res://assets/PlayerModels/Knight2.png"),
+	"Wizard 2": preload("res://assets/PlayerModels/Wizard.png"),
+	"Witch": preload("res://assets/PlayerModels/Witch.png")
+}
 
 func _ready() -> void:
 	await get_tree().process_frame
@@ -57,7 +64,12 @@ func apply_customization() -> void:
 	accessory.visible = false
 	outfit.visible = false
 	active_layers.clear()
-
+	
+	if cname in shop_skins:
+		shop_skin.texture = shop_skins[cname]
+		shop_skin.visible = true
+		return  
+		
 	match cname:
 		"Knight":
 			outfit.sprite_frames = KNIGHT_OUTFIT_FRAMES
@@ -75,7 +87,7 @@ func apply_customization() -> void:
 			eyes.visible = true
 			accessory.visible = true
 			active_layers = [outfit, body, eyes, accessory]
-
+		
 	play_all("idle")
 	
 	outfit.modulate = PlayerCustomization.color_outfit

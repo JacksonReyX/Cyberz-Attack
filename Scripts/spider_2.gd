@@ -22,3 +22,14 @@ func _physics_process(delta: float) -> void:
 	velocity.x = 0
 	velocity.y = direction * SPEED
 	move_and_slide()
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		die()
+		
+func die():
+	print("SPIDER DIED")
+	var splatter = preload("res://Scenes/sabella/splatter.tscn").instantiate()
+	splatter.global_position = global_position
+	get_parent().add_child(splatter)
+	queue_free()
