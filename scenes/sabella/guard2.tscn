@@ -104,16 +104,16 @@ position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_meda4")
 
 [node name="Eprompt" type="Sprite2D" parent="."]
-position = Vector2(1.90735e-06, -17)
+position = Vector2(-2.27374e-13, -16)
 scale = Vector2(0.333333, 0.3)
 texture = ExtResource("5_fk082")
 
 [node name="Label" type="Label" parent="."]
 z_index = 9
 offset_left = -32.0
-offset_top = -33.0
+offset_top = -31.0
 offset_right = 318.0
-offset_bottom = 21.0
+offset_bottom = 23.0
 scale = Vector2(0.18, 0.2)
 theme_override_fonts/font = ExtResource("6_n2ge8")
 text = "Congrats! You've made it this far... but tougher enemies lie ahead."
@@ -121,7 +121,7 @@ horizontal_alignment = 1
 autowrap_mode = 1
 
 [node name="arrow" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, -20)
+position = Vector2(-1, -19)
 rotation = 3.1573
 scale = Vector2(0.483, 0.561)
 sprite_frames = SubResource("SpriteFrames_077sa")
