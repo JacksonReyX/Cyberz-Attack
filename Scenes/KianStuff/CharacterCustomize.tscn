@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://c1qwr34in1lv6"]
+[gd_scene load_steps=42 format=3 uid="uid://c1qwr34in1lv6"]
 
 [ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://Assets/Menus/Buttons/BackHover.png" id="1_d061v"]
 [ext_resource type="Script" path="res://Scripts/character_customize.gd" id="1_ogjvl"]
@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://chamnv1k7rktu" path="res://Assets/Menus/Card/Accessory.png" id="31_gbnaj"]
 [ext_resource type="Texture2D" uid="uid://dxa1b3vqs58s" path="res://Assets/Menus/Card/AccessoryHover.png" id="32_hjmbo"]
 [ext_resource type="Texture2D" uid="uid://ccnae655cne6r" path="res://Assets/Menus/Card/AccessoryUnselected.png" id="33_egsed"]
+[ext_resource type="Texture2D" uid="uid://b0enksl88ocwi" path="res://Assets/Menus/Card/SwatchHolder.png" id="35_7pou6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_35nb7"]
 texture = ExtResource("1_y3noa")
@@ -190,7 +191,7 @@ texture_normal = ExtResource("3_4a3q7")
 texture_pressed = ExtResource("5_2y0fi")
 texture_hover = ExtResource("6_rxag3")
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+[node name="CustomizeHolder" type="TextureRect" parent="CanvasLayer"]
 offset_left = 270.0
 offset_top = 111.0
 offset_right = 494.0
@@ -264,6 +265,14 @@ texture_hover = ExtResource("32_hjmbo")
 layout_mode = 3
 anchors_preset = 0
 
+[node name="SwatchHolder" type="TextureRect" parent="CanvasLayer/ContentStack"]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 152.0
+offset_right = 434.0
+offset_bottom = 232.0
+texture = ExtResource("35_7pou6")
+
 [node name="HairPanel" type="Control" parent="CanvasLayer/ContentStack"]
 unique_name_in_owner = true
 anchors_preset = 0
@@ -272,102 +281,174 @@ offset_top = 113.0
 offset_right = 341.0
 offset_bottom = 153.0
 
-[node name="ColorSwatchWhite" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 41.0
-offset_top = 78.0
-offset_right = 57.0
-offset_bottom = 102.0
-
 [node name="ColorSwatchBlack" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
 layout_mode = 0
-offset_left = 57.0
-offset_top = 78.0
-offset_right = 73.0
-offset_bottom = 102.0
+offset_left = 49.0
+offset_top = 43.0
+offset_right = 65.0
+offset_bottom = 67.0
 
 [node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchBlack" index="0"]
 color = Color(0.0110876, 0.0110876, 0.0110876, 1)
 
-[node name="ColorSwatchPurple" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+[node name="ColorSwatchGrey" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+offset_left = 65.0
+offset_top = 43.0
+offset_right = 81.0
+offset_bottom = 67.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchGrey" index="0"]
+color = Color(0.331019, 0.331019, 0.331019, 1)
+
+[node name="ColorSwatchGray" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+offset_left = 81.0
+offset_top = 43.0
+offset_right = 97.0
+offset_bottom = 67.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchGray" index="0"]
+color = Color(0.558954, 0.558954, 0.558954, 1)
+
+[node name="ColorSwatchOffWhite" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+offset_left = 97.0
+offset_top = 43.0
+offset_right = 113.0
+offset_bottom = 67.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchOffWhite" index="0"]
+color = Color(0.843184, 0.843184, 0.843184, 1)
+
+[node name="ColorSwatchWhite" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
 layout_mode = 0
-offset_left = 73.0
-offset_top = 78.0
-offset_right = 89.0
-offset_bottom = 102.0
+offset_left = 113.0
+offset_top = 43.0
+offset_right = 129.0
+offset_bottom = 67.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchPurple" index="0"]
-color = Color(0.496437, 0.000180875, 0.498631, 1)
-
-[node name="ColorSwatchPink" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+[node name="ColorSwatchBrown" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
 layout_mode = 0
-offset_left = 89.0
-offset_top = 78.0
-offset_right = 105.0
-offset_bottom = 102.0
+offset_left = 33.0
+offset_top = 67.0
+offset_right = 49.0
+offset_bottom = 91.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchPink" index="0"]
-color = Color(1, 0.380999, 0.998583, 1)
-
-[node name="ColorSwatchBlue" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 105.0
-offset_top = 78.0
-offset_right = 121.0
-offset_bottom = 102.0
-
-[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchBlue" index="0"]
-color = Color(0, 0.399335, 0.643463, 1)
-
-[node name="ColorSwatchGreen" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 73.0
-offset_top = 54.0
-offset_right = 89.0
-offset_bottom = 78.0
-
-[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchGreen" index="0"]
-color = Color(0, 0.752941, 0.345098, 1)
-
-[node name="ColorSwatchYellow" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 89.0
-offset_top = 54.0
-offset_right = 105.0
-offset_bottom = 78.0
-
-[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchYellow" index="0"]
-color = Color(1, 0.94902, 0.0784314, 1)
-
-[node name="ColorSwatchOrange" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 105.0
-offset_top = 54.0
-offset_right = 121.0
-offset_bottom = 78.0
-
-[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchOrange" index="0"]
-color = Color(1, 0.591352, 0.196581, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchBrown" index="0"]
+color = Color(0.582465, 0.228018, 0.117232, 1)
 
 [node name="ColorSwatchRed" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
 layout_mode = 0
-offset_left = 57.0
-offset_top = 54.0
-offset_right = 73.0
-offset_bottom = 78.0
+offset_left = 49.0
+offset_top = 67.0
+offset_right = 65.0
+offset_bottom = 91.0
 
 [node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchRed" index="0"]
 color = Color(1, 0.25544, 0.166839, 1)
 
-[node name="ColorSwatchBrown" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+[node name="ColorSwatchOrange" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
 layout_mode = 0
-offset_left = 41.0
-offset_top = 54.0
-offset_right = 57.0
-offset_bottom = 78.0
+offset_left = 65.0
+offset_top = 67.0
+offset_right = 81.0
+offset_bottom = 91.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchBrown" index="0"]
-color = Color(0.582465, 0.228018, 0.117232, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchOrange" index="0"]
+color = Color(1, 0.591352, 0.196581, 1)
+
+[node name="ColorSwatchYellow" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 67.0
+offset_right = 97.0
+offset_bottom = 91.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchYellow" index="0"]
+color = Color(1, 0.94902, 0.0784314, 1)
+
+[node name="ColorSwatchGreen" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 67.0
+offset_right = 113.0
+offset_bottom = 91.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchGreen" index="0"]
+color = Color(0, 0.752941, 0.345098, 1)
+
+[node name="ColorSwatchLime" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+offset_left = 113.0
+offset_top = 67.0
+offset_right = 129.0
+offset_bottom = 91.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchLime" index="0"]
+color = Color(0.409073, 0.978745, 0.403335, 1)
+
+[node name="ColorSwatchTeal" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+offset_left = 33.0
+offset_top = 91.0
+offset_right = 49.0
+offset_bottom = 115.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchTeal" index="0"]
+color = Color(0.227328, 0.981291, 0.642949, 1)
+
+[node name="ColorSwatchCyan" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+offset_left = 49.0
+offset_top = 91.0
+offset_right = 65.0
+offset_bottom = 115.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchCyan" index="0"]
+color = Color(0, 0.962874, 0.894344, 1)
+
+[node name="ColorSwatchBlue" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 91.0
+offset_right = 81.0
+offset_bottom = 115.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchBlue" index="0"]
+color = Color(3.08037e-06, 0.525919, 0.838064, 1)
+
+[node name="ColorSwatchPurple" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 91.0
+offset_right = 97.0
+offset_bottom = 115.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchPurple" index="0"]
+color = Color(0.594861, 0.000267992, 0.597446, 1)
+
+[node name="ColorSwatchPink" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 91.0
+offset_right = 113.0
+offset_bottom = 115.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchPink" index="0"]
+color = Color(1, 0.380999, 0.998583, 1)
+
+[node name="ColorSwatchSalmon" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+offset_left = 113.0
+offset_top = 91.0
+offset_right = 129.0
+offset_bottom = 115.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchSalmon" index="0"]
+color = Color(1, 0.432474, 0.518486, 1)
+
+[node name="ColorSwatchGlass" parent="CanvasLayer/ContentStack/HairPanel" instance=ExtResource("22_6piv5")]
+offset_left = 33.0
+offset_top = 43.0
+offset_right = 49.0
+offset_bottom = 67.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/HairPanel/ColorSwatchGlass" index="0"]
+color = Color(0, 0.952941, 0.831373, 0.168627)
 
 [node name="BodyPanel" type="Control" parent="CanvasLayer/ContentStack"]
 unique_name_in_owner = true
@@ -375,102 +456,164 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ColorSwatchWhite" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 342.0
-offset_top = 191.0
-offset_right = 358.0
-offset_bottom = 215.0
-
 [node name="ColorSwatchBlack" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 358.0
-offset_top = 191.0
-offset_right = 374.0
-offset_bottom = 215.0
+offset_left = 350.0
+offset_top = 156.0
+offset_right = 366.0
+offset_bottom = 180.0
 
 [node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBlack" index="0"]
 color = Color(0.0110876, 0.0110876, 0.0110876, 1)
 
-[node name="ColorSwatchPurple" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 374.0
-offset_top = 191.0
-offset_right = 390.0
-offset_bottom = 215.0
+[node name="ColorSwatchGrey" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 366.0
+offset_top = 156.0
+offset_right = 382.0
+offset_bottom = 180.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchPurple" index="0"]
-color = Color(0.496437, 0.000180875, 0.498631, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchGrey" index="0"]
+color = Color(0.331019, 0.331019, 0.331019, 1)
 
-[node name="ColorSwatchPink" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 390.0
-offset_top = 191.0
-offset_right = 406.0
-offset_bottom = 215.0
+[node name="ColorSwatchGray" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 382.0
+offset_top = 156.0
+offset_right = 398.0
+offset_bottom = 180.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchPink" index="0"]
-color = Color(1, 0.380999, 0.998583, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchGray" index="0"]
+color = Color(0.558954, 0.558954, 0.558954, 1)
 
-[node name="ColorSwatchBlue" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 406.0
-offset_top = 191.0
-offset_right = 422.0
-offset_bottom = 215.0
+[node name="ColorSwatchOffWhite" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 398.0
+offset_top = 156.0
+offset_right = 414.0
+offset_bottom = 180.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBlue" index="0"]
-color = Color(0, 0.399335, 0.643463, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchOffWhite" index="0"]
+color = Color(0.843184, 0.843184, 0.843184, 1)
 
-[node name="ColorSwatchGreen" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 374.0
-offset_top = 167.0
-offset_right = 390.0
-offset_bottom = 191.0
+[node name="ColorSwatchWhite" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 414.0
+offset_top = 156.0
+offset_right = 430.0
+offset_bottom = 180.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchGreen" index="0"]
-color = Color(0, 0.752941, 0.345098, 1)
+[node name="ColorSwatchBrown" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 334.0
+offset_top = 180.0
+offset_right = 350.0
+offset_bottom = 204.0
 
-[node name="ColorSwatchYellow" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 390.0
-offset_top = 167.0
-offset_right = 406.0
-offset_bottom = 191.0
-
-[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchYellow" index="0"]
-color = Color(1, 0.94902, 0.0784314, 1)
-
-[node name="ColorSwatchOrange" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 406.0
-offset_top = 167.0
-offset_right = 422.0
-offset_bottom = 191.0
-
-[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchOrange" index="0"]
-color = Color(1, 0.591352, 0.196581, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBrown" index="0"]
+color = Color(0.582465, 0.228018, 0.117232, 1)
 
 [node name="ColorSwatchRed" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 358.0
-offset_top = 167.0
-offset_right = 374.0
-offset_bottom = 191.0
+offset_left = 350.0
+offset_top = 180.0
+offset_right = 366.0
+offset_bottom = 204.0
 
 [node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchRed" index="0"]
 color = Color(1, 0.25544, 0.166839, 1)
 
-[node name="ColorSwatchBrown" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 342.0
-offset_top = 167.0
-offset_right = 358.0
-offset_bottom = 191.0
+[node name="ColorSwatchOrange" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 366.0
+offset_top = 180.0
+offset_right = 382.0
+offset_bottom = 204.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBrown" index="0"]
-color = Color(0.582465, 0.228018, 0.117232, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchOrange" index="0"]
+color = Color(1, 0.591352, 0.196581, 1)
+
+[node name="ColorSwatchYellow" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 382.0
+offset_top = 180.0
+offset_right = 398.0
+offset_bottom = 204.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchYellow" index="0"]
+color = Color(1, 0.94902, 0.0784314, 1)
+
+[node name="ColorSwatchGreen" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 398.0
+offset_top = 180.0
+offset_right = 414.0
+offset_bottom = 204.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchGreen" index="0"]
+color = Color(0, 0.752941, 0.345098, 1)
+
+[node name="ColorSwatchLime" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 414.0
+offset_top = 180.0
+offset_right = 430.0
+offset_bottom = 204.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchLime" index="0"]
+color = Color(0.409073, 0.978745, 0.403335, 1)
+
+[node name="ColorSwatchTeal" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 334.0
+offset_top = 204.0
+offset_right = 350.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchTeal" index="0"]
+color = Color(0.227328, 0.981291, 0.642949, 1)
+
+[node name="ColorSwatchCyan" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 350.0
+offset_top = 204.0
+offset_right = 366.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchCyan" index="0"]
+color = Color(0, 0.962874, 0.894344, 1)
+
+[node name="ColorSwatchBlue" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 366.0
+offset_top = 204.0
+offset_right = 382.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBlue" index="0"]
+color = Color(3.08037e-06, 0.525919, 0.838064, 1)
+
+[node name="ColorSwatchPurple" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 382.0
+offset_top = 204.0
+offset_right = 398.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchPurple" index="0"]
+color = Color(0.594861, 0.000267992, 0.597446, 1)
+
+[node name="ColorSwatchPink" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 398.0
+offset_top = 204.0
+offset_right = 414.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchPink" index="0"]
+color = Color(1, 0.380999, 0.998583, 1)
+
+[node name="ColorSwatchSalmon" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 414.0
+offset_top = 204.0
+offset_right = 430.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchSalmon" index="0"]
+color = Color(1, 0.432474, 0.518486, 1)
+
+[node name="ColorSwatchGlass" parent="CanvasLayer/ContentStack/BodyPanel" instance=ExtResource("22_6piv5")]
+offset_left = 334.0
+offset_top = 156.0
+offset_right = 350.0
+offset_bottom = 180.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/BodyPanel/ColorSwatchGlass" index="0"]
+color = Color(0, 0.952941, 0.831373, 0.168627)
 
 [node name="EyesPanel" type="Control" parent="CanvasLayer/ContentStack"]
 unique_name_in_owner = true
@@ -480,102 +623,164 @@ offset_top = 113.0
 offset_right = 341.0
 offset_bottom = 153.0
 
-[node name="ColorSwatchWhite" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 41.0
-offset_top = 78.0
-offset_right = 57.0
-offset_bottom = 102.0
-
 [node name="ColorSwatchBlack" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 57.0
-offset_top = 78.0
-offset_right = 73.0
-offset_bottom = 102.0
+offset_left = 49.0
+offset_top = 43.0
+offset_right = 65.0
+offset_bottom = 67.0
 
 [node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBlack" index="0"]
 color = Color(0.0110876, 0.0110876, 0.0110876, 1)
 
-[node name="ColorSwatchPurple" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 73.0
-offset_top = 78.0
-offset_right = 89.0
-offset_bottom = 102.0
+[node name="ColorSwatchGrey" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 65.0
+offset_top = 43.0
+offset_right = 81.0
+offset_bottom = 67.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchPurple" index="0"]
-color = Color(0.496437, 0.000180875, 0.498631, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchGrey" index="0"]
+color = Color(0.331019, 0.331019, 0.331019, 1)
 
-[node name="ColorSwatchPink" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 89.0
-offset_top = 78.0
-offset_right = 105.0
-offset_bottom = 102.0
+[node name="ColorSwatchGray" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 81.0
+offset_top = 43.0
+offset_right = 97.0
+offset_bottom = 67.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchPink" index="0"]
-color = Color(1, 0.380999, 0.998583, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchGray" index="0"]
+color = Color(0.558954, 0.558954, 0.558954, 1)
 
-[node name="ColorSwatchBlue" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 105.0
-offset_top = 78.0
-offset_right = 121.0
-offset_bottom = 102.0
+[node name="ColorSwatchOffWhite" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 97.0
+offset_top = 43.0
+offset_right = 113.0
+offset_bottom = 67.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBlue" index="0"]
-color = Color(0, 0.399335, 0.643463, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchOffWhite" index="0"]
+color = Color(0.843184, 0.843184, 0.843184, 1)
 
-[node name="ColorSwatchGreen" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 73.0
-offset_top = 54.0
-offset_right = 89.0
-offset_bottom = 78.0
+[node name="ColorSwatchWhite" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 113.0
+offset_top = 43.0
+offset_right = 129.0
+offset_bottom = 67.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchGreen" index="0"]
-color = Color(0, 0.752941, 0.345098, 1)
+[node name="ColorSwatchBrown" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 33.0
+offset_top = 67.0
+offset_right = 49.0
+offset_bottom = 91.0
 
-[node name="ColorSwatchYellow" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 89.0
-offset_top = 54.0
-offset_right = 105.0
-offset_bottom = 78.0
-
-[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchYellow" index="0"]
-color = Color(1, 0.94902, 0.0784314, 1)
-
-[node name="ColorSwatchOrange" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 105.0
-offset_top = 54.0
-offset_right = 121.0
-offset_bottom = 78.0
-
-[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchOrange" index="0"]
-color = Color(1, 0.591352, 0.196581, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBrown" index="0"]
+color = Color(0.582465, 0.228018, 0.117232, 1)
 
 [node name="ColorSwatchRed" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 57.0
-offset_top = 54.0
-offset_right = 73.0
-offset_bottom = 78.0
+offset_left = 49.0
+offset_top = 67.0
+offset_right = 65.0
+offset_bottom = 91.0
 
 [node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchRed" index="0"]
 color = Color(1, 0.25544, 0.166839, 1)
 
-[node name="ColorSwatchBrown" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 41.0
-offset_top = 54.0
-offset_right = 57.0
-offset_bottom = 78.0
+[node name="ColorSwatchOrange" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 65.0
+offset_top = 67.0
+offset_right = 81.0
+offset_bottom = 91.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBrown" index="0"]
-color = Color(0.582465, 0.228018, 0.117232, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchOrange" index="0"]
+color = Color(1, 0.591352, 0.196581, 1)
+
+[node name="ColorSwatchYellow" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 81.0
+offset_top = 67.0
+offset_right = 97.0
+offset_bottom = 91.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchYellow" index="0"]
+color = Color(1, 0.94902, 0.0784314, 1)
+
+[node name="ColorSwatchGreen" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 97.0
+offset_top = 67.0
+offset_right = 113.0
+offset_bottom = 91.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchGreen" index="0"]
+color = Color(0, 0.752941, 0.345098, 1)
+
+[node name="ColorSwatchLime" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 113.0
+offset_top = 67.0
+offset_right = 129.0
+offset_bottom = 91.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchLime" index="0"]
+color = Color(0.409073, 0.978745, 0.403335, 1)
+
+[node name="ColorSwatchTeal" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 33.0
+offset_top = 91.0
+offset_right = 49.0
+offset_bottom = 115.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchTeal" index="0"]
+color = Color(0.227328, 0.981291, 0.642949, 1)
+
+[node name="ColorSwatchCyan" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 49.0
+offset_top = 91.0
+offset_right = 65.0
+offset_bottom = 115.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchCyan" index="0"]
+color = Color(0, 0.962874, 0.894344, 1)
+
+[node name="ColorSwatchBlue" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 65.0
+offset_top = 91.0
+offset_right = 81.0
+offset_bottom = 115.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBlue" index="0"]
+color = Color(3.08037e-06, 0.525919, 0.838064, 1)
+
+[node name="ColorSwatchPurple" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 81.0
+offset_top = 91.0
+offset_right = 97.0
+offset_bottom = 115.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchPurple" index="0"]
+color = Color(0.594861, 0.000267992, 0.597446, 1)
+
+[node name="ColorSwatchPink" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 97.0
+offset_top = 91.0
+offset_right = 113.0
+offset_bottom = 115.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchPink" index="0"]
+color = Color(1, 0.380999, 0.998583, 1)
+
+[node name="ColorSwatchSalmon" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 113.0
+offset_top = 91.0
+offset_right = 129.0
+offset_bottom = 115.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchSalmon" index="0"]
+color = Color(1, 0.432474, 0.518486, 1)
+
+[node name="ColorSwatchGlass" parent="CanvasLayer/ContentStack/EyesPanel" instance=ExtResource("22_6piv5")]
+offset_left = 33.0
+offset_top = 43.0
+offset_right = 49.0
+offset_bottom = 67.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/EyesPanel/ColorSwatchGlass" index="0"]
+color = Color(0, 0.952941, 0.831373, 0.168627)
 
 [node name="OutfitPanel" type="Control" parent="CanvasLayer/ContentStack"]
 unique_name_in_owner = true
@@ -583,102 +788,164 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ColorSwatchWhite" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 342.0
-offset_top = 191.0
-offset_right = 358.0
-offset_bottom = 215.0
-
 [node name="ColorSwatchBlack" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 358.0
-offset_top = 191.0
-offset_right = 374.0
-offset_bottom = 215.0
+offset_left = 350.0
+offset_top = 156.0
+offset_right = 366.0
+offset_bottom = 180.0
 
 [node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBlack" index="0"]
 color = Color(0.0110876, 0.0110876, 0.0110876, 1)
 
-[node name="ColorSwatchPurple" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 374.0
-offset_top = 191.0
-offset_right = 390.0
-offset_bottom = 215.0
+[node name="ColorSwatchGrey" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 366.0
+offset_top = 156.0
+offset_right = 382.0
+offset_bottom = 180.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchPurple" index="0"]
-color = Color(0.496437, 0.000180875, 0.498631, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchGrey" index="0"]
+color = Color(0.331019, 0.331019, 0.331019, 1)
 
-[node name="ColorSwatchPink" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 390.0
-offset_top = 191.0
-offset_right = 406.0
-offset_bottom = 215.0
+[node name="ColorSwatchGray" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 382.0
+offset_top = 156.0
+offset_right = 398.0
+offset_bottom = 180.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchPink" index="0"]
-color = Color(1, 0.380999, 0.998583, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchGray" index="0"]
+color = Color(0.558954, 0.558954, 0.558954, 1)
 
-[node name="ColorSwatchBlue" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 406.0
-offset_top = 191.0
-offset_right = 422.0
-offset_bottom = 215.0
+[node name="ColorSwatchOffWhite" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 398.0
+offset_top = 156.0
+offset_right = 414.0
+offset_bottom = 180.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBlue" index="0"]
-color = Color(0, 0.399335, 0.643463, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchOffWhite" index="0"]
+color = Color(0.843184, 0.843184, 0.843184, 1)
 
-[node name="ColorSwatchGreen" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 374.0
-offset_top = 167.0
-offset_right = 390.0
-offset_bottom = 191.0
+[node name="ColorSwatchWhite" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 414.0
+offset_top = 156.0
+offset_right = 430.0
+offset_bottom = 180.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchGreen" index="0"]
-color = Color(0, 0.752941, 0.345098, 1)
+[node name="ColorSwatchBrown" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 334.0
+offset_top = 180.0
+offset_right = 350.0
+offset_bottom = 204.0
 
-[node name="ColorSwatchYellow" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 390.0
-offset_top = 167.0
-offset_right = 406.0
-offset_bottom = 191.0
-
-[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchYellow" index="0"]
-color = Color(1, 0.94902, 0.0784314, 1)
-
-[node name="ColorSwatchOrange" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 406.0
-offset_top = 167.0
-offset_right = 422.0
-offset_bottom = 191.0
-
-[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchOrange" index="0"]
-color = Color(1, 0.591352, 0.196581, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBrown" index="0"]
+color = Color(0.582465, 0.228018, 0.117232, 1)
 
 [node name="ColorSwatchRed" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 358.0
-offset_top = 167.0
-offset_right = 374.0
-offset_bottom = 191.0
+offset_left = 350.0
+offset_top = 180.0
+offset_right = 366.0
+offset_bottom = 204.0
 
 [node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchRed" index="0"]
 color = Color(1, 0.25544, 0.166839, 1)
 
-[node name="ColorSwatchBrown" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 342.0
-offset_top = 167.0
-offset_right = 358.0
-offset_bottom = 191.0
+[node name="ColorSwatchOrange" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 366.0
+offset_top = 180.0
+offset_right = 382.0
+offset_bottom = 204.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBrown" index="0"]
-color = Color(0.582465, 0.228018, 0.117232, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchOrange" index="0"]
+color = Color(1, 0.591352, 0.196581, 1)
+
+[node name="ColorSwatchYellow" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 382.0
+offset_top = 180.0
+offset_right = 398.0
+offset_bottom = 204.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchYellow" index="0"]
+color = Color(1, 0.94902, 0.0784314, 1)
+
+[node name="ColorSwatchGreen" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 398.0
+offset_top = 180.0
+offset_right = 414.0
+offset_bottom = 204.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchGreen" index="0"]
+color = Color(0, 0.752941, 0.345098, 1)
+
+[node name="ColorSwatchLime" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 414.0
+offset_top = 180.0
+offset_right = 430.0
+offset_bottom = 204.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchLime" index="0"]
+color = Color(0.409073, 0.978745, 0.403335, 1)
+
+[node name="ColorSwatchTeal" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 334.0
+offset_top = 204.0
+offset_right = 350.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchTeal" index="0"]
+color = Color(0.227328, 0.981291, 0.642949, 1)
+
+[node name="ColorSwatchCyan" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 350.0
+offset_top = 204.0
+offset_right = 366.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchCyan" index="0"]
+color = Color(0, 0.962874, 0.894344, 1)
+
+[node name="ColorSwatchBlue" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 366.0
+offset_top = 204.0
+offset_right = 382.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBlue" index="0"]
+color = Color(3.08037e-06, 0.525919, 0.838064, 1)
+
+[node name="ColorSwatchPurple" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 382.0
+offset_top = 204.0
+offset_right = 398.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchPurple" index="0"]
+color = Color(0.594861, 0.000267992, 0.597446, 1)
+
+[node name="ColorSwatchPink" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 398.0
+offset_top = 204.0
+offset_right = 414.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchPink" index="0"]
+color = Color(1, 0.380999, 0.998583, 1)
+
+[node name="ColorSwatchSalmon" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 414.0
+offset_top = 204.0
+offset_right = 430.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchSalmon" index="0"]
+color = Color(1, 0.432474, 0.518486, 1)
+
+[node name="ColorSwatchBlack2" parent="CanvasLayer/ContentStack/OutfitPanel" instance=ExtResource("22_6piv5")]
+offset_left = 334.0
+offset_top = 156.0
+offset_right = 350.0
+offset_bottom = 180.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBlack2" index="0"]
+color = Color(0, 0.952941, 0.831373, 0.168627)
 
 [node name="AccessoryPanel" type="Control" parent="CanvasLayer/ContentStack"]
 unique_name_in_owner = true
@@ -686,153 +953,255 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ColorSwatchWhite" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 342.0
-offset_top = 191.0
-offset_right = 358.0
-offset_bottom = 215.0
-
 [node name="ColorSwatchBlack" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 358.0
-offset_top = 191.0
-offset_right = 374.0
-offset_bottom = 215.0
+offset_left = 350.0
+offset_top = 156.0
+offset_right = 366.0
+offset_bottom = 180.0
 
 [node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchBlack" index="0"]
 color = Color(0.0110876, 0.0110876, 0.0110876, 1)
 
-[node name="ColorSwatchPurple" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 374.0
-offset_top = 191.0
-offset_right = 390.0
-offset_bottom = 215.0
+[node name="ColorSwatchGrey" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 366.0
+offset_top = 156.0
+offset_right = 382.0
+offset_bottom = 180.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchPurple" index="0"]
-color = Color(0.496437, 0.000180875, 0.498631, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchGrey" index="0"]
+color = Color(0.331019, 0.331019, 0.331019, 1)
 
-[node name="ColorSwatchPink" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 390.0
-offset_top = 191.0
-offset_right = 406.0
-offset_bottom = 215.0
+[node name="ColorSwatchGray" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 382.0
+offset_top = 156.0
+offset_right = 398.0
+offset_bottom = 180.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchPink" index="0"]
-color = Color(1, 0.380999, 0.998583, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchGray" index="0"]
+color = Color(0.558954, 0.558954, 0.558954, 1)
 
-[node name="ColorSwatchBlue" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 406.0
-offset_top = 191.0
-offset_right = 422.0
-offset_bottom = 215.0
+[node name="ColorSwatchOffWhite" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 398.0
+offset_top = 156.0
+offset_right = 414.0
+offset_bottom = 180.0
 
-[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchBlue" index="0"]
-color = Color(0, 0.399335, 0.643463, 1)
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchOffWhite" index="0"]
+color = Color(0.843184, 0.843184, 0.843184, 1)
 
-[node name="ColorSwatchGreen" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 374.0
-offset_top = 167.0
-offset_right = 390.0
-offset_bottom = 191.0
-
-[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchGreen" index="0"]
-color = Color(0, 0.752941, 0.345098, 1)
-
-[node name="ColorSwatchYellow" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 390.0
-offset_top = 167.0
-offset_right = 406.0
-offset_bottom = 191.0
-
-[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchYellow" index="0"]
-color = Color(1, 0.94902, 0.0784314, 1)
-
-[node name="ColorSwatchOrange" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 406.0
-offset_top = 167.0
-offset_right = 422.0
-offset_bottom = 191.0
-
-[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchOrange" index="0"]
-color = Color(1, 0.591352, 0.196581, 1)
-
-[node name="ColorSwatchRed" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 358.0
-offset_top = 167.0
-offset_right = 374.0
-offset_bottom = 191.0
-
-[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchRed" index="0"]
-color = Color(1, 0.25544, 0.166839, 1)
+[node name="ColorSwatchWhite" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 414.0
+offset_top = 156.0
+offset_right = 430.0
+offset_bottom = 180.0
 
 [node name="ColorSwatchBrown" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
-layout_mode = 0
-offset_left = 342.0
-offset_top = 167.0
-offset_right = 358.0
-offset_bottom = 191.0
+offset_left = 334.0
+offset_top = 180.0
+offset_right = 350.0
+offset_bottom = 204.0
 
 [node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchBrown" index="0"]
 color = Color(0.582465, 0.228018, 0.117232, 1)
 
+[node name="ColorSwatchRed" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 350.0
+offset_top = 180.0
+offset_right = 366.0
+offset_bottom = 204.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchRed" index="0"]
+color = Color(1, 0.25544, 0.166839, 1)
+
+[node name="ColorSwatchOrange" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 366.0
+offset_top = 180.0
+offset_right = 382.0
+offset_bottom = 204.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchOrange" index="0"]
+color = Color(1, 0.591352, 0.196581, 1)
+
+[node name="ColorSwatchYellow" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 382.0
+offset_top = 180.0
+offset_right = 398.0
+offset_bottom = 204.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchYellow" index="0"]
+color = Color(1, 0.94902, 0.0784314, 1)
+
+[node name="ColorSwatchGreen" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 398.0
+offset_top = 180.0
+offset_right = 414.0
+offset_bottom = 204.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchGreen" index="0"]
+color = Color(0, 0.752941, 0.345098, 1)
+
+[node name="ColorSwatchLime" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 414.0
+offset_top = 180.0
+offset_right = 430.0
+offset_bottom = 204.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchLime" index="0"]
+color = Color(0.409073, 0.978745, 0.403335, 1)
+
+[node name="ColorSwatchTeal" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 334.0
+offset_top = 204.0
+offset_right = 350.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchTeal" index="0"]
+color = Color(0.227328, 0.981291, 0.642949, 1)
+
+[node name="ColorSwatchCyan" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 350.0
+offset_top = 204.0
+offset_right = 366.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchCyan" index="0"]
+color = Color(0, 0.962874, 0.894344, 1)
+
+[node name="ColorSwatchBlue" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 366.0
+offset_top = 204.0
+offset_right = 382.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchBlue" index="0"]
+color = Color(3.08037e-06, 0.525919, 0.838064, 1)
+
+[node name="ColorSwatchPurple" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 382.0
+offset_top = 204.0
+offset_right = 398.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchPurple" index="0"]
+color = Color(0.594861, 0.000267992, 0.597446, 1)
+
+[node name="ColorSwatchPink" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 398.0
+offset_top = 204.0
+offset_right = 414.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchPink" index="0"]
+color = Color(1, 0.380999, 0.998583, 1)
+
+[node name="ColorSwatchSalmon" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 414.0
+offset_top = 204.0
+offset_right = 430.0
+offset_bottom = 228.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchSalmon" index="0"]
+color = Color(1, 0.432474, 0.518486, 1)
+
+[node name="ColorSwatchGlass" parent="CanvasLayer/ContentStack/AccessoryPanel" instance=ExtResource("22_6piv5")]
+offset_left = 334.0
+offset_top = 156.0
+offset_right = 350.0
+offset_bottom = 180.0
+
+[node name="ColorRect" parent="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchGlass" index="0"]
+color = Color(0, 0.952941, 0.831373, 0.168627)
+
 [connection signal="pressed" from="CanvasLayer/Buttons/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Buttons/PlayButton" to="." method="_on_play_button_pressed"]
 
-[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchWhite"]
 [editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchBlack"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchGrey"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchGray"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchOffWhite"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchWhite"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchBrown"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchRed"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchOrange"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchYellow"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchGreen"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchLime"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchTeal"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchCyan"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchBlue"]
 [editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchPurple"]
 [editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchPink"]
-[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchBlue"]
-[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchGreen"]
-[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchYellow"]
-[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchOrange"]
-[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchRed"]
-[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchBrown"]
-[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchWhite"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchSalmon"]
+[editable path="CanvasLayer/ContentStack/HairPanel/ColorSwatchGlass"]
 [editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBlack"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchGrey"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchGray"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchOffWhite"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchWhite"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBrown"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchRed"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchOrange"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchYellow"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchGreen"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchLime"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchTeal"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchCyan"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBlue"]
 [editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchPurple"]
 [editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchPink"]
-[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBlue"]
-[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchGreen"]
-[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchYellow"]
-[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchOrange"]
-[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchRed"]
-[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchBrown"]
-[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchWhite"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchSalmon"]
+[editable path="CanvasLayer/ContentStack/BodyPanel/ColorSwatchGlass"]
 [editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBlack"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchGrey"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchGray"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchOffWhite"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchWhite"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBrown"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchRed"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchOrange"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchYellow"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchGreen"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchLime"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchTeal"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchCyan"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBlue"]
 [editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchPurple"]
 [editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchPink"]
-[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBlue"]
-[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchGreen"]
-[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchYellow"]
-[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchOrange"]
-[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchRed"]
-[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchBrown"]
-[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchWhite"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchSalmon"]
+[editable path="CanvasLayer/ContentStack/EyesPanel/ColorSwatchGlass"]
 [editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBlack"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchGrey"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchGray"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchOffWhite"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchWhite"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBrown"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchRed"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchOrange"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchYellow"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchGreen"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchLime"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchTeal"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchCyan"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBlue"]
 [editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchPurple"]
 [editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchPink"]
-[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBlue"]
-[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchGreen"]
-[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchYellow"]
-[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchOrange"]
-[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchRed"]
-[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBrown"]
-[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchWhite"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchSalmon"]
+[editable path="CanvasLayer/ContentStack/OutfitPanel/ColorSwatchBlack2"]
 [editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchBlack"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchGrey"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchGray"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchOffWhite"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchWhite"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchBrown"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchRed"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchOrange"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchYellow"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchGreen"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchLime"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchTeal"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchCyan"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchBlue"]
 [editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchPurple"]
 [editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchPink"]
-[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchBlue"]
-[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchGreen"]
-[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchYellow"]
-[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchOrange"]
-[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchRed"]
-[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchBrown"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchSalmon"]
+[editable path="CanvasLayer/ContentStack/AccessoryPanel/ColorSwatchGlass"]
