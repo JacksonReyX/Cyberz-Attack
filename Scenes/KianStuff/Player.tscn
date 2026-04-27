@@ -14,22 +14,22 @@ script = ExtResource("1_q6k34")
 [node name="Body" type="AnimatedSprite2D" parent="Visuals"]
 unique_name_in_owner = true
 position = Vector2(0, 1)
-animation = &"run"
+animation = &""
 
 [node name="Outfit" type="AnimatedSprite2D" parent="Visuals"]
 unique_name_in_owner = true
 position = Vector2(0, 1)
-animation = &"idle"
+animation = &""
 
 [node name="Eyes" type="AnimatedSprite2D" parent="Visuals"]
 unique_name_in_owner = true
 position = Vector2(0, 1)
-animation = &"idle"
+animation = &""
 
 [node name="Accessory" type="AnimatedSprite2D" parent="Visuals"]
 unique_name_in_owner = true
 position = Vector2(0, 1)
-animation = &"idle"
+animation = &""
 
 [node name="Hair" type="AnimatedSprite2D" parent="Visuals"]
 unique_name_in_owner = true
