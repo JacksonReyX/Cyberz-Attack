@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://cj1decmy7gali"]
 
-[ext_resource type="Texture2D" uid="uid://bjvkcp3hrotcs" path="res://scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalkingSide1.png" id="1_08qyi"]
+[ext_resource type="Texture2D" uid="uid://bjvkcp3hrotcs" path="res://Scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalkingSide1.png" id="1_08qyi"]
 [ext_resource type="Script" path="res://Scripts/spider_1.gd" id="1_awx4v"]
-[ext_resource type="Texture2D" uid="uid://cxfm1fhx10tus" path="res://scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalkingSide2.png" id="2_mj5yc"]
-[ext_resource type="Texture2D" uid="uid://cux5dqxwh5wme" path="res://scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalkingSide3.png" id="3_tdglx"]
-[ext_resource type="Texture2D" uid="uid://bmxst1rn50ctk" path="res://scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalkingSide4.png" id="4_cy2mx"]
+[ext_resource type="Texture2D" uid="uid://cxfm1fhx10tus" path="res://Scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalkingSide2.png" id="2_mj5yc"]
+[ext_resource type="Texture2D" uid="uid://cux5dqxwh5wme" path="res://Scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalkingSide3.png" id="3_tdglx"]
+[ext_resource type="Texture2D" uid="uid://bmxst1rn50ctk" path="res://Scenes/sabella/images/SpiderPack/WalkingOrange/SpiderWalkingSide4.png" id="4_cy2mx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ge13c"]
 atlas = ExtResource("1_08qyi")

@@ -7221,6 +7221,7 @@ position = Vector2(-90, -1709)
 position = Vector2(-236, 20)
 
 [node name="Spider1" parent="ExtraDecor" instance=ExtResource("56_6ygf5")]
+z_index = 5
 position = Vector2(153, -169)
 
 [node name="Spider3" parent="ExtraDecor" instance=ExtResource("56_6ygf5")]

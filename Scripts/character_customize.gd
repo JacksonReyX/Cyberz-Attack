@@ -37,8 +37,14 @@ const WIZARD_ACCESSORY := preload("res://Assets/Characters/Wizard/WizardAccessor
 @onready var class_left: TextureButton = %ClassLeft
 @onready var class_right: TextureButton = %ClassRight
 
+# Item shop button
+@onready var item_shop_btn = %ItemShop
+
 # Tab list
 @onready var tabs: Array[BaseButton] = [hair_tab, body_tab, eyes_tab, outfit_tab, accessory_tab]
+
+# Item shop scene path
+@export_file("*.tscn") var item_shop_scene := "res://Scenes/sabella/ItemShop.tscn"
 
 var classes := ["Knight", "Wizard", "Knight 2", "Wizard 2", "Witch"]
 var class_index := 0
@@ -48,6 +54,7 @@ func _ready() -> void:
 	UISfx.wire_buttons(self)
 	class_left.pressed.connect(func(): _change_class(-1))
 	class_right.pressed.connect(func(): _change_class(1))
+	item_shop_btn.pressed.connect(_on_item_shop_pressed)
 
 	for t in tabs:
 		t.toggle_mode = true
@@ -65,6 +72,8 @@ func _ready() -> void:
 	_apply_class()
 	_connect_swatches()
 
+func _set_tab_locked(tab: TextureButton, locked: bool) -> void:
+	tab.disabled = locked
 
 func _connect_swatches() -> void:
 	_wire_swatch_panel(hair_panel, "hair")
@@ -72,32 +81,6 @@ func _connect_swatches() -> void:
 	_wire_swatch_panel(accessory_panel, "accessory")
 	_wire_swatch_panel(body_panel, "body")
 	_wire_swatch_panel(eyes_panel, "eyes")
-
-	for swatch in hair_panel.get_children():
-		if not swatch is TextureButton:
-			continue
-		var color = swatch.get_node("ColorRect").color
-		swatch.pressed.connect(func(): _pick_color("hair", color))
-	for swatch in outfit_panel.get_children():
-		if not swatch is TextureButton:
-			continue
-		var color = swatch.get_node("ColorRect").color
-		swatch.pressed.connect(func(): _pick_color("outfit", color))
-	for swatch in accessory_panel.get_children():
-		if not swatch is TextureButton:
-			continue
-		var color = swatch.get_node("ColorRect").color
-		swatch.pressed.connect(func(): _pick_color("accessory", color))
-	for swatch in body_panel.get_children():
-		if not swatch is TextureButton:
-			continue
-		var color = swatch.get_node("ColorRect").color
-		swatch.pressed.connect(func(): _pick_color("body", color))
-	for swatch in eyes_panel.get_children():
-		if not swatch is TextureButton:
-			continue
-		var color = swatch.get_node("ColorRect").color
-		swatch.pressed.connect(func(): _pick_color("eyes", color))
 
 func _wire_swatch_panel(panel: Control, layer: String) -> void:
 	for swatch in panel.get_children():
@@ -171,6 +154,13 @@ func _apply_class() -> void:
 	PlayerCustomization.selected_class = cname
 	class_label.text = cname
 
+	# Unlock all tabs first
+	_set_tab_locked(hair_tab, false)
+	_set_tab_locked(body_tab, false)
+	_set_tab_locked(eyes_tab, false)
+	_set_tab_locked(outfit_tab, false)
+	_set_tab_locked(accessory_tab, false)
+
 	match cname:
 		"Knight":
 			body.texture = null
@@ -178,33 +168,60 @@ func _apply_class() -> void:
 			hair.texture = null
 			outfit.texture = KNIGHT_OUTFIT
 			accessory.texture = KNIGHT_ACCESSORY
+			_set_tab_locked(hair_tab, true)
+			_set_tab_locked(body_tab, true)
+			_set_tab_locked(eyes_tab, true)
 		"Wizard":
 			body.texture = WIZARD_BODY
 			eyes.texture = WIZARD_EYES
 			hair.texture = null
 			outfit.texture = WIZARD_OUTFIT
 			accessory.texture = WIZARD_ACCESSORY
+			_set_tab_locked(hair_tab, true)
 		"Knight 2":
 			body.texture = null
 			eyes.texture = null
 			hair.texture = null
 			outfit.texture = preload("res://assets/PlayerModels/Knight2.png")
 			accessory.texture = null
+			_set_tab_locked(hair_tab, true)
+			_set_tab_locked(body_tab, true)
+			_set_tab_locked(eyes_tab, true)
+			_set_tab_locked(accessory_tab, true)
 		"Wizard 2":
 			body.texture = null
 			eyes.texture = null
 			hair.texture = null
 			outfit.texture = preload("res://assets/PlayerModels/Wizard.png")
 			accessory.texture = null
+			_set_tab_locked(hair_tab, true)
+			_set_tab_locked(body_tab, true)
+			_set_tab_locked(eyes_tab, true)
+			_set_tab_locked(accessory_tab, true)
 		"Witch":
 			body.texture = null
 			eyes.texture = null
 			hair.texture = null
 			outfit.texture = preload("res://assets/PlayerModels/Witch.png")
 			accessory.texture = null
+			_set_tab_locked(hair_tab, true)
+			_set_tab_locked(body_tab, true)
+			_set_tab_locked(eyes_tab, true)
+			_set_tab_locked(accessory_tab, true)
+
+	# If current tab is now locked switch to first unlocked tab
+	var current_selected = tabs.filter(func(t): return t.button_pressed)
+	if current_selected.size() > 0 and current_selected[0].disabled:
+		for t in tabs:
+			if not t.disabled:
+				_select_tab(t)
+				break
 
 func _apply_selected_skin() -> void:
 	pass
+
+func _on_item_shop_pressed() -> void:
+	get_tree().change_scene_to_file(item_shop_scene)
 
 func _on_play_button_pressed() -> void:
 	MusicManager.play_dungeon()

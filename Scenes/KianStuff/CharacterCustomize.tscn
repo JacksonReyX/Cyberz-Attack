@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://c1qwr34in1lv6"]
+[gd_scene load_steps=45 format=3 uid="uid://c1qwr34in1lv6"]
 
 [ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://Assets/Menus/Buttons/BackHover.png" id="1_d061v"]
 [ext_resource type="Script" path="res://Scripts/character_customize.gd" id="1_ogjvl"]
@@ -23,13 +23,16 @@
 [ext_resource type="Texture2D" uid="uid://dgdp1u6dec5am" path="res://Assets/Menus/Card/HairUnselected.png" id="21_nwp4s"]
 [ext_resource type="Texture2D" uid="uid://bc2ofuc4r6767" path="res://Assets/Menus/Card/Eyes.png" id="22_5dyvk"]
 [ext_resource type="PackedScene" uid="uid://dybql1oxbrpuj" path="res://Scenes/KianStuff/ColorSwatch.tscn" id="22_6piv5"]
+[ext_resource type="Texture2D" uid="uid://b1s70wnumn60w" path="res://Assets/Menus/Card/HairLocked.png" id="22_cip3t"]
 [ext_resource type="Texture2D" uid="uid://xixdvms7fxnp" path="res://Assets/Menus/Card/EyesHover.png" id="23_vk0xs"]
 [ext_resource type="Texture2D" uid="uid://bu0b4nomtg34w" path="res://Assets/Menus/Card/EyesUnselected.png" id="24_h0epr"]
+[ext_resource type="Texture2D" uid="uid://wkkpf00dnesl" path="res://Assets/Menus/Card/EyesLocked.png" id="25_8odj5"]
 [ext_resource type="Texture2D" uid="uid://jpr83nwn0eh5" path="res://Assets/Menus/Card/Body.png" id="25_qqxio"]
 [ext_resource type="Texture2D" uid="uid://c0ib4bu1cd88y" path="res://Assets/Menus/Card/BodyHover.png" id="26_d3vcd"]
 [ext_resource type="Texture2D" uid="uid://bdc54cxto6mrw" path="res://Assets/Menus/Card/BodyUnselected.png" id="27_ivwtw"]
 [ext_resource type="Texture2D" uid="uid://c5ylul7mlb755" path="res://Assets/Menus/Card/Shirt.png" id="28_hdd42"]
 [ext_resource type="Texture2D" uid="uid://dxev5rs3woa32" path="res://Assets/Menus/Card/ShirtHover.png" id="29_eb33q"]
+[ext_resource type="Texture2D" uid="uid://cb5igitcg7yyl" path="res://Assets/Menus/Card/BodyLocked.png" id="29_ufvfq"]
 [ext_resource type="Texture2D" uid="uid://bg7rmfc5n8acv" path="res://Assets/Menus/Card/ShirtUnselected.png" id="30_e4cf6"]
 [ext_resource type="Texture2D" uid="uid://chamnv1k7rktu" path="res://Assets/Menus/Card/Accessory.png" id="31_gbnaj"]
 [ext_resource type="Texture2D" uid="uid://dxa1b3vqs58s" path="res://Assets/Menus/Card/AccessoryHover.png" id="32_hjmbo"]
@@ -200,6 +203,17 @@ texture = ExtResource("18_agvjx")
 
 [node name="Tabs" type="Node" parent="CanvasLayer"]
 
+[node name="ItemShop" type="Button" parent="CanvasLayer/Tabs"]
+unique_name_in_owner = true
+z_index = 10
+offset_left = 10.0
+offset_top = 331.0
+offset_right = 150.0
+offset_bottom = 362.0
+scale = Vector2(0.7, 0.7)
+theme_override_fonts/font = ExtResource("10_8kkrl")
+text = "Item Shop"
+
 [node name="HairTab" type="TextureButton" parent="CanvasLayer/Tabs"]
 unique_name_in_owner = true
 offset_left = 301.0
@@ -212,6 +226,7 @@ button_group = SubResource("ButtonGroup_54t7t")
 texture_normal = ExtResource("21_nwp4s")
 texture_pressed = ExtResource("19_frt37")
 texture_hover = ExtResource("20_0udql")
+texture_disabled = ExtResource("22_cip3t")
 
 [node name="EyesTab" type="TextureButton" parent="CanvasLayer/Tabs"]
 unique_name_in_owner = true
@@ -224,6 +239,7 @@ button_group = SubResource("ButtonGroup_hcsw1")
 texture_normal = ExtResource("24_h0epr")
 texture_pressed = ExtResource("22_5dyvk")
 texture_hover = ExtResource("23_vk0xs")
+texture_disabled = ExtResource("25_8odj5")
 
 [node name="BodyTab" type="TextureButton" parent="CanvasLayer/Tabs"]
 unique_name_in_owner = true
@@ -236,6 +252,7 @@ button_group = SubResource("ButtonGroup_bqgdj")
 texture_normal = ExtResource("27_ivwtw")
 texture_pressed = ExtResource("25_qqxio")
 texture_hover = ExtResource("26_d3vcd")
+texture_disabled = ExtResource("29_ufvfq")
 
 [node name="OutfitTab" type="TextureButton" parent="CanvasLayer/Tabs"]
 unique_name_in_owner = true

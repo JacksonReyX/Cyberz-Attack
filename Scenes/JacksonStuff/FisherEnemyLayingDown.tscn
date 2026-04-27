@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bo7jxpp2nhqqg"]
+[gd_scene load_steps=7 format=3 uid="uid://dcu76mc8uajdy"]
 
 [ext_resource type="Script" path="res://Scripts/enemy_collide.gd" id="1_roh81"]
 [ext_resource type="Texture2D" uid="uid://celyeexjnwlpw" path="res://Assets/PlayerModels/oldfisherman.png" id="2_bxmrl"]
-[ext_resource type="PackedScene" uid="uid://cty5lg0a4vev" path="res://Scenes/JacksonStuff/textboxFisher.tscn" id="3_o7m4p"]
+[ext_resource type="PackedScene" uid="uid://c07kfoji0r1dn" path="res://Scenes/JacksonStuff/textboxFisher.tscn" id="3_o7m4p"]
+[ext_resource type="AudioStream" uid="uid://c8lyqijsjd6x8" path="res://Assets/Audio/Voices/GuideTalk1.wav" id="4_ke6n7"]
+[ext_resource type="AudioStream" uid="uid://ckdaviiidr1ji" path="res://Assets/Audio/Voices/GuardVoice2.wav" id="5_k8yqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h8l1k"]
 size = Vector2(26.75, 29)
@@ -24,6 +26,8 @@ position = Vector2(9.625, 1.5)
 shape = SubResource("RectangleShape2D_h8l1k")
 
 [node name="Textbox" parent="Area2D" instance=ExtResource("3_o7m4p")]
+typing_sound_1 = ExtResource("4_ke6n7")
+typing_sound_2 = ExtResource("5_k8yqw")
 
 [node name="textTimer" type="Timer" parent="."]
 wait_time = 3.0
