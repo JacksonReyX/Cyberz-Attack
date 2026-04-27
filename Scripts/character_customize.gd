@@ -10,6 +10,18 @@ const WIZARD_OUTFIT := preload("res://Assets/Characters/Wizard/WizardOutfit.png"
 const WIZARD_EYES := preload("res://Assets/Characters/Wizard/WizardEyes.png")
 const WIZARD_ACCESSORY := preload("res://Assets/Characters/Wizard/WizardAccessory.png")
 
+# Monster
+const MONSTER_BODY := preload("res://Assets/Characters/Monster/MonsterBody.png")
+const MONSTER_OUTFIT := preload("res://Assets/Characters/Monster/MonsterOutfit.png")
+const MONSTER_EYES := preload("res://Assets/Characters/Monster/MonsterEyes.png")
+const MONSTER_ACCESSORY := preload("res://Assets/Characters/Monster/MonsterAccessory.png")
+
+# Human
+const HUMAN_HAIR := preload("res://Assets/Characters/Human/HumanHair.png")
+const HUMAN_BODY := preload("res://Assets/Characters/Human/HumanBody.png")
+const HUMAN_OUTFIT := preload("res://Assets/Characters/Human/HumanOutfit.png")
+const HUMAN_EYES := preload("res://Assets/Characters/Human/HumanEyes.png")
+
 @onready var body: Sprite2D = %Body
 @onready var outfit: Sprite2D = %Outfit
 @onready var eyes: Sprite2D = %Eyes
@@ -46,7 +58,7 @@ const WIZARD_ACCESSORY := preload("res://Assets/Characters/Wizard/WizardAccessor
 # Item shop scene path
 @export_file("*.tscn") var item_shop_scene := "res://Scenes/sabella/ItemShop.tscn"
 
-var classes := ["Knight", "Wizard", "Knight 2", "Wizard 2", "Witch"]
+var classes := ["Human", "Knight", "Wizard", "Demon", "Knight 2", "Wizard 2", "Witch"]
 var class_index := 0
 
 func _ready() -> void:
@@ -139,7 +151,7 @@ func _change_class(dir: int) -> void:
 
 func _is_class_unlocked(cname: String) -> bool:
 	match cname:
-		"Knight", "Wizard":
+		"Human", "Knight", "Wizard", "Demon":
 			return true
 		"Knight 2":
 			return "skin2" in GameState.owned_skins
@@ -162,6 +174,14 @@ func _apply_class() -> void:
 	_set_tab_locked(accessory_tab, false)
 
 	match cname:
+		"Human":
+			hair.texture = HUMAN_HAIR
+			body.texture = HUMAN_BODY
+			outfit.texture = HUMAN_OUTFIT
+			eyes.texture = HUMAN_EYES
+			accessory.texture = null
+			_set_tab_locked(accessory_tab, true)
+		
 		"Knight":
 			body.texture = null
 			eyes.texture = null
@@ -177,6 +197,13 @@ func _apply_class() -> void:
 			hair.texture = null
 			outfit.texture = WIZARD_OUTFIT
 			accessory.texture = WIZARD_ACCESSORY
+			_set_tab_locked(hair_tab, true)
+		"Demon":
+			body.texture = MONSTER_BODY
+			eyes.texture = MONSTER_EYES
+			hair.texture = null
+			outfit.texture = MONSTER_OUTFIT
+			accessory.texture = MONSTER_ACCESSORY
 			_set_tab_locked(hair_tab, true)
 		"Knight 2":
 			body.texture = null
