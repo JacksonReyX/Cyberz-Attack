@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends CharacterBody2D
 
 const SPEED = 20
 
@@ -17,4 +17,13 @@ func _process(delta: float) -> void:
 		spider.flip_h = false
 	position.x += direction * SPEED * delta
 	
-	
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		die()
+		
+func die():
+	var splatter = preload("res://Scenes/sabella/splatter.tscn").instantiate()
+	splatter.global_position = global_position
+	get_parent().add_child(splatter)
+
+	queue_free()

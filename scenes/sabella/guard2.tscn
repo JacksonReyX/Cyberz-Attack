@@ -1,13 +1,13 @@
 [gd_scene load_steps=21 format=3 uid="uid://bwij34jk4w03i"]
 
-[ext_resource type="Texture2D" uid="uid://dkl77eelgoe8k" path="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/MagicShopKeeper_Idle + Walk_1.png" id="1_38f4k"]
+[ext_resource type="Texture2D" uid="uid://dkl77eelgoe8k" path="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/MagicShopKeeper_Idle + Walk_1.png" id="1_38f4k"]
 [ext_resource type="Script" path="res://Scripts/guard_2.gd" id="1_jrt7b"]
-[ext_resource type="Texture2D" uid="uid://b8tsc73etsa6y" path="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/MagicShopKeeper_Idle + Walk_2.png" id="2_42igi"]
-[ext_resource type="Texture2D" uid="uid://cny1lj311pssl" path="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/MagicShopKeeper_Idle + Walk_3.png" id="3_r166i"]
-[ext_resource type="Texture2D" uid="uid://dmq6sm6vmspgu" path="res://scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/MagicShopKeeper_Idle + Walk_4.png" id="4_gye5t"]
-[ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://assets/Menus/Buttons/prompt_normal.png" id="5_fk082"]
-[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="6_n2ge8"]
-[ext_resource type="Texture2D" uid="uid://dcbkf5ybaaim4" path="res://scenes/sabella/images/Pixelart arrow icon pack 1.0.png" id="6_o1edu"]
+[ext_resource type="Texture2D" uid="uid://b8tsc73etsa6y" path="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/MagicShopKeeper_Idle + Walk_2.png" id="2_42igi"]
+[ext_resource type="Texture2D" uid="uid://cny1lj311pssl" path="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/MagicShopKeeper_Idle + Walk_3.png" id="3_r166i"]
+[ext_resource type="Texture2D" uid="uid://dmq6sm6vmspgu" path="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/MagicShopKeeper_Idle + Walk_4.png" id="4_gye5t"]
+[ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://Assets/Menus/Buttons/prompt_normal.png" id="5_fk082"]
+[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="6_n2ge8"]
+[ext_resource type="Texture2D" uid="uid://dcbkf5ybaaim4" path="res://Scenes/sabella/images/Pixelart arrow icon pack 1.0.png" id="6_o1edu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cujky"]
 atlas = ExtResource("1_38f4k")
@@ -96,6 +96,7 @@ script = ExtResource("1_jrt7b")
 position = Vector2(1.42109e-14, -9)
 scale = Vector2(1.11328, 1.07813)
 sprite_frames = SubResource("SpriteFrames_5fbj6")
+autoplay = "default"
 frame_progress = 0.812824
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -103,16 +104,16 @@ position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_meda4")
 
 [node name="Eprompt" type="Sprite2D" parent="."]
-position = Vector2(1.90735e-06, -17)
+position = Vector2(-2.27374e-13, -16)
 scale = Vector2(0.333333, 0.3)
 texture = ExtResource("5_fk082")
 
 [node name="Label" type="Label" parent="."]
 z_index = 9
 offset_left = -32.0
-offset_top = -33.0
+offset_top = -31.0
 offset_right = 318.0
-offset_bottom = 21.0
+offset_bottom = 23.0
 scale = Vector2(0.18, 0.2)
 theme_override_fonts/font = ExtResource("6_n2ge8")
 text = "Congrats! You've made it this far... but tougher enemies lie ahead."
@@ -120,9 +121,9 @@ horizontal_alignment = 1
 autowrap_mode = 1
 
 [node name="arrow" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, -18)
+position = Vector2(-1, -19)
 rotation = 3.1573
-scale = Vector2(0.606571, 0.630404)
+scale = Vector2(0.483, 0.561)
 sprite_frames = SubResource("SpriteFrames_077sa")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

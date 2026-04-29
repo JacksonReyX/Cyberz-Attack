@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://dyq4gt5o3v7fc"]
+
+[ext_resource type="Texture2D" uid="uid://c8bh16bk6oqoe" path="res://Scenes/sabella/shopSkins/MageIdle.png" id="1_g5eeq"]
+[ext_resource type="Texture2D" uid="uid://8c2gxsrpftrc" path="res://Scenes/sabella/shopSkins/MageRun.png" id="2_vuxh5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gugs7"]
+atlas = ExtResource("1_g5eeq")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iobro"]
+atlas = ExtResource("1_g5eeq")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gptl"]
+atlas = ExtResource("1_g5eeq")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur74x"]
+atlas = ExtResource("1_g5eeq")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cf3ba"]
+atlas = ExtResource("2_vuxh5")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxjbg"]
+atlas = ExtResource("2_vuxh5")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgmtj"]
+atlas = ExtResource("2_vuxh5")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5cbr"]
+atlas = ExtResource("2_vuxh5")
+region = Rect2(48, 0, 16, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gugs7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iobro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gptl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur74x")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cf3ba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxjbg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgmtj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5cbr")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
