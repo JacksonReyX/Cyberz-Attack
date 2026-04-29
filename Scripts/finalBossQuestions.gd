@@ -15,7 +15,7 @@ extends Control
 @onready var rightTimer = $"../rightTimer"
 @onready var wrongTimer = $"../wrongTimer"
 
-var Items : Array = read_json_file("res://Assets/Questions/fisherQuestions.json")
+var Items : Array = read_json_file("res://Assets/Questions/finalBossQuestions.json")
 var item : Dictionary
 var index_item : int 
 var used_indices : Array = [] # Tracks questions already asked
@@ -88,7 +88,7 @@ func _on_button_pressed() -> void:
 
 	if isCorrect:
 		correctCount += 1
-		enemyHealth -= 30
+		enemyHealth -= 10
 		score += 10
 		correctSFX.play()
 		rightAnswer.visible = true

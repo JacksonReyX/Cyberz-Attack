@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=90 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
@@ -57,12 +57,15 @@
 [ext_resource type="PackedScene" uid="uid://cw41mv4uqlnt" path="res://Scenes/sabella/bat1.tscn" id="55_7bgvj"]
 [ext_resource type="PackedScene" uid="uid://tds5j2t07fpe" path="res://Scenes/JacksonStuff/WitchEnemy.tscn" id="55_e8ppr"]
 [ext_resource type="PackedScene" uid="uid://cj1decmy7gali" path="res://Scenes/sabella/spider1.tscn" id="56_6ygf5"]
+[ext_resource type="PackedScene" uid="uid://bh2sy3do6mjy2" path="res://Scenes/JacksonStuff/FinalBoss.tscn" id="56_ncqug"]
 [ext_resource type="PackedScene" uid="uid://bdrdi3kqaoiv3" path="res://Scenes/sabella/spider2.tscn" id="57_5usby"]
 [ext_resource type="PackedScene" uid="uid://7puia2wfx82s" path="res://Scenes/sabella/spiderweb.tscn" id="58_kqrtd"]
 [ext_resource type="PackedScene" uid="uid://ccr6b1a2ram23" path="res://Scenes/sabella/bat3.tscn" id="59_r46sl"]
 [ext_resource type="PackedScene" uid="uid://ctikdqjam5smm" path="res://Scenes/sabella/guard.tscn" id="60_1lb8d"]
 [ext_resource type="PackedScene" uid="uid://bwij34jk4w03i" path="res://Scenes/sabella/guard2.tscn" id="61_hk3s5"]
+[ext_resource type="PackedScene" uid="uid://xkpdtaveq8i0" path="res://Scenes/JacksonStuff/introGuard.tscn" id="62_fxdmx"]
 [ext_resource type="PackedScene" uid="uid://ct6ka3lfhwoco" path="res://Scenes/KianStuff/Pillar.tscn" id="63_iv0br"]
+[ext_resource type="PackedScene" uid="uid://c0400ev4sf6jf" path="res://Scenes/JacksonStuff/EncryptionGuy.tscn" id="65_bl2jf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
 texture = ExtResource("2_og63f")
@@ -7149,6 +7152,7 @@ position = Vector2(-25, -680)
 position = Vector2(464, -560)
 
 [node name="FisherEnemy" parent="Enemies" instance=ExtResource("32_p1g1e")]
+visible = false
 position = Vector2(-2, -458)
 script = ExtResource("53_c222u")
 
@@ -7182,6 +7186,10 @@ position = Vector2(297, -1428)
 
 [node name="VirusEnemy2" parent="Enemies" instance=ExtResource("54_oeyak")]
 position = Vector2(766, -1231)
+
+[node name="BigOleDragon" parent="Enemies" instance=ExtResource("56_ncqug")]
+position = Vector2(-138, -1644)
+scale = Vector2(2.7848, 1.55351)
 
 [node name="ExtraDecor" type="Node" parent="."]
 
@@ -7282,8 +7290,15 @@ position = Vector2(122, -1496)
 z_index = 8
 position = Vector2(1, -136)
 
+[node name="Guard3" parent="ExtraDecor" instance=ExtResource("62_fxdmx")]
+position = Vector2(0, -24)
+scale = Vector2(0.865844, 0.823855)
+
 [node name="Guard2" parent="ExtraDecor" instance=ExtResource("61_hk3s5")]
 position = Vector2(49, -1168)
+
+[node name="Encyrption" parent="ExtraDecor" instance=ExtResource("65_bl2jf")]
+position = Vector2(0, -439)
 
 [node name="Bat11" parent="ExtraDecor" instance=ExtResource("59_r46sl")]
 position = Vector2(847, -1241)

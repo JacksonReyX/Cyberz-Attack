@@ -1,0 +1,30 @@
+extends Area2D
+
+@onready var textTimer = $"../textTimer"
+@onready var textbox = $Textbox
+
+signal battle_triggered(enemy_node)
+
+# Customize this per enemy type
+var encounter_text = "Oh No A Cyber Securty Dragon\nAnswer it's questions to esacape"
+
+func _ready() -> void:
+	textbox.hide_text()
+	add_to_group("enemies")
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		if GameState.returning_from_battle:
+			return
+
+		var actual_enemy_name = get_parent().name
+		GameState.active_enemy_name = actual_enemy_name
+		GameState.playerPosition = body.global_position
+		GameState.returning_from_battle = true
+
+		textbox.show_text(encounter_text)
+		textTimer.start()
+
+func _on_text_timer_timeout() -> void:
+	textbox.hide_text()
+	get_tree().call_deferred("change_scene_to_file", "res://Scenes/JacksonStuff/finalBattle.tscn")
