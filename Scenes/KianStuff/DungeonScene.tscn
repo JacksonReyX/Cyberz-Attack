@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=88 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
@@ -62,6 +62,7 @@
 [ext_resource type="PackedScene" uid="uid://ccr6b1a2ram23" path="res://Scenes/sabella/bat3.tscn" id="59_r46sl"]
 [ext_resource type="PackedScene" uid="uid://ctikdqjam5smm" path="res://Scenes/sabella/guard.tscn" id="60_1lb8d"]
 [ext_resource type="PackedScene" uid="uid://bwij34jk4w03i" path="res://Scenes/sabella/guard2.tscn" id="61_hk3s5"]
+[ext_resource type="PackedScene" uid="uid://xkpdtaveq8i0" path="res://Scenes/JacksonStuff/introGuard.tscn" id="62_fxdmx"]
 [ext_resource type="PackedScene" uid="uid://ct6ka3lfhwoco" path="res://Scenes/KianStuff/Pillar.tscn" id="63_iv0br"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
@@ -7281,6 +7282,10 @@ position = Vector2(122, -1496)
 [node name="Guard" parent="ExtraDecor" instance=ExtResource("60_1lb8d")]
 z_index = 8
 position = Vector2(1, -136)
+
+[node name="Guard3" parent="ExtraDecor" instance=ExtResource("62_fxdmx")]
+position = Vector2(0, -24)
+scale = Vector2(0.865844, 0.823855)
 
 [node name="Guard2" parent="ExtraDecor" instance=ExtResource("61_hk3s5")]
 position = Vector2(49, -1168)

@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=3 uid="uid://xkpdtaveq8i0"]
+
+[ext_resource type="Script" path="res://Scripts/introGuard.gd" id="1_w4kfb"]
+[ext_resource type="PackedScene" uid="uid://boyieidkdxwqg" path="res://Scenes/KianStuff/Textbox.tscn" id="2_egfxn"]
+[ext_resource type="AudioStream" uid="uid://c4ufp64h1choc" path="res://Assets/Audio/Voices/GuardTalk2.wav" id="3_4qt2f"]
+[ext_resource type="Texture2D" uid="uid://dy6gaei37m1w3" path="res://Assets/PlayerModels/oldmanSprite.png" id="4_y1jvt"]
+[ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://Assets/Menus/Buttons/prompt_normal.png" id="5_w1pwo"]
+[ext_resource type="Texture2D" uid="uid://dcbkf5ybaaim4" path="res://Scenes/sabella/images/Pixelart arrow icon pack 1.0.png" id="6_euwix"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t1hnn"]
+radius = 10.3226
+height = 23.2727
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8qqg"]
+atlas = ExtResource("6_euwix")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhnoc"]
+atlas = ExtResource("6_euwix")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3x6ci"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8qqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhnoc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nrvcs"]
+radius = 5.0
+height = 20.0
+
+[node name="Guard" type="Area2D"]
+script = ExtResource("1_w4kfb")
+
+[node name="Textbox" parent="." instance=ExtResource("2_egfxn")]
+typing_sound_2 = ExtResource("3_4qt2f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -6)
+scale = Vector2(0.0132598, 0.0105114)
+texture = ExtResource("4_y1jvt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -7)
+scale = Vector2(0.96875, 1.03125)
+shape = SubResource("CapsuleShape2D_t1hnn")
+
+[node name="Eprompt" type="Sprite2D" parent="."]
+position = Vector2(-1, -22)
+scale = Vector2(0.36875, 0.304167)
+texture = ExtResource("5_w1pwo")
+
+[node name="arrow" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -25)
+rotation = 3.12414
+scale = Vector2(0.484912, 0.560881)
+sprite_frames = SubResource("SpriteFrames_3x6ci")
+autoplay = "default"
+frame_progress = 0.798033
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, -7)
+shape = SubResource("CapsuleShape2D_nrvcs")
