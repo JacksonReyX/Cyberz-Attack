@@ -7289,7 +7289,7 @@ z_index = 8
 position = Vector2(1, -136)
 
 [node name="Guard2" parent="ExtraDecor" instance=ExtResource("61_hk3s5")]
-position = Vector2(-152, -1645)
+position = Vector2(-165, -1657)
 
 [node name="Bat11" parent="ExtraDecor" instance=ExtResource("59_r46sl")]
 position = Vector2(847, -1241)
