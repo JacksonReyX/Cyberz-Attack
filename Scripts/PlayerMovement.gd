@@ -9,6 +9,14 @@ const WIZARD_OUTFIT_FRAMES := preload("res://Assets/Characters/CharactersAnimati
 const WIZARD_BODY_FRAMES := preload("res://Assets/Characters/CharactersAnimations/WizardBodyFrames.tres")
 const WIZARD_EYES_FRAMES := preload("res://Assets/Characters/CharactersAnimations/WizardEyesFrames.tres")
 const WIZARD_ACCESSORY_FRAMES := preload("res://Assets/Characters/CharactersAnimations/WizardAccessoryFrames.tres")
+const DEMON_OUTFIT_FRAMES := preload("res://Assets/Characters/CharactersAnimations/MonsterOutfitFrames.tres")
+const DEMON_BODY_FRAMES := preload("res://Assets/Characters/CharactersAnimations/MonsterBodyFrames.tres")
+const DEMON_EYES_FRAMES := preload("res://Assets/Characters/CharactersAnimations/MonsterEyesFrames.tres")
+const DEMON_ACCESSORY_FRAMES := preload("res://Assets/Characters/CharactersAnimations/MonsterAccessoryFrames.tres")
+const HUMAN_OUTFIT_FRAMES := preload("res://Assets/Characters/CharactersAnimations/HumanOutfitFrames.tres")
+const HUMAN_BODY_FRAMES := preload("res://Assets/Characters/CharactersAnimations/HumanBodyFrames.tres")
+const HUMAN_EYES_FRAMES := preload("res://Assets/Characters/CharactersAnimations/HumanEyesFrames.tres")
+const HUMAN_HAIR_FRAMES := preload("res://Assets/Characters/CharactersAnimations/HumanHairFrames.tres")
 
 @onready var visuals: Node2D = $Visuals
 @onready var body: AnimatedSprite2D = %Body
@@ -47,9 +55,6 @@ func _physics_process(_delta: float) -> void:
 
 func apply_customization() -> void:
 	var cname: String = PlayerCustomization.selected_class
-	print("apply_customization called with class: ", cname)
-	print("outfit node: ", outfit)
-	print("outfit frames: ", outfit.sprite_frames if outfit else "NULL NODE")
 
 	body.visible = false
 	eyes.visible = false
@@ -75,9 +80,29 @@ func apply_customization() -> void:
 			eyes.visible = true
 			accessory.visible = true
 			active_layers = [outfit, body, eyes, accessory]
+		"Demon":
+			outfit.sprite_frames = DEMON_OUTFIT_FRAMES
+			body.sprite_frames = DEMON_BODY_FRAMES
+			eyes.sprite_frames = DEMON_EYES_FRAMES
+			accessory.sprite_frames = DEMON_ACCESSORY_FRAMES
+			outfit.visible = true
+			body.visible = true
+			eyes.visible = true
+			accessory.visible = true
+			active_layers = [outfit, body, eyes, accessory]
+		"Human":
+			outfit.sprite_frames = HUMAN_OUTFIT_FRAMES
+			body.sprite_frames = HUMAN_BODY_FRAMES
+			eyes.sprite_frames = HUMAN_EYES_FRAMES
+			hair.sprite_frames = HUMAN_HAIR_FRAMES
+			outfit.visible = true
+			body.visible = true
+			eyes.visible = true
+			hair.visible = true
+			active_layers = [outfit, body, eyes, hair]
 
 	play_all("idle")
-	
+
 	outfit.modulate = PlayerCustomization.color_outfit
 	accessory.modulate = PlayerCustomization.color_accessory
 	body.modulate = PlayerCustomization.color_body

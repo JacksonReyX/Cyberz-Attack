@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://begbgcyic600l"]
+
+[ext_resource type="Texture2D" uid="uid://d3qwqt2pm4ir7" path="res://Assets/Characters/CharactersAnimations/human_hair_idle.png" id="1_0qkqv"]
+[ext_resource type="Texture2D" uid="uid://xgt84ubhjadm" path="res://Assets/Characters/CharactersAnimations/human_hair_run.png" id="2_s1sk3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hqrm"]
+atlas = ExtResource("1_0qkqv")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clrgg"]
+atlas = ExtResource("1_0qkqv")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewwg8"]
+atlas = ExtResource("1_0qkqv")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahm4n"]
+atlas = ExtResource("1_0qkqv")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybtmn"]
+atlas = ExtResource("2_s1sk3")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqo5l"]
+atlas = ExtResource("2_s1sk3")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3c85"]
+atlas = ExtResource("2_s1sk3")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ulg8"]
+atlas = ExtResource("2_s1sk3")
+region = Rect2(48, 0, 16, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hqrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clrgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewwg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahm4n")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybtmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqo5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3c85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ulg8")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]

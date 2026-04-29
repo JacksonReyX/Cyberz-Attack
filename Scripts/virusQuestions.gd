@@ -18,32 +18,43 @@ extends Control
 
 var Items : Array = read_json_file("res://Assets/Questions/virusQuestions.json")
 var item : Dictionary
-var index_item : int = randi_range(0,1)
-var correctCount : float  = 0
-var isCorrect : Variant = null 
+var index_item : int 
+var used_indices : Array = [] # Tracks questions already asked
+var correctCount : float = 0
+var isCorrect : Variant = null
 var healthPercent : int = 100
 var enemyHealth : int = 100
 var score : int = 0
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
+	pick_new_question() # Initial pick
 	refresh_scene()
 
+func pick_new_question():
+	# If we ran out of questions, clear the list or handle endgame
+	if used_indices.size() >= Items.size():
+		used_indices.clear() # Optional: Reset if you want to loop
 	
+	var new_index = randi() % Items.size()
+	while used_indices.has(new_index):
+		new_index = randi() % Items.size()
+	
+	index_item = new_index
+	used_indices.append(index_item)
+
 func refresh_scene():
-	# 1. ALWAYS update the text labels first so the player sees the 0%
 	health.text = str(healthPercent) + "%"
 	enemyHealthBar.text = str(enemyHealth) + "%"
 	
-	var greet
 	if enemyHealth <= 0:
 		enemyHealthBar.text = "0%" 
-		
 		ListItem.hide()
-		greet = "Congratulations, You Win!" # Fixed spelling too :)
-		DisplayText.text = "{greet} ! Your Score is {score}".format({"greet": greet, "score": score})
+		RestartButton.disabled = true
+		var greet = "Congratulations, You Win!"
+		DisplayText.text = greet
 		winTimer.start()
 	elif healthPercent <= 0:
-		# Handle player death here if needed
+		RestartButton.disabled = true
 		health.text = "0%"
 		DisplayText.text = "Game Over"
 		deathTimer.start()
@@ -52,38 +63,19 @@ func refresh_scene():
 		
 func show_questions():
 	ListItem.show()
-	ListItem.clear()
 	
-	# Safety check for index out of bounds
-	item = Items[index_item]
-	
-	DisplayText.text = item.question
-	var options = item.options
-	for option in options:
-		ListItem.add_item(option)
-		
-		
-func show_results():
-	ListItem.hide()
-	#RestartButton.show()
-	var score = round(correctCount / item.size() * 100)
-	var greet
-	if enemyHealth <= 0:
-		greet = "Congraduations, You Win!"
-		#winTimer.start()
-	else:
-		greet = "Oh no"
-	DisplayText.text = "{greet} ! Your Score is {score}".format({"greet": greet, "score": score})
-	
+	if ListItem.item_count == 0 or DisplayText.text != Items[index_item].question:
+		ListItem.clear()
+		item = Items[index_item]
+		DisplayText.text = item.question
+		for option in item.options:
+			ListItem.add_item(option)
 	
 func read_json_file(path):
+	if not FileAccess.file_exists(path): return []
 	var file = FileAccess.open(path, FileAccess.READ)
-	var text = file.get_as_text()
-	var json_content = JSON.parse_string(text)
-	file.close()
-	print(json_content)
+	var json_content = JSON.parse_string(file.get_as_text())
 	return json_content
-
 
 func _on_item_list_item_selected(index: int) -> void:
 	if index == item.correctIndex:
@@ -91,29 +83,33 @@ func _on_item_list_item_selected(index: int) -> void:
 	else:
 		isCorrect = false
 	buttonFX.play()
-	
-
 
 func _on_button_pressed() -> void:
+	if isCorrect == null: return
+
 	if isCorrect:
 		correctCount += 1
-		enemyHealth -= 60
-		index_item = randi_range(0,1)
+		enemyHealth -= 30
 		score += 10
 		correctSFX.play()
 		rightAnswer.visible = true
 		rightTimer.start()
+		
+		ListItem.clear()
+		pick_new_question()
 	else:
+		var selected_indices = ListItem.get_selected_items()
+		if selected_indices.size() > 0:
+			var idx = selected_indices[0]
+			ListItem.set_item_disabled(idx, true)
+			ListItem.set_item_custom_fg_color(idx, Color(0.5, 0.2, 0.2, 1.0)) # Dark Red
+		
 		incorrectSFX.play()
-		#index_item = randi_range(0,1)
 		healthPercent -= 20
 		wrongAnswer.visible = true
 		wrongTimer.start()
-		if(score > 5):
-			score -= 5
-		if(healthPercent <= 0):
-			DisplayText.text = "Game Over"
-			deathTimer.start()
+		if score > 5: score -= 5
+		
 	isCorrect = null 
 	ListItem.deselect_all()
 	refresh_scene()

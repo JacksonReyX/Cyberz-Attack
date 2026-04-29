@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://68cpajcw1236"]
+
+[ext_resource type="Texture2D" uid="uid://cu6dhevpdtam1" path="res://Assets/Characters/CharactersAnimations/monster_accessory_idle.png" id="1_elxu7"]
+[ext_resource type="Texture2D" uid="uid://b2yw1o4tlbml4" path="res://Assets/Characters/CharactersAnimations/monster_accessory_run.png" id="2_mipry"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0f31"]
+atlas = ExtResource("1_elxu7")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx3ce"]
+atlas = ExtResource("1_elxu7")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5atc"]
+atlas = ExtResource("1_elxu7")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ml4fw"]
+atlas = ExtResource("1_elxu7")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5l2k"]
+atlas = ExtResource("2_mipry")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0be1e"]
+atlas = ExtResource("2_mipry")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egsdw"]
+atlas = ExtResource("2_mipry")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3uxey"]
+atlas = ExtResource("2_mipry")
+region = Rect2(48, 0, 16, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0f31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rx3ce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5atc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ml4fw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5l2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0be1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egsdw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3uxey")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]

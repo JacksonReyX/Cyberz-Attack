@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bh2sy3do6mjy2"]
+
+[ext_resource type="Script" path="res://Scripts/finalBossBattleTrigger.gd" id="1_y4ar0"]
+[ext_resource type="Texture2D" uid="uid://cua311tu4ib8s" path="res://Assets/PlayerModels/scaryDragon.png" id="2_78r02"]
+[ext_resource type="PackedScene" uid="uid://boyieidkdxwqg" path="res://Scenes/KianStuff/Textbox.tscn" id="3_s31qo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8l1k"]
+size = Vector2(44, 29)
+
+[node name="BigOleDragon" type="Node2D" groups=["enemies"]]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-10, 1)
+script = ExtResource("1_y4ar0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(9, 3)
+scale = Vector2(0.0303922, 0.0243939)
+texture = ExtResource("2_78r02")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(11, 1.5)
+shape = SubResource("RectangleShape2D_h8l1k")
+
+[node name="Textbox" parent="Area2D" instance=ExtResource("3_s31qo")]
+
+[node name="textTimer" type="Timer" parent="." groups=["enemies"]]
+wait_time = 4.849
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="timeout" from="textTimer" to="Area2D" method="_on_text_timer_timeout"]
