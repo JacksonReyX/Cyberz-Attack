@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://bjnvpqdwgvp4f"]
+
+[ext_resource type="Texture2D" uid="uid://8ebq53ghaqbi" path="res://Assets/Characters/CharactersAnimations/monster_body_idle.png" id="1_u6oa0"]
+[ext_resource type="Texture2D" uid="uid://cv84h48ltoqa" path="res://Assets/Characters/CharactersAnimations/monster_body_run.png" id="2_l7d38"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lho6v"]
+atlas = ExtResource("1_u6oa0")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pynt"]
+atlas = ExtResource("1_u6oa0")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nw4g"]
+atlas = ExtResource("1_u6oa0")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gap2y"]
+atlas = ExtResource("1_u6oa0")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3nhw"]
+atlas = ExtResource("2_l7d38")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orp4c"]
+atlas = ExtResource("2_l7d38")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0fkx"]
+atlas = ExtResource("2_l7d38")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcwrh"]
+atlas = ExtResource("2_l7d38")
+region = Rect2(48, 0, 16, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lho6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pynt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nw4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gap2y")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3nhw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orp4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0fkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcwrh")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]

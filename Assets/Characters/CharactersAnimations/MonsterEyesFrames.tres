@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://dr1a6gvoudk7j"]
+
+[ext_resource type="Texture2D" uid="uid://h8mbjukbbtp1" path="res://Assets/Characters/CharactersAnimations/monster_eyes_idle.png" id="1_xebhl"]
+[ext_resource type="Texture2D" uid="uid://dagbr6qjuep6d" path="res://Assets/Characters/CharactersAnimations/monster_eyes_run.png" id="2_py1io"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqsuq"]
+atlas = ExtResource("1_xebhl")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wpes"]
+atlas = ExtResource("1_xebhl")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3iga2"]
+atlas = ExtResource("1_xebhl")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_notfe"]
+atlas = ExtResource("1_xebhl")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6exo"]
+atlas = ExtResource("2_py1io")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_huvfr"]
+atlas = ExtResource("2_py1io")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmg8d"]
+atlas = ExtResource("2_py1io")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_004vd"]
+atlas = ExtResource("2_py1io")
+region = Rect2(48, 0, 16, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqsuq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wpes")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3iga2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_notfe")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6exo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_huvfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmg8d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_004vd")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]

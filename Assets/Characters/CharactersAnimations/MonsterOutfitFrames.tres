@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://dhjm0mi2767og"]
+
+[ext_resource type="Texture2D" uid="uid://bob66h6irrqxg" path="res://Assets/Characters/CharactersAnimations/monster_outfit_idle.png" id="1_d6mu2"]
+[ext_resource type="Texture2D" uid="uid://cflriywk2wqsg" path="res://Assets/Characters/CharactersAnimations/monster_outfit_run.png" id="2_nqib6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdmox"]
+atlas = ExtResource("1_d6mu2")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o418r"]
+atlas = ExtResource("1_d6mu2")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmd8g"]
+atlas = ExtResource("1_d6mu2")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eompq"]
+atlas = ExtResource("1_d6mu2")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ob4d"]
+atlas = ExtResource("2_nqib6")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjtqd"]
+atlas = ExtResource("2_nqib6")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_804oc"]
+atlas = ExtResource("2_nqib6")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0pi6"]
+atlas = ExtResource("2_nqib6")
+region = Rect2(48, 0, 16, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdmox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o418r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmd8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eompq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ob4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjtqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_804oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0pi6")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]

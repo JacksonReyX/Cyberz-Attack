@@ -284,10 +284,10 @@ anchors_preset = 0
 
 [node name="SwatchHolder" type="TextureRect" parent="CanvasLayer/ContentStack"]
 layout_mode = 0
-offset_left = 330.0
-offset_top = 152.0
-offset_right = 434.0
-offset_bottom = 232.0
+offset_left = 326.0
+offset_top = 148.0
+offset_right = 438.0
+offset_bottom = 236.0
 texture = ExtResource("35_7pou6")
 
 [node name="HairPanel" type="Control" parent="CanvasLayer/ContentStack"]

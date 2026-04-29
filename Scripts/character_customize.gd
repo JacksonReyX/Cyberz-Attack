@@ -1,5 +1,11 @@
 extends Control
 
+# Human
+const HUMAN_HAIR := preload("res://Assets/Characters/Human/HumanHair.png")
+const HUMAN_BODY := preload("res://Assets/Characters/Human/HumanBody.png")
+const HUMAN_OUTFIT := preload("res://Assets/Characters/Human/HumanOutfit.png")
+const HUMAN_EYES := preload("res://Assets/Characters/Human/HumanEyes.png")
+
 # Knight
 const KNIGHT_OUTFIT := preload("res://Assets/Characters/Knight/KnightOutfit.png")
 const KNIGHT_ACCESSORY := preload("res://Assets/Characters/Knight/KnightAccessory.png")
@@ -10,17 +16,11 @@ const WIZARD_OUTFIT := preload("res://Assets/Characters/Wizard/WizardOutfit.png"
 const WIZARD_EYES := preload("res://Assets/Characters/Wizard/WizardEyes.png")
 const WIZARD_ACCESSORY := preload("res://Assets/Characters/Wizard/WizardAccessory.png")
 
-# Monster
-const MONSTER_BODY := preload("res://Assets/Characters/Monster/MonsterBody.png")
-const MONSTER_OUTFIT := preload("res://Assets/Characters/Monster/MonsterOutfit.png")
-const MONSTER_EYES := preload("res://Assets/Characters/Monster/MonsterEyes.png")
-const MONSTER_ACCESSORY := preload("res://Assets/Characters/Monster/MonsterAccessory.png")
-
-# Human
-const HUMAN_HAIR := preload("res://Assets/Characters/Human/HumanHair.png")
-const HUMAN_BODY := preload("res://Assets/Characters/Human/HumanBody.png")
-const HUMAN_OUTFIT := preload("res://Assets/Characters/Human/HumanOutfit.png")
-const HUMAN_EYES := preload("res://Assets/Characters/Human/HumanEyes.png")
+# Demon
+const DEMON_BODY := preload("res://Assets/Characters/Monster/MonsterBody.png")
+const DEMON_OUTFIT := preload("res://Assets/Characters/Monster/MonsterOutfit.png")
+const DEMON_EYES := preload("res://Assets/Characters/Monster/MonsterEyes.png")
+const DEMON_ACCESSORY := preload("res://Assets/Characters/Monster/MonsterAccessory.png")
 
 @onready var body: Sprite2D = %Body
 @onready var outfit: Sprite2D = %Outfit
@@ -58,7 +58,7 @@ const HUMAN_EYES := preload("res://Assets/Characters/Human/HumanEyes.png")
 # Item shop scene path
 @export_file("*.tscn") var item_shop_scene := "res://Scenes/sabella/ItemShop.tscn"
 
-var classes := ["Human", "Knight", "Wizard", "Demon", "Knight 2", "Wizard 2", "Witch"]
+var classes := ["Human", "Knight", "Wizard", "Demon"]
 var class_index := 0
 
 func _ready() -> void:
@@ -153,12 +153,6 @@ func _is_class_unlocked(cname: String) -> bool:
 	match cname:
 		"Human", "Knight", "Wizard", "Demon":
 			return true
-		"Knight 2":
-			return "skin2" in GameState.owned_skins
-		"Wizard 2":
-			return "skin1" in GameState.owned_skins
-		"Witch":
-			return "skin3" in GameState.owned_skins
 	return false
 
 func _apply_class() -> void:
@@ -181,7 +175,6 @@ func _apply_class() -> void:
 			eyes.texture = HUMAN_EYES
 			accessory.texture = null
 			_set_tab_locked(accessory_tab, true)
-		
 		"Knight":
 			body.texture = null
 			eyes.texture = null
@@ -199,42 +192,12 @@ func _apply_class() -> void:
 			accessory.texture = WIZARD_ACCESSORY
 			_set_tab_locked(hair_tab, true)
 		"Demon":
-			body.texture = MONSTER_BODY
-			eyes.texture = MONSTER_EYES
+			body.texture = DEMON_BODY
+			eyes.texture = DEMON_EYES
 			hair.texture = null
-			outfit.texture = MONSTER_OUTFIT
-			accessory.texture = MONSTER_ACCESSORY
+			outfit.texture = DEMON_OUTFIT
+			accessory.texture = DEMON_ACCESSORY
 			_set_tab_locked(hair_tab, true)
-		"Knight 2":
-			body.texture = null
-			eyes.texture = null
-			hair.texture = null
-			outfit.texture = preload("res://assets/PlayerModels/Knight2.png")
-			accessory.texture = null
-			_set_tab_locked(hair_tab, true)
-			_set_tab_locked(body_tab, true)
-			_set_tab_locked(eyes_tab, true)
-			_set_tab_locked(accessory_tab, true)
-		"Wizard 2":
-			body.texture = null
-			eyes.texture = null
-			hair.texture = null
-			outfit.texture = preload("res://assets/PlayerModels/Wizard.png")
-			accessory.texture = null
-			_set_tab_locked(hair_tab, true)
-			_set_tab_locked(body_tab, true)
-			_set_tab_locked(eyes_tab, true)
-			_set_tab_locked(accessory_tab, true)
-		"Witch":
-			body.texture = null
-			eyes.texture = null
-			hair.texture = null
-			outfit.texture = preload("res://assets/PlayerModels/Witch.png")
-			accessory.texture = null
-			_set_tab_locked(hair_tab, true)
-			_set_tab_locked(body_tab, true)
-			_set_tab_locked(eyes_tab, true)
-			_set_tab_locked(accessory_tab, true)
 
 	# If current tab is now locked switch to first unlocked tab
 	var current_selected = tabs.filter(func(t): return t.button_pressed)
