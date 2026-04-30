@@ -1,0 +1,149 @@
+[gd_scene load_steps=25 format=3 uid="uid://dqj1b2s7eof37"]
+
+[ext_resource type="Script" path="res://Scripts/guard_3.gd" id="1_3vqbd"]
+[ext_resource type="Texture2D" uid="uid://brce01udrc8lu" path="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Mage_Idle_1.png" id="1_iojye"]
+[ext_resource type="Texture2D" uid="uid://cw67tec4dfc65" path="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Mage_Idle_2.png" id="2_ph31s"]
+[ext_resource type="Texture2D" uid="uid://b5ei1v7msknlb" path="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Mage_Idle_3.png" id="3_v8wv8"]
+[ext_resource type="Texture2D" uid="uid://y6wsqqwthjak" path="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Mage_Idle_4.png" id="4_emnlw"]
+[ext_resource type="Texture2D" uid="uid://covol255eq4kj" path="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Mage_Walk_1.png" id="5_ou3o5"]
+[ext_resource type="Texture2D" uid="uid://chjx7jred7bca" path="res://Scenes/sabella/Fantasy RPG NPCs - Individuel Frames/Fantasy RPG NPCs - Individuel Frames/All/Mage_Walk_2.png" id="6_psjb1"]
+[ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://Assets/Menus/Buttons/prompt_normal.png" id="7_7k281"]
+[ext_resource type="Texture2D" uid="uid://dcbkf5ybaaim4" path="res://Scenes/sabella/images/Pixelart arrow icon pack 1.0.png" id="7_u8pi1"]
+[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="8_vqauy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ip840"]
+atlas = ExtResource("1_iojye")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hasnx"]
+atlas = ExtResource("2_ph31s")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxjlg"]
+atlas = ExtResource("3_v8wv8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea0mk"]
+atlas = ExtResource("4_emnlw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5b8f"]
+atlas = ExtResource("5_ou3o5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06t0s"]
+atlas = ExtResource("6_psjb1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ypcf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ip840")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hasnx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxjlg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea0mk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5b8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06t0s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_332ju"]
+height = 26.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_st5jc"]
+atlas = ExtResource("7_u8pi1")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrckf"]
+atlas = ExtResource("7_u8pi1")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wmnt"]
+atlas = ExtResource("7_u8pi1")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixx5m"]
+atlas = ExtResource("7_u8pi1")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_epjoj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_st5jc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrckf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wmnt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ixx5m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_66w2s"]
+height = 24.0
+
+[node name="Guard3" type="Area2D"]
+script = ExtResource("1_3vqbd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -5)
+sprite_frames = SubResource("SpriteFrames_8ypcf")
+autoplay = "default"
+frame_progress = 0.809354
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_332ju")
+
+[node name="Eprompt" type="Sprite2D" parent="."]
+position = Vector2(0.4, -13)
+scale = Vector2(0.3695, 0.304)
+texture = ExtResource("7_7k281")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -48.0
+offset_top = -25.0
+offset_right = 437.0
+offset_bottom = 30.0
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/font = ExtResource("8_vqauy")
+text = "Dungeon cleared. 
+You outsmarted the cyber threats!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="arrow" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+rotation = 3.12414
+scale = Vector2(0.483042, 0.561)
+sprite_frames = SubResource("SpriteFrames_epjoj")
+autoplay = "default"
+frame_progress = 0.618593
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 1)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("CapsuleShape2D_66w2s")
