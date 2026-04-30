@@ -59,11 +59,27 @@ stretch_mode = 4
 layout_mode = 0
 offset_left = 158.0
 offset_top = 55.0
-offset_right = 274.0
-offset_bottom = 63.0
+offset_right = 296.0
+offset_bottom = 74.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_ttgnl")
 theme_override_font_sizes/font_size = 8
-text = "Nothing Here Yet"
+text = "In thy relentless there dungen lie many terroring cyber threats.  Seeking to take your data doth thou still endeavor on this treacherous journey?
+
+May you find the reward of the end worth your oddyssey I hope you find the knowledge worthy to take beyond and into the mortal realm."
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 350.0
+offset_top = 55.0
+offset_right = 488.0
+offset_bottom = 272.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_ttgnl")
+theme_override_font_sizes/font_size = 8
+text = "Do not fret as the dungen dwellars provides thee with guidance and wisdom. Such wisdom may win for your trials and tribulations.
+
+If you seek more you may find more in the end with potions and coins alike, but alas thee riches will not carry on outside, which not matter, as the knowledge gained is far more invaluable"
+autowrap_mode = 2
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
