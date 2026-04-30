@@ -88,7 +88,7 @@ func _on_button_pressed() -> void:
 
 	if isCorrect:
 		correctCount += 1
-		enemyHealth -= 10
+		enemyHealth -= 14
 		score += 10
 		correctSFX.play()
 		rightAnswer.visible = true
