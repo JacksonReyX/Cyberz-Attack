@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var enemy_sprite: AnimatedSprite2D = $EnemySection/EnemySprite
+@onready var enemy_sprite = $EnemySection/EnemySprite
 @onready var enemy_name_label: Label = $EnemySection/EnemyNameLabel
 @onready var question_label: Label = $QuestionSection/QuestionBox/QuestionLabel
 @onready var feedback_label: Label = $QuestionSection/FeedbackBox/Label

@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://c1qwr34in1lv6"]
+[gd_scene load_steps=46 format=3 uid="uid://c1qwr34in1lv6"]
 
 [ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://Assets/Menus/Buttons/BackHover.png" id="1_d061v"]
 [ext_resource type="Script" path="res://Scripts/character_customize.gd" id="1_ogjvl"]
@@ -38,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://dxa1b3vqs58s" path="res://Assets/Menus/Card/AccessoryHover.png" id="32_hjmbo"]
 [ext_resource type="Texture2D" uid="uid://ccnae655cne6r" path="res://Assets/Menus/Card/AccessoryUnselected.png" id="33_egsed"]
 [ext_resource type="Texture2D" uid="uid://b0enksl88ocwi" path="res://Assets/Menus/Card/SwatchHolder.png" id="35_7pou6"]
+[ext_resource type="Texture2D" uid="uid://cyck023aekqeb" path="res://Assets/Menus/Card/AccessoryLocked.png" id="37_rac7a"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_35nb7"]
 texture = ExtResource("1_y3noa")
@@ -277,6 +278,7 @@ button_group = SubResource("ButtonGroup_pwsf3")
 texture_normal = ExtResource("33_egsed")
 texture_pressed = ExtResource("31_gbnaj")
 texture_hover = ExtResource("32_hjmbo")
+texture_disabled = ExtResource("37_rac7a")
 
 [node name="ContentStack" type="Control" parent="CanvasLayer"]
 layout_mode = 3

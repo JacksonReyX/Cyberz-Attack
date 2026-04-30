@@ -7,13 +7,13 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_j3vuw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v7t32"]
-radius = 16.0
+radius = 26.0
 
 [node name="FisherEnemy" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_t3v7c")
-frame_progress = 0.0842776
+frame_progress = 0.927182
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -28,8 +28,8 @@ enemy_name_override = "The Phisherman"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_v7t32")
 
+[node name="Textbox" parent="Area2D" instance=ExtResource("3_dum8k")]
+
 [node name="textTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
-
-[node name="Textbox" parent="." instance=ExtResource("3_dum8k")]

@@ -1,12 +1,20 @@
 extends Area2D
 
-@export var encounter_text: String = "I need your clicks"
+@export var encounter_text: String = ""
 @export var enemy_name_override: String = "Phisherman"
 
 @onready var textTimer: Timer = $"../textTimer"
-@onready var textbox = $"../Textbox"
+@onready var textbox = $Textbox
 
 func _ready() -> void:
+	add_to_group("enemies")
+	body_entered.connect(_on_body_entered)
+	textTimer.timeout.connect(_on_text_timer_timeout)
+	print("My path: ", get_path())
+	print("Parent: ", get_parent().name)
+	for child in get_parent().get_children():
+		print("  child: ", child.name)
+	add_to_group("enemies")
 	textbox.hide_text()
 	add_to_group("enemies")
 

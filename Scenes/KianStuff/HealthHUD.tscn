@@ -23,7 +23,7 @@ heart_empty_texture = ExtResource("3_ab28s")
 
 [node name="HealthBarBackground" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(44, 13.5)
+position = Vector2(47, 17)
 texture = ExtResource("6_g7yiq")
 
 [node name="Segment1" parent="." instance=ExtResource("2_ba0co")]
@@ -76,5 +76,5 @@ position = Vector2(82, 9)
 
 [node name="HeartOverlay" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(10.5, 9)
+position = Vector2(13.5, 12.5)
 texture = ExtResource("3_5m3ug")

@@ -1,15 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://4t63uuj8qyas"]
+[gd_scene load_steps=12 format=3 uid="uid://4t63uuj8qyas"]
 
 [ext_resource type="PackedScene" uid="uid://bh6af5v8500yi" path="res://Scenes/KianStuff/HealthHUD.tscn" id="1_kfys8"]
 [ext_resource type="Script" path="res://Scripts/battle_scene.gd" id="1_xixmo"]
-[ext_resource type="Script" path="res://Scripts/health_hud.gd" id="2_01gox"]
 [ext_resource type="Texture2D" uid="uid://o6p5xc3bxhpu" path="res://Assets/Menus/Card/BattleSceneBackground.png" id="2_041c7"]
 [ext_resource type="Texture2D" uid="uid://4hp2ebkpuftk" path="res://Assets/Menus/Buttons/AnswerChoiceA.png" id="5_olvj4"]
 [ext_resource type="Texture2D" uid="uid://d0jttuc4316cl" path="res://Assets/Menus/Buttons/AnswerChoiceB.png" id="6_l86ro"]
 [ext_resource type="Texture2D" uid="uid://dqhit4deshi7j" path="res://Assets/Menus/Buttons/AnswerChoiceC.png" id="7_f0r5i"]
 [ext_resource type="Texture2D" uid="uid://xhtyfwyumcnb" path="res://Assets/Menus/Buttons/AnswerChoiceD.png" id="8_ckxuq"]
 [ext_resource type="Texture2D" uid="uid://cd5f1x3o0ycbi" path="res://Assets/Menus/Buttons/QuestionBox.png" id="9_cx6cn"]
+[ext_resource type="SpriteFrames" uid="uid://b74nx6skcnvcn" path="res://Assets/Characters/CharactersAnimations/FisherEnemyIdle.tres" id="10_3do02"]
 [ext_resource type="Texture2D" uid="uid://diaki4dmxapdo" path="res://Assets/Menus/Buttons/FeedbackBox.png" id="10_880we"]
+[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="11_7wbir"]
 
 [node name="BattleScene" type="Node2D"]
 script = ExtResource("1_xixmo")
@@ -19,21 +20,51 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_041c7")
 
-[node name="EnemySection" type="Node2D" parent="."]
-
-[node name="EnemySprite" type="AnimatedSprite2D" parent="EnemySection"]
-script = ExtResource("2_01gox")
-
-[node name="EnemyNameLabel" type="Label" parent="EnemySection"]
-offset_right = 40.0
-offset_bottom = 23.0
-
 [node name="PlayerSection" type="Node2D" parent="."]
 position = Vector2(537, 317)
 
 [node name="HealthHud" parent="PlayerSection" instance=ExtResource("1_kfys8")]
 offset_top = 4.0
 offset_bottom = 4.0
+
+[node name="Segment1" parent="PlayerSection/HealthHud" index="1"]
+position = Vector2(19, 16.5)
+
+[node name="Segment2" parent="PlayerSection/HealthHud" index="2"]
+position = Vector2(25, 16.5)
+
+[node name="Segment3" parent="PlayerSection/HealthHud" index="3"]
+position = Vector2(31, 16.5)
+
+[node name="Segment4" parent="PlayerSection/HealthHud" index="4"]
+position = Vector2(37, 16.5)
+
+[node name="Segment5" parent="PlayerSection/HealthHud" index="5"]
+position = Vector2(43, 16.5)
+
+[node name="Segment6" parent="PlayerSection/HealthHud" index="6"]
+position = Vector2(49, 16.5)
+
+[node name="Segment7" parent="PlayerSection/HealthHud" index="7"]
+position = Vector2(55, 16.5)
+
+[node name="Segment8" parent="PlayerSection/HealthHud" index="8"]
+position = Vector2(61, 16.5)
+
+[node name="Segment9" parent="PlayerSection/HealthHud" index="9"]
+position = Vector2(67, 16.5)
+
+[node name="Segment10" parent="PlayerSection/HealthHud" index="10"]
+position = Vector2(73, 16.5)
+
+[node name="Segment11" parent="PlayerSection/HealthHud" index="11"]
+position = Vector2(79, 16.5)
+
+[node name="Segment12" parent="PlayerSection/HealthHud" index="12"]
+position = Vector2(85, 16.5)
+
+[node name="HeartOverlay" parent="PlayerSection/HealthHud" index="13"]
+position = Vector2(13.5, 16.5)
 
 [node name="QuestionSection" type="Control" parent="."]
 layout_mode = 3
@@ -55,6 +86,9 @@ offset_left = 9.0
 offset_top = 9.0
 offset_right = 231.0
 offset_bottom = 71.0
+theme_override_fonts/font = ExtResource("11_7wbir")
+theme_override_font_sizes/font_size = 12
+autowrap_mode = 2
 
 [node name="Answer1" type="TextureButton" parent="QuestionSection"]
 layout_mode = 0
@@ -70,8 +104,12 @@ offset_left = 28.0
 offset_top = 3.0
 offset_right = 115.0
 offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("11_7wbir")
+theme_override_font_sizes/font_size = 6
+autowrap_mode = 2
 
 [node name="Answer2" type="TextureButton" parent="QuestionSection"]
+layout_mode = 0
 offset_left = 403.0
 offset_top = 275.0
 offset_right = 523.0
@@ -84,8 +122,12 @@ offset_left = 28.0
 offset_top = 3.0
 offset_right = 115.0
 offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("11_7wbir")
+theme_override_font_sizes/font_size = 6
+autowrap_mode = 2
 
 [node name="Answer3" type="TextureButton" parent="QuestionSection"]
+layout_mode = 0
 offset_left = 270.0
 offset_top = 318.0
 offset_right = 390.0
@@ -98,8 +140,12 @@ offset_left = 28.0
 offset_top = 3.0
 offset_right = 115.0
 offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("11_7wbir")
+theme_override_font_sizes/font_size = 6
+autowrap_mode = 2
 
 [node name="Answer4" type="TextureButton" parent="QuestionSection"]
+layout_mode = 0
 offset_left = 403.0
 offset_top = 318.0
 offset_right = 523.0
@@ -112,8 +158,12 @@ offset_left = 28.0
 offset_top = 3.0
 offset_right = 115.0
 offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("11_7wbir")
+theme_override_font_sizes/font_size = 6
+autowrap_mode = 2
 
 [node name="FeedbackBox" type="TextureRect" parent="QuestionSection"]
+z_index = 10
 layout_mode = 0
 offset_left = 542.0
 offset_top = 270.0
@@ -122,13 +172,75 @@ offset_bottom = 310.0
 texture = ExtResource("10_880we")
 
 [node name="FeedbackLabel" type="Label" parent="QuestionSection/FeedbackBox"]
+layout_mode = 0
 offset_left = 4.0
 offset_top = 5.0
 offset_right = 76.0
 offset_bottom = 35.0
 
 [node name="EnemyHealthBar" parent="." instance=ExtResource("1_kfys8")]
-offset_left = 16.0
-offset_top = 17.0
-offset_right = 16.0
-offset_bottom = 17.0
+offset_left = 224.0
+offset_top = 41.0
+offset_right = 224.0
+offset_bottom = 41.0
+scale = Vector2(2, 2)
+
+[node name="Segment1" parent="EnemyHealthBar" index="1"]
+position = Vector2(19, 16.5)
+
+[node name="Segment2" parent="EnemyHealthBar" index="2"]
+position = Vector2(25, 16.5)
+
+[node name="Segment3" parent="EnemyHealthBar" index="3"]
+position = Vector2(31, 16.5)
+
+[node name="Segment4" parent="EnemyHealthBar" index="4"]
+position = Vector2(37, 16.5)
+
+[node name="Segment5" parent="EnemyHealthBar" index="5"]
+position = Vector2(43, 16.5)
+
+[node name="Segment6" parent="EnemyHealthBar" index="6"]
+position = Vector2(49, 16.5)
+
+[node name="Segment7" parent="EnemyHealthBar" index="7"]
+position = Vector2(55, 16.5)
+
+[node name="Segment8" parent="EnemyHealthBar" index="8"]
+position = Vector2(61, 16.5)
+
+[node name="Segment9" parent="EnemyHealthBar" index="9"]
+position = Vector2(67, 16.5)
+
+[node name="Segment10" parent="EnemyHealthBar" index="10"]
+position = Vector2(73, 16.5)
+
+[node name="Segment11" parent="EnemyHealthBar" index="11"]
+position = Vector2(79, 16.5)
+
+[node name="Segment12" parent="EnemyHealthBar" index="12"]
+position = Vector2(85, 16.5)
+
+[node name="HeartOverlay" parent="EnemyHealthBar" index="13"]
+position = Vector2(13.5, 16.5)
+
+[node name="EnemySection" type="Node2D" parent="."]
+
+[node name="EnemySprite" type="AnimatedSprite2D" parent="EnemySection"]
+z_index = 10
+position = Vector2(318, 140)
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("10_3do02")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="EnemyNameLabel" type="Label" parent="EnemySection"]
+offset_left = 271.0
+offset_top = 54.0
+offset_right = 311.0
+offset_bottom = 77.0
+theme_override_fonts/font = ExtResource("11_7wbir")
+theme_override_font_sizes/font_size = 8
+
+[editable path="PlayerSection/HealthHud"]
+[editable path="EnemyHealthBar"]
