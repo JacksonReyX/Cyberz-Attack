@@ -32,7 +32,7 @@ func _on_body_entered(body: Node2D) -> void:
 		GameState.active_enemy_name = actual_enemy_name
 
 		var direction_away = (body.global_position - global_position).normalized()
-		GameState.playerPosition = body.global_position + direction_away * 40
+		GameState.playerPosition = body.global_position + direction_away * 5
 
 		GameState.returning_from_battle = true
 

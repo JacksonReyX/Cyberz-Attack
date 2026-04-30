@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=97 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
@@ -52,7 +52,6 @@
 [ext_resource type="PackedScene" uid="uid://cw41mv4uqlnt" path="res://Scenes/sabella/bat1.tscn" id="55_7bgvj"]
 [ext_resource type="PackedScene" uid="uid://cj1decmy7gali" path="res://Scenes/sabella/spider1.tscn" id="56_6ygf5"]
 [ext_resource type="PackedScene" uid="uid://dgivop1h5lvjw" path="res://Scenes/KianStuff/RansomwareEnemy.tscn" id="56_d3qvj"]
-[ext_resource type="PackedScene" path="res://Scenes/sabella/spider2.tscn" id="57_5usby"]
 [ext_resource type="PackedScene" uid="uid://7puia2wfx82s" path="res://Scenes/sabella/spiderweb.tscn" id="58_kqrtd"]
 [ext_resource type="PackedScene" uid="uid://ccr6b1a2ram23" path="res://Scenes/sabella/bat3.tscn" id="59_r46sl"]
 [ext_resource type="PackedScene" uid="uid://ctikdqjam5smm" path="res://Scenes/sabella/guard.tscn" id="60_1lb8d"]
@@ -7410,9 +7409,6 @@ position = Vector2(151, -1484)
 z_index = 3
 position = Vector2(-90, -1709)
 
-[node name="Spider2" parent="ExtraDecor" instance=ExtResource("57_5usby")]
-position = Vector2(-236, 20)
-
 [node name="Spider1" parent="ExtraDecor" instance=ExtResource("56_6ygf5")]
 z_index = 5
 position = Vector2(153, -169)
@@ -7428,12 +7424,6 @@ position = Vector2(351, -1432)
 
 [node name="Spider8" parent="ExtraDecor" instance=ExtResource("56_6ygf5")]
 position = Vector2(1109, -1688)
-
-[node name="Spider12" parent="ExtraDecor" instance=ExtResource("57_5usby")]
-position = Vector2(435, -1550)
-
-[node name="Spider13" parent="ExtraDecor" instance=ExtResource("57_5usby")]
-position = Vector2(-178, -1423)
 
 [node name="Spiderweb3" parent="ExtraDecor" instance=ExtResource("58_kqrtd")]
 position = Vector2(-254, -678)
