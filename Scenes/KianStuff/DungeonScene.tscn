@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://Scripts/coins_hud.gd" id="9_5yy4f"]
 [ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="11_gyowf"]
 [ext_resource type="PackedScene" uid="uid://wh66v8lxv0la" path="res://Scenes/sabella/key.tscn" id="12_hetau"]
+[ext_resource type="Script" path="res://Scripts/collisionToEndScreen.gd" id="12_lkqhk"]
 [ext_resource type="PackedScene" uid="uid://ce88u41h83qm" path="res://Scenes/sabella/coin.tscn" id="13_q0wdd"]
 [ext_resource type="PackedScene" uid="uid://of2x4eype5rj" path="res://Scenes/sabella/LockedDoor.tscn" id="14_k3ij0"]
 [ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="14_rge1b"]
@@ -6360,6 +6361,12 @@ scale = Vector2(0.23, 0.23)
 theme_override_fonts/font = ExtResource("11_gyowf")
 text = "level 3"
 
+[node name="winTrigger" parent="Level 3" instance=ExtResource("8_5730i")]
+z_index = 3
+position = Vector2(58, -713)
+scale = Vector2(1.36195, 1)
+script = ExtResource("12_lkqhk")
+
 [node name="Interactables" type="Node" parent="."]
 
 [node name="Key" type="Node2D" parent="Interactables"]
@@ -7530,6 +7537,8 @@ position = Vector2(-232, -628)
 [node name="Pillar8" parent="." instance=ExtResource("63_iv0br")]
 z_index = 10
 position = Vector2(312, -564)
+
+[connection signal="body_entered" from="Level 3/winTrigger" to="Level 3/winTrigger" method="_on_body_entered"]
 
 [editable path="HUDLayer/HUDRoot/TopLeftPanel/HealthHud"]
 [editable path="ExtraDecor/Guard"]
