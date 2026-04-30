@@ -58,7 +58,6 @@
 [ext_resource type="PackedScene" uid="uid://tds5j2t07fpe" path="res://Scenes/JacksonStuff/WitchEnemy.tscn" id="55_e8ppr"]
 [ext_resource type="PackedScene" uid="uid://cj1decmy7gali" path="res://Scenes/sabella/spider1.tscn" id="56_6ygf5"]
 [ext_resource type="PackedScene" uid="uid://bh2sy3do6mjy2" path="res://Scenes/JacksonStuff/FinalBoss.tscn" id="56_ncqug"]
-[ext_resource type="PackedScene" uid="uid://bdrdi3kqaoiv3" path="res://Scenes/sabella/spider2.tscn" id="57_5usby"]
 [ext_resource type="PackedScene" uid="uid://7puia2wfx82s" path="res://Scenes/sabella/spiderweb.tscn" id="58_kqrtd"]
 [ext_resource type="PackedScene" uid="uid://ccr6b1a2ram23" path="res://Scenes/sabella/bat3.tscn" id="59_r46sl"]
 [ext_resource type="PackedScene" uid="uid://ctikdqjam5smm" path="res://Scenes/sabella/guard.tscn" id="60_1lb8d"]
@@ -7303,7 +7302,7 @@ position = Vector2(0, -24)
 scale = Vector2(0.865844, 0.823855)
 
 [node name="Guard2" parent="ExtraDecor" instance=ExtResource("61_hk3s5")]
-position = Vector2(-165, -1657)
+position = Vector2(-384, -1856)
 
 [node name="Encyrption" parent="ExtraDecor" instance=ExtResource("65_bl2jf")]
 position = Vector2(0, -439)
@@ -7311,7 +7310,7 @@ position = Vector2(0, -439)
 [node name="Bat11" parent="ExtraDecor" instance=ExtResource("59_r46sl")]
 position = Vector2(847, -1241)
 
-[node name="Guard3" parent="ExtraDecor" instance=ExtResource("62_4juhv")]
+[node name="Guard4" parent="ExtraDecor" instance=ExtResource("62_4juhv")]
 position = Vector2(-755, -2614)
 script = null
 
