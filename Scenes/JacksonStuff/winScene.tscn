@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckayego0btb3w"]
+
+[ext_resource type="Texture2D" uid="uid://c806c0er6kjpx" path="res://Assets/Menus/Info/Book.png" id="1_fs8m0"]
+[ext_resource type="Texture2D" uid="uid://dkta6fl0lsnk3" path="res://Assets/Menus/Buttons/Quit.png" id="2_dblcp"]
+[ext_resource type="Texture2D" uid="uid://ccc0lgx022isv" path="res://Assets/Menus/Buttons/QuitPressed.png" id="3_ylfpl"]
+[ext_resource type="Texture2D" uid="uid://cdjjdpewsvvum" path="res://Assets/Menus/Buttons/QuitHover.png" id="4_t1a6n"]
+[ext_resource type="Script" path="res://Scripts/restartButton.gd" id="5_jt8uv"]
+
+[node name="WinScene" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -260.0
+offset_top = -248.0
+offset_right = -220.0
+offset_bottom = -208.0
+scale = Vector2(15.8267, 11.769)
+color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(60, -25)
+
+[node name="Book" type="Sprite2D" parent="."]
+position = Vector2(-20.2, -27)
+scale = Vector2(2.8, 2.8)
+texture = ExtResource("1_fs8m0")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 2.79999
+offset_top = -178.0
+offset_right = 175.8
+offset_bottom = -1.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 19
+text = "Congraduations
+
+
+Keep your data 
+safe. Stay aware
+and stay safe!
+"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -204.2
+offset_top = -180.0
+offset_right = -31.2
+offset_bottom = 117.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 19
+text = "You have escaped
+the dungeon.
+
+Spread the word
+far and wide. 
+There are many 
+cyber threats 
+lurking the 
+internet
+
+"
+
+[node name="Quit" type="TextureButton" parent="."]
+z_index = 10
+custom_minimum_size = Vector2(124, 60)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 233.0
+offset_top = 76.0
+offset_right = 357.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_dblcp")
+texture_pressed = ExtResource("3_ylfpl")
+texture_hover = ExtResource("4_t1a6n")
+script = ExtResource("5_jt8uv")
+
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]

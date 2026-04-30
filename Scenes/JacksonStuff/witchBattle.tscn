@@ -757,12 +757,12 @@ offset_right = -167.0
 offset_bottom = 156.0
 
 [node name="Label" type="Label" parent="."]
-offset_left = -25.0
+offset_left = -46.0
 offset_top = -90.0
-offset_right = 103.0
+offset_right = 82.0
 offset_bottom = -67.0
 theme_override_font_sizes/font_size = 11
-text = "Fisherman"
+text = "Your friend Alex"
 
 [node name="enemyHealth" type="Label" parent="."]
 offset_left = 266.0

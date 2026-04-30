@@ -1,52 +1,38 @@
 [
-	{
-		"question": "You get an AD for free robux. You love roblox! What do you do?",
-		"options": [
-			"Click on it, Robux are awesome",
-			"Ignore it",
-			"Tell all your friends",
-			"Go to the website to see if it's real or not"
-		],
-		"correctIndex": 1
-	},
-	{
-		"question": "A website make you create a password. Which would be the best option?",
-		"options": [
-			"123ABC",
-			"July082006",
-			"KdH1938--POuM3_8nchd",
-			"iluvmyfriends0938"
-		],
-		"correctIndex": 2
-	},
-	{
-		"question": "You're signing up for a new website, you must enter a username and password\nWhat username and password should you use?",
-		"options": [
-			"The same ones I always use. I remember them",
-			"Super long complicated ones, no one could guess them",
-			"My usual username but a new password",
-			"New username and secure password, but ones I can remember"
-		],
-		"correctIndex": 3
-	},
-	{
-		"question": "You pay with your credit or debit card on a secure website.\nThe website asks if you want to save your card number to make your next transaction faster. What do you do?",
-		"options": [
-			"Save it, the website is secure so my card number is safe",
-			"Don't save because the company employees will use it",
-			"Do not save the card, a data breach would expose your card number",
-			"Look up if ths website has had data breaches before. If not save the data"
-		],
-		"correctIndex": 2
-	},
-	{
-		"question": "You click a link, google says the website is not secure.\nThere is a button that allows you to proceed but it's at your own risk. Do you proceed?",
-		"options": [
-			"Yes, google is just being overly cautious",
-			"No, these websites are mever safe",
-			"Switch browsers and try again",
-			"Research the site and if cources say it is safe then proceed"
-		],
-		"correctIndex": 3
-	}
+  {
+	"question": "You get an AD for free robux. You love roblox! What do you do?",
+	"options": ["Click on it, Robux are awesome", "Ignore it", "Tell all your friends", "Go to the website to see if it's real or not"],
+	"correctIndex": 1
+  },
+  {
+	"question": "A website make you create a password. Which would be the best option?",
+	"options": ["123ABC", "July082006", "KdH1938--POuM3_8nchd", "iluvmyfriends0938"],
+	"correctIndex": 2
+  },
+  {
+	"question": "You're signing up for a new website, you must enter a username and password\nWhat username and password should you use?",
+	"options": ["The same ones I always use. I remember them", "Super long complicated ones, no one could guess them", "My usual username but a new password", "New username and secure password, but ones I can remember"],
+	"correctIndex": 3
+  },
+  {
+	"question": "You pay with your credit or debit card on a secure website.\nThe website asks if you want to save your card number to make your next transaction faster. What do you do?",
+	"options": ["Save it, the website is secure so my card number is safe", "Don't save because the company employees will use it" ,"Do not save the card, a data breach would expose your card number", "Look up if ths website has had data breaches before. If not save the data"],
+	"correctIndex": 2
+  },
+  {
+	"question": "You click a link, google says the website is not secure.\nThere is a button that allows you to proceed but it's at your own risk. Do you proceed?",
+	"options": ["Yes, google is just being overly cautious", "No, these websites are mever safe", "Switch browsers and try again", "Research the site and if sources say it is safe then proceed"],
+	"correctIndex": 3
+  },
+  {
+	"question": "Are passwords usually hashed or encrypted?\nDoes this mean you can retreieve the original data from it?",
+	"options": ["Encrypted, You can't get the original data back", "Encrypted, You can't get the original data back", "Encrypted, You can get the original data back through a key", "Hashed, You can get the original data back through a key"],
+	"correctIndex": 1
+  },
+  {
+	"question": "If you're on public wifi at a popular place such as mcdonalds\nHow secure if your data?",
+	"options": ["Not at all, your entire computer is compromised", "Super secure, Mcdonalds puts a lot of money into securing their wifi" , "Public wifi usually has little security. The data you transfer across that wifi is vunerable",  "It could be exposed but it's unlikely anyone will try and hack me"],
+	"correctIndex": 1
+  },
+
 ]
