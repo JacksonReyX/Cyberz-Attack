@@ -1,0 +1,134 @@
+[gd_scene load_steps=11 format=3 uid="uid://4t63uuj8qyas"]
+
+[ext_resource type="PackedScene" uid="uid://bh6af5v8500yi" path="res://Scenes/KianStuff/HealthHUD.tscn" id="1_kfys8"]
+[ext_resource type="Script" path="res://Scripts/battle_scene.gd" id="1_xixmo"]
+[ext_resource type="Script" path="res://Scripts/health_hud.gd" id="2_01gox"]
+[ext_resource type="Texture2D" uid="uid://o6p5xc3bxhpu" path="res://Assets/Menus/Card/BattleSceneBackground.png" id="2_041c7"]
+[ext_resource type="Texture2D" uid="uid://4hp2ebkpuftk" path="res://Assets/Menus/Buttons/AnswerChoiceA.png" id="5_olvj4"]
+[ext_resource type="Texture2D" uid="uid://d0jttuc4316cl" path="res://Assets/Menus/Buttons/AnswerChoiceB.png" id="6_l86ro"]
+[ext_resource type="Texture2D" uid="uid://dqhit4deshi7j" path="res://Assets/Menus/Buttons/AnswerChoiceC.png" id="7_f0r5i"]
+[ext_resource type="Texture2D" uid="uid://xhtyfwyumcnb" path="res://Assets/Menus/Buttons/AnswerChoiceD.png" id="8_ckxuq"]
+[ext_resource type="Texture2D" uid="uid://cd5f1x3o0ycbi" path="res://Assets/Menus/Buttons/QuestionBox.png" id="9_cx6cn"]
+[ext_resource type="Texture2D" uid="uid://diaki4dmxapdo" path="res://Assets/Menus/Buttons/FeedbackBox.png" id="10_880we"]
+
+[node name="BattleScene" type="Node2D"]
+script = ExtResource("1_xixmo")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_041c7")
+
+[node name="EnemySection" type="Node2D" parent="."]
+
+[node name="EnemySprite" type="AnimatedSprite2D" parent="EnemySection"]
+script = ExtResource("2_01gox")
+
+[node name="EnemyNameLabel" type="Label" parent="EnemySection"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PlayerSection" type="Node2D" parent="."]
+position = Vector2(537, 317)
+
+[node name="HealthHud" parent="PlayerSection" instance=ExtResource("1_kfys8")]
+offset_top = 4.0
+offset_bottom = 4.0
+
+[node name="QuestionSection" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="QuestionBox" type="TextureRect" parent="QuestionSection"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 271.0
+offset_right = 255.0
+offset_bottom = 351.0
+texture = ExtResource("9_cx6cn")
+
+[node name="QuestionLabel" type="Label" parent="QuestionSection/QuestionBox"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 231.0
+offset_bottom = 71.0
+
+[node name="Answer1" type="TextureButton" parent="QuestionSection"]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 275.0
+offset_right = 390.0
+offset_bottom = 305.0
+texture_normal = ExtResource("5_olvj4")
+
+[node name="Label" type="Label" parent="QuestionSection/Answer1"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 3.0
+offset_right = 115.0
+offset_bottom = 26.0
+
+[node name="Answer2" type="TextureButton" parent="QuestionSection"]
+offset_left = 403.0
+offset_top = 275.0
+offset_right = 523.0
+offset_bottom = 305.0
+texture_normal = ExtResource("6_l86ro")
+
+[node name="Label" type="Label" parent="QuestionSection/Answer2"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 3.0
+offset_right = 115.0
+offset_bottom = 26.0
+
+[node name="Answer3" type="TextureButton" parent="QuestionSection"]
+offset_left = 270.0
+offset_top = 318.0
+offset_right = 390.0
+offset_bottom = 348.0
+texture_normal = ExtResource("7_f0r5i")
+
+[node name="Label" type="Label" parent="QuestionSection/Answer3"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 3.0
+offset_right = 115.0
+offset_bottom = 26.0
+
+[node name="Answer4" type="TextureButton" parent="QuestionSection"]
+offset_left = 403.0
+offset_top = 318.0
+offset_right = 523.0
+offset_bottom = 348.0
+texture_normal = ExtResource("8_ckxuq")
+
+[node name="Label" type="Label" parent="QuestionSection/Answer4"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 3.0
+offset_right = 115.0
+offset_bottom = 26.0
+
+[node name="FeedbackBox" type="TextureRect" parent="QuestionSection"]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 270.0
+offset_right = 622.0
+offset_bottom = 310.0
+texture = ExtResource("10_880we")
+
+[node name="FeedbackLabel" type="Label" parent="QuestionSection/FeedbackBox"]
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 76.0
+offset_bottom = 35.0
+
+[node name="EnemyHealthBar" parent="." instance=ExtResource("1_kfys8")]
+offset_left = 16.0
+offset_top = 17.0
+offset_right = 16.0
+offset_bottom = 17.0

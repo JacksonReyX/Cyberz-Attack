@@ -28,33 +28,33 @@ var max_health := 12
 var current_health := 12
 
 func _ready() -> void:
-	current_health = max_health
-
-
+	max_health = GameState.max_health
+	current_health = GameState.current_health
 	if health_bar_background and health_full_texture:
 		health_bar_background.texture = health_full_texture
-
 	if heart_overlay and heart_full_texture:
 		heart_overlay.texture = heart_full_texture
-
-	for segment in segments:
-		if segment:
-			segment.set_full()
+	# Show correct number of segments based on saved health
+	for i in range(segments.size()):
+		if segments[i]:
+			if i < current_health:
+				segments[i].set_full()
+			else:
+				segments[i].set_empty()
+	_update_bar_and_heart()
 			
 	
 
 func set_health(new_health: int) -> void:
 	new_health = clampi(new_health, 0, max_health)
-
 	if new_health == current_health:
 		return
-
 	if new_health < current_health:
 		await _lose_health(current_health, new_health)
 	elif new_health > current_health:
 		await _gain_health(current_health, new_health)
-
 	current_health = new_health
+	GameState.current_health = current_health  # Save to GameState
 	_update_bar_and_heart()
 
 func damage(amount: int) -> void:

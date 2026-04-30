@@ -1,9 +1,10 @@
 extends Area2D
 
-@onready var textTimer = $"../textTimer"
-@onready var textbox = $Textbox
+@export var encounter_text: String = "I need your clicks"
+@export var enemy_name_override: String = "Phisherman"
 
-var encounter_text = "Give me your clicks!"
+@onready var textTimer: Timer = $"../textTimer"
+@onready var textbox = $"../Textbox"
 
 func _ready() -> void:
 	textbox.hide_text()
@@ -11,8 +12,13 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		print("body node: ", body.name)
+		print("body script: ", body.get_script())
+		print("has movement_locked: ", "movement_locked" in body)
 		if GameState.returning_from_battle:
 			return
+		
+
 
 		var actual_enemy_name = get_parent().name
 		GameState.active_enemy_name = actual_enemy_name
@@ -33,4 +39,5 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_text_timer_timeout() -> void:
 	textbox.hide_text()
-	get_tree().call_deferred("change_scene_to_file", "res://Scenes/JacksonStuff/fisherBattle.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://Scenes/KianStuff/BattleScene.tscn")
+	

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://div5imyu201ny"]
+
+[ext_resource type="SpriteFrames" uid="uid://b74nx6skcnvcn" path="res://Assets/Characters/CharactersAnimations/FisherEnemyIdle.tres" id="1_t3v7c"]
+[ext_resource type="Script" path="res://Scripts/enemy_collide.gd" id="2_jpigx"]
+[ext_resource type="PackedScene" uid="uid://boyieidkdxwqg" path="res://Scenes/KianStuff/Textbox.tscn" id="3_dum8k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j3vuw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v7t32"]
+radius = 16.0
+
+[node name="FisherEnemy" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_t3v7c")
+frame_progress = 0.0842776
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_j3vuw")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_jpigx")
+encounter_text = "I have some sweet deals..."
+enemy_name_override = "The Phisherman"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_v7t32")
+
+[node name="textTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Textbox" parent="." instance=ExtResource("3_dum8k")]

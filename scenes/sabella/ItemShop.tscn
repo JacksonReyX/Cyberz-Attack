@@ -4,9 +4,9 @@
 [ext_resource type="Script" path="res://Scripts/item_shop.gd" id="1_yrxvl"]
 [ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="2_grguu"]
 [ext_resource type="Texture2D" uid="uid://b4207duut6b75" path="res://Assets/Sprites/Deco/Coin.png" id="3_w4588"]
-[ext_resource type="Texture2D" uid="uid://cubkxo8oar5r2" path="res://Assets/PlayerModels/Wizard.png" id="4_lo1pv"]
-[ext_resource type="Texture2D" uid="uid://ddihs33po7wso" path="res://Assets/PlayerModels/Knight2.png" id="5_yrxvl"]
-[ext_resource type="Texture2D" uid="uid://b6tko3r8q07m4" path="res://Assets/PlayerModels/Witch.png" id="6_0ncwt"]
+[ext_resource type="Texture2D" uid="uid://b44p4a5xvilf1" path="res://Assets/Characters/Dino/Dino.png" id="4_uvftt"]
+[ext_resource type="Texture2D" uid="uid://rdb1yo3k3cit" path="res://Assets/Characters/Archer/Archer.png" id="5_cteop"]
+[ext_resource type="Texture2D" uid="uid://p0p26cq28lfs" path="res://Assets/Characters/Boar-Man/Boar-Man.png" id="6_140cp"]
 [ext_resource type="Texture2D" uid="uid://b7ewo6yo1xb4q" path="res://Assets/Menus/Buttons/Back.png" id="7_q12tm"]
 [ext_resource type="Texture2D" uid="uid://cp8d3uvb3ielr" path="res://Assets/Menus/Buttons/BackPressed.png" id="8_vh0se"]
 [ext_resource type="Texture2D" uid="uid://3n5aa1xh88vp" path="res://Assets/Menus/Buttons/BackHover.png" id="9_1tvsk"]
@@ -23,14 +23,16 @@ scale = Vector2(0.562419, 0.478455)
 texture = ExtResource("1_b0wkj")
 
 [node name="ShopTitle" type="Label" parent="."]
-offset_left = 234.0
-offset_top = 57.0
-offset_right = 416.0
-offset_bottom = 105.0
+offset_left = 186.0
+offset_top = 60.0
+offset_right = 450.0
+offset_bottom = 108.0
 theme_override_colors/font_color = Color(0.0126172, 0.0126172, 0.0126172, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_grguu")
-theme_override_font_sizes/font_size = 22
-text = "Item Shop"
+theme_override_font_sizes/font_size = 32
+text = "Cosmetics"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -48,17 +50,18 @@ text = "Available Skins
 
 [node name="PlayerCoinCountLabel" type="Label" parent="."]
 offset_left = 105.0
-offset_top = 67.0
+offset_top = 72.0
 offset_right = 152.0
-offset_bottom = 86.0
+offset_bottom = 91.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_grguu")
-theme_override_font_sizes/font_size = 13
+theme_override_font_sizes/font_size = 16
 text = "0"
 
 [node name="SkinContainer" type="GridContainer" parent="."]
 offset_left = 102.0
-offset_top = 134.0
+offset_top = 73.0
 offset_right = 541.0
 offset_bottom = 240.0
 columns = 3
@@ -67,28 +70,30 @@ columns = 3
 
 [node name="Skin1Button" type="Button" parent="SkinContainer/Skin1"]
 offset_left = 146.0
-offset_top = 265.0
-offset_right = 190.0
-offset_bottom = 286.0
+offset_top = 261.0
+offset_right = 202.0
+offset_bottom = 285.0
 theme_override_fonts/font = ExtResource("2_grguu")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 16
 text = "100
 "
 
-[node name="WizardSkin" type="Sprite2D" parent="SkinContainer/Skin1"]
-position = Vector2(169.5, 196.5)
-scale = Vector2(4.1875, 3.625)
-texture = ExtResource("4_lo1pv")
+[node name="DinoSkin" type="Sprite2D" parent="SkinContainer/Skin1"]
+position = Vector2(169.5, 190.188)
+scale = Vector2(4.1875, 4.19886)
+texture = ExtResource("4_uvftt")
 
 [node name="Label" type="Label" parent="SkinContainer/Skin1"]
-offset_left = 132.0
-offset_top = 116.0
-offset_right = 208.0
-offset_bottom = 132.0
+offset_left = 138.0
+offset_top = 115.0
+offset_right = 232.0
+offset_bottom = 131.0
 theme_override_colors/font_color = Color(0.0126172, 0.0126172, 0.0126172, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_grguu")
-theme_override_font_sizes/font_size = 13
-text = "Wizard"
+theme_override_font_sizes/font_size = 16
+text = "Dino"
 
 [node name="Skin2" type="Node" parent="SkinContainer"]
 
@@ -99,28 +104,30 @@ anchor_top = 0.205
 anchor_right = 0.066
 anchor_bottom = 0.205
 offset_left = 260.76
-offset_top = 189.2
-offset_right = 304.76
-offset_bottom = 210.2
+offset_top = 187.2
+offset_right = 316.76
+offset_bottom = 211.2
 theme_override_fonts/font = ExtResource("2_grguu")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 16
 text = "100
 "
 
-[node name="KnightSkin" type="Sprite2D" parent="SkinContainer/Skin2"]
-position = Vector2(325.5, 195.5)
-scale = Vector2(4.3125, 3.70833)
-texture = ExtResource("5_yrxvl")
+[node name="ArcherSkin" type="Sprite2D" parent="SkinContainer/Skin2"]
+position = Vector2(326, 198)
+scale = Vector2(4.2, 3.82823)
+texture = ExtResource("5_cteop")
 
 [node name="Label" type="Label" parent="SkinContainer/Skin2"]
-offset_left = 289.0
+offset_left = 278.0
 offset_top = 116.0
-offset_right = 362.0
+offset_right = 374.0
 offset_bottom = 132.0
 theme_override_colors/font_color = Color(0.0126172, 0.0126172, 0.0126172, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_grguu")
-theme_override_font_sizes/font_size = 13
-text = "Knight"
+theme_override_font_sizes/font_size = 16
+text = "Archer"
 
 [node name="Skin3" type="Node" parent="SkinContainer"]
 
@@ -129,27 +136,29 @@ anchors_preset = -1
 anchor_right = 0.012
 anchor_bottom = 0.035
 offset_left = 458.0
-offset_top = 263.0
-offset_right = 494.32
-offset_bottom = 271.4
+offset_top = 261.0
+offset_right = 506.32
+offset_bottom = 272.4
 theme_override_fonts/font = ExtResource("2_grguu")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 16
 text = "100"
 
-[node name="WitchSkin" type="Sprite2D" parent="SkinContainer/Skin3"]
-position = Vector2(485, 193)
-scale = Vector2(4.5, 3.5)
-texture = ExtResource("6_0ncwt")
+[node name="Boar-ManSkin" type="Sprite2D" parent="SkinContainer/Skin3"]
+position = Vector2(477, 196)
+scale = Vector2(4.5, 4.11364)
+texture = ExtResource("6_140cp")
 
 [node name="Label" type="Label" parent="SkinContainer/Skin3"]
-offset_left = 447.0
-offset_top = 117.0
-offset_right = 509.0
-offset_bottom = 140.0
+offset_left = 415.0
+offset_top = 115.0
+offset_right = 541.0
+offset_bottom = 138.0
 theme_override_colors/font_color = Color(0.0126172, 0.0126172, 0.0126172, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_grguu")
-theme_override_font_sizes/font_size = 13
-text = "Witch"
+theme_override_font_sizes/font_size = 16
+text = "Boar-Man"
 
 [node name="BackButton" type="Node" parent="."]
 
@@ -169,49 +178,49 @@ texture_hover = ExtResource("9_1tvsk")
 [node name="CoinIcon3" type="TextureRect" parent="CoinIcons"]
 z_index = 1
 offset_left = 279.0
-offset_top = 264.0
+offset_top = 261.0
 offset_right = 299.0
-offset_bottom = 280.0
+offset_bottom = 284.0
 mouse_filter = 2
 texture = ExtResource("3_w4588")
 
 [node name="CoinIcon4" type="TextureRect" parent="CoinIcons"]
 z_index = 1
 offset_left = 434.0
-offset_top = 264.0
+offset_top = 261.0
 offset_right = 454.0
-offset_bottom = 281.0
+offset_bottom = 284.0
 mouse_filter = 2
 texture = ExtResource("3_w4588")
 
 [node name="CoinCountIcon" type="TextureRect" parent="CoinIcons"]
 offset_left = 79.0
-offset_top = 63.0
+offset_top = 64.0
 offset_right = 103.0
-offset_bottom = 83.0
+offset_bottom = 91.0
 texture = ExtResource("3_w4588")
 
 [node name="CoinIcon5" type="TextureRect" parent="CoinIcons"]
 z_index = 1
 offset_left = 123.0
-offset_top = 266.0
+offset_top = 262.0
 offset_right = 143.0
-offset_bottom = 282.0
+offset_bottom = 285.0
 mouse_filter = 2
 texture = ExtResource("3_w4588")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(168, 173)
+position = Vector2(168, 171)
 scale = Vector2(9.3125, 7.41667)
 texture = ExtResource("11_qntp1")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(324, 172)
+position = Vector2(324, 171)
 scale = Vector2(9.3125, 7.33333)
 texture = ExtResource("11_qntp1")
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(477, 172)
+position = Vector2(477, 171)
 scale = Vector2(9.3125, 7.375)
 texture = ExtResource("11_qntp1")
 

@@ -8,6 +8,9 @@ var defeatedEnemies = []
 var active_enemy_name: String = ""
 var returning_from_battle = false
 
+var current_health: int = 12
+var max_health: int = 12
+
 func setScene():
 	playerPosition = Vector2.ZERO
 	defeatedEnemies = []
@@ -68,7 +71,7 @@ func load_data():
 	coins = data.get("coins", 0)
 	owned_skins = data.get("owned_skins", ["default"])
 	selected_skin = data.get("selected_skin", "default")
-
+	
 func reset_data():
 	coins = 0
 	owned_skins = ["default"]
@@ -77,5 +80,6 @@ func reset_data():
 	playerPosition = Vector2.ZERO
 	defeatedEnemies = []
 	active_enemy_name = ""
+	current_health = max_health
 	save_data()
 	print("Progress reset!")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/hackerBattle.gd" id="1_2ica5"]
 [ext_resource type="Texture2D" uid="uid://cv6cm8e2vaj4y" path="res://Assets/PlayerModels/hacker.png" id="2_bnxqc"]
-[ext_resource type="PackedScene" uid="uid://ojufl0hq3ajx" path="res://Scenes/JacksonStuff/textboxHacker.tscn" id="3_b1q4c"]
+[ext_resource type="PackedScene" path="res://Scenes/JacksonStuff/textboxHacker.tscn" id="3_b1q4c"]
 [ext_resource type="Script" path="res://Scripts/textboxHacker.gd" id="4_8jf1o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h8l1k"]

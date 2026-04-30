@@ -41,7 +41,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rwqht"]
-radius = 6.28221
+radius = 6.86046
 
 [sub_resource type="Animation" id="Animation_vn1ks"]
 resource_name = "pickup"
@@ -57,13 +57,15 @@ script = ExtResource("1_i64fm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(5.96046e-08, 0)
+rotation = 1.57079
 scale = Vector2(1.05469, 0.710368)
 sprite_frames = SubResource("SpriteFrames_xmuha")
 autoplay = "default"
 frame_progress = 0.16669
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 5.96046e-08)
+position = Vector2(-3.61999e-06, 1)
+rotation = 1.57079
 scale = Vector2(0.636719, 0.449219)
 shape = SubResource("CircleShape2D_rwqht")
 
