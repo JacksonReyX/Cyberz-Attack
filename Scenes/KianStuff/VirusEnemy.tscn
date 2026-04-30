@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvon6ab2xnhkm"]
+
+[ext_resource type="SpriteFrames" uid="uid://bfsjksnvikwkr" path="res://Assets/Characters/CharactersAnimations/VirusEnemyIdle.tres" id="1_1reay"]
+[ext_resource type="Script" path="res://Scripts/enemy_collide.gd" id="2_fn3x2"]
+[ext_resource type="PackedScene" uid="uid://boyieidkdxwqg" path="res://Scenes/KianStuff/Textbox.tscn" id="3_knore"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1uu3q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2c3lq"]
+radius = 26.0
+
+[node name="VirusEnemy" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_1reay")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_1uu3q")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_fn3x2")
+encounter_text = "I'm not a bug, I'm a feature"
+enemy_name_override = "The virus"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_2c3lq")
+
+[node name="Textbox" parent="Area2D" instance=ExtResource("3_knore")]
+
+[node name="textTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true

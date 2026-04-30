@@ -120,3 +120,24 @@ func play_all(anim: String, force: bool = false) -> void:
 		if layer.sprite_frames and layer.sprite_frames.has_animation(anim):
 			if force or layer.animation != anim:
 				layer.play(anim)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_1:
+			await _use_potion()
+
+func _use_potion() -> void:
+	if GameState.health_potions <= 0:
+		return
+	if GameState.current_health >= GameState.max_health:
+		return
+
+	var heal_amount := 3
+	GameState.health_potions -= 1
+	GameState.current_health = min(GameState.current_health + heal_amount, GameState.max_health)
+
+	var hud = get_tree().get_root().get_node_or_null("DungeonScene/HUDLayer/HUDRoot/TopLeftPanel/HealthHud")
+	if hud:
+		await hud.heal(heal_amount)
+	else:
+		print("HealthHUD not found — check path")

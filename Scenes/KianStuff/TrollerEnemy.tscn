@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://ci5kcqhvxiv0l"]
+
+[ext_resource type="SpriteFrames" uid="uid://nijeuc5eu6iw" path="res://Assets/Characters/CharactersAnimations/TrollerEnemyIdle.tres" id="1_2lkt6"]
+[ext_resource type="Script" path="res://Scripts/enemy_collide.gd" id="2_rh5h0"]
+[ext_resource type="PackedScene" uid="uid://boyieidkdxwqg" path="res://Scenes/KianStuff/Textbox.tscn" id="3_x2ygh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w1o5v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7gx8l"]
+radius = 26.0
+
+[node name="TrollerEnemy" type="Node2D"]
+z_index = 10
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_2lkt6")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_w1o5v")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_rh5h0")
+encounter_text = "LOL"
+enemy_name_override = "The Troll"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_7gx8l")
+
+[node name="Textbox" parent="Area2D" instance=ExtResource("3_x2ygh")]
+
+[node name="textTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true

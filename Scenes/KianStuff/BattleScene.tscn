@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://4t63uuj8qyas"]
+[gd_scene load_steps=19 format=3 uid="uid://4t63uuj8qyas"]
 
 [ext_resource type="PackedScene" uid="uid://bh6af5v8500yi" path="res://Scenes/KianStuff/HealthHUD.tscn" id="1_kfys8"]
 [ext_resource type="Script" path="res://Scripts/battle_scene.gd" id="1_xixmo"]
@@ -6,11 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://4hp2ebkpuftk" path="res://Assets/Menus/Buttons/AnswerChoiceA.png" id="5_olvj4"]
 [ext_resource type="Texture2D" uid="uid://d0jttuc4316cl" path="res://Assets/Menus/Buttons/AnswerChoiceB.png" id="6_l86ro"]
 [ext_resource type="Texture2D" uid="uid://dqhit4deshi7j" path="res://Assets/Menus/Buttons/AnswerChoiceC.png" id="7_f0r5i"]
+[ext_resource type="Texture2D" uid="uid://bu8vhymxmdas1" path="res://Assets/Menus/Buttons/AnswerChoiceAPressed.png" id="7_mmfsh"]
+[ext_resource type="Texture2D" uid="uid://36y0iajib1b0" path="res://Assets/Menus/Buttons/AnswerChoiceAHover.png" id="8_7uylr"]
 [ext_resource type="Texture2D" uid="uid://xhtyfwyumcnb" path="res://Assets/Menus/Buttons/AnswerChoiceD.png" id="8_ckxuq"]
 [ext_resource type="Texture2D" uid="uid://cd5f1x3o0ycbi" path="res://Assets/Menus/Buttons/QuestionBox.png" id="9_cx6cn"]
-[ext_resource type="SpriteFrames" uid="uid://b74nx6skcnvcn" path="res://Assets/Characters/CharactersAnimations/FisherEnemyIdle.tres" id="10_3do02"]
 [ext_resource type="Texture2D" uid="uid://diaki4dmxapdo" path="res://Assets/Menus/Buttons/FeedbackBox.png" id="10_880we"]
+[ext_resource type="Texture2D" uid="uid://dglu2bo3xaqxg" path="res://Assets/Menus/Buttons/AnswerChoiceBPressed.png" id="10_x52hv"]
 [ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="11_7wbir"]
+[ext_resource type="Texture2D" uid="uid://bboix4fdynrwy" path="res://Assets/Menus/Buttons/AnswerChoiceBHover.png" id="11_sd828"]
+[ext_resource type="Texture2D" uid="uid://bwbnnw813gbol" path="res://Assets/Menus/Buttons/AnswerChoiceCPressed.png" id="13_fg7y8"]
+[ext_resource type="Texture2D" uid="uid://dj40oxliinu0y" path="res://Assets/Menus/Buttons/AnswerChoiceCHover.png" id="14_cg7xa"]
+[ext_resource type="Texture2D" uid="uid://cvnjdhpds4ggb" path="res://Assets/Menus/Buttons/AnswerChoiceDPressed.png" id="16_rakna"]
+[ext_resource type="Texture2D" uid="uid://b31g7y64ivp3v" path="res://Assets/Menus/Buttons/AnswerChoiceDHover.png" id="17_nl8ai"]
 
 [node name="BattleScene" type="Node2D"]
 script = ExtResource("1_xixmo")
@@ -97,6 +104,8 @@ offset_top = 275.0
 offset_right = 390.0
 offset_bottom = 305.0
 texture_normal = ExtResource("5_olvj4")
+texture_pressed = ExtResource("7_mmfsh")
+texture_hover = ExtResource("8_7uylr")
 
 [node name="Label" type="Label" parent="QuestionSection/Answer1"]
 layout_mode = 0
@@ -115,6 +124,8 @@ offset_top = 275.0
 offset_right = 523.0
 offset_bottom = 305.0
 texture_normal = ExtResource("6_l86ro")
+texture_pressed = ExtResource("10_x52hv")
+texture_hover = ExtResource("11_sd828")
 
 [node name="Label" type="Label" parent="QuestionSection/Answer2"]
 layout_mode = 0
@@ -133,6 +144,8 @@ offset_top = 318.0
 offset_right = 390.0
 offset_bottom = 348.0
 texture_normal = ExtResource("7_f0r5i")
+texture_pressed = ExtResource("13_fg7y8")
+texture_hover = ExtResource("14_cg7xa")
 
 [node name="Label" type="Label" parent="QuestionSection/Answer3"]
 layout_mode = 0
@@ -151,6 +164,8 @@ offset_top = 318.0
 offset_right = 523.0
 offset_bottom = 348.0
 texture_normal = ExtResource("8_ckxuq")
+texture_pressed = ExtResource("16_rakna")
+texture_hover = ExtResource("17_nl8ai")
 
 [node name="Label" type="Label" parent="QuestionSection/Answer4"]
 layout_mode = 0
@@ -177,6 +192,8 @@ offset_left = 4.0
 offset_top = 5.0
 offset_right = 76.0
 offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("11_7wbir")
+theme_override_font_sizes/font_size = 8
 
 [node name="EnemyHealthBar" parent="." instance=ExtResource("1_kfys8")]
 offset_left = 224.0
@@ -230,7 +247,6 @@ position = Vector2(13.5, 16.5)
 z_index = 10
 position = Vector2(318, 140)
 scale = Vector2(4, 4)
-sprite_frames = ExtResource("10_3do02")
 animation = &"idle"
 autoplay = "idle"
 

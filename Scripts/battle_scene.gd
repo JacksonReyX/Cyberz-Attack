@@ -3,7 +3,7 @@ extends Node2D
 @onready var enemy_sprite = $EnemySection/EnemySprite
 @onready var enemy_name_label: Label = $EnemySection/EnemyNameLabel
 @onready var question_label: Label = $QuestionSection/QuestionBox/QuestionLabel
-@onready var feedback_label: Label = $QuestionSection/FeedbackBox/Label
+@onready var feedback_label: Label = $QuestionSection/FeedbackBox/FeedbackLabel
 @onready var feedback_box: TextureRect = $QuestionSection/FeedbackBox
 @onready var answer_buttons: Array = [
 	$QuestionSection/Answer1,
@@ -17,35 +17,56 @@ extends Node2D
 var enemy_data: Dictionary = {}
 var current_question: Dictionary = {}
 var used_questions: Array = []
-var enemy_current_health: int = 3
+var enemy_current_health: int = 12
+var damage_per_correct: int = 4
 var answer_selected: bool = false
 
 func _ready() -> void:
 	MusicManager.play_combat()
 	UISfx.wire_buttons(self)
 
-	# Tint enemy health bar purple
+	# Mark enemy bar so it doesn't overwrite player health in GameState
+	enemy_health_bar.is_enemy_bar = true
 	enemy_health_bar.modulate = Color(0.7, 0.3, 1.0)
 
-	# Hide feedback box initially
 	feedback_box.visible = false
 
-	# Load enemy data
+	# Load enemy data FIRST before anything else
 	var enemy_key = _get_enemy_key()
 	if EnemyData.enemies.has(enemy_key):
 		enemy_data = EnemyData.enemies[enemy_key]
 	else:
 		enemy_data = EnemyData.enemies.values()[0]
 
+	# Debug prints AFTER loading enemy data
+	print("active enemy: ", GameState.active_enemy_name)
+	print("enemy key: ", enemy_key)
+	print("animation path: ", enemy_data.get("animation_frames", "NO PATH"))
+
 	enemy_current_health = enemy_data.health
+	damage_per_correct = enemy_data.get("damage_per_correct", 4)
 	enemy_name_label.text = enemy_data.display_name
 
-	# Load enemy animation
+	# Initialize enemy health bar
+	enemy_health_bar.max_health = enemy_data.health
+	enemy_health_bar.current_health = enemy_data.health
+	for i in range(enemy_health_bar.segments.size()):
+		if enemy_health_bar.segments[i]:
+			enemy_health_bar.segments[i].position = enemy_health_bar.segments[i].original_position
+			if i < enemy_data.health:
+				enemy_health_bar.segments[i].set_full()
+			else:
+				enemy_health_bar.segments[i].set_empty()
+
+	# Load enemy animation AFTER enemy_data is populated
 	if enemy_data.has("animation_frames"):
 		var frames = load(enemy_data.animation_frames)
+		print("frames loaded: ", frames)
 		if frames:
 			enemy_sprite.sprite_frames = frames
 			enemy_sprite.play("idle")
+		else:
+			print("WARNING: Could not load frames from: ", enemy_data.animation_frames)
 
 	# Wire answer buttons
 	for i in range(answer_buttons.size()):
@@ -56,19 +77,28 @@ func _ready() -> void:
 	_load_question()
 
 func _get_enemy_key() -> String:
-	var name = GameState.active_enemy_name
-	if "isher" in name or "ish" in name:
+	var ename = GameState.active_enemy_name
+	if "Fisher" in ename:
 		return "Phisher"
-	elif "ack" in name or "acker" in name:
+	elif "Hacker" in ename:
 		return "Hacker"
-	elif "alware" in name or "irus" in name:
+	elif "Malware" in ename:
 		return "Malware"
-	elif "cam" in name or "cammer" in name:
+	elif "Scammer" in ename:
 		return "Scammer"
+	elif "Virus" in ename:
+		return "Virus"
+	elif "Spyware" in ename:
+		return "Spyware"
+	elif "Troller" in ename:
+		return "Troller"
+	elif "DataThief" in ename:
+		return "DataThief"
+	elif "Ransomware" in ename:
+		return "Ransomware"
 	return "Phisher"
 
 func _load_question() -> void:
-	# Reset all buttons
 	for btn in answer_buttons:
 		btn.disabled = false
 		btn.modulate = Color.WHITE
@@ -103,7 +133,6 @@ func _load_question() -> void:
 func _on_answer_selected(index: int) -> void:
 	if answer_selected:
 		return
-
 	if index == current_question.correct:
 		await _correct_answer()
 	else:
@@ -111,16 +140,17 @@ func _on_answer_selected(index: int) -> void:
 
 func _correct_answer() -> void:
 	answer_selected = true
-	enemy_current_health -= 1
+	enemy_current_health -= damage_per_correct
+	enemy_current_health = max(enemy_current_health, 0)
 
-	# Disable all buttons
 	for btn in answer_buttons:
 		btn.disabled = true
 
-	# Show correct feedback
 	feedback_label.text = "Correct!"
 	feedback_label.modulate = Color.GREEN
 	feedback_box.visible = true
+
+	await enemy_health_bar.set_health(enemy_current_health)
 
 	await get_tree().create_timer(1.5).timeout
 	feedback_box.visible = false
@@ -131,23 +161,18 @@ func _correct_answer() -> void:
 		_load_question()
 
 func _wrong_answer(index: int) -> void:
-	# Grey out just the wrong button
 	answer_buttons[index].disabled = true
 	answer_buttons[index].modulate = Color(0.4, 0.4, 0.4, 1.0)
 
-	# Show wrong feedback
-	feedback_label.text = "Wrong! Try again!"
+	feedback_label.text = "Wrong!"
 	feedback_label.modulate = Color.RED
 	feedback_box.visible = true
 
-	# Damage player health
 	await health_hud.damage(1)
-	GameState.current_health = health_hud.current_health
 
 	await get_tree().create_timer(1.0).timeout
 	feedback_box.visible = false
 
-	# Check if player dead
 	if GameState.current_health <= 0:
 		await _lose()
 
@@ -155,7 +180,7 @@ func _win() -> void:
 	for btn in answer_buttons:
 		btn.disabled = true
 
-	feedback_label.text = "You defeated the " + enemy_data.display_name + "!"
+	feedback_label.text = "You won!"
 	feedback_label.modulate = Color.YELLOW
 	feedback_box.visible = true
 
@@ -170,7 +195,7 @@ func _lose() -> void:
 	for btn in answer_buttons:
 		btn.disabled = true
 
-	feedback_label.text = "You were defeated!"
+	feedback_label.text = "You lost!"
 	feedback_label.modulate = Color.RED
 	feedback_box.visible = true
 

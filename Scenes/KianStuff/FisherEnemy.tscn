@@ -13,7 +13,8 @@ radius = 26.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_t3v7c")
-frame_progress = 0.927182
+animation = &"idle"
+frame_progress = 0.512563
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

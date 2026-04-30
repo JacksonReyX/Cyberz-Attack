@@ -8,6 +8,7 @@ var defeatedEnemies = []
 var active_enemy_name: String = ""
 var returning_from_battle = false
 
+# Player health — separate from enemy health
 var current_health: int = 12
 var max_health: int = 12
 
@@ -50,7 +51,8 @@ func save_data():
 	f.store_var({
 		"coins": coins,
 		"owned_skins": owned_skins,
-		"selected_skin": selected_skin
+		"selected_skin": selected_skin,
+		"current_health": current_health
 	})
 	print("SAVING:", coins)
 
@@ -71,7 +73,8 @@ func load_data():
 	coins = data.get("coins", 0)
 	owned_skins = data.get("owned_skins", ["default"])
 	selected_skin = data.get("selected_skin", "default")
-	
+	current_health = data.get("current_health", max_health)
+
 func reset_data():
 	coins = 0
 	owned_skins = ["default"]

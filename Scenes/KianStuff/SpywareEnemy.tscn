@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxnxlfnorxb07"]
+
+[ext_resource type="SpriteFrames" uid="uid://bvo7cmoelkr6w" path="res://Assets/Characters/CharactersAnimations/SpywareEnemyIdle.tres" id="1_d5l2p"]
+[ext_resource type="Script" path="res://Scripts/enemy_collide.gd" id="2_vhuse"]
+[ext_resource type="PackedScene" uid="uid://boyieidkdxwqg" path="res://Scenes/KianStuff/Textbox.tscn" id="3_0dcbh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bbmmv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4slit"]
+radius = 26.0
+
+[node name="SpywareEnemy" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_d5l2p")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_bbmmv")
+
+[node name="Area2D" type="Area2D" parent="."]
+z_index = 10
+script = ExtResource("2_vhuse")
+encounter_text = "You can see me?"
+enemy_name_override = "The Spyware"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_4slit")
+
+[node name="Textbox" parent="Area2D" instance=ExtResource("3_0dcbh")]
+
+[node name="textTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true

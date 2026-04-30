@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=92 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
@@ -48,16 +48,11 @@
 [ext_resource type="Texture2D" uid="uid://di31e1fe563qd" path="res://Assets/Menus/Buttons/VolumeSliderBar.png" id="31_agevm"]
 [ext_resource type="Texture2D" uid="uid://badehacwr6sl3" path="res://Assets/Menus/Card/VolumeContainer.png" id="31_b5wfc"]
 [ext_resource type="Texture2D" uid="uid://es30jjr2ubix" path="res://Assets/Menus/Buttons/VolumeSlider.png" id="32_27j3r"]
-[ext_resource type="PackedScene" uid="uid://d047538vnageu" path="res://Scenes/JacksonStuff/FisherEnemy.tscn" id="32_p1g1e"]
 [ext_resource type="Texture2D" uid="uid://bd8b40ennr78r" path="res://Assets/Menus/Card/VolumeSliderFocused.png" id="33_d3nvm"]
 [ext_resource type="Texture2D" uid="uid://cx265xv42yk88" path="res://Assets/Menus/Buttons/Nothing.png" id="33_vvkc4"]
-[ext_resource type="PackedScene" uid="uid://bdk7s55tilwt0" path="res://Scenes/JacksonStuff/hacker_enemy.tscn" id="52_cc4fk"]
-[ext_resource type="Script" path="res://Scripts/preBattleState.gd" id="53_c222u"]
-[ext_resource type="PackedScene" uid="uid://s3mpivfnm1tj" path="res://Scenes/JacksonStuff/virusEnemy.tscn" id="54_oeyak"]
 [ext_resource type="PackedScene" uid="uid://cw41mv4uqlnt" path="res://Scenes/sabella/bat1.tscn" id="55_7bgvj"]
-[ext_resource type="PackedScene" uid="uid://tds5j2t07fpe" path="res://Scenes/JacksonStuff/WitchEnemy.tscn" id="55_e8ppr"]
 [ext_resource type="PackedScene" uid="uid://cj1decmy7gali" path="res://Scenes/sabella/spider1.tscn" id="56_6ygf5"]
-[ext_resource type="PackedScene" path="res://Scenes/JacksonStuff/FinalBoss.tscn" id="56_ncqug"]
+[ext_resource type="PackedScene" uid="uid://dgivop1h5lvjw" path="res://Scenes/KianStuff/RansomwareEnemy.tscn" id="56_d3qvj"]
 [ext_resource type="PackedScene" uid="uid://bdrdi3kqaoiv3" path="res://Scenes/sabella/spider2.tscn" id="57_5usby"]
 [ext_resource type="PackedScene" uid="uid://7puia2wfx82s" path="res://Scenes/sabella/spiderweb.tscn" id="58_kqrtd"]
 [ext_resource type="PackedScene" uid="uid://ccr6b1a2ram23" path="res://Scenes/sabella/bat3.tscn" id="59_r46sl"]
@@ -66,7 +61,13 @@
 [ext_resource type="PackedScene" path="res://Scenes/JacksonStuff/introGuard.tscn" id="62_fxdmx"]
 [ext_resource type="PackedScene" uid="uid://ct6ka3lfhwoco" path="res://Scenes/KianStuff/Pillar.tscn" id="63_iv0br"]
 [ext_resource type="PackedScene" path="res://Scenes/JacksonStuff/EncryptionGuy.tscn" id="65_bl2jf"]
+[ext_resource type="PackedScene" uid="uid://bvon6ab2xnhkm" path="res://Scenes/KianStuff/VirusEnemy.tscn" id="66_yd5cu"]
+[ext_resource type="PackedScene" uid="uid://boapyj3sdvc3u" path="res://Scenes/KianStuff/ScammerEnemy.tscn" id="67_4dpik"]
 [ext_resource type="PackedScene" uid="uid://div5imyu201ny" path="res://Scenes/KianStuff/FisherEnemy.tscn" id="67_760ik"]
+[ext_resource type="PackedScene" uid="uid://bntmityvblci6" path="res://Scenes/KianStuff/DataThiefEnemy.tscn" id="67_hnyyx"]
+[ext_resource type="PackedScene" uid="uid://ci5kcqhvxiv0l" path="res://Scenes/KianStuff/TrollerEnemy.tscn" id="67_tyxji"]
+[ext_resource type="PackedScene" uid="uid://cxnxlfnorxb07" path="res://Scenes/KianStuff/SpywareEnemy.tscn" id="67_uwbif"]
+[ext_resource type="PackedScene" uid="uid://6gkfpnewq42c" path="res://Scenes/KianStuff/MalwareEnemy.tscn" id="68_0phoc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
 texture = ExtResource("2_og63f")
@@ -6039,9 +6040,6 @@ z_index = 3
 position = Vector2(0, -244)
 target_marker = NodePath("../../Level 1/Entrance_From_StartBase")
 
-[node name="FisherEnemy" parent="StartBase" instance=ExtResource("67_760ik")]
-position = Vector2(-55, 6)
-
 [node name="Level 1" type="Node" parent="."]
 
 [node name="Entrance_From_StartBase" type="Marker2D" parent="Level 1"]
@@ -6696,10 +6694,10 @@ color = Color(0.648078, 0.648078, 0.648078, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(100, 100)
-offset_left = -3008.0
-offset_top = -4636.0
-offset_right = 2992.0
-offset_bottom = 1364.0
+offset_left = -3010.0
+offset_top = -4637.0
+offset_right = 2990.0
+offset_bottom = 1363.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0, 0, 0, 1)
@@ -6739,6 +6737,42 @@ offset_right = 6.0
 offset_bottom = 6.0
 health_full_texture = ExtResource("16_ylyeg")
 health_empty_texture = ExtResource("17_x4mv7")
+
+[node name="Segment1" parent="HUDLayer/HUDRoot/TopLeftPanel/HealthHud" index="1"]
+position = Vector2(18, 12.25)
+
+[node name="Segment2" parent="HUDLayer/HUDRoot/TopLeftPanel/HealthHud" index="2"]
+position = Vector2(24, 12.25)
+
+[node name="Segment3" parent="HUDLayer/HUDRoot/TopLeftPanel/HealthHud" index="3"]
+position = Vector2(30, 12.25)
+
+[node name="Segment4" parent="HUDLayer/HUDRoot/TopLeftPanel/HealthHud" index="4"]
+position = Vector2(36, 12.25)
+
+[node name="Segment5" parent="HUDLayer/HUDRoot/TopLeftPanel/HealthHud" index="5"]
+position = Vector2(42, 12.25)
+
+[node name="Segment6" parent="HUDLayer/HUDRoot/TopLeftPanel/HealthHud" index="6"]
+position = Vector2(48, 12.25)
+
+[node name="Segment7" parent="HUDLayer/HUDRoot/TopLeftPanel/HealthHud" index="7"]
+position = Vector2(54, 12.25)
+
+[node name="Segment8" parent="HUDLayer/HUDRoot/TopLeftPanel/HealthHud" index="8"]
+position = Vector2(60, 12.25)
+
+[node name="Segment9" parent="HUDLayer/HUDRoot/TopLeftPanel/HealthHud" index="9"]
+position = Vector2(66, 12.25)
+
+[node name="Segment10" parent="HUDLayer/HUDRoot/TopLeftPanel/HealthHud" index="10"]
+position = Vector2(72, 12.25)
+
+[node name="Segment11" parent="HUDLayer/HUDRoot/TopLeftPanel/HealthHud" index="11"]
+position = Vector2(78, 12.25)
+
+[node name="Segment12" parent="HUDLayer/HUDRoot/TopLeftPanel/HealthHud" index="12"]
+position = Vector2(84, 12.25)
 
 [node name="InventorySection" type="Control" parent="HUDLayer/HUDRoot"]
 anchors_preset = 0
@@ -6842,15 +6876,15 @@ texture = ExtResource("18_f4i3l")
 [node name="CoinSection" type="Control" parent="HUDLayer/HUDRoot"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 26.0
-offset_top = 24.0
-offset_right = 66.0
-offset_bottom = 64.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 70.0
+offset_bottom = 70.0
 scale = Vector2(0.75, 0.75)
 script = ExtResource("9_5yy4f")
 
 [node name="CoinIcon" type="AnimatedSprite2D" parent="HUDLayer/HUDRoot/CoinSection"]
-position = Vector2(22, 21.875)
+position = Vector2(22, 21.5)
 scale = Vector2(1.75, 1.75)
 sprite_frames = SubResource("SpriteFrames_1c8c5")
 autoplay = "default"
@@ -6859,9 +6893,9 @@ frame_progress = 0.874954
 [node name="CoinLabel" type="Label" parent="HUDLayer/HUDRoot/CoinSection"]
 layout_mode = 0
 offset_left = 31.0
-offset_top = 15.0
+offset_top = 14.0
 offset_right = 71.0
-offset_bottom = 31.0
+offset_bottom = 30.0
 theme_override_fonts/font = ExtResource("11_gyowf")
 text = "0"
 
@@ -7238,45 +7272,57 @@ text = "UI SFX"
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="HackerEnemy" parent="Enemies" instance=ExtResource("52_cc4fk")]
-position = Vector2(-25, -680)
+[node name="Scammer" parent="Enemies" instance=ExtResource("67_4dpik")]
+position = Vector2(-135, -1651)
 
-[node name="HackerEnemy2" parent="Enemies" instance=ExtResource("52_cc4fk")]
-position = Vector2(464, -560)
+[node name="MalwareEnemy" parent="Enemies" instance=ExtResource("68_0phoc")]
+position = Vector2(240, -1821)
 
-[node name="FisherEnemy" parent="Enemies" instance=ExtResource("32_p1g1e")]
-visible = false
-position = Vector2(-2, -458)
-script = ExtResource("53_c222u")
+[node name="FisherEnemy" parent="Enemies" instance=ExtResource("67_760ik")]
+z_index = 10
+position = Vector2(455, -554)
+rotation = -3.14159
+scale = Vector2(1, -1)
 
-[node name="id" type="Label" parent="Enemies/FisherEnemy"]
-visible = false
-offset_right = 40.0
-offset_bottom = 23.0
-text = "1"
+[node name="DataThiefEnemy" parent="Enemies" instance=ExtResource("67_hnyyx")]
+z_index = 10
+position = Vector2(808, -1417)
+rotation = -3.14159
+scale = Vector2(1, -1)
 
-[node name="VirusEnemy" parent="Enemies" instance=ExtResource("54_oeyak")]
-position = Vector2(337, -814)
+[node name="TrollerEnemy1" parent="Enemies" instance=ExtResource("67_tyxji")]
+position = Vector2(567, -1534)
 
-[node name="FisherEnemy3" parent="Enemies" instance=ExtResource("55_e8ppr")]
-position = Vector2(809, -1418)
+[node name="SpywareEnemy" parent="Enemies" instance=ExtResource("67_uwbif")]
+z_index = 10
+position = Vector2(-41, -673)
+rotation = -3.14159
+scale = Vector2(1, -1)
 
-[node name="WitchEnemy1" parent="Enemies" instance=ExtResource("55_e8ppr")]
-position = Vector2(220, -1204)
+[node name="VirusEnemy" parent="Enemies" instance=ExtResource("66_yd5cu")]
+z_index = 10
+position = Vector2(356, -802)
 
-[node name="HackerEnemy3" parent="Enemies" instance=ExtResource("52_cc4fk")]
-position = Vector2(297, -1428)
-
-[node name="VirusEnemy2" parent="Enemies" instance=ExtResource("54_oeyak")]
-position = Vector2(766, -1231)
-
-[node name="BigOleDragon" parent="Enemies" instance=ExtResource("56_ncqug")]
-position = Vector2(-138, -1644)
-scale = Vector2(2.7848, 1.55351)
+[node name="RansomwareEnemy" parent="Enemies" instance=ExtResource("56_d3qvj")]
+z_index = 10
+position = Vector2(296, -1391)
 
 [node name="FisherEnemy2" parent="Enemies" instance=ExtResource("67_760ik")]
 z_index = 10
 position = Vector2(-200, -833)
+
+[node name="VirusEnemy2" parent="Enemies" instance=ExtResource("66_yd5cu")]
+position = Vector2(-152, -2133)
+
+[node name="RansomwareEnemy2" parent="Enemies" instance=ExtResource("56_d3qvj")]
+position = Vector2(-598, -1922)
+
+[node name="TrollerEnemy" parent="Enemies" instance=ExtResource("67_tyxji")]
+position = Vector2(-591, -1437)
+
+[node name="FisherEnemy3" parent="Enemies" instance=ExtResource("67_760ik")]
+position = Vector2(-1465, -2137)
+scale = Vector2(-1, 1)
 
 [node name="ExtraDecor" type="Node" parent="."]
 
@@ -7437,3 +7483,5 @@ position = Vector2(-232, -628)
 [node name="Pillar8" parent="." instance=ExtResource("63_iv0br")]
 z_index = 10
 position = Vector2(312, -564)
+
+[editable path="HUDLayer/HUDRoot/TopLeftPanel/HealthHud"]
