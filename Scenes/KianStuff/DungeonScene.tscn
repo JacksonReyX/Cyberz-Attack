@@ -57,15 +57,15 @@
 [ext_resource type="PackedScene" uid="uid://cw41mv4uqlnt" path="res://Scenes/sabella/bat1.tscn" id="55_7bgvj"]
 [ext_resource type="PackedScene" uid="uid://tds5j2t07fpe" path="res://Scenes/JacksonStuff/WitchEnemy.tscn" id="55_e8ppr"]
 [ext_resource type="PackedScene" uid="uid://cj1decmy7gali" path="res://Scenes/sabella/spider1.tscn" id="56_6ygf5"]
-[ext_resource type="PackedScene" uid="uid://bh2sy3do6mjy2" path="res://Scenes/JacksonStuff/FinalBoss.tscn" id="56_ncqug"]
+[ext_resource type="PackedScene" path="res://Scenes/JacksonStuff/FinalBoss.tscn" id="56_ncqug"]
 [ext_resource type="PackedScene" uid="uid://bdrdi3kqaoiv3" path="res://Scenes/sabella/spider2.tscn" id="57_5usby"]
 [ext_resource type="PackedScene" uid="uid://7puia2wfx82s" path="res://Scenes/sabella/spiderweb.tscn" id="58_kqrtd"]
 [ext_resource type="PackedScene" uid="uid://ccr6b1a2ram23" path="res://Scenes/sabella/bat3.tscn" id="59_r46sl"]
 [ext_resource type="PackedScene" uid="uid://ctikdqjam5smm" path="res://Scenes/sabella/guard.tscn" id="60_1lb8d"]
 [ext_resource type="PackedScene" uid="uid://bwij34jk4w03i" path="res://Scenes/sabella/guard2.tscn" id="61_hk3s5"]
-[ext_resource type="PackedScene" uid="uid://xkpdtaveq8i0" path="res://Scenes/JacksonStuff/introGuard.tscn" id="62_fxdmx"]
+[ext_resource type="PackedScene" path="res://Scenes/JacksonStuff/introGuard.tscn" id="62_fxdmx"]
 [ext_resource type="PackedScene" uid="uid://ct6ka3lfhwoco" path="res://Scenes/KianStuff/Pillar.tscn" id="63_iv0br"]
-[ext_resource type="PackedScene" uid="uid://c0400ev4sf6jf" path="res://Scenes/JacksonStuff/EncryptionGuy.tscn" id="65_bl2jf"]
+[ext_resource type="PackedScene" path="res://Scenes/JacksonStuff/EncryptionGuy.tscn" id="65_bl2jf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1r3"]
 texture = ExtResource("2_og63f")
@@ -5943,6 +5943,7 @@ script = ExtResource("1_nv8n0")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_q2ont")]
 z_index = 10
+speed = 65.0
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(2, 2)
@@ -6304,10 +6305,6 @@ text = "level 3"
 
 [node name="Interactables" type="Node" parent="."]
 
-[node name="Chest" parent="Interactables" instance=ExtResource("8_cthv1")]
-z_index = 3
-position = Vector2(40, -168)
-
 [node name="Sign" parent="Interactables" instance=ExtResource("12_ua63u")]
 position = Vector2(56, -24)
 
@@ -6329,210 +6326,279 @@ position = Vector2(-983, -2028)
 
 [node name="Coin" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-250, 23)
+coin_id = "1"
 
 [node name="Coin2" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-250, -137)
+coin_id = "2"
 
 [node name="Coin3" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-251, -89)
+coin_id = "3"
 
 [node name="Coin4" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-251, -26)
+coin_id = "4"
 
 [node name="Coin5" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(245, -137)
+coin_id = "5"
 
 [node name="Coin6" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(245, -90)
+coin_id = "6"
 
 [node name="Coin7" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(246, 22)
+coin_id = "7"
 
 [node name="Coin9" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-107, -425)
+coin_id = "8"
 
 [node name="Coin10" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-170, -425)
+coin_id = "9"
 
 [node name="Coin11" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-203, -457)
+coin_id = "10"
 
 [node name="Coin12" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-203, -522)
+coin_id = "11"
 
 [node name="Coin13" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(102, -426)
+coin_id = "12"
 
 [node name="Coin14" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(166, -426)
+coin_id = "13"
 
 [node name="Coin15" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(230, -425)
+coin_id = "14"
 
 [node name="Coin16" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(278, -457)
+coin_id = "15"
 
 [node name="Coin17" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(278, -506)
+coin_id = "16"
 
 [node name="Coin18" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(357, -554)
+coin_id = "17"
 
 [node name="Coin19" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(389, -554)
+coin_id = "18"
 
 [node name="Coin20" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(422, -554)
+coin_id = "19"
 
 [node name="Coin21" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(502, -681)
+coin_id = "20"
 
 [node name="Coin22" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(502, -649)
+coin_id = "21"
 
 [node name="Coin26" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-203, -698)
+coin_id = "22"
 
 [node name="Coin27" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-202, -730)
+coin_id = "23"
 
 [node name="Coin28" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-203, -762)
+coin_id = "24"
 
 [node name="Coin29" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-122, -825)
+coin_id = "25"
 
 [node name="Coin30" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-74, -825)
+coin_id = "26"
 
 [node name="Coin31" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-27, -825)
+coin_id = "27"
 
 [node name="Coin32" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(20, -826)
+coin_id = "28"
 
 [node name="Coin33" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(38, -858)
+coin_id = "29"
 
 [node name="Coin34" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(38, -905)
+coin_id = "30"
 
 [node name="Coin35" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(646, -1225)
+coin_id = "31"
 
 [node name="Coin36" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(742, -1226)
+coin_id = "32"
 
 [node name="Coin37" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(678, -1226)
+coin_id = "33"
 
 [node name="Coin38" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(709, -1226)
+coin_id = "34"
 
 [node name="Coin46" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(1046, -1530)
+coin_id = "35"
 
 [node name="Coin47" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(1045, -1562)
+coin_id = "36"
 
 [node name="Coin48" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(293, -1356)
+coin_id = "37"
 
 [node name="Coin49" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(292, -1321)
+coin_id = "38"
 
 [node name="Coin50" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(341, -1275)
+coin_id = "39"
 
 [node name="Coin51" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(374, -1275)
+coin_id = "40"
 
 [node name="Coin52" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(405, -1275)
+coin_id = "41"
 
 [node name="Coin53" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(437, -1274)
+coin_id = "42"
 
 [node name="Coin54" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(470, -1273)
+coin_id = "43"
 
 [node name="Coin55" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-138, -1578)
+coin_id = "44"
 
 [node name="Coin56" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(-139, -1545)
+coin_id = "45"
 
 [node name="Coin57" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(118, -1545)
+coin_id = "46"
 
 [node name="Coin58" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(118, -1513)
+coin_id = "47"
 
 [node name="Coin59" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(566, -1514)
+coin_id = "48"
 
 [node name="Coin60" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(566, -1481)
+coin_id = "49"
 
 [node name="Coin61" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(565, -1451)
+coin_id = "50"
 
 [node name="Coin62" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(565, -1417)
+coin_id = "51"
 
 [node name="Coin63" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(566, -1385)
+coin_id = "52"
 
 [node name="Coin64" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(565, -1353)
+coin_id = "53"
 
 [node name="Coin65" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(565, -1321)
+coin_id = "54"
 
 [node name="Coin8" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(500, -715)
+coin_id = "55"
 
 [node name="Coin23" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(500, -747)
+coin_id = "56"
 
 [node name="Coin24" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(453, -754)
+coin_id = "57"
 
 [node name="Coin25" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(1045, -1498)
+coin_id = "58"
 
 [node name="Coin39" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(1014, -1489)
+coin_id = "59"
 
 [node name="Coin40" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(982, -1489)
+coin_id = "60"
 
 [node name="Coin41" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(951, -1489)
+coin_id = "61"
 
 [node name="Coin42" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(422, -1721)
+coin_id = "62"
 
 [node name="Coin43" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(422, -1689)
+coin_id = "63"
 
 [node name="Coin44" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(421, -1658)
+coin_id = "64"
 
 [node name="Coin45" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(421, -1626)
+coin_id = "65"
 
 [node name="Coin67" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(422, -1562)
+coin_id = "66"
 
 [node name="Coin66" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(422, -1593)
+coin_id = "67"
 
 [node name="Coin68" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(454, -1554)
+coin_id = "68"
 
 [node name="Coin69" parent="Interactables/Coins" instance=ExtResource("13_q0wdd")]
 position = Vector2(487, -1553)
+coin_id = "69"
 
 [node name="LockedDoors" type="Node2D" parent="Interactables"]
 
@@ -6544,69 +6610,91 @@ position = Vector2(-156, -1619)
 
 [node name="Chests" type="Node2D" parent="Interactables"]
 
+[node name="Chest19" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
+position = Vector2(40, -168)
+chest_id = "chest_1"
+
 [node name="Chest4" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(199, -440)
+chest_id = "chest_2"
 
 [node name="Chest2" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(536, -599)
+chest_id = "chest_3"
 
 [node name="Chest5" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(809, -1496)
+chest_id = "chest_5"
 
 [node name="Chest7" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(616, -1288)
+chest_id = "chest_6"
 
 [node name="Chest9" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(121, -1655)
+chest_id = "chest_7"
 
 [node name="Chest8" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
-position = Vector2(-184, -1689)
+position = Vector2(-184, -1687)
+chest_id = "chest_8"
 
 [node name="Chest" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(103, -984)
+chest_id = "chest_9"
 
 [node name="Chest3" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(56, -712)
+chest_id = "chest_10"
 
 [node name="Chest10" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(423, -1752)
+chest_id = "chest_11"
 
 [node name="Chest11" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(-360, -1896)
+chest_id = "chest_12"
 
 [node name="Chest12" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(-296, -1896)
+chest_id = "chest_13"
 
 [node name="Chest13" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(-1160, -2392)
+chest_id = "chest_14"
 
 [node name="Chest14" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(-1192, -1944)
+chest_id = "chest_15"
 
 [node name="Chest15" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(-745, -1961)
+chest_id = "chest_16"
 
 [node name="Chest16" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(-152, -2296)
+chest_id = "chest_17"
 
 [node name="Chest6" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(360, -1288)
+chest_id = "chest_18"
 
 [node name="Chest17" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(-393, -1608)
+chest_id = "chest_19"
 
 [node name="Chest18" parent="Interactables/Chests" instance=ExtResource("8_cthv1")]
 position = Vector2(24, -1208)
+chest_id = "chest_20"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.648078, 0.648078, 0.648078, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(100, 100)
-offset_left = -3010.0
-offset_top = -4640.0
-offset_right = 2990.0
-offset_bottom = 1360.0
+offset_left = -3008.0
+offset_top = -4636.0
+offset_right = 2992.0
+offset_bottom = 1364.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0, 0, 0, 1)

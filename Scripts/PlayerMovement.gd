@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var speed: float = 65.0
 var door_lock := false
+var movement_locked := false
 
 const KNIGHT_OUTFIT_FRAMES := preload("res://Assets/Characters/CharactersAnimations/KnightOutfitFrames.tres")
 const KNIGHT_ACCESSORY_FRAMES := preload("res://Assets/Characters/CharactersAnimations/KnightAccessoryFrames.tres")
@@ -34,6 +35,11 @@ func _ready() -> void:
 	play_all("idle", true)
 
 func _physics_process(_delta: float) -> void:
+	if movement_locked:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+
 	var input_vec := Vector2.ZERO
 	if Input.is_action_pressed("move_right"):
 		input_vec.x += 1
