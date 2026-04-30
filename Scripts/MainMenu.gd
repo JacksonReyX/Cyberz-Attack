@@ -8,6 +8,7 @@ extends Control
 @onready var info_btn: TextureButton = $UILayer/Info
 @onready var quit_btn: TextureButton = $UILayer/Quit
 @onready var options_btn: TextureButton = $UILayer/Options
+@onready var delete_btn: TextureButton = $UILayer/DeleteProgress
 
 
 func _ready() -> void:
@@ -18,6 +19,8 @@ func _ready() -> void:
 	info_btn.pressed.connect(_on_info_pressed)
 	quit_btn.pressed.connect(_on_quit_pressed)
 	options_btn.pressed.connect(_on_options_pressed)
+	delete_btn.pressed.connect(_on_delete_pressed)
+	
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file(character_customize_scene)
@@ -30,5 +33,9 @@ func _on_quit_pressed() -> void:
 	
 func _on_options_pressed() -> void:
 	get_tree().change_scene_to_file(options_scene)
+	
+func _on_delete_pressed() -> void:
+	GameState.reset_data()
+	print("Progress reset!")
 
 	

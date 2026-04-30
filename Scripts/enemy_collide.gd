@@ -3,9 +3,6 @@ extends Area2D
 @onready var textTimer = $"../textTimer"
 @onready var textbox = $Textbox
 
-signal battle_triggered(enemy_node)
-
-# Customize this per enemy type
 var encounter_text = "Give me your clicks!"
 
 func _ready() -> void:
@@ -19,8 +16,17 @@ func _on_body_entered(body: Node2D) -> void:
 
 		var actual_enemy_name = get_parent().name
 		GameState.active_enemy_name = actual_enemy_name
-		GameState.playerPosition = body.global_position
+
+		var direction_away = (body.global_position - global_position).normalized()
+		GameState.playerPosition = body.global_position + direction_away * 40
+
 		GameState.returning_from_battle = true
+
+		# Freeze player completely
+		body.set_physics_process(false)
+		body.set_process(false)
+		body.velocity = Vector2.ZERO
+		body.movement_locked = true
 
 		textbox.show_text(encounter_text)
 		textTimer.start()
