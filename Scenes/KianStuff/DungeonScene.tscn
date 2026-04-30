@@ -5919,7 +5919,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b7187"]
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r0ash"]
 
 [sub_resource type="Theme" id="Theme_qa666"]
@@ -5931,7 +5930,6 @@ HSlider/icons/grabber_highlight = null
 HSlider/icons/tick = null
 HSlider/styles/grabber_area = null
 HSlider/styles/grabber_area_highlight = null
-HSlider/styles/slider = SubResource("StyleBoxEmpty_b7187")
 HSlider/styles/slider = SubResource("StyleBoxEmpty_r0ash")
 
 [node name="DungeonScene" type="Node2D"]
