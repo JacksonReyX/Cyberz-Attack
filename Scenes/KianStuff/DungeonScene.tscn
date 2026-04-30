@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=4 uid="uid://djflweht2ar7u"]
+[gd_scene load_steps=98 format=4 uid="uid://djflweht2ar7u"]
 
 [ext_resource type="Script" path="res://Scripts/dungeon_scene.gd" id="1_nv8n0"]
 [ext_resource type="PackedScene" uid="uid://daee17hg000ae" path="res://Scenes/KianStuff/Player.tscn" id="1_q2ont"]
@@ -13,7 +13,6 @@
 [ext_resource type="Script" path="res://Scripts/coins_hud.gd" id="9_5yy4f"]
 [ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="11_gyowf"]
 [ext_resource type="PackedScene" uid="uid://wh66v8lxv0la" path="res://Scenes/sabella/key.tscn" id="12_hetau"]
-[ext_resource type="PackedScene" uid="uid://dh4me51kb1tpd" path="res://Scenes/KianStuff/Sign.tscn" id="12_ua63u"]
 [ext_resource type="PackedScene" uid="uid://ce88u41h83qm" path="res://Scenes/sabella/coin.tscn" id="13_q0wdd"]
 [ext_resource type="PackedScene" uid="uid://of2x4eype5rj" path="res://Scenes/sabella/LockedDoor.tscn" id="14_k3ij0"]
 [ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="14_rge1b"]
@@ -53,14 +52,13 @@
 [ext_resource type="PackedScene" uid="uid://cw41mv4uqlnt" path="res://Scenes/sabella/bat1.tscn" id="55_7bgvj"]
 [ext_resource type="PackedScene" uid="uid://cj1decmy7gali" path="res://Scenes/sabella/spider1.tscn" id="56_6ygf5"]
 [ext_resource type="PackedScene" uid="uid://dgivop1h5lvjw" path="res://Scenes/KianStuff/RansomwareEnemy.tscn" id="56_d3qvj"]
-[ext_resource type="PackedScene" uid="uid://bdrdi3kqaoiv3" path="res://Scenes/sabella/spider2.tscn" id="57_5usby"]
+[ext_resource type="PackedScene" path="res://Scenes/sabella/spider2.tscn" id="57_5usby"]
 [ext_resource type="PackedScene" uid="uid://7puia2wfx82s" path="res://Scenes/sabella/spiderweb.tscn" id="58_kqrtd"]
 [ext_resource type="PackedScene" uid="uid://ccr6b1a2ram23" path="res://Scenes/sabella/bat3.tscn" id="59_r46sl"]
 [ext_resource type="PackedScene" uid="uid://ctikdqjam5smm" path="res://Scenes/sabella/guard.tscn" id="60_1lb8d"]
 [ext_resource type="PackedScene" uid="uid://bwij34jk4w03i" path="res://Scenes/sabella/guard2.tscn" id="61_hk3s5"]
-[ext_resource type="PackedScene" path="res://Scenes/JacksonStuff/introGuard.tscn" id="62_fxdmx"]
 [ext_resource type="PackedScene" uid="uid://ct6ka3lfhwoco" path="res://Scenes/KianStuff/Pillar.tscn" id="63_iv0br"]
-[ext_resource type="PackedScene" path="res://Scenes/JacksonStuff/EncryptionGuy.tscn" id="65_bl2jf"]
+[ext_resource type="PackedScene" uid="uid://b36b4fjlooxxk" path="res://Scenes/JacksonStuff/EncryptionGuy.tscn" id="65_bl2jf"]
 [ext_resource type="PackedScene" uid="uid://bvon6ab2xnhkm" path="res://Scenes/KianStuff/VirusEnemy.tscn" id="66_yd5cu"]
 [ext_resource type="PackedScene" uid="uid://boapyj3sdvc3u" path="res://Scenes/KianStuff/ScammerEnemy.tscn" id="67_4dpik"]
 [ext_resource type="PackedScene" uid="uid://div5imyu201ny" path="res://Scenes/KianStuff/FisherEnemy.tscn" id="67_760ik"]
@@ -5940,6 +5938,63 @@ HSlider/styles/grabber_area = null
 HSlider/styles/grabber_area_highlight = null
 HSlider/styles/slider = SubResource("StyleBoxEmpty_b7187")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_380lr"]
+atlas = ExtResource("4_w0n7e")
+region = Rect2(512, 171, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46jtp"]
+atlas = ExtResource("4_w0n7e")
+region = Rect2(528, 171, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnbc4"]
+atlas = ExtResource("4_w0n7e")
+region = Rect2(544, 171, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6vha"]
+atlas = ExtResource("4_w0n7e")
+region = Rect2(560, 171, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2utb"]
+atlas = ExtResource("4_w0n7e")
+region = Rect2(576, 171, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kboq5"]
+atlas = ExtResource("4_w0n7e")
+region = Rect2(592, 171, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vacvh"]
+atlas = ExtResource("4_w0n7e")
+region = Rect2(608, 171, 16, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_83xhu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_380lr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46jtp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnbc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6vha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2utb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kboq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vacvh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="DungeonScene" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_nv8n0")
@@ -6307,9 +6362,6 @@ theme_override_fonts/font = ExtResource("11_gyowf")
 text = "level 3"
 
 [node name="Interactables" type="Node" parent="."]
-
-[node name="Sign" parent="Interactables" instance=ExtResource("12_ua63u")]
-position = Vector2(56, -24)
 
 [node name="Key" type="Node2D" parent="Interactables"]
 
@@ -7423,15 +7475,20 @@ position = Vector2(122, -1496)
 z_index = 8
 position = Vector2(1, -136)
 
-[node name="Guard3" parent="ExtraDecor" instance=ExtResource("62_fxdmx")]
-position = Vector2(0, -24)
-scale = Vector2(0.865844, 0.823855)
+[node name="AnimatedSprite2D" parent="ExtraDecor/Guard" index="1"]
+sprite_frames = SubResource("SpriteFrames_83xhu")
+frame_progress = 0.394227
+
+[node name="Guard3" parent="ExtraDecor" instance=ExtResource("60_1lb8d")]
+z_index = 8
+position = Vector2(-55, -20)
 
 [node name="Guard2" parent="ExtraDecor" instance=ExtResource("61_hk3s5")]
 position = Vector2(49, -1168)
 
 [node name="Encyrption" parent="ExtraDecor" instance=ExtResource("65_bl2jf")]
-position = Vector2(0, -439)
+position = Vector2(0, -438)
+scale = Vector2(1.25, 1.25)
 
 [node name="Bat11" parent="ExtraDecor" instance=ExtResource("59_r46sl")]
 position = Vector2(847, -1241)
@@ -7485,3 +7542,5 @@ z_index = 10
 position = Vector2(312, -564)
 
 [editable path="HUDLayer/HUDRoot/TopLeftPanel/HealthHud"]
+[editable path="ExtraDecor/Guard"]
+[editable path="ExtraDecor/Guard3"]

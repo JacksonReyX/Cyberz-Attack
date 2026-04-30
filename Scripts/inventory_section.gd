@@ -28,7 +28,7 @@ func show_potion_message():
 	if showing_potion_message:
 		return
 	showing_potion_message = true
-	pickup_label.text = "Healing Potion (+25 HP)"
+	pickup_label.text = "Health Potion & 20 Gold!"
 	pickup_label.visible = true
 	await get_tree().create_timer(3.0).timeout
 	pickup_label.visible = false

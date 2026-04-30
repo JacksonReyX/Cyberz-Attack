@@ -1,0 +1,165 @@
+[gd_scene load_steps=19 format=3 uid="uid://hb5fx8fvog5s"]
+
+[ext_resource type="Texture2D" uid="uid://c0eu0yoqno1qv" path="res://Assets/Tiles/dungeontiles-extended v1.1/dungeontileset-extended.png" id="1_bngh2"]
+[ext_resource type="Script" path="res://Scripts/loading_screen.gd" id="1_uw2q6"]
+[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="2_k25it"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpsjm"]
+atlas = ExtResource("1_bngh2")
+region = Rect2(576, 234, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pn4b5"]
+atlas = ExtResource("1_bngh2")
+region = Rect2(592, 234, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5v0a"]
+atlas = ExtResource("1_bngh2")
+region = Rect2(608, 234, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oo2ec"]
+atlas = ExtResource("1_bngh2")
+region = Rect2(624, 234, 16, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_526ah"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpsjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pn4b5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5v0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oo2ec")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmd0u"]
+atlas = ExtResource("1_bngh2")
+region = Rect2(576, 14, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5l6c"]
+atlas = ExtResource("1_bngh2")
+region = Rect2(592, 14, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0oel"]
+atlas = ExtResource("1_bngh2")
+region = Rect2(608, 14, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2201a"]
+atlas = ExtResource("1_bngh2")
+region = Rect2(624, 14, 16, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uxl6x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmd0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5l6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0oel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2201a")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2a53"]
+atlas = ExtResource("1_bngh2")
+region = Rect2(800, 14, 32, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovicn"]
+atlas = ExtResource("1_bngh2")
+region = Rect2(832, 14, 32, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kt4s0"]
+atlas = ExtResource("1_bngh2")
+region = Rect2(864, 14, 32, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6t7e"]
+atlas = ExtResource("1_bngh2")
+region = Rect2(896, 14, 32, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jvjrl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2a53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovicn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kt4s0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6t7e")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[node name="LoadingScreen" type="Node2D"]
+script = ExtResource("1_uw2q6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -45.0
+offset_top = -30.0
+offset_right = 729.0
+offset_bottom = 426.0
+color = Color(0.0627451, 0.0745098, 0.141176, 1)
+
+[node name="CharactersRow" type="Node2D" parent="."]
+
+[node name="Character1" type="Node2D" parent="CharactersRow"]
+position = Vector2(268, 157)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharactersRow/Character1"]
+position = Vector2(-17, -6)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_526ah")
+animation = &"run"
+autoplay = "run"
+frame_progress = 0.768672
+
+[node name="Character2" type="Node2D" parent="CharactersRow"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharactersRow/Character2"]
+position = Vector2(320, 160)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_uxl6x")
+animation = &"run"
+autoplay = "run"
+frame_progress = 0.693708
+
+[node name="Character3" type="Node2D" parent="CharactersRow"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharactersRow/Character3"]
+position = Vector2(379, 148)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_jvjrl")
+animation = &"run"
+autoplay = "run"
+frame_progress = 0.476517
+
+[node name="LoadingLabel" type="Label" parent="."]
+offset_left = 174.0
+offset_top = 207.0
+offset_right = 462.0
+offset_bottom = 239.0
+theme_override_fonts/font = ExtResource("2_k25it")
+theme_override_font_sizes/font_size = 32
+text = "Loading..."

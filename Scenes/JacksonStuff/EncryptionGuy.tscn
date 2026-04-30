@@ -1,11 +1,47 @@
-[gd_scene load_steps=12 format=3 uid="uid://c0400ev4sf6jf"]
+[gd_scene load_steps=17 format=3 uid="uid://b36b4fjlooxxk"]
 
 [ext_resource type="Script" path="res://Scripts/encryption.gd" id="1_nf5k5"]
 [ext_resource type="PackedScene" uid="uid://boyieidkdxwqg" path="res://Scenes/KianStuff/Textbox.tscn" id="2_ue3kq"]
 [ext_resource type="AudioStream" uid="uid://c4ufp64h1choc" path="res://Assets/Audio/Voices/GuardTalk2.wav" id="3_uqtcb"]
-[ext_resource type="Texture2D" uid="uid://dy6gaei37m1w3" path="res://Assets/PlayerModels/oldmanSprite.png" id="4_rtirm"]
+[ext_resource type="Texture2D" uid="uid://c0eu0yoqno1qv" path="res://Assets/Tiles/dungeontiles-extended v1.1/dungeontileset-extended.png" id="4_c6nq3"]
 [ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://Assets/Menus/Buttons/prompt_normal.png" id="5_tbc0h"]
 [ext_resource type="Texture2D" uid="uid://dcbkf5ybaaim4" path="res://Scenes/sabella/images/Pixelart arrow icon pack 1.0.png" id="6_2cvhg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37ykf"]
+atlas = ExtResource("4_c6nq3")
+region = Rect2(672, 16, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xqe4"]
+atlas = ExtResource("4_c6nq3")
+region = Rect2(704, 16, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e28c3"]
+atlas = ExtResource("4_c6nq3")
+region = Rect2(736, 16, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dj6c"]
+atlas = ExtResource("4_c6nq3")
+region = Rect2(768, 16, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v3k0l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37ykf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xqe4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e28c3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dj6c")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t1hnn"]
 radius = 10.3226
@@ -43,10 +79,13 @@ script = ExtResource("1_nf5k5")
 [node name="Textbox" parent="." instance=ExtResource("2_ue3kq")]
 typing_sound_2 = ExtResource("3_uqtcb")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1, -6)
-scale = Vector2(0.0132598, 0.0105114)
-texture = ExtResource("4_rtirm")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 10
+position = Vector2(-1, -10)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_v3k0l")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -7)

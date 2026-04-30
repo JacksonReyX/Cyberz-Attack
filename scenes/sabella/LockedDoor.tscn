@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://of2x4eype5rj"]
 
-[ext_resource type="Texture2D" uid="uid://dlmk0crquvh0k" path="res://assets/Sprites/Deco/door.png" id="1_1idtp"]
+[ext_resource type="Texture2D" uid="uid://dlmk0crquvh0k" path="res://Assets/Sprites/Deco/door.png" id="1_1idtp"]
 [ext_resource type="Script" path="res://Scripts/locked_door.gd" id="1_fcbhr"]
-[ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://assets/Menus/Buttons/prompt_normal.png" id="3_3wi8c"]
-[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_cnro8"]
+[ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://Assets/Menus/Buttons/prompt_normal.png" id="3_3wi8c"]
+[ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="4_cnro8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fcbhr"]
 atlas = ExtResource("1_1idtp")

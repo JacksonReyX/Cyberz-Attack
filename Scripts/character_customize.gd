@@ -215,7 +215,7 @@ func _on_item_shop_pressed() -> void:
 
 func _on_play_button_pressed() -> void:
 	MusicManager.play_dungeon()
-	get_tree().change_scene_to_file("res://Scenes/KianStuff/DungeonScene.tscn")
+	get_tree().change_scene_to_file("res://Scenes/KianStuff/LoadingScreen.tscn")
 
 func _on_back_button_pressed() -> void:
 	MusicManager.play_menu()

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://de1fym16t3g5d"]
+[gd_scene load_steps=4 format=3 uid="uid://de1fym16t3g5d"]
 
 [ext_resource type="Script" path="res://Scripts/door_trigger.gd" id="1_2ub4p"]
+[ext_resource type="Texture2D" uid="uid://btf7mne4trvig" path="res://Assets/Menus/Buttons/prompt_normal.png" id="2_i1wve"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a2a5a"]
 size = Vector2(24, 10)
@@ -12,3 +13,8 @@ script = ExtResource("1_2ub4p")
 shape = SubResource("RectangleShape2D_a2a5a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="EPrompt" type="Sprite2D" parent="."]
+position = Vector2(0, -19)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_i1wve")
