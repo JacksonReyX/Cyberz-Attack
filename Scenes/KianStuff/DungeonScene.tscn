@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://Scripts/coins_hud.gd" id="9_5yy4f"]
 [ext_resource type="FontFile" uid="uid://dvlrxo8miodpu" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="11_gyowf"]
 [ext_resource type="PackedScene" uid="uid://wh66v8lxv0la" path="res://Scenes/sabella/key.tscn" id="12_hetau"]
+[ext_resource type="Script" path="res://Scripts/collisionToEndScreen.gd" id="12_lkqhk"]
 [ext_resource type="PackedScene" uid="uid://ce88u41h83qm" path="res://Scenes/sabella/coin.tscn" id="13_q0wdd"]
 [ext_resource type="PackedScene" uid="uid://of2x4eype5rj" path="res://Scenes/sabella/LockedDoor.tscn" id="14_k3ij0"]
 [ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="14_rge1b"]
@@ -52,7 +53,6 @@
 [ext_resource type="PackedScene" uid="uid://cw41mv4uqlnt" path="res://Scenes/sabella/bat1.tscn" id="55_7bgvj"]
 [ext_resource type="PackedScene" uid="uid://cj1decmy7gali" path="res://Scenes/sabella/spider1.tscn" id="56_6ygf5"]
 [ext_resource type="PackedScene" uid="uid://dgivop1h5lvjw" path="res://Scenes/KianStuff/RansomwareEnemy.tscn" id="56_d3qvj"]
-[ext_resource type="PackedScene" path="res://Scenes/sabella/spider2.tscn" id="57_5usby"]
 [ext_resource type="PackedScene" uid="uid://7puia2wfx82s" path="res://Scenes/sabella/spiderweb.tscn" id="58_kqrtd"]
 [ext_resource type="PackedScene" uid="uid://ccr6b1a2ram23" path="res://Scenes/sabella/bat3.tscn" id="59_r46sl"]
 [ext_resource type="PackedScene" uid="uid://ctikdqjam5smm" path="res://Scenes/sabella/guard.tscn" id="60_1lb8d"]
@@ -6361,6 +6361,12 @@ scale = Vector2(0.23, 0.23)
 theme_override_fonts/font = ExtResource("11_gyowf")
 text = "level 3"
 
+[node name="winTrigger" parent="Level 3" instance=ExtResource("8_5730i")]
+z_index = 3
+position = Vector2(58, -713)
+scale = Vector2(1.36195, 1)
+script = ExtResource("12_lkqhk")
+
 [node name="Interactables" type="Node" parent="."]
 
 [node name="Key" type="Node2D" parent="Interactables"]
@@ -7410,8 +7416,18 @@ position = Vector2(151, -1484)
 z_index = 3
 position = Vector2(-90, -1709)
 
-[node name="Spider2" parent="ExtraDecor" instance=ExtResource("57_5usby")]
+[node name="Spider2" parent="ExtraDecor"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 position = Vector2(-236, 20)
+script = null
 
 [node name="Spider1" parent="ExtraDecor" instance=ExtResource("56_6ygf5")]
 z_index = 5
@@ -7429,11 +7445,31 @@ position = Vector2(351, -1432)
 [node name="Spider8" parent="ExtraDecor" instance=ExtResource("56_6ygf5")]
 position = Vector2(1109, -1688)
 
-[node name="Spider12" parent="ExtraDecor" instance=ExtResource("57_5usby")]
+[node name="Spider12" parent="ExtraDecor"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 position = Vector2(435, -1550)
+script = null
 
-[node name="Spider13" parent="ExtraDecor" instance=ExtResource("57_5usby")]
+[node name="Spider13" parent="ExtraDecor"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 position = Vector2(-178, -1423)
+script = null
 
 [node name="Spiderweb3" parent="ExtraDecor" instance=ExtResource("58_kqrtd")]
 position = Vector2(-254, -678)
@@ -7540,6 +7576,8 @@ position = Vector2(-232, -628)
 [node name="Pillar8" parent="." instance=ExtResource("63_iv0br")]
 z_index = 10
 position = Vector2(312, -564)
+
+[connection signal="body_entered" from="Level 3/winTrigger" to="Level 3/winTrigger" method="_on_body_entered"]
 
 [editable path="HUDLayer/HUDRoot/TopLeftPanel/HealthHud"]
 [editable path="ExtraDecor/Guard"]
